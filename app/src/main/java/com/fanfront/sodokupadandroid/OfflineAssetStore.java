@@ -43,7 +43,7 @@ final class OfflineAssetStore {
             String url = keys.next();
             JSONObject item = map.getJSONObject(url);
             String file = item.getString("file");
-            if (!file.matches("files/[a-f0-9]{64}")) throw new IOException("Unsafe path");
+            if (!file.matches("(files/[a-f0-9]{64}|pages/[a-z0-9-]+\\.zh-Hans\\.html)")) throw new IOException("Unsafe path");
             byUrl.put(key(url), new Entry("offline/" + file,
                     item.optString("mime", "application/octet-stream")));
         }
