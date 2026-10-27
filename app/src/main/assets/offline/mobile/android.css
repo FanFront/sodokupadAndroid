@@ -1,0 +1,119 @@
+/* Android-only presentation layered over the captured SudokuPad HTML.
+   Original controls remain in DOM for the game engine, but no desktop
+   header, sponsor links or cramped control sidebars are shown on phones. */
+html.android-port, html.android-port body {
+  overflow: hidden !important;
+  overscroll-behavior: none;
+  margin: 0;
+  padding: 0;
+  background: #101625;
+}
+html.android-port .topbar,
+html.android-port #sudokupad_toplinks,
+html.android-port #svenpeek,
+html.android-port .controls-footer,
+html.android-port .menu-link-steam,
+html.android-port .menu-link-patreon,
+html.android-port .menu-link-kofi,
+html.android-port .menu-link-youtube,
+html.android-port .menu-link-thanks { display: none !important; }
+/* Keep original control DOM mounted; layout and puzzle event handlers rely on it. */
+html.android-port #controls {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+html.android-port .app {
+  position: absolute !important;
+  left: 0; top: 0; width: 100%;
+  height: calc(100% - var(--android-dock-height, 218px)) !important;
+  height: calc(100dvh - var(--android-dock-height, 218px)) !important;
+  overflow: hidden;
+}
+html.android-port .game { width: 100% !important; height: 100% !important; }
+html.android-port .dialog-overlay { z-index: 30000 !important; }
+html.android-port .dialog {
+  max-width: calc(100vw - 16px);
+  max-height: calc(100dvh - var(--android-dock-height, 218px) - 12px);
+  min-width: 0 !important;
+  overflow-y: auto;
+  border-width: 5px;
+  font-size: 15px;
+}
+html.android-port .puzzle-rules, html.android-port .dialog-content {
+  overflow-wrap: anywhere;
+  user-select: text !important;
+  -webkit-user-select: text !important;
+}
+#android-gamepad {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 15000;
+  background: #111c2c;
+  color: #f7f8ff;
+  padding: 5px max(5px,env(safe-area-inset-right)) calc(5px + env(safe-area-inset-bottom)) max(5px,env(safe-area-inset-left));
+  border-top: 1px solid #465c7e;
+  display: grid;
+  gap: 4px;
+  box-shadow: 0 -3px 16px rgba(0,0,0,.4);
+  touch-action: manipulation;
+  font-family: system-ui, 'Noto Sans SC', sans-serif;
+}
+#android-gamepad .android-tools {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0,1fr));
+  gap: 4px;
+}
+#android-gamepad .android-numbers {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0,1fr));
+  grid-template-rows: repeat(2, minmax(43px,1fr));
+  gap: 4px;
+}
+#android-gamepad .android-actions {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0,1fr));
+  gap: 4px;
+}
+#android-gamepad button {
+  min-width: 0;
+  min-height: 39px;
+  margin: 0;
+  padding: 4px 1px;
+  border: 1px solid #4a5b7b;
+  border-radius: 9px;
+  background: #293a55;
+  color: #fdfdfd;
+  font: 600 clamp(10px, 3vw, 14px)/1.2 system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+#android-gamepad .android-numbers button {
+  background: #364d71;
+  font-size: clamp(18px,5.1vw,24px);
+  min-height: 43px;
+}
+#android-gamepad button:active { background: #456a9f; }
+#android-gamepad button[aria-pressed="true"] {
+  background: #2b7168;
+  border-color: #65e0c6;
+}
+#android-gamepad button:focus-visible { outline: 2px solid #e0d36e; }
+#android-gamepad #android-status {
+  position: absolute;
+  right: 10px;
+  bottom: calc(100% + 8px);
+  max-width: 82vw;
+  padding: 7px 10px;
+  color: white;
+  background: rgba(18,24,40,.94);
+  border-radius: 8px;
+  font-size: 13px;
+}
+html.android-port.android-pan #board { touch-action: none !important; }
+@media (max-height: 600px) {
+  #android-gamepad { gap: 2px; padding-top: 2px; }
+  #android-gamepad button { min-height: 31px; padding: 2px 0; }
+  #android-gamepad .android-numbers { grid-template-rows: repeat(2,34px); }
+  #android-gamepad .android-numbers button { min-height: 34px; }
+}
