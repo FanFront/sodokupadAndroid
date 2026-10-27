@@ -1,50 +1,26 @@
-/** Decode the "scl" URL-safe LZ-String package used by SudokuPad.
- * Pure JS: does not change or execute original game data. */
+/** Decode SudokuPad's compressed "scl" puzzle package.
+ *
+ * IMPORTANT: The captured SudokuPad engine uses BASE64-LZ encoding, with
+ * '+' and '/' (not lz-string's URL-safe '+', '-' alphabet). Decode using
+ * precisely the same format that SudokuPad's puzpatcher.bundle.js expects.
+ */
+import LZString from 'lz-string';
+
 export function unpackScl(packed) {
   if (typeof packed !== 'string' || !packed.startsWith('scl')) {
     throw new Error('Expected a SudokuPad scl package');
   }
-  const text = packed.slice(3).trim().replace(/ /g, '+');
-  const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-$';
-  const nextValue = n => alphabet.indexOf(text.charAt(n));
-  const data = {val: nextValue(0), mask:32, index:1};
-  const dictionary = [0,1,2];
-  let size=4, bits=3, enlarge=4, output=[];
-  function read(count) {
-    let num=0, p=1, upper=2**count;
-    while(p<upper) {
-      const bit=data.val & data.mask;
-      data.mask>>=1;
-      if(!data.mask) { data.mask=32; data.val=nextValue(data.index++); }
-      num+=(bit?1:0)*p;
-      p*=2;
-    }
-    return num;
+  const encoded = packed.slice(3).trim();
+  if (!encoded || !/^[A-Za-z0-9+/=]+$/.test(encoded)) {
+    throw new Error('Invalid BASE64-LZ SudokuPad package');
   }
-  let initial=read(2);
-  if (initial===2) return {};
-  let current=initial===0?String.fromCharCode(read(8))
-    :String.fromCharCode(read(16));
-  dictionary[3]=current;
-  output.push(current);
-  for(let limit=0;limit<10000000;limit++) {
-    if(data.index>text.length) throw new Error('Truncated SudokuPad puzzle package');
-    let code=read(bits);
-    if(code===0 || code===1) {
-      dictionary[size++]=String.fromCharCode(read(code ? 16:8));
-      code=size-1;
-      enlarge--;
-    } else if (code===2) {
-      return JSON.parse(output.join(''));
-    }
-    if (!enlarge) { enlarge=2**bits; bits++; }
-    let phrase=dictionary[code]!==undefined ? dictionary[code]
-      :code===size ? current+current[0] : null;
-    if (phrase===null) throw new Error('Invalid compressed puzzle data');
-    output.push(phrase);
-    dictionary[size++]=current+phrase[0];
-    current=phrase;
-    if(!--enlarge) {enlarge=2**bits;bits++;}
+  const json = LZString.decompressFromBase64(encoded);
+  if (!json || json[0] !== '{') {
+    throw new Error('SudokuPad puzzle failed BASE64-LZ decompression');
   }
-  throw new Error('Puzzle package exceeded decompression limit');
+  const puzzle = JSON.parse(json);
+  if (!puzzle || typeof puzzle !== 'object' || !puzzle.metadata) {
+    throw new Error('SudokuPad package is missing puzzle metadata');
+  }
+  return puzzle;
 }
