@@ -1,0 +1,14 @@
+{
+  "games": [
+    {
+      "id": "digits-of-despair",
+      "title": "Sudokuvania 1 — Digits of Despair",
+      "url": "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1"
+    },
+    {
+      "id": "lineage-of-logic",
+      "title": "Sudokuvania 2 — Lineage of Logic",
+      "url": "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
+    }
+  ]
+}
