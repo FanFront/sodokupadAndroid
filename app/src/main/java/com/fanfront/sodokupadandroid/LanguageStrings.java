@@ -7,9 +7,9 @@ import java.util.Map;
 final class LanguageStrings {
     private static final Map<String, String> TEXT = new HashMap<>();
     static {
-        TEXT.put("title", "数独游戏盒");
+        TEXT.put("title", "数独魔城 · 离线版");
         TEXT.put("subtitle", "选择要玩的谜题");
-        TEXT.put("note", "在线游戏。部分剧情和特殊规则仍未翻译。");
+        TEXT.put("note", "离线版：游戏文件已打包在 APK 中。部分剧情与特殊规则仍未完成汉化。");
         TEXT.put("game", "开始游戏");
         TEXT.put("add", "添加数独链接");
         TEXT.put("name", "谜题名称");
@@ -26,8 +26,8 @@ final class LanguageStrings {
         TEXT.put("rotate", "旋转屏幕");
         TEXT.put("guideTitle", "入门规则（无剧透）");
         TEXT.put("ok", "确定");
-        TEXT.put("loadError", "游戏加载失败，请检查网络。");
-        TEXT.put("permission", "游戏需要联网，进度保存在此应用的网页存储中。");
+        TEXT.put("loadError", "资源加载失败，请检查离线包是否完整。");
+        TEXT.put("permission", "无需联网。存档保存在本机，请勿清除应用数据。");
         TEXT.put("own", "我的谜题");
         TEXT.put("builtIn", "恶魔城数独");
         TEXT.put("translateNote", "本指南已翻译，但游戏内大量剧情和规则尚未翻译。");
