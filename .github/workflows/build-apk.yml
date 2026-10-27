@@ -92,7 +92,9 @@ jobs:
           retention-days: 14
 
   personal-offline-apk:
-    if: github.event_name == 'workflow_dispatch'
+    # A one-time explicit capture can also be requested by a commit marker.
+    # Capturing the generated snapshot never recursively starts another capture.
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && contains(github.event.head_commit.message, '[capture-bosses]'))
     permissions:
       contents: write
     needs: source-checks
@@ -129,8 +131,8 @@ jobs:
         run: npm run build-html
       - name: Bake reviewed Chinese into offline compressed game metadata
         run: npm run build-puzzle-zh
-      - name: Validate the local capture before packaging
-        run: npm run verify
+      - name: Validate every boss puzzle and its Android controls
+        run: OFFLINE_REQUIRE_BOSS_PUZZLES=1 npm run verify
       - name: Validate SudokuPad-compatible puzzle encoding
         run: node scripts/test-scl.mjs --require-translated
       - name: Extract English text from HTML and puzzle data
