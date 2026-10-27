@@ -121,6 +121,10 @@
     useApp(a => {
       switch (action) {
         case 'digit': {
+          if(!a.puzzle.selectedCells?.length) {
+            notify('请先轻触棋盘格子，再输入数字');
+            return;
+          }
           // SudokuPad may remap the normal keypad to letters or colour IDs.
           const original = doc.querySelector('.controls-input button[data-key="' + value + '"]');
           a.doPressDigit(original?.dataset.value || value);
@@ -207,6 +211,8 @@
     if(syntheticClick || duplicateTouchPointer) return true;
     lastActivation = {button, kind, at:performance.now()};
     button.dataset.androidTapCount = String((+button.dataset.androidTapCount || 0)+1);
+    button.classList.add('android-tapped');
+    setTimeout(() => button.classList.remove('android-tapped'), 160);
     doGameAction(button.dataset.androidAction,button.dataset.value);
     return true;
   }
