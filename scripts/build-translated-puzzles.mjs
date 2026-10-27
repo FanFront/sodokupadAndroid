@@ -45,22 +45,45 @@ for(const game of catalog){
     return out;
   }
   if(translated.metadata) {
-    for(const field of ['rules','msgcorrect']) {
+    for(const field of ['rules','msgcorrect','title']) {
       translated.metadata[field]=localize(translated.metadata[field]);
     }
     for(const grid of translated.metadata.grids||[]) {
-      if(typeof grid.rules==='string') grid.rules=localize(grid.rules);
+      for(const field of ['title','rules','author']) {
+        if(typeof grid[field]==='string') grid[field]=localize(grid[field]);
+      }
     }
+  }
+  // Map labels and clue descriptions are SVG text, not numeric puzzle data.
+  for(const kind of ['overlays','underlays']) {
+    for(const object of translated[kind]||[]) {
+      if(typeof object.text==='string') object.text=localize(object.text);
+    }
+  }
+  for(const line of translated.lines||[]) {
+    if(typeof line.name==='string') line.name=localize(line.name);
   }
   // Verify that reverting ONLY the allowed metadata changes recreates the
   // original JSON. If not, do not overwrite the offline index.
   const proof=JSON.parse(JSON.stringify(translated));
   if(proof.metadata&&original.metadata){
-    for(const field of ['rules','msgcorrect'])proof.metadata[field]=original.metadata[field];
+    for(const field of ['rules','msgcorrect','title'])proof.metadata[field]=original.metadata[field];
     for(let n=0;n<(proof.metadata.grids||[]).length;n++){
       const a=proof.metadata.grids[n], b=original.metadata.grids[n];
-      if(b&&Object.prototype.hasOwnProperty.call(b,'rules')) a.rules=b.rules;
+      if(b) for(const field of ['title','rules','author']) {
+        if(Object.prototype.hasOwnProperty.call(b,field)) a[field]=b[field];
+      }
     }
+  }
+  for(const kind of ['overlays','underlays']) {
+    for(let n=0;n<(proof[kind]||[]).length;n++) {
+      const a=proof[kind][n],b=original[kind][n];
+      if(b&&Object.prototype.hasOwnProperty.call(b,'text'))a.text=b.text;
+    }
+  }
+  for(let n=0;n<(proof.lines||[]).length;n++) {
+    const a=proof.lines[n],b=original.lines[n];
+    if(b&&Object.prototype.hasOwnProperty.call(b,'name'))a.name=b.name;
   }
   if(JSON.stringify(proof)!==JSON.stringify(original)){
     throw new Error('Puzzle data changed outside permitted metadata prose: '+game.id);
