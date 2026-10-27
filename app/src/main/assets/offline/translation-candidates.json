@@ -1284,6 +1284,18 @@
     ]
   },
   {
+    "english": "Special thanks to my supporters",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair",
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:original-html/#document/html/body/div/aside/div/nav/div/a/span",
+      "lineage-of-logic:original-html/#document/html/body/div/aside/div/nav/div/a/span"
+    ]
+  },
+  {
     "english": "strictly increase from the rounded bulb end.",
     "zhHans": "",
     "gameIds": [
@@ -1327,6 +1339,16 @@
     ]
   },
   {
+    "english": "Sudokuvania: Digits of Despair by Skeptical Mario (Sven's SudokuPad v0.611.0)",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:original-html/#document/html/head/title"
+    ]
+  },
+  {
     "english": "Sum Whip as portrayed",
     "zhHans": "",
     "gameIds": [
@@ -1344,6 +1366,18 @@
     ],
     "sourcePaths": [
       "digits-of-despair:puzzle.overlays[79].text"
+    ]
+  },
+  {
+    "english": "Sven Neumann",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair",
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:original-html/#document/html/body/div/div/div/div/a",
+      "lineage-of-logic:original-html/#document/html/body/div/div/div/div/a"
     ]
   },
   {
@@ -1759,7 +1793,9 @@
       "lineage-of-logic:puzzle.overlays[96].text",
       "lineage-of-logic:puzzle.overlays[97].text",
       "lineage-of-logic:puzzle.overlays[99].text",
-      "lineage-of-logic:puzzle.overlays[100].text"
+      "lineage-of-logic:puzzle.overlays[100].text",
+      "lineage-of-logic:puzzle.overlays[101].text",
+      "lineage-of-logic:puzzle.overlays[102].text"
     ]
   },
   {
@@ -1957,7 +1993,9 @@
       "lineage-of-logic:puzzle.overlays[110].text",
       "lineage-of-logic:puzzle.overlays[111].text",
       "lineage-of-logic:puzzle.overlays[112].text",
-      "lineage-of-logic:puzzle.overlays[113].text"
+      "lineage-of-logic:puzzle.overlays[113].text",
+      "lineage-of-logic:puzzle.overlays[114].text",
+      "lineage-of-logic:puzzle.overlays[115].text"
     ]
   },
   {
@@ -2455,7 +2493,9 @@
       "lineage-of-logic:puzzle.metadata.grids[102].title",
       "lineage-of-logic:puzzle.metadata.grids[103].title",
       "lineage-of-logic:puzzle.metadata.grids[104].title",
-      "lineage-of-logic:puzzle.metadata.grids[105].title"
+      "lineage-of-logic:puzzle.metadata.grids[105].title",
+      "lineage-of-logic:puzzle.metadata.grids[106].title",
+      "lineage-of-logic:puzzle.metadata.grids[107].title"
     ]
   },
   {
@@ -3606,6 +3646,16 @@
       "lineage-of-logic:puzzle.metadata.grids[21].author",
       "lineage-of-logic:puzzle.metadata.grids[37].author",
       "lineage-of-logic:puzzle.metadata.grids[38].author"
+    ]
+  },
+  {
+    "english": "Sudokuvania 2: Lineage of Logic by Skeptical Mario (Sven's SudokuPad v0.611.0)",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:original-html/#document/html/head/title"
     ]
   },
   {

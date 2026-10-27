@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "capturedAt": "2026-10-27T08:58:56.044Z",
+  "capturedAt": "2026-10-27T09:03:12.714Z",
   "entrypoints": [
     {
       "id": "digits-of-despair",
@@ -624,6 +624,11 @@
     },
     "https://www.googletagmanager.com/gtag/js?id=UA-173937060-1&cx=c&gtm=4e6an1": {
       "file": "files/534d8a31e941acb190c9d5d40071e1133b4a905aa1eba190633b2859eebbba25.js",
+      "mime": "application/javascript",
+      "bytes": 341907
+    },
+    "https://www.googletagmanager.com/gtag/js?id=UA-173937060-1&cx=c&gtm=4e6an1h1": {
+      "file": "files/0d3abd9f225247ce0d078e594da1fd14b62df5517e5ceb69ff3fdf7395e50ca9.js",
       "mime": "application/javascript",
       "bytes": 341907
     },
