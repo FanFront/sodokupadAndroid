@@ -635,12 +635,12 @@
     "https://sudokupad.app/__android/android.css": {
       "file": "mobile/android.css",
       "mime": "text/css",
-      "bytes": 5237
+      "bytes": 5563
     },
     "https://sudokupad.app/__android/android.js": {
       "file": "mobile/android.js",
       "mime": "application/javascript",
-      "bytes": 11775
+      "bytes": 15810
     }
   }
 }
