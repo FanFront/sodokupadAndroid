@@ -116,10 +116,14 @@ async function replay(entry, original = false) {
 
     // A fresh SudokuPad session may display a Start/Continue dialog before
     // the puzzle begins. Never press Restart; that could erase saved data.
-    const start = page.getByText(/^(Start Puzzle|Continue Puzzle|开始游戏|继续游戏)$/i).first();
+    // The actual SudokuPad button contains a ▶ icon, so its accessible
+    // name is NOT exactly "Start Puzzle". Do not anchor to a full match.
+    const start = page.getByRole('button', {
+      name:/Start Puzzle|Continue Puzzle|开始游戏|继续游戏/i
+    }).first();
     if(await start.count() && await start.isVisible()) {
-      await start.click({timeout:3500}).catch(error =>
-        report.errors.push('Start dialog click: ' + error.message.slice(0,180)));
+      await start.click({timeout:6000});
+      report.passes.push('Start/Continue puzzle dialog dismissed');
     }
     await page.waitForFunction(() => {
       const app = (typeof Framework === 'undefined' ? null : Framework)?.app;
