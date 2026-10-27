@@ -66,9 +66,7 @@ jobs:
         run: npm run build-html
       - name: Validate the local capture before packaging
         run: npm run verify
-      - name: Replay both games with all network requests blocked
-        run: node scripts/replay-offline.mjs
-      - name: Extract translation candidates privately
+      - name: Extract English text from HTML and puzzle data
         run: npm run extract-strings
       - name: Save captured resources and HTML into GitHub repository
         run: |
@@ -79,6 +77,8 @@ jobs:
             git commit -m "chore: save offline HTML and assets [offline snapshot]"
             git push origin "HEAD:${{ github.ref_name }}"
           fi
+      - name: Replay both games with all network requests blocked
+        run: node scripts/replay-offline.mjs
       - name: Build offline debug APK
         run: gradle --no-daemon :app:assembleDebug
       - name: Upload personal offline test APK
