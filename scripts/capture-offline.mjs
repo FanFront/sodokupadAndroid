@@ -90,6 +90,11 @@ async function visit(browser, url) {
     console.log('Capturing:', url);
     const response = await page.goto(url, {waitUntil:'domcontentloaded', timeout:90000});
     if (!response || response.status() >= 400) throw new Error('HTTP '+response?.status());
+    if (key(response.url()) !== key(url)) {
+      await Promise.allSettled([...writes]);
+      const finalResource = entries.get(key(response.url()));
+      if (finalResource) entries.set(key(url), finalResource);
+    }
     await page.waitForTimeout(WAIT_MS);
     const start = page.getByText(/Start Puzzle|Continue Puzzle/i).first();
     if (await start.count() && await start.isVisible()) {
