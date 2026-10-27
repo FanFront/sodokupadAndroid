@@ -15,6 +15,7 @@
             return Object.prototype.hasOwnProperty.call(dictionary, key);
         };
         var machineEnabled = !!allowMachine && !!window.SudokuTranslate;
+        var translationEnabled = true;
         var translations = new Map();
         var storedNodes = new Map(); // changed DOM nodes; lets players compare with English
         var pending = new Map(); // request id -> { original, nodes }
@@ -60,7 +61,7 @@
 
         function observeNode(node) {
             if (!node || !node.isConnected || node.nodeType !== 3) return;
-            if (!dictionary) return;
+            if (!translationEnabled || !dictionary) return;
             if (!visible(node.parentElement)) return;
             var saved = storedNodes.get(node);
             if (saved && node.nodeValue === saved.translated) return;
@@ -163,8 +164,9 @@
         });
         window.__spAndroidTranslator = {
             setMachine: function (enabled) {
+                translationEnabled = !!enabled;
                 machineEnabled = !!enabled && !!window.SudokuTranslate;
-                if (machineEnabled) {
+                if (translationEnabled) {
                     storedNodes.forEach(function (record, node) {
                         if (!node.isConnected) storedNodes.delete(node);
                     });
@@ -176,8 +178,9 @@
                     queued.clear();
                     storedNodes.forEach(function (record, node) {
                         if (!node.isConnected) { storedNodes.delete(node); return; }
-                        // Leave reviewed dictionary translations in place.
-                        if (node.nodeValue === record.translated && !dictionaryHas(record.original.trim())) {
+                        // Compare all visible labels with the source English,
+                        // including curated terms; puzzle data is unchanged.
+                        if (node.nodeValue === record.translated) {
                             node.nodeValue = record.original;
                             storedNodes.delete(node);
                         }
