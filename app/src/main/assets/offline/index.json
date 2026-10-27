@@ -631,6 +631,16 @@
       "file": "files/0d3abd9f225247ce0d078e594da1fd14b62df5517e5ceb69ff3fdf7395e50ca9.js",
       "mime": "application/javascript",
       "bytes": 341907
+    },
+    "https://sudokupad.app/__android/android.css": {
+      "file": "mobile/android.css",
+      "mime": "text/css",
+      "bytes": 3804
+    },
+    "https://sudokupad.app/__android/android.js": {
+      "file": "mobile/android.js",
+      "mime": "application/javascript",
+      "bytes": 7478
     }
   }
 }
