@@ -42,6 +42,51 @@
     }
   }
 
+  /**
+   * The large Sudokuvania board is about 50x50 cells. Fitting the WHOLE
+   * board to a 390px phone screen makes the entrance unreadably small.
+   * Focus the first entrance grid using the engine's built-in pan and zoom.
+   * User progress, fog and selected digits are not touched.
+   */
+  function focusEntrance() {
+    const a = app();
+    const f = feature();
+    if (!a || !a.puzzle || !a.puzzle.currentPuzzle || !f) return false;
+    if (!f.featureEnabled) {
+      // A mobile build needs the Large Puzzle feature for map gestures.
+      if (typeof f.attachElem === 'function') f.attachElem();
+      return false;
+    }
+    const board = doc.getElementById('board');
+    const svg = doc.getElementById('svgrenderer');
+    if (!board || !svg || !board.getBoundingClientRect().width) return false;
+    const viewBox = (svg.getAttribute('viewBox') || '').split(/\s+/).map(Number);
+    if (viewBox.length !== 4 || !viewBox.every(Number.isFinite) || viewBox[2] <= 0) return false;
+    const grids = a.sourcePuzzle?.metadata?.grids || [];
+    const entrance = grids[0];
+    const cellSize = typeof SvgRenderer !== 'undefined' ? SvgRenderer.CellSize : 64;
+    // Grid coordinates from metadata are zero-based.
+    const focusCol = entrance && Number.isFinite(+entrance.left)
+      ? +entrance.left + Math.max(1, (+entrance.width || 6) * 0.5)
+      : 3;
+    const focusRow = entrance && Number.isFinite(+entrance.top)
+      ? +entrance.top + Math.max(0.5, (+entrance.height || 6) * 0.5)
+      : 22;
+    const playfield = doc.querySelector('.game')?.getBoundingClientRect();
+    if (!playfield || playfield.height < 120 || playfield.width < 120) return false;
+    const usable = Math.min(playfield.width / (7 * cellSize),
+      playfield.height / (9 * cellSize));
+    const scale = Math.max(0.38, Math.min(0.82, usable));
+    const baseScale = Number.isFinite(f.baseScale) ? f.baseScale : 1;
+    f.zoomLevel = Math.max(1, 1 + scale - baseScale);
+    f.panPos = [
+      (focusCol * cellSize - (viewBox[0] + 0.5 * viewBox[2])) * scale,
+      (focusRow * cellSize - (viewBox[1] + 0.5 * viewBox[3])) * scale
+    ];
+    f.rawUpdateTransform();
+    return true;
+  }
+
   function doGameAction(action, value) {
     if (action === 'home') {
       window.location.href = 'sudokuandroid://home';
@@ -62,9 +107,7 @@
         return;
       }
       if (action === 'recenter') {
-        f.zoomLevel = 1;
-        f.panPos = [0,0];
-        f.updateTransform();
+        if (!focusEntrance()) notify('地图仍在载入中');
       } else {
         const r = f.boEl.getBoundingClientRect();
         f.handleZoomInOut(action === 'zoom-in' ? 1 : -1,
@@ -225,5 +268,22 @@
   ['touchstart','touchmove','touchend','touchcancel'].forEach(type =>
     doc.addEventListener(type, capture, {capture:true,passive:false}));
 
-  window.AndroidSudokuvaniaPort = {notify, updateModes, dock};
+  // Do not steal the player's current position after startup. Only focus
+  // once, after the decoded puzzle metadata and SVG viewBox are ready.
+  let tries = 0;
+  const timer = setInterval(() => {
+    if (focusEntrance()) {
+      clearInterval(timer);
+    } else if (++tries > 50) {
+      clearInterval(timer);
+      notify('棋盘未能加载：请检查离线资源并重新打开游戏');
+      console.error('Android board startup failed', {
+        framework: !!app(), loaded: !!app()?.puzzle?.currentPuzzle,
+        largePuzzle: !!feature()?.featureEnabled,
+        viewBox: doc.getElementById('svgrenderer')?.getAttribute('viewBox')
+      });
+    }
+  }, 400);
+
+  window.AndroidSudokuvaniaPort = {notify, updateModes, focusEntrance, dock};
 })();
