@@ -31,6 +31,20 @@ if (!expectedBosses.length) {
   if (process.env.OFFLINE_REQUIRE_BOSS_PUZZLES === '1') throw new Error(message);
   console.warn('WARNING:',message);
 }
+// Check against an independent source: the authored boss links already
+// present in the translated main-map metadata, not just a generated count.
+const candidates = JSON.parse(await readFile(join(root,'translation-candidates.json'),'utf8'));
+const sourceBosses = new Set();
+for (const item of candidates) {
+  for (const match of String(item.english || '').matchAll(/\[([^\]]+)\]\((https:\/\/sudokupad\.app\/[^)\s]+)\)/g)) {
+    if (/boss|首领/i.test(match[1]) || /\/boss-/i.test(match[2])) sourceBosses.add(match[2]);
+  }
+}
+if (expectedBosses.length) {
+  for (const url of sourceBosses) {
+    if (!expectedBosses.includes(url)) throw new Error('Boss absent from manifest: '+url);
+  }
+}
 for (const url of expectedBosses) {
   if (!/^https:\/\/sudokupad\.app\//.test(url)) throw new Error('Unsafe boss URL: '+url);
   const page = index.assets[url];
