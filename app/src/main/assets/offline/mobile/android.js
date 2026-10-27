@@ -8,9 +8,9 @@
   const doc = document;
   const root = doc.documentElement;
   root.classList.add('android-port');
-  const app = () => window.Framework && window.Framework.app;
-  const feature = () => window.Framework && window.Framework.features &&
-    window.Framework.features.largepuzzle;
+  const getFramework = () => typeof Framework !== 'undefined' ? Framework : null;
+  const app = () => getFramework()?.app;
+  const feature = () => getFramework()?.features?.largepuzzle;
   let moveMode = false;
   let drag = null;
   let noticeTimer;
@@ -128,7 +128,7 @@
         }
         case 'letter': {
           if (typeof ToolLetter === 'undefined') return notify('该谜题未加载字母工具');
-          if (!a.hasTool('letter')) window.Framework.addTool(ToolLetter);
+          if (!a.hasTool('letter')) getFramework().addTool(ToolLetter);
           ToolLetter.tool.toggleMode();
           updateModes();
           notify(ToolLetter.tool.letterMode ? '已切换至字母键盘' : '已切换至数字键盘');
@@ -139,7 +139,7 @@
           break;
         case 'tool':
           if (value === 'pen' && !a.hasTool('pen') && typeof ToolPen !== 'undefined') {
-            window.Framework.addTool(ToolPen);
+            getFramework().addTool(ToolPen);
           }
           if (!a.hasTool(value)) return notify('当前游戏不支持这种标记');
           a.changeTool(value);
