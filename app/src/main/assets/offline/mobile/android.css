@@ -48,7 +48,9 @@ html.android-port .puzzle-rules, html.android-port .dialog-content {
   position: fixed;
   inset-inline: 0;
   bottom: 0;
-  z-index: 15000;
+  /* Above the engine's transparent input layers, below modal dialogs. */
+  z-index: 25000;
+  pointer-events: auto !important;
   background: #111c2c;
   color: #f7f8ff;
   padding: 5px max(5px,env(safe-area-inset-right)) calc(5px + env(safe-area-inset-bottom)) max(5px,env(safe-area-inset-left));
@@ -158,4 +160,11 @@ html.android-port .icon-toby {
   display: none !important;
   content: none !important;
   background-image: none !important;
+}
+
+html.android-port #android-gamepad button[data-android-action] {
+  pointer-events: auto !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -webkit-touch-callout: none !important;
 }
