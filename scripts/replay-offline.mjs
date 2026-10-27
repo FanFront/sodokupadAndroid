@@ -40,6 +40,45 @@ try {
     await page.waitForTimeout(2200);
     try {
       await page.waitForSelector('#android-gamepad', {timeout:12000});
+      // Regression for a real Android report: controls loaded correctly but
+      // the puzzle was blank because the desktop #controls offset placed the
+      // board offscreen. The numberpad alone is NOT a successful game load.
+      await page.waitForFunction(() => {
+        const a = window.Framework?.app;
+        const board = document.querySelector('#board');
+        const svg = document.querySelector('#svgrenderer');
+        return !!a?.puzzle?.currentPuzzle && !!svg?.getAttribute('viewBox')
+          && !!board && parseFloat(getComputedStyle(board).opacity) >= 0.99;
+      }, null, {timeout:20000});
+      const frame = await page.evaluate(() => {
+        const board = document.querySelector('#board').getBoundingClientRect();
+        const game = document.querySelector('.game').getBoundingClientRect();
+        const feature = window.Framework?.features?.largepuzzle;
+        return {
+          board:{left:board.left,top:board.top,right:board.right,bottom:board.bottom,
+            width:board.width,height:board.height},
+          game:{left:game.left,top:game.top,right:game.right,bottom:game.bottom},
+          viewBox:document.querySelector('#svgrenderer').getAttribute('viewBox'),
+          scale:feature?.baseScale + feature?.zoomLevel - 1,
+          gridRows:window.Framework?.app?.puzzle?.rows,
+          gridCols:window.Framework?.app?.puzzle?.cols
+        };
+      });
+      if(frame.board.width <= 10 || frame.board.height <= 10 ||
+         frame.board.right < frame.game.left || frame.board.left > frame.game.right ||
+         frame.board.bottom < frame.game.top || frame.board.top > frame.game.bottom) {
+        problems.add('Rendered puzzle is outside mobile viewport: '+entry.id+
+          ' '+JSON.stringify(frame));
+      }
+      if(frame.gridRows < 20 || frame.gridCols < 20) {
+        problems.add('Wrong or empty offline puzzle package loaded: '+entry.id+
+          ' '+JSON.stringify(frame));
+      }
+      if(frame.scale < 0.35) {
+        problems.add('Puzzle is too small to play on phone: '+entry.id+
+          ' scale '+frame.scale);
+      }
+
       const buttonCount=await page.locator('#android-gamepad button[data-android-action="digit"]').count();
       if(buttonCount!==10)problems.add('Incomplete Android keypad: '+entry.id);
       const pan=page.locator('#android-gamepad button[data-android-action="pan"]');
