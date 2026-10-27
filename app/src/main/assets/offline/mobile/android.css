@@ -74,8 +74,8 @@ html.android-port .puzzle-rules, html.android-port .dialog-content {
 }
 #android-gamepad .android-actions {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0,1fr));
-  gap: 4px;
+  grid-template-columns: repeat(9, minmax(0,1fr));
+  gap: 3px;
 }
 #android-gamepad button {
   min-width: 0;
@@ -168,4 +168,83 @@ html.android-port #android-gamepad button[data-android-action] {
   user-select: none !important;
   -webkit-user-select: none !important;
   -webkit-touch-callout: none !important;
+}
+
+
+/* Current-grid rules are copied out of the original invisible desktop
+   #controls element, so links remain legible and tappable on phones. */
+#android-gamepad button[hidden] { display: none !important; }
+#android-region-overlay {
+  position: fixed;
+  z-index: 29000;
+  top: 0; left: 0; right: 0;
+  bottom: var(--android-dock-height, 218px);
+  padding: max(12px, env(safe-area-inset-top)) 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 14, 24, .78);
+  pointer-events: auto;
+  font-family: system-ui, 'Noto Sans SC', sans-serif;
+}
+#android-region-overlay .android-region-dialog {
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 620px);
+  max-height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background: #17243a;
+  border: 1px solid #6887ac;
+  border-radius: 12px;
+  color: #f7f9ff;
+  box-shadow: 0 15px 40px rgba(0,0,0,.5);
+}
+#android-region-overlay header {
+  padding: 9px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: #263d5d;
+}
+#android-region-overlay header button {
+  border: 1px solid #aec6ea;
+  border-radius: 8px;
+  padding: 7px 12px;
+  background: #34547b;
+  color: white;
+  font-size: 15px;
+  touch-action: manipulation;
+}
+#android-region-overlay .android-region-content {
+  padding: 12px 14px 20px;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  -webkit-user-select: text;
+  user-select: text;
+}
+#android-region-overlay .android-region-content a {
+  color: #9ed3ff;
+  text-decoration: underline;
+}
+#android-region-overlay .android-boss-link {
+  display: block;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border: 1px solid #9dc7f0;
+  border-radius: 8px;
+  background: #315277;
+  color: #fff !important;
+  font-weight: 600;
+  min-height: 42px;
+  touch-action: manipulation;
+}
+#android-region-overlay .gridrulessection,
+#android-region-overlay .gridrules {
+  margin: 0;
 }
