@@ -199,8 +199,12 @@
     if (!button || button.disabled) return false;
     // Suppress synthetic click/pointer events for a touch we just handled.
     // Never suppress another real touchstart/touchend gesture.
-    if (kind !== 'touch' && lastActivation?.button === button &&
-        performance.now() - lastActivation.at < 550) return true;
+    const syntheticClick = kind === 'click' && lastActivation?.button === button &&
+      performance.now() - lastActivation.at < 550;
+    const duplicateTouchPointer = kind === 'pointer' &&
+      lastActivation?.kind === 'touch' && lastActivation.button === button &&
+      performance.now() - lastActivation.at < 180;
+    if(syntheticClick || duplicateTouchPointer) return true;
     lastActivation = {button, kind, at:performance.now()};
     button.dataset.androidTapCount = String((+button.dataset.androidTapCount || 0)+1);
     doGameAction(button.dataset.androidAction,button.dataset.value);
