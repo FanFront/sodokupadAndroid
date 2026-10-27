@@ -1,196 +1,4366 @@
 [
   {
-    "english": "{ if('undefined' !== typeof PuzzleLoader) { clearInterval(waitIntervalId); updateSudokuPadLinks(); } }, 300); })();",
-    "zhHans": "",
-    "gameIds": [
-      "digits-of-despair",
-      "lineage-of-logic"
-    ],
-    "foundIn": [
-      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
-    ]
-  },
-  {
-    "english": "} else if(typeof urlQueryPuzzleId === 'string' && urlQueryPuzzleId !== '') { // Reading puzzleId from url query string: ?puzzleid=",
-    "zhHans": "",
-    "gameIds": [
-      "digits-of-despair",
-      "lineage-of-logic"
-    ],
-    "foundIn": [
-      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
-    ]
-  },
-  {
-    "english": "<a id=\"aslink\" href=\"https://artisanalsudoku.substack.com/?utm_source=sudokupad&utm_campaign=artisanal164\" style=\"position:relative;display:block;padding:0.5rem;margin:-1rem auto 0.5rem auto;text-align:center;outline:1px dotted #ffb700;outline-offset:-0.5rem;\"> <div style=\"position:absolute;top:0.5rem;right:0.5rem;font-size:small;background:#ffb700;padding:0.05rem;\">AD</div> <div style=\"margin-top:-0.5rem;height:310px;overflow:hidden;\"><img src=\"/images/artisinalsudoku_testad.png\"></div> <div style=\"padding-bottom:0.5rem;font-size:1.1rem;\">More puzzles at artisanalsudoku.com</div> </a>",
-    "zhHans": "",
-    "gameIds": [],
-    "foundIn": [
-      "https://sudokupad.app/assets/sudokupad.config.json"
-    ]
-  },
-  {
-    "english": "<a id=\"aslink\" href=\"https://artisanalsudoku.substack.com/?utm_source=sudokupad&utm_campaign=artisanal165\" style=\"position:relative;display:block;padding:0.5rem;margin:-1rem auto 0.5rem auto;text-align:center;outline:1px dotted #ffb700;outline-offset:-0.5rem;\"> <div style=\"position:absolute;top:0.5rem;right:0.5rem;font-size:small;background:#ffb700;padding:0.05rem;\">AD</div> <div style=\"margin-top:-0.5rem;height:310px;overflow:hidden;\"><img src=\"/images/artisinalsudoku_testad.png\"></div> <div style=\"padding-bottom:0.5rem;font-size:1.1rem;\">More puzzles at artisanalsudoku.com</div> </a>",
-    "zhHans": "",
-    "gameIds": [],
-    "foundIn": [
-      "https://sudokupad.app/assets/sudokupad.config.json"
-    ]
-  },
-  {
-    "english": "<a id=\"aslink\" href=\"https://artisanalsudoku.substack.com/?utm_source=sudokupad&utm_campaign=artisanal166\" style=\"position:relative;display:block;padding:0.5rem;margin:-1rem auto 0.5rem auto;text-align:center;outline:1px dotted #ffb700;outline-offset:-0.5rem;\"> <div style=\"position:absolute;top:0.5rem;right:0.5rem;font-size:small;background:#ffb700;padding:0.05rem;\">AD</div> <div style=\"margin-top:-0.5rem;height:310px;overflow:hidden;\"><img src=\"/images/artisinalsudoku_testad.png\"></div> <div style=\"padding-bottom:0.5rem;font-size:1.1rem;\">More puzzles at artisanalsudoku.com</div> </a>",
-    "zhHans": "",
-    "gameIds": [],
-    "foundIn": [
-      "https://sudokupad.app/assets/sudokupad.config.json"
-    ]
-  },
-  {
-    "english": "<a id=\"aslink\" href=\"https://artisanalsudoku.substack.com/?utm_source=sudokupad&utm_campaign=artisanal167\" style=\"position:relative;display:block;padding:0.5rem;margin:-1rem auto 0.5rem auto;text-align:center;outline:1px dotted #ffb700;outline-offset:-0.5rem;\"> <div style=\"position:absolute;top:0.5rem;right:0.5rem;font-size:small;background:#ffb700;padding:0.05rem;\">AD</div> <div style=\"margin-top:-0.5rem;height:310px;overflow:hidden;\"><img src=\"/images/artisinalsudoku_testad.png\"></div> <div style=\"padding-bottom:0.5rem;font-size:1.1rem;\">More puzzles at artisanalsudoku.com</div> </a>",
-    "zhHans": "",
-    "gameIds": [],
-    "foundIn": [
-      "https://sudokupad.app/assets/sudokupad.config.json"
-    ]
-  },
-  {
-    "english": "<a id=\"aslink\" href=\"https://artisanalsudoku.substack.com/?utm_source=sudokupad&utm_campaign=artisanal168\" style=\"position:relative;display:block;padding:0.5rem;margin:-1rem auto 0.5rem auto;text-align:center;outline:1px dotted #ffb700;outline-offset:-0.5rem;\"> <div style=\"position:absolute;top:0.5rem;right:0.5rem;font-size:small;background:#ffb700;padding:0.05rem;\">AD</div> <div style=\"margin-top:-0.5rem;height:310px;overflow:hidden;\"><img src=\"/images/artisinalsudoku_testad.png\"></div> <div style=\"padding-bottom:0.5rem;font-size:1.1rem;\">More puzzles at artisanalsudoku.com</div> </a>",
-    "zhHans": "",
-    "gameIds": [],
-    "foundIn": [
-      "https://sudokupad.app/assets/sudokupad.config.json"
-    ]
-  },
-  {
-    "english": "<a id=\"aslink\" href=\"https://artisanalsudoku.substack.com/?utm_source=sudokupad&utm_campaign=artisanal169\" style=\"position:relative;display:block;padding:0.5rem;margin:-1rem auto 0.5rem auto;text-align:center;outline:1px dotted #ffb700;outline-offset:-0.5rem;\"> <div style=\"position:absolute;top:0.5rem;right:0.5rem;font-size:small;background:#ffb700;padding:0.05rem;\">AD</div> <div style=\"margin-top:-0.5rem;height:310px;overflow:hidden;\"><img src=\"/images/artisinalsudoku_testad.png\"></div> <div style=\"padding-bottom:0.5rem;font-size:1.1rem;\">More puzzles at artisanalsudoku.com</div> </a>",
-    "zhHans": "",
-    "gameIds": [],
-    "foundIn": [
-      "https://sudokupad.app/assets/sudokupad.config.json"
-    ]
-  },
-  {
-    "english": "<a id=\"aslink\" href=\"https://artisanalsudoku.substack.com/?utm_source=sudokupad&utm_campaign=artisanal170\" style=\"position:relative;display:block;padding:0.5rem;margin:-1rem auto 0.5rem auto;text-align:center;outline:1px dotted #ffb700;outline-offset:-0.5rem;\"> <div style=\"position:absolute;top:0.5rem;right:0.5rem;font-size:small;background:#ffb700;padding:0.05rem;\">AD</div> <div style=\"margin-top:-0.5rem;height:310px;overflow:hidden;\"><img src=\"/images/artisinalsudoku_testad.png\"></div> <div style=\"padding-bottom:0.5rem;font-size:1.1rem;\">More puzzles at artisanalsudoku.com</div> </a>",
-    "zhHans": "",
-    "gameIds": [],
-    "foundIn": [
-      "https://sudokupad.app/assets/sudokupad.config.json"
-    ]
-  },
-  {
-    "english": "body { background-color: #121212; } /* Avoid flash-of-white */",
-    "zhHans": "",
-    "gameIds": [
-      "digits-of-despair",
-      "lineage-of-logic"
-    ],
-    "foundIn": [
-      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
-    ]
-  },
-  {
-    "english": "document.location = url; let gtagArgs = ['event', 'outbound', 'sudokupad', url, { transport: 'beacon', hitCallback: openUrl, eventCallback: openUrl, hitCallbackFail: openUrl, }]; if(typeof ga === 'function') ga('send', ...gtagArgs); else gtag(...gtagArgs); setTimeout(openUrl, 100); }",
-    "zhHans": "",
-    "gameIds": [
-      "digits-of-despair",
-      "lineage-of-logic"
-    ],
-    "foundIn": [
-      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
-    ]
-  },
-  {
-    "english": "function getPuzzleId(puzzleId = '') { const rePuzzleId = /^([0-9A-Za-z]+|classic(.*)|.+)$/; var urlQueryPuzzleId = document.location.search.replace(/^\\?.*puzzleid=([^&]+).*|.*/, '$1'); var urlPathPuzzleId = (document.location.pathname.match(/^\\/(?:sudoku\\/)?(.+)$/) || [])[1]; if(typeof puzzleId === 'string' && puzzleId !== '') { //Reading puzzleId from pre-set variable: puzzleid =",
-    "zhHans": "",
-    "gameIds": [
-      "digits-of-despair",
-      "lineage-of-logic"
-    ],
-    "foundIn": [
-      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
-    ]
-  },
-  {
-    "english": "function preventZoom(event) { console.log('preventZoom:', event); event.preventDefault(); document.body.style.zoom = 0.999999; } document.addEventListener('gesturestart', preventZoom); document.addEventListener('gesturechange', preventZoom); document.addEventListener('gestureend', preventZoom);",
-    "zhHans": "",
-    "gameIds": [
-      "digits-of-despair",
-      "lineage-of-logic"
-    ],
-    "foundIn": [
-      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
-    ]
-  },
-  {
-    "english": "puzzleId = urlQueryPuzzleId; } else if(typeof urlPathPuzzleId === 'string' && urlPathPuzzleId !== '') { // Reading puzzleId from url path: /sudoku/",
-    "zhHans": "",
-    "gameIds": [
-      "digits-of-despair",
-      "lineage-of-logic"
-    ],
-    "foundIn": [
-      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
-    ]
-  },
-  {
-    "english": "Special thanks to my supporters",
-    "zhHans": "",
-    "gameIds": [
-      "digits-of-despair",
-      "lineage-of-logic"
-    ],
-    "foundIn": [
-      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
-    ]
-  },
-  {
-    "english": "Sudokuvania 2: Lineage of Logic by Skeptical Mario (Sven's SudokuPad v0.611.0)",
-    "zhHans": "",
-    "gameIds": [
-      "lineage-of-logic"
-    ],
-    "foundIn": [
-      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
-    ]
-  },
-  {
-    "english": "Sudokuvania: Digits of Despair by Skeptical Mario (Sven's SudokuPad v0.611.0)",
+    "english": "Every 100 years, the mysterious castle of Sudokuvania appears in the countryside. Legend has it that it contains the Secret of Sudoku. Gathering the last few given digits in the area, you solemnly approach the boxy fortress, determined to discover the secret and share it with your favorite people.\n---\n\nNote for SudokuPad: Sudokuvania is best played in a desktop browser.\nFor the best experience, open the Settings menu and ensure the following settings are enabled:\nExperimental > Test Large Puzzle UI: ON\nVisual > Draw Arrows Above Lines: ON\nVisual > Disable Emoji Replacement: ON\n\nRules:\nGattai Sudoku - In each square grid, enter digits from 1-N into each row, column, and region, where N is the length of each side of the grid.\nDynamic Fog - The map is covered with fog. Placing correct digits may reveal more clues or rules.\nClues may only be used if their associated rule is uncovered in the Learned Rules panel (in the upper left).\nDynamic Rules - Selecting cells can change the rules displayed in this panel (scroll down to see them); to avoid spoilers, try not to read the rules when a cell covered by fog is selected.\n* Select a cell in the map to learn more about its grid, and to get a link to its Boss Puzzle (if applicable).\n* Select a rule in the Learned Rules panel for more details.",
     "zhHans": "",
     "gameIds": [
       "digits-of-despair"
     ],
-    "foundIn": [
-      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1"
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.rules"
     ]
   },
   {
-    "english": "Sven Neumann",
+    "english": "The castle of Sudokuvania shimmers in the morning air and dissipates with the last of the remaining fog. A short distance away, you trudge up a small hill towards the waiting figure of the Guru. Somehow, you aren’t surprised to see her here.\n“The world will never know how you saved Sudoku from those cultists,” she says. “Was it worth it? Did you find what you were looking for?”\nYou think about the adventures you’ve had and the friends you made along the way, and nod. You may not have found the Secret of Sudoku, but you did gain insight you’ll keep all your life. That, and a sack of gold.\n“One more thing,” the Guru calls as you depart. (You wish she would stop doing that.) “Did you remember to turn off the lights before you left?”\nOh, bobbins.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.msgcorrect"
+    ]
+  },
+  {
+    "english": "\"Nooooooo! It's not fair!\" The imp's pleading voice is pitiful, but it can't hide a deceitful tone. Who knows how long this creature has been guiding the course of Sudoku from its seat of power here? You can't allow it to continue.\nWith the last of the 7x7 grid filled, you stand at the doorway looking down on the defeated monster. Knowing the rest of the castle has also been filled with digits, you take hold of the lines throughout this 7x7 grid and pull sharply; the walls and ceiling instantly collapse onto the once-ruler, caving in the heart of Sudokuvania.\n\nYou wearily make your way towards the entryway, and the town outside. What was it all for? You'd never even found a hint of what happened to your father all those years ago. And what will happen to Sudoku if there is no king?\n\nYou suddenly become aware of the castle's power, a thrumming heat that had always been there, just behind your conscious mind. You had the sense that... it *wanted* you to stay. It was about to leave this plane of existence, and it needed a ruler. After all, someone had to be in charge of Sudoku--to set the rules and dictate the flows of logic for the puzzling world to solve. And you had proved yourself tonight, hadn't you?\n\nAnn Givens and her father meet you at the front gate of Sudokuvania. They see you smile as you approach, and their own smiles fade as you swing the gate shut between you. Then the castle itself shimmers and vanishes, and they never see you again.\n\nCongratulations! You have conquered Sudokuvania and become the ruler of Sudoku.\n\nDeveloped by Skeptical Mario\n\nSudokuPad by Sven Neumann\n\nCreated with SudokuMaker by sirxemic",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.msgcorrect"
+    ]
+  },
+  {
+    "english": "Ever since he disappeared in a Sudoku attack, you have had questions about your father's fate. Now that the mythical castle Sudokuvania has reappeared, you know the answers must lie somewhere within.\n---\n\n[version 1.1.1]\nRules:\nComplete the Quests by filling each grid according to its rules. Completely filling all grids is NOT required to reach an ending of the story.\nSudoku - Unless overridden by an uncovered rule, you may assume that each grid follows normal sudoku rules: Place digits from 1-n into each grid, where n is the grid's square size, without repeating in a row, column, or box.\nDynamic Fog - Entering a correct digit into a cell will clear the fog from that cell and perhaps others.\nDynamic Rules - Additional rules will be displayed in this panel when certain cells are selected. Abridged rules are also displayed on the map itself. These rules are only valid if the selected cell is NOT covered by fog. Some cells outside the grid are uncovered by default because they have no associated rules; drag at these 'pan handles' to avoid spoilers.\nSelect the ⚙️ to read about settings.\nSelect the 📋 to read about play controls.\n\n[Click here](https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1) to play the plain version of this puzzle.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.rules"
+    ]
+  },
+  {
+    "english": "'Outside the Boxes' quest, given",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[37].title",
+      "digits-of-despair:puzzle.metadata.grids[38].title"
+    ]
+  },
+  {
+    "english": "'Wall Sandwiches' quest, given",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[35].title",
+      "digits-of-despair:puzzle.metadata.grids[36].title"
+    ]
+  },
+  {
+    "english": "\"Hey, keep your eyes open for any collectible coins, you hear? There were only 45 ever made!\"",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[33].rules",
+      "digits-of-despair:puzzle.metadata.grids[34].rules"
+    ]
+  },
+  {
+    "english": "\"I hid some snacks in the walls of the castle in case I get hungry later, but I'm hungry now, and I can't remember the recipes! If I tell you where to find them, can you look and see what they are made of?\"\\n\\nWall Food clues next to a row or column indicate the sum of the digits between two 'crust' digits in that row or column. Different food icons can have different crust digits.\\n\\nGiven the food icon and sum for three rows/columns, enter the two crust digits (low and high, respectively) in this panel to complete the quest.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[35].rules",
+      "digits-of-despair:puzzle.metadata.grids[36].rules"
+    ]
+  },
+  {
+    "english": "\"You have learned much, but you are still bound by the confines of the grid. Only by letting your mind go free can you truly understand the essence of Sudoku.\"\\n\\nRemember, all clues (outside of the examples in the Learned Rules panel) must be correct. Solve the clues outside the castle's grids to complete the quest.\\n\\nCells outside of grids may contain a 0 or they may be blank. Examine the clue rules closely to deduce which cells must be filled.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[37].rules",
+      "digits-of-despair:puzzle.metadata.grids[38].rules"
+    ]
+  },
+  {
+    "english": "(👁️)s indicate the number of digits seen in the direction pointed at by an arrow. Larger digits obscure and block sight of subsequent smaller digits in the adjacent row or column.\\nNote: The clue only counts digits in the adjacent grid, not the entire map.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[22].rules"
+    ]
+  },
+  {
+    "english": "A blue ROAMING line allows fast travel.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[267].text"
+    ]
+  },
+  {
+    "english": "A book icon (📖) in column N contains a digit matching the column X where the digit N is found in that row.\\nFor example, a 📖 in R3C5 containing 7 indicates R3C7 is 5.\\nThe row and column numbers only apply to the current grid.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[24].rules"
+    ]
+  },
+  {
+    "english": "A CODEX cell (📖) indicates the column in its row",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[329].text"
+    ]
+  },
+  {
+    "english": "A digit on a COLLECTIBLE COIN indicates the",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[268].text"
+    ]
+  },
+  {
+    "english": "A digit on a Collectible Coin indicates the number of coins bearing that digit in the entire map.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[27].rules"
+    ]
+  },
+  {
+    "english": "A dilapidated garden full of green vines and crumbling statues. There isn't a soul in sight... so why do you hear movement?\\n\\n[Click here when ready to play the Courtyard Boss Puzzle](https://sudokupad.app/frudzw3n73).",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[1].rules"
+    ]
+  },
+  {
+    "english": "A hint given",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[33].title",
+      "digits-of-despair:puzzle.metadata.grids[34].title"
+    ]
+  },
+  {
+    "english": "A maze of corridors that once housed the servants, and perhaps the naked singles, of Sudokuvania. Most of the doors are locked...\\n\\n[Click here when ready to play the Quarters Boss Puzzle](https://sudokupad.app/qs2zx7uynr).",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[2].rules"
+    ]
+  },
+  {
+    "english": "A secret that can't be found",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[16].title"
+    ]
+  },
+  {
+    "english": "A Wall Food clue indicates the sum of the digits between a particular pair of 'crust' digits in the adjacent row or column.\\nThe 'crust' digits are the same for each clue with a particular icon, i.e., all 🥪 clues use the same crusts, which may be different from 🌯 clues.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[31].rules"
+    ]
+  },
+  {
+    "english": "A WALL FOOD clue indicates the sum of the digits between two particular digits",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[123].text"
+    ]
+  },
+  {
+    "english": "AKARI LANTERN",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[301].text"
+    ]
+  },
+  {
+    "english": "All clues contained in the HALL OF",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[105].text"
+    ]
+  },
+  {
+    "english": "All Knight's moves",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[72].text"
+    ]
+  },
+  {
+    "english": "Along a bronze thermometer line, digits increase from the bulb to the tip.\\nEach line has exactly one bulb.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[30].rules"
+    ]
+  },
+  {
+    "english": "Along a green line, digits must differ from the next digit on the line by 5 or more.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[20].rules"
+    ]
+  },
+  {
+    "english": "Along a red line, cells an equal distance from the center cell of the line contain digits that sum to the center cell.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[25].rules"
+    ]
+  },
+  {
+    "english": "are strictly",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[73].text"
+    ]
+  },
+  {
+    "english": "Black dots always border two digits.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[354].text"
+    ]
+  },
+  {
+    "english": "Black dots separate two digits where one digit is double the other.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[21].rules"
+    ]
+  },
+  {
+    "english": "Black DOUBLE JUMP dots separate cells",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[263].text"
+    ]
+  },
+  {
+    "english": "Blank cells on whisper lines are ignored.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[355].text"
+    ]
+  },
+  {
+    "english": "But watch out for DARK cells.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[299].text"
+    ]
+  },
+  {
+    "english": "But whip arrows must still sum",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[352].text"
+    ]
+  },
+  {
+    "english": "Cells an equal distance from the center of a red",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[97].text"
+    ]
+  },
+  {
+    "english": "Cells in the FACTORY area separated by a chess",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[333].text"
+    ]
+  },
+  {
+    "english": "Cells on a WHIP sum to the digit",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[279].text"
+    ]
+  },
+  {
+    "english": "Check the upper left corner for known rules.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[289].text"
+    ]
+  },
+  {
+    "english": "Clues contained entirely inside the HALL OF ILLUSIONS grid are wrogn and indicate the opposite of their normal rules:\\nDigits on wrogn thermometers increase as they get closer to the bulb.\\nDigits on wrogn whisper lines must differ from adjacent digits by less than 5.\\nA digit in a wrogn dark cell must be greater than all orthogonally-adjacent non-dark cells.\\nWrogn black dots, arrows, and indexing clues must not portray the relationship in their respective rules.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[29].rules"
+    ]
+  },
+  {
+    "english": "Codex Cells as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[24].title"
+    ]
+  },
+  {
+    "english": "Coins are located throughout the map.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[273].text"
+    ]
+  },
+  {
+    "english": "Collectible Coins as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[27].title"
+    ]
+  },
+  {
+    "english": "Collectible Coins Found",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[337].text"
+    ]
+  },
+  {
+    "english": "COLLECTIBLE COINS!",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[127].text"
+    ]
+  },
+  {
+    "english": "Column Indexing",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[24].author"
+    ]
+  },
+  {
+    "english": "Counting Circles",
     "zhHans": "",
     "gameIds": [
       "digits-of-despair",
       "lineage-of-logic"
     ],
-    "foundIn": [
-      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
-      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[27].author",
+      "lineage-of-logic:puzzle.metadata.grids[35].author",
+      "lineage-of-logic:puzzle.metadata.grids[55].author"
+    ]
+  },
+  {
+    "english": "Dark Cells as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[26].title"
+    ]
+  },
+  {
+    "english": "Deconstruction Sudoku",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[32].author"
+    ]
+  },
+  {
+    "english": "Digits along a bronze Guide THERMO line",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[278].text"
+    ]
+  },
+  {
+    "english": "Digits on a thin gray arrow line sum to the digit in the attached circle.\\nArrows in the fog may cross between cells but never share a cell.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[19].rules"
+    ]
+  },
+  {
+    "english": "Divide the 6x5 grid into polyomino regions.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[87].text"
+    ]
+  },
+  {
+    "english": "Double Jump as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[21].title"
+    ]
+  },
+  {
+    "english": "DOUBLE jump!",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[81].text"
+    ]
+  },
+  {
+    "english": "Each cell's digit is the size of its region.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[88].text"
+    ]
+  },
+  {
+    "english": "energy has cleared fog",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[114].text"
+    ]
+  },
+  {
+    "english": "Entering correct digits reveals more of the map and possibly additional clue types.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[95].text"
+    ]
+  },
+  {
+    "english": "Every cell of a blue Roaming Line has a digit. The sequence of its cells is the same when read forwards or backwards.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[23].rules"
+    ]
+  },
+  {
+    "english": "Fast travel Zipline",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[119].text"
+    ]
+  },
+  {
+    "english": "FILLOMINO portal!",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[89].text"
+    ]
+  },
+  {
+    "english": "Find Mr. Snake's hidden food",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[339].text"
+    ]
+  },
+  {
+    "english": "Four 4x4 grids can be found by placing digits in clues adjacent to the map.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[40].rules"
+    ]
+  },
+  {
+    "english": "from much of the castle.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[115].text"
+    ]
+  },
+  {
+    "english": "Front Gate",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[0].author",
+      "digits-of-despair:puzzle.overlays[130].text"
+    ]
+  },
+  {
+    "english": "German Whispers",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[20].author"
+    ]
+  },
+  {
+    "english": "Golden Temple",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[10].author",
+      "digits-of-despair:puzzle.overlays[141].text"
+    ]
+  },
+  {
+    "english": "Guide Thermo as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[30].title"
+    ]
+  },
+  {
+    "english": "Guide THERMO!",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[112].text"
+    ]
+  },
+  {
+    "english": "Heed the guru's WARNING!",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[104].text"
+    ]
+  },
+  {
+    "english": "Hey, stop clicking random areas looking for stuff!",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[16].rules"
+    ]
+  },
+  {
+    "english": "Hidden Puzzle, designated",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[12].title",
+      "digits-of-despair:puzzle.metadata.grids[13].title",
+      "digits-of-despair:puzzle.metadata.grids[14].title",
+      "digits-of-despair:puzzle.metadata.grids[15].title"
+    ]
+  },
+  {
+    "english": "Hidden Puzzle!",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[86].text",
+      "digits-of-despair:puzzle.overlays[92].text",
+      "digits-of-despair:puzzle.overlays[103].text",
+      "digits-of-despair:puzzle.overlays[121].text"
+    ]
+  },
+  {
+    "english": "Hidden Puzzles",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[117].text"
+    ]
+  },
+  {
+    "english": "Hidden Puzzles, to be found",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[40].title"
+    ]
+  },
+  {
+    "english": "ILLUSIONS grid are lying.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[106].text"
+    ]
+  },
+  {
+    "english": "in a row or column. Cells in this grid which aren't in any region must not contain a digit.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[100].text"
+    ]
+  },
+  {
+    "english": "In each NxN grid, enter the digits 1-N into each cell without repeating in a row, column, or region.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[94].text"
+    ]
+  },
+  {
+    "english": "In the 11x11 THRONE ROOM area, instead of placing digits from 1-11 in each row and column, locate",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[98].text"
+    ]
+  },
+  {
+    "english": "In the 11x11 THRONE ROOM area, instead of placing digits from 1-11 in each row and column, locate nine 3x3 non-overlapping regions and place the digits from 1-9 into each one. Digits still may not repeat in a row or column.\\nCells in this grid which aren't in any region must not contain a digit.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[32].rules"
+    ]
+  },
+  {
+    "english": "in the adjacent row or column. The sum, and the digits, are the same for each clue",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[124].text"
+    ]
+  },
+  {
+    "english": "in the attached circle.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[276].text"
+    ]
+  },
+  {
+    "english": "In the HALL OF ILLUSIONS area, each clue",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[269].text"
+    ]
+  },
+  {
+    "english": "into the generator, and its",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[113].text"
+    ]
+  },
+  {
+    "english": "is lying and indicates the negation of",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[270].text"
+    ]
+  },
+  {
+    "english": "It is disorienting seeing the regions of this otherworldly prairie stretch out into the distance. The ground doesn't feel quite solid.\\n\\nIrregular sudoku - enter digits from 1-9 into each row, column, and marked region.\\n\\n[Click here when ready to play the Elsewhere Boss Puzzle](https://sudokupad.app/mtrhhm8g95).",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[8].rules"
+    ]
+  },
+  {
+    "english": "Its digits are the same read forwards or backwards.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[272].text"
+    ]
+  },
+  {
+    "english": "its normal rule (select here for examples)",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[271].text"
+    ]
+  },
+  {
+    "english": "knight's move cannot contain the same digit.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[334].text"
+    ]
+  },
+  {
+    "english": "LEARNED RULES",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[93].text"
+    ]
+  },
+  {
+    "english": "LIBRARY CODEX!",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[110].text"
+    ]
+  },
+  {
+    "english": "Minimum Cells",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[26].author"
+    ]
+  },
+  {
+    "english": "New rules and secrets may also be revealed.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[288].text"
+    ]
+  },
+  {
+    "english": "nine 3x3 non-overlapping regions and place the digits from 1-9 into each one. Digits still may not repeat",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[99].text"
+    ]
+  },
+  {
+    "english": "Normal sudoku rules apply in each grid.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[286].text"
+    ]
+  },
+  {
+    "english": "number of coins bearing that digit.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[285].text"
+    ]
+  },
+  {
+    "english": "of digits seen in the indicated direction's row/column,",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[265].text"
+    ]
+  },
+  {
+    "english": "On a WHISPER line, each digit must differ from",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[262].text"
+    ]
+  },
+  {
+    "english": "Only the dizzying drop and biting winds mar the spectacular view of the castle from atop its walls. The main tower looms oppressively from this close.\\n\\n[Click here when ready to play the Battlements Boss Puzzle](https://sudokupad.app/xu2ai5oymi).",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[4].rules"
+    ]
+  },
+  {
+    "english": "Open the secret door to the center of the castle.\\nRemember, cells outside grids do not all need to be filled as long as the clues are correct.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[17].rules"
+    ]
+  },
+  {
+    "english": "or arrows can be blank.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[351].text"
+    ]
+  },
+  {
+    "english": "orthogonally-adjacent non-dark cells.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[332].text"
+    ]
+  },
+  {
+    "english": "Other Quests",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[320].text"
+    ]
+  },
+  {
+    "english": "Outside cells on thermos",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[350].text"
+    ]
+  },
+  {
+    "english": "Outside the Boxes",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[297].text"
+    ]
+  },
+  {
+    "english": "Outside Tutorials",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[129].text"
+    ]
+  },
+  {
+    "english": "Pairs sum to the center even if one is blank.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[357].text"
+    ]
+  },
+  {
+    "english": "Palindrome Lines",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[23].author"
+    ]
+  },
+  {
+    "english": "Pipes sprawl along the walls and low ceiling in this dark place. You can only guess what purpose any of these mechanisms serve, but they all look important.\\n\\n[Click here when ready to play the Maintenance Boss Puzzle](https://sudokupad.app/84lyno986x).",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[6].rules"
+    ]
+  },
+  {
+    "english": "Placing correct digits reveals more of the map.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[287].text"
+    ]
+  },
+  {
+    "english": "Puzzle version",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[39].title"
+    ]
+  },
+  {
+    "english": "QUEST PROGRESS",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[232].text"
+    ]
+  },
+  {
+    "english": "Ratio Kropki",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair",
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[21].author",
+      "lineage-of-logic:puzzle.metadata.grids[29].author",
+      "lineage-of-logic:puzzle.metadata.grids[46].author"
+    ]
+  },
+  {
+    "english": "Regions of equal size may not share an edge.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[90].text"
+    ]
+  },
+  {
+    "english": "Roaming Lines as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[23].title"
+    ]
+  },
+  {
+    "english": "ROAMING Lines!",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[84].text"
+    ]
+  },
+  {
+    "english": "Sandwich Clues",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[31].author"
+    ]
+  },
+  {
+    "english": "SCRY-PEEPER clues (👁️) count the number",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[264].text"
+    ]
+  },
+  {
+    "english": "Secret Passage",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[17].author",
+      "digits-of-despair:puzzle.overlays[142].text"
+    ]
+  },
+  {
+    "english": "See the FAQ and player guide at https://tinyurl.com/SudokuvaniaFAQ",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[39].rules"
+    ]
+  },
+  {
+    "english": "Shaded Dark Cells are hard to clear fog around. They contain a digit that is less than any orthogonally-adjacent unshaded cell.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[26].rules"
+    ]
+  },
+  {
+    "english": "Shaded DARK cells have a lower value than",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[331].text"
+    ]
+  },
+  {
+    "english": "Shelves packed with books stretch nearly to the ceiling of the castle's library. It would be easy to lose your bearings in these narrow aisles.\\n\\n[Click here when ready to play the Library Boss Puzzle](https://sudokupad.app/ofvhfxebg3).",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[5].rules"
+    ]
+  },
+  {
+    "english": "Skeptical Mario",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair",
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.author",
+      "lineage-of-logic:puzzle.metadata.author"
+    ]
+  },
+  {
+    "english": "Skyscraper Clues",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[22].author"
+    ]
+  },
+  {
+    "english": "Solve clues outside the grid",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[338].text"
+    ]
+  },
+  {
+    "english": "Solve the",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[118].text",
+      "digits-of-despair:puzzle.overlays[128].text"
+    ]
+  },
+  {
+    "english": "Solve the Title",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[120].text"
+    ]
+  },
+  {
+    "english": "strictly increase from the rounded bulb end.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[277].text"
+    ]
+  },
+  {
+    "english": "Sudoku - In each NxN grid, enter a digit from 1-9 into each cell without repeating in a row, column or region.\\nMost grid's regions are 3x3 boxes.\\nDigits can repeat in a row or column as long as they are in separate grids.\\n\\nDynamic Fog - Entering the correct digit in a cell may clear some fog. No guessing is required.\\n\\nLearning Rules - Clues have no meaning until the associated rule is uncovered from the fog. Select a rule in the Learned Rules panel for more information.\\n\\nBoss Puzzles - When you uncover a Boss Cell (😈), click the link to the associated Boss Puzzle below (must have a cell in its grid selected).\\nSolving the Boss Puzzle will give the digit to be placed in the Boss Cell.\\n\\nOutside the Map - Cells outside of any grid do not need to contain any digit; or, they may contain the digit 0, as necessitated by nearby clues.\\nAll clues must be correct, even those outside the map.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[18].rules"
+    ]
+  },
+  {
+    "english": "Sudoku - In this 4x4 grid, enter digits from 1-4 into each row, column, and 2x2 box.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[12].rules",
+      "digits-of-despair:puzzle.metadata.grids[13].rules",
+      "digits-of-despair:puzzle.metadata.grids[14].rules",
+      "digits-of-despair:puzzle.metadata.grids[15].rules"
+    ]
+  },
+  {
+    "english": "Sudoku Maker v2025.04.24-dev-6294be4",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.source"
+    ]
+  },
+  {
+    "english": "Sum Whip as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[19].title"
+    ]
+  },
+  {
+    "english": "Sum WHIP!",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[79].text"
+    ]
+  },
+  {
+    "english": "The abandoned yet pristine factory floor is a silent monument to all of the Sudoku that must have been created here. You wonder if everyone isn't simply on break.\\n\\n[Click here when ready to play the Factory Boss Puzzle](https://sudokupad.app/ny34cxleh8).",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[3].rules"
+    ]
+  },
+  {
+    "english": "The Caretaker",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[33].author",
+      "digits-of-despair:puzzle.metadata.grids[34].author"
+    ]
+  },
+  {
+    "english": "The castle of Sudokuvania stands before you...\\n\\nSudoku - In this 6x6 grid, enter digits from 1-6 into each row, column, and 2x3 box.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[0].rules"
+    ]
+  },
+  {
+    "english": "The dazzling wealth on display in the castle's highest tower puts the rest of it to shame. Who knew Sudoku could be so lucrative?\\n\\n[Click here when ready to play the Golden Temple Boss Puzzle](https://sudokupad.app/vmp8mhugbr).",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[10].rules"
+    ]
+  },
+  {
+    "english": "the nearest digits on the line by 5 or more.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[274].text"
+    ]
+  },
+  {
+    "english": "The opulence of this grand hall is out of place when compared to areas you've already visited. Your greatest desires could be just behind any corner...\\n\\n[Click here when ready to play the Hall of Illusions Boss Puzzle](https://sudokupad.app/6cn54q09sv).",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[9].rules"
+    ]
+  },
+  {
+    "english": "the rules",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[18].author"
+    ]
+  },
+  {
+    "english": "the solver",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[40].author"
+    ]
+  },
+  {
+    "english": "The Sudoku Guru",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[37].author",
+      "digits-of-despair:puzzle.metadata.grids[38].author"
+    ]
+  },
+  {
+    "english": "The world seems stretched in this interdimensional tunnel where sudoku rules do not apply.\\n\\nFillomino - Divide the 6x5 grid into regions or 'polyominoes', and enter into each cell a digit equal to the size of its region. Regions of the same size cannot share a cell edge.\\nNote that the last column is also part of a sudoku grid and digits may not repeat in it.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[7].rules"
+    ]
+  },
+  {
+    "english": "Throne Room",
+    "zhHans": "王座厅",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[11].author",
+      "digits-of-despair:puzzle.overlays[140].text"
+    ]
+  },
+  {
+    "english": "Throne Room as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[32].title"
+    ]
+  },
+  {
+    "english": "to a digit in the whip's circle.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[353].text"
+    ]
+  },
+  {
+    "english": "To solve Boss Cells (😈), solve the Boss puzzle displayed when you select a cell in its grid.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[96].text"
+    ]
+  },
+  {
+    "english": "Two cells in the FACTORY grid may not have the same digit if they are separated by a single chess knight's move.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[28].rules"
+    ]
+  },
+  {
+    "english": "Unlocked AKARI LANTERN!",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[298].text"
+    ]
+  },
+  {
+    "english": "using logic",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[16].author"
+    ]
+  },
+  {
+    "english": "Wall Food as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[31].title"
+    ]
+  },
+  {
+    "english": "Wall Sandwiches",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[328].text"
+    ]
+  },
+  {
+    "english": "where digits obscure any subsequent smaller digits.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[266].text"
+    ]
+  },
+  {
+    "english": "where one digit is double the other.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[275].text"
+    ]
+  },
+  {
+    "english": "which contains a digit matching the Codex's column.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[330].text"
+    ]
+  },
+  {
+    "english": "Whisper Dash as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[20].title"
+    ]
+  },
+  {
+    "english": "WHISPER dash!",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[77].text"
+    ]
+  },
+  {
+    "english": "with a particular icon. The types of Wall Food in Sudokuvania are 🥪, 🌯, and 🍔.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[125].text"
+    ]
+  },
+  {
+    "english": "Wrogn Clues",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[29].author"
+    ]
+  },
+  {
+    "english": "You found a",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[85].text",
+      "digits-of-despair:puzzle.overlays[91].text",
+      "digits-of-despair:puzzle.overlays[102].text",
+      "digits-of-despair:puzzle.overlays[122].text"
+    ]
+  },
+  {
+    "english": "You found the",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[109].text"
+    ]
+  },
+  {
+    "english": "You have found the hidden heart of Castle Sudokuvania, and its columns are laden with some kind of arcane device. Can you deconstruct it before it activates and destroys Sudoku forever?\\n\\nDeconstruction - Locate nine 3x3 boxes to be placed in the 11x11 grid, and place digits from 1-9 into each box without repeating in a row or column. Cells not in any region must remain empty.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[11].rules"
+    ]
+  },
+  {
+    "english": "You plugged the",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[300].text"
+    ]
+  },
+  {
+    "english": "Zipline centers must contain a digit.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[356].text"
+    ]
+  },
+  {
+    "english": "ZIPLINE fast travel!",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.underlays[291].text"
+    ]
+  },
+  {
+    "english": "ZIPLINE sum to the digit in that center cell.",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.overlays[101].text"
+    ]
+  },
+  {
+    "english": "Zipper Lines",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "sourcePaths": [
+      "digits-of-despair:puzzle.metadata.grids[25].author"
+    ]
+  },
+  {
+    "english": "1 greater than its digit.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[335].text"
+    ]
+  },
+  {
+    "english": "3x3 boxes; they can be any shape,",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[342].text"
+    ]
+  },
+  {
+    "english": "6x6 quattroquadri rules apply.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[89].text"
+    ]
+  },
+  {
+    "english": "6x6 sudoku rules apply.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[85].text",
+      "lineage-of-logic:puzzle.overlays[98].text"
+    ]
+  },
+  {
+    "english": "9x9 irregular sudoku rules apply.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[94].text"
+    ]
+  },
+  {
+    "english": "9x9 sudoku rules apply.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[87].text",
+      "lineage-of-logic:puzzle.overlays[88].text",
+      "lineage-of-logic:puzzle.overlays[90].text",
+      "lineage-of-logic:puzzle.overlays[91].text",
+      "lineage-of-logic:puzzle.overlays[93].text",
+      "lineage-of-logic:puzzle.overlays[95].text",
+      "lineage-of-logic:puzzle.overlays[96].text",
+      "lineage-of-logic:puzzle.overlays[97].text",
+      "lineage-of-logic:puzzle.overlays[99].text",
+      "lineage-of-logic:puzzle.overlays[100].text"
+    ]
+  },
+  {
+    "english": "a breakable wall",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[80].author",
+      "lineage-of-logic:puzzle.metadata.grids[81].author",
+      "lineage-of-logic:puzzle.metadata.grids[82].author",
+      "lineage-of-logic:puzzle.metadata.grids[83].author",
+      "lineage-of-logic:puzzle.metadata.grids[84].author",
+      "lineage-of-logic:puzzle.metadata.grids[85].author",
+      "lineage-of-logic:puzzle.metadata.grids[86].author",
+      "lineage-of-logic:puzzle.metadata.grids[87].author",
+      "lineage-of-logic:puzzle.metadata.grids[88].author",
+      "lineage-of-logic:puzzle.metadata.grids[94].author"
+    ]
+  },
+  {
+    "english": "A diamond between two cells indicates that the difference between the values in those cells is 1.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[27].rules",
+      "lineage-of-logic:puzzle.metadata.grids[43].rules"
+    ]
+  },
+  {
+    "english": "a different digit from 0-9.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[155].text"
+    ]
+  },
+  {
+    "english": "A digit on a 🏺[vase] indicates the number of artifacts with that digit in the entire map.\\nWhen you've found all of a particular digit of artifact, its cell in the Journal will be uncovered.\\nUntil then, you will need to track them yourself...",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[35].rules",
+      "lineage-of-logic:puzzle.metadata.grids[55].rules"
+    ]
+  },
+  {
+    "english": "A door at the back of the kitchen's freezer leads to another, smaller, *colder* freezer.\\n[Click here to fight the boss](https://sudokupad.app/sudokuvania/boss-stalking-the-freezer).",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[174].rules"
+    ]
+  },
+  {
+    "english": "A food icon adjacent to a grid's row or column has a number which is the sum of the values in digits between two \"ingredient\" digits in that row or column. The \"ingredient digits\" depend on the icon used; for example, a 🥪 icon uses the digits 1 and 9.\\n\\nNo two recipes use the same pair of digits; learn the ingredient digits for different recipes to use those clues as you encounter them throughout the castle!\\nThe clue applies to any grid row or column orthogonally adjacent to the clue, but only in the adjacent grid.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[33].rules",
+      "lineage-of-logic:puzzle.metadata.grids[45].rules"
+    ]
+  },
+  {
+    "english": "A Nice Place To Solve",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[117].text"
+    ]
+  },
+  {
+    "english": "A pinched bridge between two cells indicates that the value in one of those cells is double the value in the other.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[29].rules",
+      "lineage-of-logic:puzzle.metadata.grids[46].rules"
+    ]
+  },
+  {
+    "english": "A scrap of paper left",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[109].title",
+      "lineage-of-logic:puzzle.metadata.grids[110].title",
+      "lineage-of-logic:puzzle.metadata.grids[111].title"
+    ]
+  },
+  {
+    "english": "A series of interconnected ballrooms is filled with music. You can't help but move with the beat, and realize it is a negative constraint.\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\n\\nAnti XV - No two orthogonally adjacent cells in the Ballroom may have values that sum to 5 or 10.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[11].rules",
+      "lineage-of-logic:puzzle.metadata.grids[72].rules"
+    ]
+  },
+  {
+    "english": "a single chess king's move",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[381].text"
+    ]
+  },
+  {
+    "english": "a stone figure",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[136].author"
+    ]
+  },
+  {
+    "english": "A triangle between two cells has an edge towards the greater of the values in those cells.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[26].rules"
+    ]
+  },
+  {
+    "english": "A wall near a cell border indicates that the values in the attached line segment sum to the value in the cell.\\nThe line segment never leaves the grid containing the wall.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[28].rules",
+      "lineage-of-logic:puzzle.metadata.grids[44].rules"
+    ]
+  },
+  {
+    "english": "activate the telescope.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[405].text"
+    ]
+  },
+  {
+    "english": "activating generators in the Dungeon",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[22].author",
+      "lineage-of-logic:puzzle.metadata.grids[39].author",
+      "lineage-of-logic:puzzle.metadata.grids[40].author"
+    ]
+  },
+  {
+    "english": "Additional rules:",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[103].text",
+      "lineage-of-logic:puzzle.overlays[104].text",
+      "lineage-of-logic:puzzle.overlays[105].text",
+      "lineage-of-logic:puzzle.overlays[107].text",
+      "lineage-of-logic:puzzle.overlays[108].text",
+      "lineage-of-logic:puzzle.overlays[109].text",
+      "lineage-of-logic:puzzle.overlays[110].text",
+      "lineage-of-logic:puzzle.overlays[111].text",
+      "lineage-of-logic:puzzle.overlays[112].text",
+      "lineage-of-logic:puzzle.overlays[113].text"
+    ]
+  },
+  {
+    "english": "adjacent non-vault cell.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[392].text"
+    ]
+  },
+  {
+    "english": "Adjacent values differ by at least 5.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[68].text"
+    ]
+  },
+  {
+    "english": "Adjacent values sum to a prime number.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[72].text"
+    ]
+  },
+  {
+    "english": "adjusting Settings",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[59].author"
+    ]
+  },
+  {
+    "english": "Albert,\\n\\nI've transferred down to the Offices where I won't have to put up with you any more. If the Countess comes back to use the telescope, she will probably want to use the same calibration code as last time: TEN.\\nWell, I've said my piece. Good luck with the rest of your life!\\n\\n--C\\n\\nA [drawing of the sky](https://sudokupad.app/6gf2shd8nd) is attached to this paper.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[111].rules"
+    ]
+  },
+  {
+    "english": "Albert,\\n\\nSince my verbal reminders apparently were not enough, use this physical note to remind yourself how to fill the telescope line.\\nThere are only two steps: One, enter the two battery digits. Two, enter the three-digit calibration code to fix onto the correct portion of the sky.\\nSee? Easy!!\\n\\n--Celia",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[109].rules"
+    ]
+  },
+  {
+    "english": "Albert!\\n\\n Did you forget already? The calibration code must be entered on the line between the digits of the batteries, but the code must also be Between those digits.\\nHonestly!\\n\\n--Celia",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[110].rules"
+    ]
+  },
+  {
+    "english": "An imperious woman is directing the efforts of several people as they work to set up some kind of stage.\\n[Click here to fight the boss](https://sudokupad.app/sudokuvania/boss-fantasy-footwork).",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[140].rules"
+    ]
+  },
+  {
+    "english": "Ann Givens",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[96].author"
+    ]
+  },
+  {
+    "english": "balcony outline",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.lines[907].name"
+    ]
+  },
+  {
+    "english": "BLINK BRACELET",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[57].text"
+    ]
+  },
+  {
+    "english": "Blink Bracelet as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[31].title",
+      "lineage-of-logic:puzzle.metadata.grids[56].title",
+      "lineage-of-logic:puzzle.metadata.grids[57].title"
+    ]
+  },
+  {
+    "english": "Blink cells teleport you to a 'destination cell' indexed by the blink cell's row or column in its grid.\\n\\nA blink cell contains either horizontal or vertical bars, and two short arrows; the arrows point at the nearest cell containing the value N in any orthogonal direction, where N is the blink cell's row number in the current grid if there are blue horizontal bars, or the blink cell's column number if there are red vertical bars.\\nThere will always be one nearest cell, meaning no ties, and the blink cell itself cannot contain N. However, the destination cell may lie in a different grid than the clue.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[31].rules",
+      "lineage-of-logic:puzzle.metadata.grids[56].rules",
+      "lineage-of-logic:puzzle.metadata.grids[57].rules"
+    ]
+  },
+  {
+    "english": "Break the Cipher",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[59].text"
+    ]
+  },
+  {
+    "english": "Buried Chamber, hidden",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[86].title"
+    ]
+  },
+  {
+    "english": "but must still connect orthogonally.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[343].text"
+    ]
+  },
+  {
+    "english": "cages marked with",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[332].text"
+    ]
+  },
+  {
+    "english": "Can you help us out? We all bumped into each other and dropped our digits. Can you help us sort them out?",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[117].rules"
+    ]
+  },
+  {
+    "english": "cells may not sum to 5 or 10.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[345].text"
+    ]
+  },
+  {
+    "english": "Check your version",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[61].title"
+    ]
+  },
+  {
+    "english": "checking this section of the Journal",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[60].author"
+    ]
+  },
+  {
+    "english": "Ciphered 6x6 sudoku rules apply.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[86].text"
+    ]
+  },
+  {
+    "english": "CLIMBING GLOVES",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[54].text"
+    ]
+  },
+  {
+    "english": "Climbing Gloves as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[28].title",
+      "lineage-of-logic:puzzle.metadata.grids[44].title"
+    ]
+  },
+  {
+    "english": "Clues in Sudokuvania can only be used if the corresponding rule has been discovered. Several of those rules are represented by items in the player's inventory, seen here.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[19].rules"
+    ]
+  },
+  {
+    "english": "COLLECTIBLE ARTIFACTS",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[67].text"
+    ]
+  },
+  {
+    "english": "Complete objectives",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[18].title"
+    ]
+  },
+  {
+    "english": "Conference Room, hidden",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[85].title"
+    ]
+  },
+  {
+    "english": "Containment Area, hidden",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[84].title"
+    ]
+  },
+  {
+    "english": "contains one \"doubler\" cell",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[397].text"
+    ]
+  },
+  {
+    "english": "Continue the quest",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[137].title",
+      "lineage-of-logic:puzzle.metadata.grids[138].title",
+      "lineage-of-logic:puzzle.metadata.grids[139].title",
+      "lineage-of-logic:puzzle.metadata.grids[140].title",
+      "lineage-of-logic:puzzle.metadata.grids[141].title",
+      "lineage-of-logic:puzzle.metadata.grids[142].title",
+      "lineage-of-logic:puzzle.metadata.grids[143].title",
+      "lineage-of-logic:puzzle.metadata.grids[144].title",
+      "lineage-of-logic:puzzle.metadata.grids[146].title"
+    ]
+  },
+  {
+    "english": "controlling SudokuPad",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[58].author"
+    ]
+  },
+  {
+    "english": "Counting Artifacts as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[35].title",
+      "lineage-of-logic:puzzle.metadata.grids[55].title"
+    ]
+  },
+  {
+    "english": "Crack the cipher",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[21].title",
+      "lineage-of-logic:puzzle.metadata.grids[37].title",
+      "lineage-of-logic:puzzle.metadata.grids[38].title"
+    ]
+  },
+  {
+    "english": "Crawl Space, hidden",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[81].title"
+    ]
+  },
+  {
+    "english": "Current version: 1.1\\n\\nPATCH NOTES\\n* Tweaked Observatory clues to better guide use of the telescope line\\n* Discovering a grid will now reveal the region borders for that grid.\\n* Now uses custom SudokuPad urls so that future updates won't require new links.\\n* Created lighter \"SudokuPLAINia\" with no emojis and fewer lines and colors, and classic clue design.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[61].rules"
+    ]
+  },
+  {
+    "english": "DASHING CAPE",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[53].text"
+    ]
+  },
+  {
+    "english": "Dashing Cape as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[27].title",
+      "lineage-of-logic:puzzle.metadata.grids[43].title"
+    ]
+  },
+  {
+    "english": "DASHING DOUBLET",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[55].text"
+    ]
+  },
+  {
+    "english": "Dashing Doublet as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[29].title",
+      "lineage-of-logic:puzzle.metadata.grids[46].title"
+    ]
+  },
+  {
+    "english": "Deconstructed sudoku rules apply.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[92].text"
+    ]
+  },
+  {
+    "english": "defeating this boss",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[137].author",
+      "lineage-of-logic:puzzle.metadata.grids[138].author",
+      "lineage-of-logic:puzzle.metadata.grids[139].author",
+      "lineage-of-logic:puzzle.metadata.grids[140].author",
+      "lineage-of-logic:puzzle.metadata.grids[141].author",
+      "lineage-of-logic:puzzle.metadata.grids[142].author",
+      "lineage-of-logic:puzzle.metadata.grids[143].author",
+      "lineage-of-logic:puzzle.metadata.grids[144].author",
+      "lineage-of-logic:puzzle.metadata.grids[145].author",
+      "lineage-of-logic:puzzle.metadata.grids[146].author"
+    ]
+  },
+  {
+    "english": "defeating this optional boss",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[174].author"
+    ]
+  },
+  {
+    "english": "Despite an aperture through which you can see the beautiful night sky, this large circular room is dominated by an enormous telescope. You had better figure out how to use it.\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\n\\nTelescope Calibration - Use the line in box 5 to operate the telescope. More detailed instructions must be located somewhere in this grid.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[15].rules",
+      "lineage-of-logic:puzzle.metadata.grids[76].rules"
+    ]
+  },
+  {
+    "english": "Despite having mechanical fixtures, this dank space was clearly originally designed to hold prisoners. The cells could just be tool storage, but the skeletons are a dead giveaway.\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\n\\nPower Cells - Digits in the three power cells marked with🔋go into the three similarly-labeled cages.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[7].rules",
+      "lineage-of-logic:puzzle.metadata.grids[68].rules"
+    ]
+  },
+  {
+    "english": "Dialogue given",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[96].title",
+      "lineage-of-logic:puzzle.metadata.grids[97].title",
+      "lineage-of-logic:puzzle.metadata.grids[98].title",
+      "lineage-of-logic:puzzle.metadata.grids[99].title",
+      "lineage-of-logic:puzzle.metadata.grids[100].title",
+      "lineage-of-logic:puzzle.metadata.grids[101].title",
+      "lineage-of-logic:puzzle.metadata.grids[102].title",
+      "lineage-of-logic:puzzle.metadata.grids[103].title",
+      "lineage-of-logic:puzzle.metadata.grids[104].title",
+      "lineage-of-logic:puzzle.metadata.grids[105].title"
+    ]
+  },
+  {
+    "english": "Difference Kropki",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[27].author",
+      "lineage-of-logic:puzzle.metadata.grids[43].author"
+    ]
+  },
+  {
+    "english": "Digits in a cage cannot repeat, and",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[327].text",
+      "lineage-of-logic:puzzle.underlays[385].text"
+    ]
+  },
+  {
+    "english": "Discover how to",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[404].text"
+    ]
+  },
+  {
+    "english": "DRAW your",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[413].text",
+      "lineage-of-logic:puzzle.underlays[431].text"
+    ]
+  },
+  {
+    "english": "Draw your conclusion",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[25].title",
+      "lineage-of-logic:puzzle.metadata.grids[53].title",
+      "lineage-of-logic:puzzle.metadata.grids[54].title"
+    ]
+  },
+  {
+    "english": "Draw Your Conclusion",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[63].text"
+    ]
+  },
+  {
+    "english": "Each cell in this grid has a value",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[334].text"
+    ]
+  },
+  {
+    "english": "Each letter represents",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[387].text"
+    ]
+  },
+  {
+    "english": "Each row, column, and box",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[396].text"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-armored-guard) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[147].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-bull-dozer?setting-nogrid=1) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[165].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-busy-busboys) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[153].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-cable-management) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[171].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-chandeliers) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[173].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-circular-reasoning) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[172].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-clockwork-trap?setting-nogrid=1) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[152].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-contrarian-librarian) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[170].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-cram-session) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[169].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-dancebreaker) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[155].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-elite-guards) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[159].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-enchanted-armor) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[148].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-grill-interrupted) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[168].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-high-vaultage) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[163].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-jump-scare) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[160].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-lock-boxer) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[162].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-office-drone) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[149].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-ornery-ivy) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[150].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-red-armored-guard) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[154].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-sewage-surge) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[158].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-skeletons) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[166].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-sum-prison-blues) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[151].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-taking-attendants) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[167].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-tango-tough) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[157].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-waltz-the-worst-that-could-happen) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[156].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-whisper-wrangler) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[161].rules"
+    ]
+  },
+  {
+    "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-zero-sum-game) if you wish to fight the enemy.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[164].rules"
+    ]
+  },
+  {
+    "english": "Entering a bedchamber in Sudokuvania's inner sanctum, a figure lies in an ornate bed, guarded by a towering armored knight.\\n[Click here to fight the boss](https://sudokupad.app/sudokuvania/boss-in10sity).",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[142].rules"
+    ]
+  },
+  {
+    "english": "Escort the Townspeople to Safety",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[61].text"
+    ]
+  },
+  {
+    "english": "escorting them through the Sewers",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[23].author",
+      "lineage-of-logic:puzzle.metadata.grids[41].author",
+      "lineage-of-logic:puzzle.metadata.grids[42].author"
+    ]
+  },
+  {
+    "english": "examining the clues",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[25].author",
+      "lineage-of-logic:puzzle.metadata.grids[53].author",
+      "lineage-of-logic:puzzle.metadata.grids[54].author"
+    ]
+  },
+  {
+    "english": "Explore the castle",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[20].title",
+      "lineage-of-logic:puzzle.metadata.grids[36].title"
+    ]
+  },
+  {
+    "english": "Explore the Castle",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[58].text"
+    ]
+  },
+  {
+    "english": "Finish the game",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[145].title"
+    ]
+  },
+  {
+    "english": "following Quest Lines",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[18].author"
+    ]
+  },
+  {
+    "english": "For a bent arrow, the value in the cell connected to its tail also appears N cells away in the direction of its tip, where N is the value in the tip's cell.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[30].rules",
+      "lineage-of-logic:puzzle.metadata.grids[48].rules"
+    ]
+  },
+  {
+    "english": "Free the townspeople",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[23].title",
+      "lineage-of-logic:puzzle.metadata.grids[41].title",
+      "lineage-of-logic:puzzle.metadata.grids[42].title"
+    ]
+  },
+  {
+    "english": "From what little you understand of this secret research facility, the scientists were experimenting with modified cells. What have you gotten yourself into?\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\n\\nDoubler cells - One cell in each row, column, and 3x3 box is a Doubler cell; the value in a doubler cell is twice the cell's digit.\\nThe nine Doubler cells contain a set of the digits 1-9.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[16].rules",
+      "lineage-of-logic:puzzle.metadata.grids[77].rules"
+    ]
+  },
+  {
+    "english": "gaps which are not part of the grid.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[339].text"
+    ]
+  },
+  {
+    "english": "Gargoyle Club, hidden",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[80].title"
+    ]
+  },
+  {
+    "english": "Gargoyle Hints as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[34].title",
+      "lineage-of-logic:puzzle.metadata.grids[47].title"
+    ]
+  },
+  {
+    "english": "GARGOYLE PENDANT",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[66].text"
+    ]
+  },
+  {
+    "english": "Gilded walls and personal decorations indicate you have found the personal quarters of the castle's King -- the King of Sudoku who has been ruling from Sudokuvania for the past hundred years.\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\n\\nAntiking - No two diagonally adjacent digits in the Royal Quarters may contain the same digit.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[13].rules",
+      "lineage-of-logic:puzzle.metadata.grids[74].rules"
+    ]
+  },
+  {
+    "english": "GRAPPLING HOOK",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[56].text"
+    ]
+  },
+  {
+    "english": "Grappling Hook as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[30].title",
+      "lineage-of-logic:puzzle.metadata.grids[48].title"
+    ]
+  },
+  {
+    "english": "greater than any orthogonally",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[391].text"
+    ]
+  },
+  {
+    "english": "Grid Progress",
+    "zhHans": "网格进度",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[50].text"
+    ]
+  },
+  {
+    "english": "I heard them say there is a secret room next to the Armory. You know, every cell next to a vault cell must have a value?",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[130].rules"
+    ]
+  },
+  {
+    "english": "I heard them say there is a secret room next to the Dungeons.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[131].rules"
+    ]
+  },
+  {
+    "english": "I heard them say there is a secret room next to the Kitchens.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[133].rules"
+    ]
+  },
+  {
+    "english": "I heard them say there is a secret room next to the Library.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[129].rules"
+    ]
+  },
+  {
+    "english": "I heard them say there is a secret room next to the Offices.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[127].rules"
+    ]
+  },
+  {
+    "english": "I heard them say there is a secret room next to the Royal Quarters, but there's no entrance. You have to get in from far away...?",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[132].rules"
+    ]
+  },
+  {
+    "english": "I heard them say there is a secret room next to the Upper Hallway.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[128].rules"
+    ]
+  },
+  {
+    "english": "I'm locked out of my shop, can you help?",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[98].rules"
+    ]
+  },
+  {
+    "english": "I'm Top Right Boi! Did you know that the top right cell in each box of Rowsville has a different digit? It's one of the reasons I moved here!",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[104].rules"
+    ]
+  },
+  {
+    "english": "Ice Cream",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[213].text"
+    ]
+  },
+  {
+    "english": "Improve your play",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[59].title"
+    ]
+  },
+  {
+    "english": "Index Arrow",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[31].author",
+      "lineage-of-logic:puzzle.metadata.grids[56].author",
+      "lineage-of-logic:puzzle.metadata.grids[57].author"
+    ]
+  },
+  {
+    "english": "Is it an unfortunate coincidence that Sudokuvania appeared right on the border of this sleepy village, or was it part of some sinister plot?\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[0].rules",
+      "lineage-of-logic:puzzle.metadata.grids[62].rules"
+    ]
+  },
+  {
+    "english": "JUMP SHOES",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[52].text"
+    ]
+  },
+  {
+    "english": "Jump Shoes as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[26].title"
+    ]
+  },
+  {
+    "english": "Learn clue types",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[19].title"
+    ]
+  },
+  {
+    "english": "Lines follow rules even if they aren't Quest Lines. Look for telltale visual characteristics.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[134].rules"
+    ]
+  },
+  {
+    "english": "Lower Hallway",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[2].author",
+      "lineage-of-logic:puzzle.metadata.grids[63].author",
+      "lineage-of-logic:puzzle.overlays[142].text",
+      "lineage-of-logic:puzzle.overlays[187].text",
+      "lineage-of-logic:puzzle.underlays[311].text"
+    ]
+  },
+  {
+    "english": "LOWER HALLWAY",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.lines[888].name",
+      "lineage-of-logic:puzzle.lines[909].name"
+    ]
+  },
+  {
+    "english": "Maximum Security, hidden",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[83].title"
+    ]
+  },
+  {
+    "english": "may contain the same digit.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[382].text"
+    ]
+  },
+  {
+    "english": "My digit is exactly five less than an orthogonal neighbor.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[122].rules"
+    ]
+  },
+  {
+    "english": "My digit is less than exactly one of my orthogonal neighbors'.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[118].rules"
+    ]
+  },
+  {
+    "english": "My digit is not consecutive with any orthogonal neighbor.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[120].rules"
+    ]
+  },
+  {
+    "english": "My digit is not in any cell located a knight's move away from me.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[126].rules"
+    ]
+  },
+  {
+    "english": "My digit is twice that of another digit in this box.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[121].rules"
+    ]
+  },
+  {
+    "english": "No two digits separated by",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[380].text"
+    ]
+  },
+  {
+    "english": "Not all rows/columns have 9 cells.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[340].text"
+    ]
+  },
+  {
+    "english": "Oh ho, what have we here?\\n\\nSudoku - Fill the grid with a set of four distinct digits from 0-9 without digits repeating in a row, column, or 2x2 box.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[80].rules",
+      "lineage-of-logic:puzzle.metadata.grids[81].rules",
+      "lineage-of-logic:puzzle.metadata.grids[82].rules",
+      "lineage-of-logic:puzzle.metadata.grids[83].rules",
+      "lineage-of-logic:puzzle.metadata.grids[85].rules",
+      "lineage-of-logic:puzzle.metadata.grids[86].rules",
+      "lineage-of-logic:puzzle.metadata.grids[87].rules",
+      "lineage-of-logic:puzzle.metadata.grids[94].rules"
+    ]
+  },
+  {
+    "english": "Oh ho, what have we here?\\n\\nSudoku - Fill the grid with a set of four distinct digits from 0-9 without digits repeating in a row, column, or 2x2 box.\\n\\nFrankenline - This line follows multiple rules.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[84].rules"
+    ]
+  },
+  {
+    "english": "Place the digits 1-9 into each box",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[336].text"
+    ]
+  },
+  {
+    "english": "Place the three batteries into the",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[331].text"
+    ]
+  },
+  {
+    "english": "Power the lift",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[22].title",
+      "lineage-of-logic:puzzle.metadata.grids[39].title",
+      "lineage-of-logic:puzzle.metadata.grids[40].title"
+    ]
+  },
+  {
+    "english": "Quest Lines",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[293].text"
+    ]
+  },
+  {
+    "english": "Quest Lines indicate your primary goals in the game and can lead you towards your objectives. Each Quest Line follows its own unique rules; which are learned when the quest is given (though you may see the line before then). The line's rules are displayed in shorthand on the Journal, and in full in the Rules Panel when those Journal cells are selected.\\n\\nFor each Quest, there is exactly one associated line, which can move orthogonally or diagonally, but which cannot branch or cross itself.\\nQuest lines must remain inside the grids of the map.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[18].rules"
+    ]
+  },
+  {
+    "english": "reaching the Royal Quarters",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[20].author",
+      "lineage-of-logic:puzzle.metadata.grids[36].author"
+    ]
+  },
+  {
+    "english": "reading this cell",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[61].author"
+    ]
+  },
+  {
+    "english": "RECIPE BOOK",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[65].text"
+    ]
+  },
+  {
+    "english": "Research the ritual",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[24].title",
+      "lineage-of-logic:puzzle.metadata.grids[50].title",
+      "lineage-of-logic:puzzle.metadata.grids[51].title",
+      "lineage-of-logic:puzzle.metadata.grids[52].title"
+    ]
+  },
+  {
+    "english": "Research the Ritual",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[62].text"
+    ]
+  },
+  {
+    "english": "Restore Power to the Lift",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[60].text"
+    ]
+  },
+  {
+    "english": "Rows of desks and cubicles are occupied by unblinking workers who appear to be setting Sudoku puzzles. They seem to have no interest in you or anything besides their work, and yet, they are chained to their stations.\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\n\\nKiller cubicles - Digits in a yellow cubicle cage cannot repeat and sum to the number in the upper left corner of the cubicle.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[3].rules",
+      "lineage-of-logic:puzzle.metadata.grids[64].rules"
+    ]
+  },
+  {
+    "english": "Royal Quarters",
+    "zhHans": "王室寝宫",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[13].author",
+      "lineage-of-logic:puzzle.metadata.grids[74].author",
+      "lineage-of-logic:puzzle.overlays[177].text",
+      "lineage-of-logic:puzzle.overlays[193].text",
+      "lineage-of-logic:puzzle.underlays[323].text"
+    ]
+  },
+  {
+    "english": "ROYAL QUARTERS",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.lines[901].name",
+      "lineage-of-logic:puzzle.lines[921].name"
+    ]
+  },
+  {
+    "english": "Royal Safe Room, hidden",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[82].title"
+    ]
+  },
+  {
+    "english": "searching the Observatory and Laboratory",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[24].author",
+      "lineage-of-logic:puzzle.metadata.grids[50].author",
+      "lineage-of-logic:puzzle.metadata.grids[51].author",
+      "lineage-of-logic:puzzle.metadata.grids[52].author"
+    ]
+  },
+  {
+    "english": "Secret Lounge, hidden",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[88].title"
+    ]
+  },
+  {
+    "english": "See your progress",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[60].title"
+    ]
+  },
+  {
+    "english": "Segments in each region have the same sum.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[70].text"
+    ]
+  },
+  {
+    "english": "Select cells and enter digits to progress!\\n * To zoom in/out, the Large Puzzle UI setting must be enabled. Use the mouse scroll wheel or drag up/down with two fingers on your trackpad.\\n * To pan, the Large Puzzle UI setting must be enabled. Hold the right mouse button and drag.\\n * Hold Shift to enter corner pencilmarks; hold Ctrl to enter center pencilmarks.\\n\\n  New to variant sudoku and feel stuck? Try https://sudoku.coach to learn techniques and find easier puzzles to practice with!\\n Or visit https://sudokuvania.com/help-and-hints for more direct information about a rule that may be confusing.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[58].rules"
+    ]
+  },
+  {
+    "english": "Several stoves give the massive kitchen area a sweltering heat. Chefs and busboys ignore you as they create delicious-smelling meals and ferry them throughout the castle. You are tempted to try one, but... where did the ingredients come from?\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\n\\nHot - Each cell has a value one greater than its digit. (This affects how the cell interacts with many types of clues.)",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[6].rules",
+      "lineage-of-logic:puzzle.metadata.grids[67].rules"
+    ]
+  },
+  {
+    "english": "Sir Tendeth holds young Ann Givens at swordpoint. In the deep moonlight, she almost seems to be glowing.\\n[Click here to fight the boss](https://sudokupad.app/sudokuvania/boss-the-witching-hour).",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[145].rules"
+    ]
+  },
+  {
+    "english": "Some rows or columns may contain",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[338].text"
+    ]
+  },
+  {
+    "english": "studying in the Library",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[21].author",
+      "lineage-of-logic:puzzle.metadata.grids[37].author",
+      "lineage-of-logic:puzzle.metadata.grids[38].author"
+    ]
+  },
+  {
+    "english": "sum to the total in the upper left.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[328].text",
+      "lineage-of-logic:puzzle.underlays[386].text"
+    ]
+  },
+  {
+    "english": "Tall shelves of books divide the immense library of Sudoku puzzles into hallways, leaving space for study desks or beautiful artwork.\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\n\\nKiller cubicles - Digits in a yellow cubicle cage cannot repeat and sum to the number in the upper left corner of the cubicle.\\n\\nCipher - Each letter represents a different digit from 0-9.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[12].rules",
+      "lineage-of-logic:puzzle.metadata.grids[73].rules"
+    ]
+  },
+  {
+    "english": "Test your skill",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[174].title"
+    ]
+  },
+  {
+    "english": "Thank you for getting us out of there. There are still more of my people missing; if you find any, entering the correct digit will send them back here. They might have useful information for you, too. Ask around to see what folks have to say!\\n\\nHere, take this key. It can open sum of the doors in the castle.\\n---\\n\\nYou got the TEN-KEY! Values separated by a keyhole sum to 10.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[97].rules"
+    ]
+  },
+  {
+    "english": "Thank you! Here you can spend coins you find in the castle by putting them (or their sums) into the appropriate cells, based on the grid in which you found them. You may not be able to use my wares, however, unless you have the correct item.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[99].rules"
+    ]
+  },
+  {
+    "english": "Thanks for rescuing me from the Armory!",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[107].rules"
+    ]
+  },
+  {
+    "english": "Thanks for rescuing me from the Armory. Don't tell anyone I kept this vault, okay? No one else in Rowsville has one!",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[106].rules"
+    ]
+  },
+  {
+    "english": "Thanks for rescuing me from the Ballroom, but I still won't sum to 5 or 10 with any orthogonally adjacent digit.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[105].rules"
+    ]
+  },
+  {
+    "english": "Thanks for rescuing me from the Ballroom! To be honest, I'm still not ready to sum to 5 or 10 with an orthogonally adjacent digit.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[100].rules"
+    ]
+  },
+  {
+    "english": "Thanks for rescuing me from the Ballroom. I'm glad that I can be adjacent to a digit summing to 10 again!",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[108].rules"
+    ]
+  },
+  {
+    "english": "Thanks for rescuing me from the Laboratory!",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[114].rules",
+      "lineage-of-logic:puzzle.metadata.grids[115].rules"
+    ]
+  },
+  {
+    "english": "Thanks for rescuing me from the Observatory!",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[113].rules"
+    ]
+  },
+  {
+    "english": "Thanks for rescuing me from the Observatory. Fun fact, my orthogonal neighbors and I spell out an English word when read in any cardinal direction!",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[112].rules"
+    ]
+  },
+  {
+    "english": "Thanks for rescuing me from the Royal Quarters, but even so, I don't want to be a king's move away from my same digit.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[101].rules"
+    ]
+  },
+  {
+    "english": "Thanks for rescuing me from the Royal Quarters! I feel much safer now, but I'd rather not be a king's move away from my same digit just yet.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[102].rules"
+    ]
+  },
+  {
+    "english": "Thanks for rescuing me from the Royal Quarters. Psst, one cell in this box is diagonally adjacent to the same digit.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[103].rules"
+    ]
+  },
+  {
+    "english": "Thanks for rescuing me!\\nHey, remember to check back any time you unlock a new ability. You never know where you might be able to use it.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[116].rules"
+    ]
+  },
+  {
+    "english": "The ancient design of these buried hallways clashes with the rest of the castle that you've seen. It's as though this underground ruin was here before and Sudokuvania appeared around it...\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\nSome rows or columns have gaps which are not part of the grid; not all rows or columns have nine cells.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[8].rules",
+      "lineage-of-logic:puzzle.metadata.grids[69].rules",
+      "lineage-of-logic:puzzle.metadata.grids[89].rules",
+      "lineage-of-logic:puzzle.metadata.grids[90].rules",
+      "lineage-of-logic:puzzle.metadata.grids[91].rules",
+      "lineage-of-logic:puzzle.metadata.grids[92].rules",
+      "lineage-of-logic:puzzle.metadata.grids[93].rules"
+    ]
+  },
+  {
+    "english": "the CASTLE",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[138].text"
+    ]
+  },
+  {
+    "english": "The castle had appeared abandoned as you entered, until the portcullis crashed shut behind you. The only way out is through.\\n\\nSudoku - Place a digit from 1-6 into each cell without digits repeating in a row, column, or 3x2 box.\\n\\n[Click here to play the tutorial/prologue](https://sudokupad.app/sudokuvania/prologue-empty-house?setting-nogrid=1).",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[1].rules",
+      "lineage-of-logic:puzzle.metadata.grids[95].rules"
+    ]
+  },
+  {
+    "english": "the CIPHER",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[124].text",
+      "lineage-of-logic:puzzle.overlays[152].text"
+    ]
+  },
+  {
+    "english": "The corner of the shop is occupied",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[136].title"
+    ]
+  },
+  {
+    "english": "The corridors of Sudokuvania are lavish, but too worn down for a place that hasn't been seen for a hundred years. You see no one despite hearing movement in the distance.\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[2].rules",
+      "lineage-of-logic:puzzle.metadata.grids[63].rules"
+    ]
+  },
+  {
+    "english": "The following SudokuPad settings may improve performance and readability:\\n * Experimental → Test Large Puzzle UI: Turn ON to enable zooming and panning.\\n * Tools → Enable Pen Tool, Enable Letter Tool: Please turn ON (these tools will come in handy).\\n * Visual → Outlines on Digits, Outlines on Arrows/Lines: When turned ON, these settings may improve digit readability but decrease performance.\\n * Visual → Disable Emoji Replacement: When turned ON, some icons will be rendered with transparency to improve readability; however, some icons may not display correctly in all browsers.\\n * Gameplay → Show Seen Cells, Conflict Checker: When turned ON, these settings indicate where conflicts can occur before and after entering digits, respectively. Note that any fog remaining in the row, column, or region will prevent these features from working as expected.\\n * Advanced → Killer Calculator, Calculate Cell Sums: Please turn OFF to improve performance!",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[59].rules"
+    ]
+  },
+  {
+    "english": "The guy above me? That one's always getting carried away.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[125].rules"
+    ]
+  },
+  {
+    "english": "The hallways in the upper floors of the castle are better kept than those below, and seem equally vacant, but are all the more threatening for it.\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[10].rules",
+      "lineage-of-logic:puzzle.metadata.grids[71].rules"
+    ]
+  },
+  {
+    "english": "The head chef doesn't take kindly to you blundering about in his kitchen.\\n[Click here to fight the boss](https://sudokupad.app/sudokuvania/boss-hot-cuisine).",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[139].rules"
+    ]
+  },
+  {
+    "english": "The Heart",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[79].author",
+      "lineage-of-logic:puzzle.overlays[176].text"
+    ]
+  },
+  {
+    "english": "The Marshal",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[97].author"
+    ]
+  },
+  {
+    "english": "The nine regions might not be",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[341].text"
+    ]
+  },
+  {
+    "english": "The open-air courtyard is a colorful respite from the confines of the castle, but rows of hedges and trellises make it still feel cramped.\\n\\n6x6 Quattroquadri - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[4].rules",
+      "lineage-of-logic:puzzle.metadata.grids[65].rules"
+    ]
+  },
+  {
+    "english": "the RITUAL",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[159].text",
+      "lineage-of-logic:puzzle.overlays[167].text",
+      "lineage-of-logic:puzzle.overlays[169].text"
+    ]
+  },
+  {
+    "english": "The Shopkeeper",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[98].author",
+      "lineage-of-logic:puzzle.metadata.grids[99].author"
+    ]
+  },
+  {
+    "english": "The shopkeeper tells you,\\n\"That's Mr. X. He's been known to offer clues for coin, but he's very selective about his customers.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[136].rules"
+    ]
+  },
+  {
+    "english": "the staff",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[109].author",
+      "lineage-of-logic:puzzle.metadata.grids[110].author",
+      "lineage-of-logic:puzzle.metadata.grids[111].author"
+    ]
+  },
+  {
+    "english": "The telescope whirs with arcane energy as you peer into it. What answers are you about to find?\\n[Click here to fight the boss](https://sudokupad.app/sudokuvania/boss-a-nights-tale).",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[143].rules"
+    ]
+  },
+  {
+    "english": "The two values separated by a keyhole sum to 10.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[32].rules",
+      "lineage-of-logic:puzzle.metadata.grids[49].rules"
+    ]
+  },
+  {
+    "english": "The walls of Sudokuvania's vault are lined with lockboxes. This must be where the secret of Sudoku is kept, but you have other goals in mind.\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\n\\nVault cells - Gold vault cells must contain a value greater than the value in every orthogonally-adjacent cell, unless the adjacent cell is also a vault cell.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[14].rules",
+      "lineage-of-logic:puzzle.metadata.grids[75].rules"
+    ]
+  },
+  {
+    "english": "The... the whole town is... empty! Please find my father and the rest of the townspeople inside the castle!",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[96].rules"
+    ]
+  },
+  {
+    "english": "There are ten secret rooms in and around the castle. Each one is a 4x4 grid.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[135].rules"
+    ]
+  },
+  {
+    "english": "There must be a way to save Ann Givens from the Spirit of Sudoku!\\n[Click here to fight the boss](https://sudokupad.app/sudokuvania/boss-saving-grace).",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[146].rules"
+    ]
+  },
+  {
+    "english": "Thick smoke billows out from a previously hidden storage chamber. It solidifies into a terrifyingly familiar form...\\n[Click here to fight the boss](https://sudokupad.app/sudokuvania/boss-through-the-ringer).",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[144].rules"
+    ]
+  },
+  {
+    "english": "This icon indicates that you have rescued every villager from this grid. Find and speak to them in Rowsville!",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[60].rules"
+    ]
+  },
+  {
+    "english": "This is the Primary Quest Line; adjacent values on the line must sum to a prime number.\\n\\nAnn Givens has vanished from Rowsville -- Use the Pen Tool to draw this Quest Line yourself! From the circle at Ann's previous location, create a line that moves orthogonally and which follows this rule until it reaches the other circle (note: The path is not necessarily unique). This Quest Line may overlap other Quest Lines, but still may not cross itself.\\nYour research indicated that an outdoor location is required for the ritual; perhaps there is a Balcony somewhere high up that you had previously missed...",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[25].rules",
+      "lineage-of-logic:puzzle.metadata.grids[53].rules",
+      "lineage-of-logic:puzzle.metadata.grids[54].rules"
+    ]
+  },
+  {
+    "english": "This Quest Line is a Between line; values on the line must be strictly between the values in the two end points of the line.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[21].rules",
+      "lineage-of-logic:puzzle.metadata.grids[37].rules",
+      "lineage-of-logic:puzzle.metadata.grids[38].rules"
+    ]
+  },
+  {
+    "english": "This Quest Line is a German Whisper line; adjacent values on the line must differ by 5 or more.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[23].rules",
+      "lineage-of-logic:puzzle.metadata.grids[41].rules",
+      "lineage-of-logic:puzzle.metadata.grids[42].rules"
+    ]
+  },
+  {
+    "english": "This Quest Line is a Region Sum line; as the line passes through grid regions [boxes], the values on each segment of the line in a region all sum to the same number.\\nSegments can overlap if a cell is in regions of multiple grids. If the line leaves a region and re-enters it, that becomes a different segment.\\n\\nThe far end of this quest is in the Royal Quarters, on the eastern side of the castle.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[20].rules",
+      "lineage-of-logic:puzzle.metadata.grids[36].rules"
+    ]
+  },
+  {
+    "english": "This Quest Line is a Split Pea line; the values between two waypoint circles sum to a concatenation of the values in those two circles.\\nFor example, if two waypoint values are 8 and 1, the cell values between them must sum to either 18 or 81.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[24].rules",
+      "lineage-of-logic:puzzle.metadata.grids[50].rules",
+      "lineage-of-logic:puzzle.metadata.grids[51].rules",
+      "lineage-of-logic:puzzle.metadata.grids[52].rules"
+    ]
+  },
+  {
+    "english": "This Quest Line is an interval Zipper line. From the line's center cell (marked with a star), extending in both directions, each pair of cells marked with squares have values that sum to the value in the center cell.\\nCells on the line without marks are not affected by the line.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[22].rules",
+      "lineage-of-logic:puzzle.metadata.grids[39].rules",
+      "lineage-of-logic:puzzle.metadata.grids[40].rules"
+    ]
+  },
+  {
+    "english": "This seemingly empty room appears to lead towards the Royal Quarters. You feel at a loss, as numbers have no effect on your surroundings.\\n\\nCipher Cages - Each value from 0-9 corresponds to a different letter. Red cages indicate where letters should be placed rather than digits. This cipher is the same throughout the castle.\\n\\nCiphered Sudoku - Place a set of six distinct values from 0-9 into each row, column, and 3x2 box; in all cells except those which overlap with other grids, use letters (there is a red cipher cage around those cells). Make sure the Letter Tool is enabled!\\nCells with a cage labeled with a letter contain that letter.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[5].rules",
+      "lineage-of-logic:puzzle.metadata.grids[66].rules"
+    ]
+  },
+  {
+    "english": "This windy precipice outside one of Sudokuvania's high towers was easy to overlook. It seems you've made it just in time for the ritual, but are you in time to stop it?\\n\\nSudoku - Place a digit from 1-6 into each cell without digits repeating in a row, column, or 2x3 box.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[17].rules",
+      "lineage-of-logic:puzzle.metadata.grids[78].rules"
+    ]
+  },
+  {
+    "english": "to provide power to the lift.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[333].text"
+    ]
+  },
+  {
+    "english": "Top Right Boi",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[104].author"
+    ]
+  },
+  {
+    "english": "Unlike most cages in the dungeon, this one is full of frightened townspeople. Surely there must be something guarding it...\\n[Click here to fight the boss](https://sudokupad.app/sudokuvania/boss-big-little-lines).",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[138].rules"
+    ]
+  },
+  {
+    "english": "unlocking inventory items",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[19].author"
+    ]
+  },
+  {
+    "english": "Upper Hallway",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[10].author",
+      "lineage-of-logic:puzzle.metadata.grids[71].author",
+      "lineage-of-logic:puzzle.overlays[148].text",
+      "lineage-of-logic:puzzle.overlays[190].text",
+      "lineage-of-logic:puzzle.underlays[317].text"
+    ]
+  },
+  {
+    "english": "UPPER HALLWAY",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.lines[895].name",
+      "lineage-of-logic:puzzle.lines[917].name"
+    ]
+  },
+  {
+    "english": "Values lie strictly between those on the ends.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[71].text"
+    ]
+  },
+  {
+    "english": "Values on opposing squares sum to the value in the star.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[69].text"
+    ]
+  },
+  {
+    "english": "Values sum to a concatenation of the waypoints' values.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.overlays[73].text"
+    ]
+  },
+  {
+    "english": "Variable Sandwiches",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[33].author",
+      "lineage-of-logic:puzzle.metadata.grids[45].author"
+    ]
+  },
+  {
+    "english": "Vault cells must contain a value",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[390].text"
+    ]
+  },
+  {
+    "english": "Wall Food Recipes as portrayed",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[33].title",
+      "lineage-of-logic:puzzle.metadata.grids[45].title"
+    ]
+  },
+  {
+    "english": "whose value is twice its digit.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[398].text"
+    ]
+  },
+  {
+    "english": "without repeating in a row or column.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.underlays[337].text"
+    ]
+  },
+  {
+    "english": "Wordoku - Fill the grid with letters fulfilling the clues without a letter repeating in a row, column, or 2x2 box.\\n\\nAcross\\n1. Extremities\\n4. Often wanted in Sudokuvania\\n5. Surface\\n\\nDown\\n1. A tautology?\\n2. Heard from sty\\n3. Shock",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[88].rules"
+    ]
+  },
+  {
+    "english": "You are finally back in a more modern locale--the sewage tunnels under the town of Rowsville. Apparently one of their previous mayors was big on infrastructure.\\n\\nIrregular sudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or region. The regions are nine groups of nine orthogonally-connected cells, which may be a 3x3 box or any other shape. Only some region shapes are revealed to start.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[9].rules",
+      "lineage-of-logic:puzzle.metadata.grids[70].rules"
+    ]
+  },
+  {
+    "english": "You hear voices and come across a pair of gargoyle statues who appear as though they have been frozen mid-argument.\\n[Click here to fight the boss](https://sudokupad.app/sudokuvania/boss-bone-constrictor).",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[141].rules"
+    ]
+  },
+  {
+    "english": "You see a group of four brutes sitting around a fire pit. On the ground to the side is a youthful figure who appears to be tied up.\\n[Click here to fight the boss](https://sudokupad.app/sudokuvania/boss-clones-quad).",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[137].rules"
+    ]
+  },
+  {
+    "english": "You've followed the \"Spirit of Sudoku\"--really just an inky devil with a big ego--into its cramped hiding place deep into the heart of the castle. Time to end its reign of terror once and for all.\\n\\nSquishdoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box; the nine 3x3 boxes overlap such that cells in rows 3 and 5, and columns 3 and 5, are in multiple regions.\\nFor example, r1c3 is in both box 1 and box 2; r5c5 is in boxes 5, 6, 8, and 9.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[79].rules"
+    ]
+  },
+  {
+    "english": "Your friendship with the gargoyles means they can be persuaded to give you clues.\\n\\nA 🗿[gargoyle] adjacent to a grid's row or column has a number which is the sum of the first X values in that row or column starting from the clue, where X is the value in the cell nearest to the clue in the row/column.",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "sourcePaths": [
+      "lineage-of-logic:puzzle.metadata.grids[34].rules",
+      "lineage-of-logic:puzzle.metadata.grids[47].rules"
     ]
   }
 ]
