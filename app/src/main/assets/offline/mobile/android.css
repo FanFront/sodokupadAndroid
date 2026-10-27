@@ -119,3 +119,32 @@ html.android-port.android-pan #board { touch-action: none !important; }
 }
 
 #android-gamepad .android-tools button { font-size: clamp(10px,2.7vw,13px); }
+
+/* Mobile viewport repair: SudokuPad's stock portrait resize places the board
+   relative to the desktop #controls transform. Those controls are hidden in
+   this port, so the calculated boardTop can be far outside the viewport.
+   Center the renderer in the visible .game area while leaving its JS
+   scale/zoom transform intact. */
+html.android-port .game {
+  position: relative !important;
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+html.android-port #board {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+html.android-port #svgrenderer {
+  visibility: visible !important;
+}
+/* Android users should never see promotional prompts while solving. */
+html.android-port .dialog a[href*="patreon.com"],
+html.android-port .dialog a[href*="youtube.com"],
+html.android-port .dialog a[href*="patreon.svencodes.com"] {
+  display: none !important;
+}
