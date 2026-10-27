@@ -3,7 +3,7 @@
  * Personal-use SudokuPad offline snapshot generator.
  *
  * Fetches publicly served runtime responses with Playwright, without
- * committing third-party code, artwork or puzzle payloads to source control.
+ * assuming that the user has authorization to retain the captured files.
  * Unlike wget -r, this records dynamically loaded /api/puzzle requests.
  *
  * Usage: npm install && npx playwright install chromium
@@ -19,7 +19,7 @@ const OUT = join(ROOT, 'files');
 const SOURCES = JSON.parse(await readFile('app/src/main/assets/games.json','utf8')).games;
 const MAX_PUZZLES = Math.max(2, Number(process.env.MAX_OFFLINE_PUZZLES || 32));
 const WAIT_MS = Math.max(1500, Number(process.env.OFFLINE_SETTLE_MS || 6000));
-const MAX_BYTES = 120 * 1024 * 1024;
+const MAX_BYTES = 90 * 1024 * 1024; // Stay under GitHub's 100 MiB per-file limit.
 const entries = new Map();
 const candidates = new Set(SOURCES.map(g => g.url));
 const processed = new Set();
@@ -143,7 +143,8 @@ async function visit(browser, url) {
     await page.close();
   }
 }
-await rm(ROOT, {recursive:true, force:true});
+// Re-capture raw blobs, but preserve manually edited pages/*.html.
+await rm(OUT, {recursive:true, force:true});
 await mkdir(OUT, {recursive:true});
 const browser = await chromium.launch({headless:true});
 try {
