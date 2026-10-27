@@ -151,3 +151,11 @@ html.android-port .dialog a[href*="patreon.svencodes.com"] {
 
 html.android-port .dialog .supportlinks,
 html.android-port .dialog #likepuzzle { display: none !important; }
+
+/* Avoid uncaptured remote cosmetic icons; use text-only solved dialogs. */
+html.android-port .icon-sven,
+html.android-port .icon-toby {
+  display: none !important;
+  content: none !important;
+  background-image: none !important;
+}
