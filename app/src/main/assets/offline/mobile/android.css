@@ -61,8 +61,8 @@ html.android-port .puzzle-rules, html.android-port .dialog-content {
 }
 #android-gamepad .android-tools {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0,1fr));
-  gap: 4px;
+  grid-template-columns: repeat(8, minmax(0,1fr));
+  gap: 3px;
 }
 #android-gamepad .android-numbers {
   display: grid;
@@ -117,3 +117,5 @@ html.android-port.android-pan #board { touch-action: none !important; }
   #android-gamepad .android-numbers { grid-template-rows: repeat(2,34px); }
   #android-gamepad .android-numbers button { min-height: 34px; }
 }
+
+#android-gamepad .android-tools button { font-size: clamp(10px,2.7vw,13px); }
