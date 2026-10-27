@@ -28,6 +28,7 @@ jobs:
           node --check scripts/capture-offline.mjs
           node --check scripts/verify-offline.mjs
           node --check scripts/replay-offline.mjs
+          node --check scripts/test-android-touch.mjs
           node --check scripts/extract-text.mjs
           node --check scripts/build-localized-pages.mjs
           node --check scripts/decode-scl.mjs
@@ -69,6 +70,7 @@ jobs:
       - name: Test the actual rendered board at Android phone size
         run: |
           npx playwright install --with-deps chromium
+          node scripts/test-android-touch.mjs
           node scripts/replay-offline.mjs
       - name: Upload replay diagnostics and screenshots
         if: always()
@@ -115,6 +117,8 @@ jobs:
         run: |
           npm install --no-audit --no-fund
           npx playwright install --with-deps chromium
+      - name: Verify real Android touch input in a browser
+        run: node scripts/test-android-touch.mjs
       - name: Capture SudokuPad pages, JS, CSS, assets and game data
         run: npm run capture
       - name: Materialize readable HTML and apply reviewed Chinese translations
