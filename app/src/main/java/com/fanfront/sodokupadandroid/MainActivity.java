@@ -260,25 +260,8 @@ public final class MainActivity extends Activity {
         selectedGame = game;
         newRoot();
 
-        HorizontalScrollView toolbarScroll = new HorizontalScrollView(this);
-        toolbarScroll.setHorizontalScrollBarEnabled(false);
-        root.addView(toolbarScroll);
-
-        LinearLayout toolbar = new LinearLayout(this);
-        toolbar.setOrientation(LinearLayout.HORIZONTAL);
-        toolbar.setPadding(dp(3), 0, dp(3), 0);
-        toolbarScroll.addView(toolbar);
-
-        toolbar.addView(button("‹ " + tr("home"), v -> showHome()));
-        toolbar.addView(button(tr("rules"), v -> showGuide()));
-
-        toolbar.addView(button(tr("reload"), v -> { if (webView != null) webView.reload(); }));
-        toolbar.addView(button(tr("rotate"), v -> {
-            landscape = !landscape;
-            setRequestedOrientation(landscape
-                    ? ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-                    : ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
-        }));
+        // The offline HTML provides its own Android numberpad and action dock.
+        // No duplicate desktop-like Android header above the board.
 
         ProgressBar loading = new ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal);
         loading.setMax(100);
@@ -289,8 +272,8 @@ public final class MainActivity extends Activity {
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);
-        settings.setSupportZoom(true);
-        settings.setBuiltInZoomControls(true);
+        settings.setSupportZoom(false);
+        settings.setBuiltInZoomControls(false);
         settings.setDisplayZoomControls(false);
         settings.setUseWideViewPort(true);
         settings.setLoadWithOverviewMode(true);
@@ -317,7 +300,13 @@ public final class MainActivity extends Activity {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 if (!request.isForMainFrame()) return false;
-                if (offline.has(request.getUrl().toString())) return false;
+                Uri destination = request.getUrl();
+                if ("sudokuandroid".equals(destination.getScheme())
+                        && "home".equals(destination.getHost())) {
+                    runOnUiThread(MainActivity.this::showHome);
+                    return true;
+                }
+                if (offline.has(destination.toString())) return false;
                 Toast.makeText(MainActivity.this,
                         "离线模式下无法访问未打包的链接。", Toast.LENGTH_SHORT).show();
                 return true;
