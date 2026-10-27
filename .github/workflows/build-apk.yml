@@ -30,6 +30,7 @@ jobs:
           node --check scripts/replay-offline.mjs
           node --check scripts/extract-text.mjs
           node --check scripts/build-localized-pages.mjs
+          node --check scripts/apply-translations.mjs
           node scripts/test-translation.cjs
 
   personal-offline-apk:
