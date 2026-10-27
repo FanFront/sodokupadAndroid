@@ -13,7 +13,7 @@ const problems=new Set();
 const browser=await chromium.launch({headless:true});
 try {
   for(const entry of snapshot.entrypoints) {
-    const page=await browser.newPage({serviceWorkers:'block'});
+    const page=await browser.newPage({serviceWorkers:'block', viewport:{width:393,height:851}, isMobile:true, hasTouch:true, deviceScaleFactor:2});
     await page.route('**/*',async route=>{
       const source=new URL(route.request().url());
       source.hash='';
