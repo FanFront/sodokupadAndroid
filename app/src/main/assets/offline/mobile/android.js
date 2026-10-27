@@ -211,7 +211,7 @@
     } else if (e.type === 'touchmove' && drag && e.touches.length) {
       const point = coords(e.touches);
       const dx = point[0]-drag.center[0], dy = point[1]-drag.center[1];
-      if (f.handlePan) f.handlePan([-dx,-dy]);
+      if (f.handlePan) f.handlePan([dx,dy]);
       const now = distance(e.touches);
       if (now && drag.distance && Math.abs(now-drag.distance)>13) {
         f.handleZoomInOut(now > drag.distance ? 1 : -1, point);
