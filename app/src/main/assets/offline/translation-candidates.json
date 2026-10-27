@@ -156,7 +156,7 @@
   },
   {
     "english": "A dilapidated garden full of green vines and crumbling statues. There isn't a soul in sight... so why do you hear movement?\\n\\n[Click here when ready to play the Courtyard Boss Puzzle](https://sudokupad.app/frudzw3n73).",
-    "zhHans": "",
+    "zhHans": "一座破败的庭园，藤蔓青翠，石像崩裂。四下不见半个人影……那你听见的动静又从何而来？\n\n[准备好后，点此挑战庭院首领谜题](https://sudokupad.app/frudzw3n73).",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -177,7 +177,7 @@
   },
   {
     "english": "A maze of corridors that once housed the servants, and perhaps the naked singles, of Sudokuvania. Most of the doors are locked...\\n\\n[Click here when ready to play the Quarters Boss Puzzle](https://sudokupad.app/qs2zx7uynr).",
-    "zhHans": "",
+    "zhHans": "曲折的走廊宛如迷宫，曾是魔城仆人们的住处——或许还住着些「裸单」。大部分房门都锁着……\n\n[准备好后，点此挑战居住区首领谜题](https://sudokupad.app/qs2zx7uynr).",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -692,7 +692,7 @@
   },
   {
     "english": "Hey, stop clicking random areas looking for stuff!",
-    "zhHans": "",
+    "zhHans": "喂，别再到处乱点，想靠碰运气找东西了！",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -848,7 +848,7 @@
   },
   {
     "english": "It is disorienting seeing the regions of this otherworldly prairie stretch out into the distance. The ground doesn't feel quite solid.\\n\\nIrregular sudoku - enter digits from 1-9 into each row, column, and marked region.\\n\\n[Click here when ready to play the Elsewhere Boss Puzzle](https://sudokupad.app/mtrhhm8g95).",
-    "zhHans": "",
+    "zhHans": "异世界草原上的各个区域向远方无限延伸，令人晕头转向。脚下的土地似乎也不太踏实。\n\n不规则数独——每行、每列及每个标示区域均须填入 1 至 9，不能重复。\n\n[准备好后，点此挑战异界首领谜题](https://sudokupad.app/mtrhhm8g95).",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -978,7 +978,7 @@
   },
   {
     "english": "Only the dizzying drop and biting winds mar the spectacular view of the castle from atop its walls. The main tower looms oppressively from this close.\\n\\n[Click here when ready to play the Battlements Boss Puzzle](https://sudokupad.app/xu2ai5oymi).",
-    "zhHans": "",
+    "zhHans": "登上城墙，城堡的壮丽景色尽收眼底；只是脚下令人眩晕的深渊与刺骨寒风，让人无心欣赏。主塔近在咫尺，显得格外压迫。\n\n[准备好后，点此挑战城墙首领谜题](https://sudokupad.app/xu2ai5oymi).",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -988,7 +988,7 @@
   },
   {
     "english": "Open the secret door to the center of the castle.\\nRemember, cells outside grids do not all need to be filled as long as the clues are correct.",
-    "zhHans": "",
+    "zhHans": "开启通往城堡中心的暗门。\n记住：只要所有线索成立，网格之外的格子不一定要全部填满。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -1078,7 +1078,7 @@
   },
   {
     "english": "Pipes sprawl along the walls and low ceiling in this dark place. You can only guess what purpose any of these mechanisms serve, but they all look important.\\n\\n[Click here when ready to play the Maintenance Boss Puzzle](https://sudokupad.app/84lyno986x).",
-    "zhHans": "",
+    "zhHans": "阴暗的空间里，管道沿墙壁和低矮的天花板纵横交错。你猜不透这些装置究竟有何用途，但它们看起来都很重要。\n\n[准备好后，点此挑战维修区首领谜题](https://sudokupad.app/84lyno986x).",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -1222,7 +1222,7 @@
   },
   {
     "english": "Shelves packed with books stretch nearly to the ceiling of the castle's library. It would be easy to lose your bearings in these narrow aisles.\\n\\n[Click here when ready to play the Library Boss Puzzle](https://sudokupad.app/ofvhfxebg3).",
-    "zhHans": "",
+    "zhHans": "城堡图书馆的书架几乎顶到天花板，塞满了各种书籍。在如此狭窄的过道里，想不迷路都难。\n\n[准备好后，点此挑战图书馆首领谜题](https://sudokupad.app/ofvhfxebg3).",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -1317,7 +1317,7 @@
   },
   {
     "english": "Sudoku - In this 4x4 grid, enter digits from 1-4 into each row, column, and 2x2 box.",
-    "zhHans": "",
+    "zhHans": "数独——在这张 4×4 网格中，每行、每列及每个 2×2 宫均须填入 1 至 4，不能重复。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -1382,7 +1382,7 @@
   },
   {
     "english": "The abandoned yet pristine factory floor is a silent monument to all of the Sudoku that must have been created here. You wonder if everyone isn't simply on break.\\n\\n[Click here when ready to play the Factory Boss Puzzle](https://sudokupad.app/ny34cxleh8).",
-    "zhHans": "",
+    "zhHans": "这片厂房早已废弃，却仍整洁得出奇，默默见证着这里曾经诞生的无数数独。你不禁怀疑：大家是不是只去休息了？\n\n[准备好后，点此挑战工厂首领谜题](https://sudokupad.app/ny34cxleh8).",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -1413,7 +1413,7 @@
   },
   {
     "english": "The dazzling wealth on display in the castle's highest tower puts the rest of it to shame. Who knew Sudoku could be so lucrative?\\n\\n[Click here when ready to play the Golden Temple Boss Puzzle](https://sudokupad.app/vmp8mhugbr).",
-    "zhHans": "",
+    "zhHans": "城堡最高塔楼里陈列着惊人的财富，其他房间与之相比都黯然失色。没想到数独还能这么赚钱！\n\n[准备好后，点此挑战黄金神殿首领谜题](https://sudokupad.app/vmp8mhugbr).",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -1433,7 +1433,7 @@
   },
   {
     "english": "The opulence of this grand hall is out of place when compared to areas you've already visited. Your greatest desires could be just behind any corner...\\n\\n[Click here when ready to play the Hall of Illusions Boss Puzzle](https://sudokupad.app/6cn54q09sv).",
-    "zhHans": "",
+    "zhHans": "这座富丽堂皇的大厅与先前见过的地方格格不入。也许你最渴望的东西，就藏在某个转角之后……\n\n[准备好后，点此挑战幻象大厅首领谜题](https://sudokupad.app/6cn54q09sv).",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -1474,7 +1474,7 @@
   },
   {
     "english": "The world seems stretched in this interdimensional tunnel where sudoku rules do not apply.\\n\\nFillomino - Divide the 6x5 grid into regions or 'polyominoes', and enter into each cell a digit equal to the size of its region. Regions of the same size cannot share a cell edge.\\nNote that the last column is also part of a sudoku grid and digits may not repeat in it.",
-    "zhHans": "",
+    "zhHans": "这个跨维度的通道仿佛把整个世界拉长了；在这里，普通数独规则并不适用。\n\n数填方（Fillomino）——将 6×5 网格划分为若干连通区域（多连方），每格填入其所在区域的格子数量。大小相同的两个区域不能共边。\n注意：最后一列同时属于另一张数独网格，其中的数字不得重复。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -1668,7 +1668,7 @@
   },
   {
     "english": "You have found the hidden heart of Castle Sudokuvania, and its columns are laden with some kind of arcane device. Can you deconstruct it before it activates and destroys Sudoku forever?\\n\\nDeconstruction - Locate nine 3x3 boxes to be placed in the 11x11 grid, and place digits from 1-9 into each box without repeating in a row or column. Cells not in any region must remain empty.",
-    "zhHans": "",
+    "zhHans": "你终于找到了数独魔城隐藏的核心。这里的一根根柱子上布满神秘装置。你能在它启动、永远毁掉数独之前，将其拆解吗？\n\n拆解谜题——在 11×11 网格中找出九个互不重叠的 3×3 宫，每个宫填入 1 至 9；同一行或列不得有重复数字。不属于任何宫的格子必须保持空白。",
     "gameIds": [
       "digits-of-despair"
     ],
