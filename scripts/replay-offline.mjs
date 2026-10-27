@@ -152,13 +152,31 @@ async function replay(entry, original = false) {
 
     const keypad = await page.locator('#android-gamepad button[data-android-action="digit"]').count();
     if(keypad !== 10) throw new Error('Expected 10 number keys, saw '+keypad);
+    // Real phone touch gestures. Mouse .click() worked in CI while touches
+    // were broken in Android because synthesized click never reached the dock.
     const pan = page.locator('#android-gamepad button[data-android-action="pan"]');
-    await pan.click();
-    if(!await page.locator('html.android-pan').count()) throw new Error('Pan mode did not enable');
-    await pan.click();
-    if(await page.locator('html.android-pan').count()) throw new Error('Pan mode did not disable');
+    const touchCount = async locator => Number(await locator.getAttribute('data-android-tap-count') || 0);
+    const beforePan = await touchCount(pan);
+    await pan.tap({timeout:5000});
+    if(!await page.locator('html.android-pan').count()) throw new Error('Physical touch failed to enable Pan mode');
+    if(await touchCount(pan) !== beforePan + 1) throw new Error('Pan touch fired zero or multiple times');
+    await pan.tap({timeout:5000});
+    if(await page.locator('html.android-pan').count()) throw new Error('Physical touch failed to disable Pan mode');
+    if(await touchCount(pan) !== beforePan + 2) throw new Error('Pan repeated tap was lost or duplicated');
+    report.passes.push('Two real touch taps toggled movement exactly once each');
+
+    // The app can ignore digit input if no cell is selected; the counter
+    // confirms the Android control handler itself received the gesture.
+    const digit = page.locator('#android-gamepad button[data-android-action="digit"][data-value="1"]');
+    const beforeDigit = await touchCount(digit);
+    await digit.tap({timeout:5000});
+    if(await touchCount(digit) !== beforeDigit + 1) throw new Error('Number 1 touch was not delivered exactly once');
+    const undo = page.locator('#android-gamepad button[data-android-action="undo"]');
+    const beforeUndo = await touchCount(undo);
+    await undo.tap({timeout:5000});
+    if(await touchCount(undo) !== beforeUndo + 1) throw new Error('Undo touch was not delivered exactly once');
     if(await page.locator('.topbar').isVisible()) throw new Error('Desktop header is still visible');
-    report.passes.push('Number keys, pan toggle, hidden desktop header');
+    report.passes.push('Number key and Undo accepted touchscreen taps');
     if(report.missing.length) throw new Error('Missing '+report.missing.length+' offline resources');
     report.status = 'pass';
   } catch(error) {
