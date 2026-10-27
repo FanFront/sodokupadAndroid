@@ -1,7 +1,7 @@
 [
   {
     "english": "Every 100 years, the mysterious castle of Sudokuvania appears in the countryside. Legend has it that it contains the Secret of Sudoku. Gathering the last few given digits in the area, you solemnly approach the boxy fortress, determined to discover the secret and share it with your favorite people.\n---\n\nNote for SudokuPad: Sudokuvania is best played in a desktop browser.\nFor the best experience, open the Settings menu and ensure the following settings are enabled:\nExperimental > Test Large Puzzle UI: ON\nVisual > Draw Arrows Above Lines: ON\nVisual > Disable Emoji Replacement: ON\n\nRules:\nGattai Sudoku - In each square grid, enter digits from 1-N into each row, column, and region, where N is the length of each side of the grid.\nDynamic Fog - The map is covered with fog. Placing correct digits may reveal more clues or rules.\nClues may only be used if their associated rule is uncovered in the Learned Rules panel (in the upper left).\nDynamic Rules - Selecting cells can change the rules displayed in this panel (scroll down to see them); to avoid spoilers, try not to read the rules when a cell covered by fog is selected.\n* Select a cell in the map to learn more about its grid, and to get a link to its Boss Puzzle (if applicable).\n* Select a rule in the Learned Rules panel for more details.",
-    "zhHans": "",
+    "zhHans": "每隔一百年，神秘的数独魔城便会在乡野间现身。传说，城中藏着「数独的秘密」。你收集起附近最后几个已知数字，郑重地走向那座棱角分明的堡垒，决心揭开秘密，与珍视的人分享。\n---\n\n手机版提示：本移植版已提供触屏数字键盘与棋盘移动功能。\n为使谜题更容易操作，建议在原版设置中启用下列选项：\n实验性功能 > 测试大型谜题界面：开启\n视觉效果 > 将箭头绘制在线条上方：开启\n视觉效果 > 禁用表情符号替换：开启\n\n规则：\n拼接数独——每个正方形网格的边长为 N；在每行、每列及每个区域中填入 1 至 N，且不得重复。\n动态迷雾——地图被迷雾笼罩。填入正确数字后，可能会揭示更多线索或规则。\n只有当对应规则已在「已学会的规则」面板中解锁时，才能使用相关线索。\n动态规则——选中不同格子会改变此面板中显示的规则（可向下滚动）。为了避免剧透，尽量不要阅读仍被迷雾遮住的格子所显示的规则。\n* 选中地图上的格子，可了解其所属网格，并查看相关首领谜题的链接（如有）。\n* 在「已学会的规则」面板中选中某条规则，可以阅读完整说明。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -31,7 +31,7 @@
   },
   {
     "english": "Ever since he disappeared in a Sudoku attack, you have had questions about your father's fate. Now that the mythical castle Sudokuvania has reappeared, you know the answers must lie somewhere within.\n---\n\n[version 1.1.1]\nRules:\nComplete the Quests by filling each grid according to its rules. Completely filling all grids is NOT required to reach an ending of the story.\nSudoku - Unless overridden by an uncovered rule, you may assume that each grid follows normal sudoku rules: Place digits from 1-n into each grid, where n is the grid's square size, without repeating in a row, column, or box.\nDynamic Fog - Entering a correct digit into a cell will clear the fog from that cell and perhaps others.\nDynamic Rules - Additional rules will be displayed in this panel when certain cells are selected. Abridged rules are also displayed on the map itself. These rules are only valid if the selected cell is NOT covered by fog. Some cells outside the grid are uncovered by default because they have no associated rules; drag at these 'pan handles' to avoid spoilers.\nSelect the ⚙️ to read about settings.\nSelect the 📋 to read about play controls.\n\n[Click here](https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1) to play the plain version of this puzzle.",
-    "zhHans": "",
+    "zhHans": "自从父亲在一次数独袭击中失踪，你便一直想弄清他的遭遇。如今，传说中的数独魔城再度现世。你知道，答案一定就在城堡深处。\n---\n\n[版本 1.1.1]\n规则：\n按照每张网格各自的规则填数、完成任务，即可推动剧情。想看到故事结局，不必填满所有网格。\n数独——除非已解锁的特殊规则另有规定，否则每张网格都遵循普通数独规则：网格边长为 n，就在其中填入 1 至 n；同一行、列或宫内的数字不能重复。\n动态迷雾——在某个格子填入正确数字后，该格及附近其他格子的迷雾可能消散。\n动态规则——选中特定格子时，此面板会显示额外规则；地图上也有简写说明。只有当被选中的格子已不被迷雾遮挡，这些规则才有效。某些网格外的格子因没有关联规则而默认可见；可从这些「移动把手」开始拖动地图，以免提前看到剧情。\n选择 ⚙️ 可查看设置说明。\n选择 📋 可查看操作说明。\n\n[点此](https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1) 游玩不带装饰的简化版谜题。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -1307,7 +1307,7 @@
   },
   {
     "english": "Sudoku - In each NxN grid, enter a digit from 1-9 into each cell without repeating in a row, column or region.\\nMost grid's regions are 3x3 boxes.\\nDigits can repeat in a row or column as long as they are in separate grids.\\n\\nDynamic Fog - Entering the correct digit in a cell may clear some fog. No guessing is required.\\n\\nLearning Rules - Clues have no meaning until the associated rule is uncovered from the fog. Select a rule in the Learned Rules panel for more information.\\n\\nBoss Puzzles - When you uncover a Boss Cell (😈), click the link to the associated Boss Puzzle below (must have a cell in its grid selected).\\nSolving the Boss Puzzle will give the digit to be placed in the Boss Cell.\\n\\nOutside the Map - Cells outside of any grid do not need to contain any digit; or, they may contain the digit 0, as necessitated by nearby clues.\\nAll clues must be correct, even those outside the map.",
-    "zhHans": "",
+    "zhHans": "数独——每张 N×N 网格的各格均填入 1 至 9；同一网格的同一行、列或区域内不得重复。\n多数网格使用 3×3 宫。\n如果两个格子分属不同网格，即使它们在同一大地图行或列，数字也可以重复。\n\n动态迷雾——在格子中填入正确数字，可能会驱散部分迷雾。无需猜测。\n\n学习规则——对应规则从迷雾中揭示之前，线索不具备任何效力。选中「已学会的规则」中的规则可以阅读详情。\n\n首领谜题——发现首领格（😈）后，先选中它所属网格中的一个格子，再通过下方链接挑战首领谜题。\n解开首领谜题后，即可得知应填入首领格的数字。\n\n地图之外——不属于任何网格的格子不必填写数字；根据附近线索的需要，也可能填入 0。\n所有线索都必须成立，包括地图外的线索。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -1403,7 +1403,7 @@
   },
   {
     "english": "The castle of Sudokuvania stands before you...\\n\\nSudoku - In this 6x6 grid, enter digits from 1-6 into each row, column, and 2x3 box.",
-    "zhHans": "",
+    "zhHans": "数独魔城矗立在你眼前……\n\n数独——在这张 6×6 网格中，每行、每列及每个 2×3 宫均须填入 1 至 6，不能重复。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -3199,7 +3199,7 @@
   },
   {
     "english": "Is it an unfortunate coincidence that Sudokuvania appeared right on the border of this sleepy village, or was it part of some sinister plot?\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.",
-    "zhHans": "",
+    "zhHans": "数独魔城偏偏出现在这座宁静小村的边界上。究竟只是巧合，还是某个阴谋的一环？\n\n数独——每格填入 1 至 9；同一行、列和 3×3 宫内的数字不能重复。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3434,7 +3434,7 @@
   },
   {
     "english": "Quest Lines indicate your primary goals in the game and can lead you towards your objectives. Each Quest Line follows its own unique rules; which are learned when the quest is given (though you may see the line before then). The line's rules are displayed in shorthand on the Journal, and in full in the Rules Panel when those Journal cells are selected.\\n\\nFor each Quest, there is exactly one associated line, which can move orthogonally or diagonally, but which cannot branch or cross itself.\\nQuest lines must remain inside the grids of the map.",
-    "zhHans": "",
+    "zhHans": "任务线指引游戏中的主要目标，并将你引向任务目的地。每条任务线都有独特规则，接受任务时才会学到；有时你会先看到线条。任务日志中会显示规则简述，选中日志对应格子后，完整说明会出现在规则面板。\n\n每项任务恰好对应一条任务线。任务线可以水平、垂直或斜向延伸，但不能分叉，也不能与自身交叉。\n任务线必须始终位于地图网格之内。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3859,7 +3859,7 @@
   },
   {
     "english": "The castle had appeared abandoned as you entered, until the portcullis crashed shut behind you. The only way out is through.\\n\\nSudoku - Place a digit from 1-6 into each cell without digits repeating in a row, column, or 3x2 box.\\n\\n[Click here to play the tutorial/prologue](https://sudokupad.app/sudokuvania/prologue-empty-house?setting-nogrid=1).",
-    "zhHans": "",
+    "zhHans": "你进城时还以为这里空无一人，直到身后的铁闸轰然落下。如今，唯一的出路就在前方。\n\n数独——每格填入 1 至 6；同一行、列和 3×2 宫内的数字不能重复。\n\n[点此进入教程／序章](https://sudokupad.app/sudokuvania/prologue-empty-house?setting-nogrid=1)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3891,7 +3891,7 @@
   },
   {
     "english": "The corridors of Sudokuvania are lavish, but too worn down for a place that hasn't been seen for a hundred years. You see no one despite hearing movement in the distance.\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.",
-    "zhHans": "",
+    "zhHans": "数独魔城的走廊装潢华丽，却又破旧得不像一座百年未现的城堡。你听见远处传来动静，却始终不见人影。\n\n数独——每格填入 1 至 9；同一行、列和 3×3 宫内的数字不能重复。",
     "gameIds": [
       "lineage-of-logic"
     ],
