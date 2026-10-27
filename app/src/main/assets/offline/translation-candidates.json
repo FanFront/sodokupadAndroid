@@ -1,0 +1,196 @@
+[
+  {
+    "english": "{ if('undefined' !== typeof PuzzleLoader) { clearInterval(waitIntervalId); updateSudokuPadLinks(); } }, 300); })();",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair",
+      "lineage-of-logic"
+    ],
+    "foundIn": [
+      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
+    ]
+  },
+  {
+    "english": "} else if(typeof urlQueryPuzzleId === 'string' && urlQueryPuzzleId !== '') { // Reading puzzleId from url query string: ?puzzleid=",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair",
+      "lineage-of-logic"
+    ],
+    "foundIn": [
+      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
+    ]
+  },
+  {
+    "english": "<a id=\"aslink\" href=\"https://artisanalsudoku.substack.com/?utm_source=sudokupad&utm_campaign=artisanal164\" style=\"position:relative;display:block;padding:0.5rem;margin:-1rem auto 0.5rem auto;text-align:center;outline:1px dotted #ffb700;outline-offset:-0.5rem;\"> <div style=\"position:absolute;top:0.5rem;right:0.5rem;font-size:small;background:#ffb700;padding:0.05rem;\">AD</div> <div style=\"margin-top:-0.5rem;height:310px;overflow:hidden;\"><img src=\"/images/artisinalsudoku_testad.png\"></div> <div style=\"padding-bottom:0.5rem;font-size:1.1rem;\">More puzzles at artisanalsudoku.com</div> </a>",
+    "zhHans": "",
+    "gameIds": [],
+    "foundIn": [
+      "https://sudokupad.app/assets/sudokupad.config.json"
+    ]
+  },
+  {
+    "english": "<a id=\"aslink\" href=\"https://artisanalsudoku.substack.com/?utm_source=sudokupad&utm_campaign=artisanal165\" style=\"position:relative;display:block;padding:0.5rem;margin:-1rem auto 0.5rem auto;text-align:center;outline:1px dotted #ffb700;outline-offset:-0.5rem;\"> <div style=\"position:absolute;top:0.5rem;right:0.5rem;font-size:small;background:#ffb700;padding:0.05rem;\">AD</div> <div style=\"margin-top:-0.5rem;height:310px;overflow:hidden;\"><img src=\"/images/artisinalsudoku_testad.png\"></div> <div style=\"padding-bottom:0.5rem;font-size:1.1rem;\">More puzzles at artisanalsudoku.com</div> </a>",
+    "zhHans": "",
+    "gameIds": [],
+    "foundIn": [
+      "https://sudokupad.app/assets/sudokupad.config.json"
+    ]
+  },
+  {
+    "english": "<a id=\"aslink\" href=\"https://artisanalsudoku.substack.com/?utm_source=sudokupad&utm_campaign=artisanal166\" style=\"position:relative;display:block;padding:0.5rem;margin:-1rem auto 0.5rem auto;text-align:center;outline:1px dotted #ffb700;outline-offset:-0.5rem;\"> <div style=\"position:absolute;top:0.5rem;right:0.5rem;font-size:small;background:#ffb700;padding:0.05rem;\">AD</div> <div style=\"margin-top:-0.5rem;height:310px;overflow:hidden;\"><img src=\"/images/artisinalsudoku_testad.png\"></div> <div style=\"padding-bottom:0.5rem;font-size:1.1rem;\">More puzzles at artisanalsudoku.com</div> </a>",
+    "zhHans": "",
+    "gameIds": [],
+    "foundIn": [
+      "https://sudokupad.app/assets/sudokupad.config.json"
+    ]
+  },
+  {
+    "english": "<a id=\"aslink\" href=\"https://artisanalsudoku.substack.com/?utm_source=sudokupad&utm_campaign=artisanal167\" style=\"position:relative;display:block;padding:0.5rem;margin:-1rem auto 0.5rem auto;text-align:center;outline:1px dotted #ffb700;outline-offset:-0.5rem;\"> <div style=\"position:absolute;top:0.5rem;right:0.5rem;font-size:small;background:#ffb700;padding:0.05rem;\">AD</div> <div style=\"margin-top:-0.5rem;height:310px;overflow:hidden;\"><img src=\"/images/artisinalsudoku_testad.png\"></div> <div style=\"padding-bottom:0.5rem;font-size:1.1rem;\">More puzzles at artisanalsudoku.com</div> </a>",
+    "zhHans": "",
+    "gameIds": [],
+    "foundIn": [
+      "https://sudokupad.app/assets/sudokupad.config.json"
+    ]
+  },
+  {
+    "english": "<a id=\"aslink\" href=\"https://artisanalsudoku.substack.com/?utm_source=sudokupad&utm_campaign=artisanal168\" style=\"position:relative;display:block;padding:0.5rem;margin:-1rem auto 0.5rem auto;text-align:center;outline:1px dotted #ffb700;outline-offset:-0.5rem;\"> <div style=\"position:absolute;top:0.5rem;right:0.5rem;font-size:small;background:#ffb700;padding:0.05rem;\">AD</div> <div style=\"margin-top:-0.5rem;height:310px;overflow:hidden;\"><img src=\"/images/artisinalsudoku_testad.png\"></div> <div style=\"padding-bottom:0.5rem;font-size:1.1rem;\">More puzzles at artisanalsudoku.com</div> </a>",
+    "zhHans": "",
+    "gameIds": [],
+    "foundIn": [
+      "https://sudokupad.app/assets/sudokupad.config.json"
+    ]
+  },
+  {
+    "english": "<a id=\"aslink\" href=\"https://artisanalsudoku.substack.com/?utm_source=sudokupad&utm_campaign=artisanal169\" style=\"position:relative;display:block;padding:0.5rem;margin:-1rem auto 0.5rem auto;text-align:center;outline:1px dotted #ffb700;outline-offset:-0.5rem;\"> <div style=\"position:absolute;top:0.5rem;right:0.5rem;font-size:small;background:#ffb700;padding:0.05rem;\">AD</div> <div style=\"margin-top:-0.5rem;height:310px;overflow:hidden;\"><img src=\"/images/artisinalsudoku_testad.png\"></div> <div style=\"padding-bottom:0.5rem;font-size:1.1rem;\">More puzzles at artisanalsudoku.com</div> </a>",
+    "zhHans": "",
+    "gameIds": [],
+    "foundIn": [
+      "https://sudokupad.app/assets/sudokupad.config.json"
+    ]
+  },
+  {
+    "english": "<a id=\"aslink\" href=\"https://artisanalsudoku.substack.com/?utm_source=sudokupad&utm_campaign=artisanal170\" style=\"position:relative;display:block;padding:0.5rem;margin:-1rem auto 0.5rem auto;text-align:center;outline:1px dotted #ffb700;outline-offset:-0.5rem;\"> <div style=\"position:absolute;top:0.5rem;right:0.5rem;font-size:small;background:#ffb700;padding:0.05rem;\">AD</div> <div style=\"margin-top:-0.5rem;height:310px;overflow:hidden;\"><img src=\"/images/artisinalsudoku_testad.png\"></div> <div style=\"padding-bottom:0.5rem;font-size:1.1rem;\">More puzzles at artisanalsudoku.com</div> </a>",
+    "zhHans": "",
+    "gameIds": [],
+    "foundIn": [
+      "https://sudokupad.app/assets/sudokupad.config.json"
+    ]
+  },
+  {
+    "english": "body { background-color: #121212; } /* Avoid flash-of-white */",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair",
+      "lineage-of-logic"
+    ],
+    "foundIn": [
+      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
+    ]
+  },
+  {
+    "english": "document.location = url; let gtagArgs = ['event', 'outbound', 'sudokupad', url, { transport: 'beacon', hitCallback: openUrl, eventCallback: openUrl, hitCallbackFail: openUrl, }]; if(typeof ga === 'function') ga('send', ...gtagArgs); else gtag(...gtagArgs); setTimeout(openUrl, 100); }",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair",
+      "lineage-of-logic"
+    ],
+    "foundIn": [
+      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
+    ]
+  },
+  {
+    "english": "function getPuzzleId(puzzleId = '') { const rePuzzleId = /^([0-9A-Za-z]+|classic(.*)|.+)$/; var urlQueryPuzzleId = document.location.search.replace(/^\\?.*puzzleid=([^&]+).*|.*/, '$1'); var urlPathPuzzleId = (document.location.pathname.match(/^\\/(?:sudoku\\/)?(.+)$/) || [])[1]; if(typeof puzzleId === 'string' && puzzleId !== '') { //Reading puzzleId from pre-set variable: puzzleid =",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair",
+      "lineage-of-logic"
+    ],
+    "foundIn": [
+      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
+    ]
+  },
+  {
+    "english": "function preventZoom(event) { console.log('preventZoom:', event); event.preventDefault(); document.body.style.zoom = 0.999999; } document.addEventListener('gesturestart', preventZoom); document.addEventListener('gesturechange', preventZoom); document.addEventListener('gestureend', preventZoom);",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair",
+      "lineage-of-logic"
+    ],
+    "foundIn": [
+      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
+    ]
+  },
+  {
+    "english": "puzzleId = urlQueryPuzzleId; } else if(typeof urlPathPuzzleId === 'string' && urlPathPuzzleId !== '') { // Reading puzzleId from url path: /sudoku/",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair",
+      "lineage-of-logic"
+    ],
+    "foundIn": [
+      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
+    ]
+  },
+  {
+    "english": "Special thanks to my supporters",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair",
+      "lineage-of-logic"
+    ],
+    "foundIn": [
+      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
+    ]
+  },
+  {
+    "english": "Sudokuvania 2: Lineage of Logic by Skeptical Mario (Sven's SudokuPad v0.611.0)",
+    "zhHans": "",
+    "gameIds": [
+      "lineage-of-logic"
+    ],
+    "foundIn": [
+      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
+    ]
+  },
+  {
+    "english": "Sudokuvania: Digits of Despair by Skeptical Mario (Sven's SudokuPad v0.611.0)",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair"
+    ],
+    "foundIn": [
+      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1"
+    ]
+  },
+  {
+    "english": "Sven Neumann",
+    "zhHans": "",
+    "gameIds": [
+      "digits-of-despair",
+      "lineage-of-logic"
+    ],
+    "foundIn": [
+      "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1",
+      "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
+    ]
+  }
+]

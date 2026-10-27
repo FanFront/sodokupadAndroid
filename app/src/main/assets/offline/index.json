@@ -1,0 +1,636 @@
+{
+  "format": 1,
+  "capturedAt": "2026-10-27T08:36:39.413Z",
+  "entrypoints": [
+    {
+      "id": "digits-of-despair",
+      "url": "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1"
+    },
+    {
+      "id": "lineage-of-logic",
+      "url": "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
+    }
+  ],
+  "requestedPages": [
+    "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1",
+    "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1",
+    "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1"
+  ],
+  "assets": {
+    "https://api.sudokupad.com/counter/skepticalmario-sudokuvania%3Adigitsofdespair": {
+      "file": "files/daf75155be887ddd3ea95e5c470a14d12ed1bf2ee0949f96ee420f7fafdf9434.json",
+      "mime": "application/json",
+      "bytes": 14
+    },
+    "https://api.sudokupad.com/counter/skepticalmario-sudokuvania2%3Alineageoflogic": {
+      "file": "files/67380dca917c6c23d1605813bea5614a139e5111d9538a63bae73282822da3eb.json",
+      "mime": "application/json",
+      "bytes": 54
+    },
+    "https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;500&display=swap": {
+      "file": "files/31c03d23e9298276b0dd348bc29d17657e4114a995c478fea2b19a7e2bf24443.css",
+      "mime": "text/css",
+      "bytes": 12969
+    },
+    "https://fonts.gstatic.com/s/lobster/v32/neILzCirqoswsqX9zoKmMw.woff2": {
+      "file": "files/f8b337b9f2ea4139758f5ebf38b904bc23e1eb7e15bd29edb713c6f988e7ce5c.woff2",
+      "mime": "font/woff2",
+      "bytes": 33844
+    },
+    "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3GUBGEe.woff2": {
+      "file": "files/78e4260aaa9498dc0fc5ab20b9bbf4d3b8ed90efe66cfe2893e98259e8c887c8.woff2",
+      "mime": "font/woff2",
+      "bytes": 36652
+    },
+    "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3iUBGEe.woff2": {
+      "file": "files/000fec62282349e8b4ef8f64b4cd50070b9aa49688df63aba7a1c9b446814fce.woff2",
+      "mime": "font/woff2",
+      "bytes": 23664
+    },
+    "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2": {
+      "file": "files/890de452eac592c62afc274f0df641ffc2a27e1e5feb230c1fa5da9b2b46fe47.woff2",
+      "mime": "font/woff2",
+      "bytes": 43136
+    },
+    "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMawCUBGEe.woff2": {
+      "file": "files/cf69d4bd86681ac6b08280c9b3f511864c329370ac378c5df5bc57ad22a22711.woff2",
+      "mime": "font/woff2",
+      "bytes": 41348
+    },
+    "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMaxKUBGEe.woff2": {
+      "file": "files/f24f53f8e279cd03f183e0d2b7b23e590958cf1ec91327f72d9d6b6ab442f88a.woff2",
+      "mime": "font/woff2",
+      "bytes": 20556
+    },
+    "https://sudokupad.app/api/puzzle/sudokuvania/digits-of-despair": {
+      "file": "files/83c902b7fe02747ac8e72f6c4d3202595e8f0c567178326c9e8d96b6fd3e23ca.html",
+      "mime": "text/html",
+      "bytes": 87091
+    },
+    "https://sudokupad.app/api/puzzle/sudokuvania/lineage-of-logic": {
+      "file": "files/7f36c4e2451ee01ec5ed203d1d516061bf43e738e039fe21a42101ee686fe90b.html",
+      "mime": "text/html",
+      "bytes": 174799
+    },
+    "https://sudokupad.app/api/puzzle/sudokuvania/lineage-of-logic-plain": {
+      "file": "files/dc78e98e7419898121b9c84331b28bfe5f2ecc6bdbcfcde17df49e49c701f93f.html",
+      "mime": "text/html",
+      "bytes": 149099
+    },
+    "https://sudokupad.app/app-settings.js?v=0.611.0": {
+      "file": "files/3f5ec860e77ad0734d104565e0b588bc13c3c5024db7d5d3b94b74044191eca2.js",
+      "mime": "application/javascript",
+      "bytes": 7104
+    },
+    "https://sudokupad.app/appmenu.js?v=0.611.0": {
+      "file": "files/79abc50970f3e194625107fb373960656ac2c6d174bae776f61749f31aea38a8.js",
+      "mime": "application/javascript",
+      "bytes": 1790
+    },
+    "https://sudokupad.app/assets/sudokupad.config.json": {
+      "file": "files/fae1fe5a1e8c3a1d51624646b7793c6200287dfa0fda3ba7b3438c2b346edf60.json",
+      "mime": "application/json",
+      "bytes": 5672
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f32e.svg": {
+      "file": "files/6619198f40e6ebb299a861d6449c51a06fa530832acf115a7d71f33f1c2b02da.svg",
+      "mime": "image/svg+xml",
+      "bytes": 4038
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f32f.svg": {
+      "file": "files/866fb917c56543dd422f901385b5df428a557a61d9b5e23350c78625a2094fa8.svg",
+      "mime": "image/svg+xml",
+      "bytes": 6517
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f354.svg": {
+      "file": "files/e14bed7101b46839c09c53b12f04c317cb70e395fe217e2bcc5c490bde72e68b.svg",
+      "mime": "image/svg+xml",
+      "bytes": 2509
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f355.svg": {
+      "file": "files/2e6738bac46d48ba3470eb52a0d5d41f8037accb7bdeac503087f0e2bee4690a.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1018
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f363.svg": {
+      "file": "files/7e7d40a999bae82ce0e2e4fca5d8a78c588d3c00fc635ed97aa081ae08471f8c.svg",
+      "mime": "image/svg+xml",
+      "bytes": 3945
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f366.svg": {
+      "file": "files/c1fa37c7df1260b3bff6c9beef8352100813b297423c0e0b6f0967e0f6f083d9.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1822
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f369.svg": {
+      "file": "files/c2005371a13c7bfe5f55c4213983505f06feec5c51be48ff73d5d192b7dfac43.svg",
+      "mime": "image/svg+xml",
+      "bytes": 3174
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f382.svg": {
+      "file": "files/b9ee04cabc3fa3bbdec324907fdc0b7e85fcc7d76efd083c240130e8ad25002d.svg",
+      "mime": "image/svg+xml",
+      "bytes": 2045
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f3ad.svg": {
+      "file": "files/0db185aff80479d2e88cbb717c276b567cbcfbd89d0d2ece05fffe15ac9221e1.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1680
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f3fa.svg": {
+      "file": "files/c6faa609a40d4905d6c816a61b11cca0a89796376613330d2dccce7087b7d7bd.svg",
+      "mime": "image/svg+xml",
+      "bytes": 2092
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f441.svg": {
+      "file": "files/52e30e0a934460b1b9ebdb0f501438fda49aa7db4132cc5d8563d78beb62db92.svg",
+      "mime": "image/svg+xml",
+      "bytes": 605
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f464.svg": {
+      "file": "files/5d50cda1e4a72a13fc1f5cf3209be5e76d6cf74091332db58cb56a2ccb3778b3.svg",
+      "mime": "image/svg+xml",
+      "bytes": 591
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f47f.svg": {
+      "file": "files/a1534aacad821574514bf1ecbe9945793a0868106cc9f2078152657663345938.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1285
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f480.svg": {
+      "file": "files/c3f74be308041ecad5ccc2ac38489a3d6ca26f0ffa82330bc3e09224348300ec.svg",
+      "mime": "image/svg+xml",
+      "bytes": 760
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f4b0.svg": {
+      "file": "files/1c7fee36eeb6c6116e09546aa78a2a258a71cf3e000de27f3ddc532e7a6577b3.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1314
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f4cb.svg": {
+      "file": "files/dd1412e53cd6ad45b0d7cbc5c53a1ca0abeb3e9b501c0b572b561c97c0b564b0.svg",
+      "mime": "image/svg+xml",
+      "bytes": 892
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f4d3.svg": {
+      "file": "files/9d1b0186f055a4b792861cb4a3286c659b4a8c6ef4f7b271e47aabd8358fbfad.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1224
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f4d6.svg": {
+      "file": "files/673f132e99f8a146f33a6f156fe5404b81584c4d6e6685927495ba59e651390a.svg",
+      "mime": "image/svg+xml",
+      "bytes": 853
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f4ff.svg": {
+      "file": "files/af14b80b0149f867f2537705f29afa5baf6008117d1f4cfb90fc47ab0ff7ad63.svg",
+      "mime": "image/svg+xml",
+      "bytes": 3484
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f50b.svg": {
+      "file": "files/4b117cc63df7a3ca8730aa7a22b83bfbda748fc4c68bd606b881f4755ae6953a.svg",
+      "mime": "image/svg+xml",
+      "bytes": 992
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f5dd.svg": {
+      "file": "files/b768788775b44811fc751b1fb1b61fabae538ad090fe0a51389bfa0f8ded54fe.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1630
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f5fa.svg": {
+      "file": "files/7eb47307b501089602dde7b53bdc79b2e4062f50d58616fd29b0cb693d06ba3b.svg",
+      "mime": "image/svg+xml",
+      "bytes": 5682
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f5ff.svg": {
+      "file": "files/d3929a6fd9bc0bbf2606140f70f912a9de5cfb0e76e8f1feea030670854f6555.svg",
+      "mime": "image/svg+xml",
+      "bytes": 767
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f608.svg": {
+      "file": "files/31016aa8bd519e5b6d96195a91f548997216acf2e281eaedee1a2431038abeee.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1417
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f6cc.svg": {
+      "file": "files/55a2591ae19b1959662030137a76973da40b25d861dd6da5cae8aaa18e3ac443.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1053
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f96a.svg": {
+      "file": "files/79cf1b46f95688e3d6b4894c7ff17432dae9413f920ab63fe80f2fe55387017a.svg",
+      "mime": "image/svg+xml",
+      "bytes": 2486
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1fa99.svg": {
+      "file": "files/b2419dae8b338cea191ce9dab0eb9e0b537dba21bf016ca084e2fc7a4a45c412.svg",
+      "mime": "image/svg+xml",
+      "bytes": 2721
+    },
+    "https://sudokupad.app/assets/twemoji/svg/2620.svg": {
+      "file": "files/ba3409c6949de878385fa80bdeabb8e243a98f597e0ed9af09bb8da2f3821a7c.svg",
+      "mime": "image/svg+xml",
+      "bytes": 2108
+    },
+    "https://sudokupad.app/assets/twemoji/svg/265e.svg": {
+      "file": "files/86fc6d861a4ab4456e626c99a591ba1d282dfcad0abcfb466ace2258103e10d7.svg",
+      "mime": "image/svg+xml",
+      "bytes": 2270
+    },
+    "https://sudokupad.app/assets/twemoji/svg/2699.svg": {
+      "file": "files/052d02ec5c6d4be9bbbec8bfee99a347d126ca5b6e00e6a6b30f06b11d1ae690.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1014
+    },
+    "https://sudokupad.app/assets/twemoji/svg/2705.svg": {
+      "file": "files/20bb0b47a4f7c87af4972f4d1a6a83b6d46ad19464d32a31ecfd8ea049b4bf6e.svg",
+      "mime": "image/svg+xml",
+      "bytes": 482
+    },
+    "https://sudokupad.app/assets/twemoji/svg/274c.svg": {
+      "file": "files/566dfac9e35cfd15baaf39ee78379a871a59a30f00cc279906583d9922e70d65.svg",
+      "mime": "image/svg+xml",
+      "bytes": 491
+    },
+    "https://sudokupad.app/assets/twemoji/svg/2757.svg": {
+      "file": "files/7f266430cd9eb0a1eb6dbb484dd35e5402f17c2b3b5da04140c923291f8a18f5.svg",
+      "mime": "image/svg+xml",
+      "bytes": 231
+    },
+    "https://sudokupad.app/assets/twemoji/twemoji.min.js": {
+      "file": "files/991368627ba1e6995514703e5f8f4b337df3ca374f1a51f0fca2c2e5becbb3d2.js",
+      "mime": "application/javascript",
+      "bytes": 18050
+    },
+    "https://sudokupad.app/controls-app.js?v=0.611.0": {
+      "file": "files/c966ca6b181f39cee4d0450b023a8f1fbe2d074fdcb209661e4b2e67450f8dd7.js",
+      "mime": "application/javascript",
+      "bytes": 5412
+    },
+    "https://sudokupad.app/controls-tools.js?v=0.611.0": {
+      "file": "files/215367d068b87f5283397a9440b3c69b52a8f9b1b4276056be602ec7c3c9ac58.js",
+      "mime": "application/javascript",
+      "bytes": 1404
+    },
+    "https://sudokupad.app/favicon-32x32.png": {
+      "file": "files/d18ec07f9a64a583f112defe1c9e0dd6e35e3145baae0445640dc6a7a36fcee8.png",
+      "mime": "image/png",
+      "bytes": 1013
+    },
+    "https://sudokupad.app/feature-aiassistant.js?v=0.611.0": {
+      "file": "files/e2d71accab86d7f9334c81292dda23088701b493f430ed3097335ba363d32e14.js",
+      "mime": "application/javascript",
+      "bytes": 17364
+    },
+    "https://sudokupad.app/feature-bgimage.js?v=0.611.0": {
+      "file": "files/f4016fc05c4dc94793d092cb2f28ddc5634735bfceffb6834c1819e5110d4a3e.js",
+      "mime": "application/javascript",
+      "bytes": 8011
+    },
+    "https://sudokupad.app/feature-cellpaste.js?v=0.611.0": {
+      "file": "files/2245be155e264887b0e8de315fcbe9d221ad90ffe225e67d4e65741ca3f4f043.js",
+      "mime": "application/javascript",
+      "bytes": 4190
+    },
+    "https://sudokupad.app/feature-compactmarks.js?v=0.611.0": {
+      "file": "files/714bd86a525ebd865d74c833b02752be7839e49112c1924e03f69a765a810e77.js",
+      "mime": "application/javascript",
+      "bytes": 4159
+    },
+    "https://sudokupad.app/feature-conflictchecker.js?v=0.611.0": {
+      "file": "files/6fb6d8f576e7cd6aab1ab5bc6011bc6c10f68d16b31b3de295b843c9f693e389.js",
+      "mime": "application/javascript",
+      "bytes": 5229
+    },
+    "https://sudokupad.app/feature-copycells.js?v=0.611.0": {
+      "file": "files/53cf1de27dc6f3651f5e02d1087541b34a5d6d1b9afa7cb1cc0a401860809668.js",
+      "mime": "application/javascript",
+      "bytes": 2685
+    },
+    "https://sudokupad.app/feature-customcolors.js?v=0.611.0": {
+      "file": "files/a4478cdddd784bf72be7632c89438e4fcd4e40eb2738b7b80d4d08ad2df962c1.js",
+      "mime": "application/javascript",
+      "bytes": 1367
+    },
+    "https://sudokupad.app/feature-debug.js?v=0.611.0": {
+      "file": "files/947faf8f9b2b68377580d4380d21685430dadaf3e202c8c2b04a5007fcd1f4e5.js",
+      "mime": "application/javascript",
+      "bytes": 12539
+    },
+    "https://sudokupad.app/feature-emoji.js?v=0.611.0": {
+      "file": "files/ac699a6f7aac64be71b097b1c6d1cef770625f20a1783c8f165f01cc674dca6e.js",
+      "mime": "application/javascript",
+      "bytes": 8992
+    },
+    "https://sudokupad.app/feature-endless.js?v=0.611.0": {
+      "file": "files/1c233aadf376c253d39968a9aef2cfc5e574e74833d9f7f7781aaa416b45fee2.js",
+      "mime": "application/javascript",
+      "bytes": 19312
+    },
+    "https://sudokupad.app/feature-fog.js?v=0.611.0": {
+      "file": "files/5f97e8eea60e8bfcd84c074ab2a1e9ce55532f3bf2226db55efd308c8516d309.js",
+      "mime": "application/javascript",
+      "bytes": 17680
+    },
+    "https://sudokupad.app/feature-fpuz.js?v=0.611.0": {
+      "file": "files/a8e977fea0d7ba16e165dfac19f181f2dbfa1d0109e6d852e01bed9f20b13bee.js",
+      "mime": "application/javascript",
+      "bytes": 4352
+    },
+    "https://sudokupad.app/feature-gifting.js?v=0.611.0": {
+      "file": "files/4346dc30e61237641d75fef3dc8323cbe83c39bd3edb620e5e365fa520475bbf.js",
+      "mime": "application/javascript",
+      "bytes": 8153
+    },
+    "https://sudokupad.app/feature-gridrules.js?v=0.611.0": {
+      "file": "files/02635b51fe0bb3ffa6632966640c75c8199c96de5cb1b0a82c2555ac02fe4088.js",
+      "mime": "application/javascript",
+      "bytes": 4656
+    },
+    "https://sudokupad.app/feature-hairgag.js?v=0.611.0": {
+      "file": "files/69c843a62f90648fd9bd3f6f674b194dce542e117c89f2303782205a55abeb10.js",
+      "mime": "application/javascript",
+      "bytes": 5832
+    },
+    "https://sudokupad.app/feature-labelrowscols.js?v=0.611.0": {
+      "file": "files/9ea565869d2abd27174f1bbc9baf245e7b16412327c97aa0473751d602f75caa.js",
+      "mime": "application/javascript",
+      "bytes": 2972
+    },
+    "https://sudokupad.app/feature-largepuzzle.js?v=0.611.0": {
+      "file": "files/02f5e527aec514648fa02137cd9ffde224c1385cf6e691b73b11c1209b8f9841.js",
+      "mime": "application/javascript",
+      "bytes": 9337
+    },
+    "https://sudokupad.app/feature-layout.js?v=0.611.0": {
+      "file": "files/68297cf413101674a68b95a4c13f270a19bcf29341e2185ec2ca9dd2b5c59401.js",
+      "mime": "application/javascript",
+      "bytes": 5326
+    },
+    "https://sudokupad.app/feature-marksolveddigits.js?v=0.611.0": {
+      "file": "files/fbc7fc2cd2afd6624f93001cc60a0473445dccb382cf800eefdf94745e3fae5b.js",
+      "mime": "application/javascript",
+      "bytes": 7112
+    },
+    "https://sudokupad.app/feature-markup.js?v=0.611.0": {
+      "file": "files/c377e618bed67814fc3166f36bd3a9f54d0b5e0cdeef2048fbb9d466b617972d.js",
+      "mime": "application/javascript",
+      "bytes": 3968
+    },
+    "https://sudokupad.app/feature-project9x9.js?v=0.611.0": {
+      "file": "files/36c0165f203a1588c9162ae935e40bf2c078ae21a9c33269c2976fae036c8f41.js",
+      "mime": "application/javascript",
+      "bytes": 21473
+    },
+    "https://sudokupad.app/feature-puzzleevents.js?v=0.611.0": {
+      "file": "files/9d2214650b32a2b2443249e47dab60157656ce13f22bc775859827df3240a078.js",
+      "mime": "application/javascript",
+      "bytes": 31683
+    },
+    "https://sudokupad.app/feature-puzzlefont.js?v=0.611.0": {
+      "file": "files/08ec0f7f7898e8dbffc0886cce7ddfb185e8cdff1a0b6bd7e8bdbc71a2c2d095.js",
+      "mime": "application/javascript",
+      "bytes": 7240
+    },
+    "https://sudokupad.app/feature-puzzlepack.js?v=0.611.0": {
+      "file": "files/0c2191bd4f1872dc4218a7d21ccca80931ea40dd4f77493dd8b6af2bb283048c.js",
+      "mime": "application/javascript",
+      "bytes": 12219
+    },
+    "https://sudokupad.app/feature-replaygif.js?v=0.611.0": {
+      "file": "files/4a90820bc5c3dbc95457f896ab14b2e2c5af6ecb46516e3ab63a422ab2ad082b.js",
+      "mime": "application/javascript",
+      "bytes": 13990
+    },
+    "https://sudokupad.app/feature-replaysave.js?v=0.611.0": {
+      "file": "files/614f1598be278c6d146f158d60ddfeee2145d6edbe05a2b6e6d5f8b8c7796c66.js",
+      "mime": "application/javascript",
+      "bytes": 9129
+    },
+    "https://sudokupad.app/feature-rulealert.js?v=0.611.0": {
+      "file": "files/6a85c9f98b8e9d1270fa4b41ec3de0ff43fb827489285c60d0e1f27310ab6e34.js",
+      "mime": "application/javascript",
+      "bytes": 2900
+    },
+    "https://sudokupad.app/feature-screenshot.js?v=0.611.0": {
+      "file": "files/db37c46d2a27369e0d4badccd96ba9644a3ac79733d643943791cdd05e841363.js",
+      "mime": "application/javascript",
+      "bytes": 12811
+    },
+    "https://sudokupad.app/feature-seasonal.js?v=0.611.0": {
+      "file": "files/6a0e7ce06ef2caf2def6285274d8a76d2ee8db4914a92063a052b0606a71b95c.js",
+      "mime": "application/javascript",
+      "bytes": 5888
+    },
+    "https://sudokupad.app/feature-settingssave.js?v=0.611.0": {
+      "file": "files/bef2eeeab3405ed75e517dbe87444db5fd0a32ac887286686a51b4025416bc33.js",
+      "mime": "application/javascript",
+      "bytes": 1993
+    },
+    "https://sudokupad.app/feature-shorturl.js?v=0.611.0": {
+      "file": "files/cec18769856bf0fca9018b283aefebe39fe607e0f5aba57626fe6dd680872c49.js",
+      "mime": "application/javascript",
+      "bytes": 7974
+    },
+    "https://sudokupad.app/feature-showseencells.js?v=0.611.0": {
+      "file": "files/36f0ce156772067e27150750b8bf31b008837ed4a8fa988de71489eb72b0d082.js",
+      "mime": "application/javascript",
+      "bytes": 3048
+    },
+    "https://sudokupad.app/feature-solvedcounter.js?v=0.611.0": {
+      "file": "files/7ce0c59423ed9ecffd21d3bff0813c3d82acfbc2442f0d6011da6a3cb8b3a454.js",
+      "mime": "application/javascript",
+      "bytes": 10059
+    },
+    "https://sudokupad.app/feature-streamtool.js?v=0.611.0": {
+      "file": "files/348a0d206a1b3a74afd76f50d3e6334a27e02d4b0871661aa871a324a1c55a4a.js",
+      "mime": "application/javascript",
+      "bytes": 29960
+    },
+    "https://sudokupad.app/feature-sudokupadpro.js?v=0.611.0": {
+      "file": "files/2b2f00a71a545f447920ad2aea0f9e42bb1163bd9fce400ba10c5a14000fb8bf.js",
+      "mime": "application/javascript",
+      "bytes": 6114
+    },
+    "https://sudokupad.app/feature-uitheme.js?v=0.611.0": {
+      "file": "files/c9101d9e6bce85d8d13ff133a567f27b5c331591ed4b64ea62cb6a36d1f73b10.js",
+      "mime": "application/javascript",
+      "bytes": 4661
+    },
+    "https://sudokupad.app/feature-userplugins.js?v=0.611.0": {
+      "file": "files/2f68adcce17a6840a22e23cb2bc14042586e0ac61d6ae10c68e4c91c17539843.js",
+      "mime": "application/javascript",
+      "bytes": 6392
+    },
+    "https://sudokupad.app/framework.js?v=0.611.0": {
+      "file": "files/9b10c1acd4478a8c0f255e9ed961ddd54bf0c2d0030890d27654f0d4058dc76e.js",
+      "mime": "application/javascript",
+      "bytes": 46257
+    },
+    "https://sudokupad.app/images/icon_copy.svg": {
+      "file": "files/0ce15c04255760342c279b0db3bc73c7f524b557505ace4f7be78a541b597275.svg",
+      "mime": "image/svg+xml",
+      "bytes": 295
+    },
+    "https://sudokupad.app/images/sudokupad_square_logo.png": {
+      "file": "files/365cef30380fbf6cf49746051ecc1f8155573abd8d64ba388f37a0213ed72d97.png",
+      "mime": "image/png",
+      "bytes": 1835
+    },
+    "https://sudokupad.app/images/svencodes_peek.png": {
+      "file": "files/a1a155912fe917229e85fda58c6ae0c1be8a5702f4c55989eb0aecedeb0b7055.png",
+      "mime": "image/png",
+      "bytes": 7532
+    },
+    "https://sudokupad.app/js/script.manual.js": {
+      "file": "files/6d412d5af165629f096b6d79196291cf72fbca0afc4713f03661a70854c3b143.js",
+      "mime": "application/javascript",
+      "bytes": 2350
+    },
+    "https://sudokupad.app/lazygtmloader.js?v=0.611.0": {
+      "file": "files/b62d14ea59726c3599841e8b8444af6eaeaf57c75c81bdc9f88c6e07bd20e656.js",
+      "mime": "application/javascript",
+      "bytes": 1304
+    },
+    "https://sudokupad.app/portableevents.js?v=0.611.0": {
+      "file": "files/0be4763e35a1f7676e5cf7c67ecb7ff54454135bac37f25c945f753d74fc2ebb.js",
+      "mime": "application/javascript",
+      "bytes": 2241
+    },
+    "https://sudokupad.app/puzpatcher.bundle.js?v=0.611.0": {
+      "file": "files/28a25776c6bdd04b6e9bc932a1fb325b7d86a5fc03587a76ddb7f7e1e1e18cc6.js",
+      "mime": "application/javascript",
+      "bytes": 38829
+    },
+    "https://sudokupad.app/puzzleloader.js?v=0.611.0": {
+      "file": "files/e9d0bcb4ac5484752d6f2a904a47f09b03e5a2cad46f158ac8d864d24aff13ca.js",
+      "mime": "application/javascript",
+      "bytes": 5528
+    },
+    "https://sudokupad.app/puzzletools.js?v=0.611.0": {
+      "file": "files/3aa6496b326e56f3c6a55b4f00daef09e1e06a0f1f51dcd54a818ddf79c7500f.js",
+      "mime": "application/javascript",
+      "bytes": 28020
+    },
+    "https://sudokupad.app/rulesparser.js?v=0.611.0": {
+      "file": "files/87548bf6d8cd4831db36d6cd547504e5881406f213e028a45b55e558fcc320a6.js",
+      "mime": "application/javascript",
+      "bytes": 9075
+    },
+    "https://sudokupad.app/script.js?v=0.611.0": {
+      "file": "files/993c0c897be7e652b4a34dc0726b28d40d2f03e696c38f7d13bdc9bab0bcecd8.js",
+      "mime": "application/javascript",
+      "bytes": 226432
+    },
+    "https://sudokupad.app/solver.js?v=0.611.0": {
+      "file": "files/fe5dc029c86fc13789be8dd7e04d74c992a289b2f54cecdb41a1bc245e0204c6.js",
+      "mime": "application/javascript",
+      "bytes": 5334
+    },
+    "https://sudokupad.app/stegosaur.js?v=0.611.0": {
+      "file": "files/883c31d3693130384176f77544c159f0d0a9260d7c204bf8720e2ef889cde9be.js",
+      "mime": "application/javascript",
+      "bytes": 2121
+    },
+    "https://sudokupad.app/style.css?v=0.611.0": {
+      "file": "files/45a82273c9a03bfdf0f1a1bf4e5d2a92b8fb5b9b7c8254f66517a0d14999723e.css",
+      "mime": "text/css",
+      "bytes": 33438
+    },
+    "https://sudokupad.app/sudokupad-colors.css?v=0.611.0": {
+      "file": "files/f4289cbfaa1eea5a78b56c13cb93bea6b17f16347a7c1cbb234f05c0ec3a473d.css",
+      "mime": "text/css",
+      "bytes": 4949
+    },
+    "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1": {
+      "file": "pages/digits-of-despair.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 22157
+    },
+    "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1": {
+      "file": "files/a59cedd0ad509ef6de6c3abae305b0365bf2c29f90fb283e760064ff2441566e.html",
+      "mime": "text/html",
+      "bytes": 21794
+    },
+    "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1": {
+      "file": "pages/lineage-of-logic.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 22158
+    },
+    "https://sudokupad.app/tool-calculator.css?v=0.611.0": {
+      "file": "files/4abdb37fc5e946e7cc6f6c9b961f588516f25b90c999a9e0f89714d3070af5fb.css",
+      "mime": "text/css",
+      "bytes": 5216
+    },
+    "https://sudokupad.app/tool-calculator.js?v=0.611.0": {
+      "file": "files/4cffba85854b65b5c77d27e05381e2a9e013083c8809d625371f8f9872769222.js",
+      "mime": "application/javascript",
+      "bytes": 29766
+    },
+    "https://sudokupad.app/tool-color.css?v=0.611.0": {
+      "file": "files/0c09beeecb3e82d78df431c291a186799d7b76cb38745c124ac297ef04a06240.css",
+      "mime": "text/css",
+      "bytes": 5963
+    },
+    "https://sudokupad.app/tool-color.js?v=0.611.0": {
+      "file": "files/d8de52c414545f3d0776fa430b5284b091b355db32e8483735b6341dcc38d213.js",
+      "mime": "application/javascript",
+      "bytes": 15584
+    },
+    "https://sudokupad.app/tool-letter.css?v=0.611.0": {
+      "file": "files/0c5c8f3a073df1f4d588d487754b9f63129f27ede4af51341f56bda963c6500b.css",
+      "mime": "text/css",
+      "bytes": 1896
+    },
+    "https://sudokupad.app/tool-letter.js?v=0.611.0": {
+      "file": "files/41f18e4eab0ea9447ffb271972e3b8237c7e853afe8fa823290883b925e5cc2a.js",
+      "mime": "application/javascript",
+      "bytes": 9256
+    },
+    "https://sudokupad.app/tool-pen.css?v=0.611.0": {
+      "file": "files/ecb674e35973917fc7100560df2944d1233e88a357170f8867b2aa4b35532d9a.css",
+      "mime": "text/css",
+      "bytes": 2752
+    },
+    "https://sudokupad.app/tool-pen.js?v=0.611.0": {
+      "file": "files/beb5b51cb29d56dedcaf5541130b548c4d74599fc940df81d00a4628fb1a183b.js",
+      "mime": "application/javascript",
+      "bytes": 14984
+    },
+    "https://sudokupad.app/tool-replay.css?v=0.611.0": {
+      "file": "files/34f5807715d33badb7897f3a06cade07756200f88b989300ff137f62c7b40adc.css",
+      "mime": "text/css",
+      "bytes": 18417
+    },
+    "https://sudokupad.app/tool-replay.js?v=0.611.0": {
+      "file": "files/6f0bda46a78c987de9d799f25dedae52aed64cc5e0022c341f00a79510535b6a.js",
+      "mime": "application/javascript",
+      "bytes": 3943
+    },
+    "https://sudokupad.app/tool-select.js?v=0.611.0": {
+      "file": "files/fff778ef8f31d05d249b7266eeba5ef1f671bd283f88d5bb3beb65618a6c3646.js",
+      "mime": "application/javascript",
+      "bytes": 992
+    },
+    "https://sudokupad.app/utilities.js?v=0.611.0": {
+      "file": "files/ed7db7c4c0badafec843f1dee8eee80cb1f553fb4b2109206df3786f616ec0f1.js",
+      "mime": "application/javascript",
+      "bytes": 30140
+    },
+    "https://www.googletagmanager.com/gtag/js?id=G-7SX7DQ4WG6": {
+      "file": "files/f5b8e2caf84a5a8246e21be595bf2cd508c96d17e0bc1734a368397d5fa550f1.js",
+      "mime": "application/javascript",
+      "bytes": 526819
+    },
+    "https://www.googletagmanager.com/gtag/js?id=UA-173937060-1&cx=c&gtm=4e6an1": {
+      "file": "files/534d8a31e941acb190c9d5d40071e1133b4a905aa1eba190633b2859eebbba25.js",
+      "mime": "application/javascript",
+      "bytes": 341907
+    },
+    "https://www.googletagmanager.com/gtag/js?id=UA-173937060-1&cx=c&gtm=4e6an1h1": {
+      "file": "files/0d3abd9f225247ce0d078e594da1fd14b62df5517e5ceb69ff3fdf7395e50ca9.js",
+      "mime": "application/javascript",
+      "bytes": 341907
+    }
+  }
+}
