@@ -63,7 +63,7 @@
   },
   {
     "english": "\"Hey, keep your eyes open for any collectible coins, you hear? There were only 45 ever made!\"",
-    "zhHans": "",
+    "zhHans": "「喂，要留心搜集那些硬币，听见没？这种硬币总共只铸造过 45 枚！」",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -74,7 +74,7 @@
   },
   {
     "english": "\"I hid some snacks in the walls of the castle in case I get hungry later, but I'm hungry now, and I can't remember the recipes! If I tell you where to find them, can you look and see what they are made of?\"\\n\\nWall Food clues next to a row or column indicate the sum of the digits between two 'crust' digits in that row or column. Different food icons can have different crust digits.\\n\\nGiven the food icon and sum for three rows/columns, enter the two crust digits (low and high, respectively) in this panel to complete the quest.",
-    "zhHans": "",
+    "zhHans": "「我怕以后肚子饿，在城堡墙里藏了些零食。可现在我就饿了，偏偏忘了配方！要是我告诉你藏在哪里，你能帮我看看都用了什么材料吗？」\n\n行或列旁的「墙中食物」线索，表示该行或列中两枚「面包皮数字」之间所有数字的和。不同食物图标可能对应不同的面包皮数字。\n\n已知三行或三列的食物图标与总和后，请在此面板依次填入两枚面包皮数字（先小后大），完成任务。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -85,7 +85,7 @@
   },
   {
     "english": "\"You have learned much, but you are still bound by the confines of the grid. Only by letting your mind go free can you truly understand the essence of Sudoku.\"\\n\\nRemember, all clues (outside of the examples in the Learned Rules panel) must be correct. Solve the clues outside the castle's grids to complete the quest.\\n\\nCells outside of grids may contain a 0 or they may be blank. Examine the clue rules closely to deduce which cells must be filled.",
-    "zhHans": "",
+    "zhHans": "「你已经学到了很多，却仍困在网格的边界之内。只有让思想挣脱束缚，你才能真正领悟数独的精髓。」\n\n记住：除了「已学会的规则」面板中的示例，所有线索都必须成立。解出城堡网格外的线索，才能完成这项任务。\n\n网格外的格子可以填 0，也可以保持空白。请仔细阅读相关规则，推断哪些格子必须填写。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -96,7 +96,7 @@
   },
   {
     "english": "(👁️)s indicate the number of digits seen in the direction pointed at by an arrow. Larger digits obscure and block sight of subsequent smaller digits in the adjacent row or column.\\nNote: The clue only counts digits in the adjacent grid, not the entire map.",
-    "zhHans": "",
+    "zhHans": "眼睛符号（👁️）表示沿箭头方向能看见多少个数字。较大的数字会遮挡视线，使后方较小的数字无法被看见；只考虑同一网格内相邻行或列中的数字。\n注意：线索只计算相邻网格中的数字，不计算整张地图。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -116,7 +116,7 @@
   },
   {
     "english": "A book icon (📖) in column N contains a digit matching the column X where the digit N is found in that row.\\nFor example, a 📖 in R3C5 containing 7 indicates R3C7 is 5.\\nThe row and column numbers only apply to the current grid.",
-    "zhHans": "",
+    "zhHans": "位于第 N 列的书本符号（📖），其格内的数字等于同一行中数字 N 所在的列号 X。\n例如，R3C5 的 📖 中填 7，表示 R3C7 应填 5。\n行列编号只在当前网格内部计算。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -146,7 +146,7 @@
   },
   {
     "english": "A digit on a Collectible Coin indicates the number of coins bearing that digit in the entire map.",
-    "zhHans": "",
+    "zhHans": "一枚收藏硬币上标出的数字，表示整张地图上共有多少枚硬币带着这个数字。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -197,7 +197,7 @@
   },
   {
     "english": "A Wall Food clue indicates the sum of the digits between a particular pair of 'crust' digits in the adjacent row or column.\\nThe 'crust' digits are the same for each clue with a particular icon, i.e., all 🥪 clues use the same crusts, which may be different from 🌯 clues.",
-    "zhHans": "",
+    "zhHans": "「墙中食物」线索给出的数字，等于相邻行或列中，某一对「面包皮数字」之间所有数字的和。\n相同食物图标所对应的面包皮数字始终相同；例如，所有 🥪 使用同一对面包皮数字，但 🌯 可能使用另一对。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -247,7 +247,7 @@
   },
   {
     "english": "Along a bronze thermometer line, digits increase from the bulb to the tip.\\nEach line has exactly one bulb.",
-    "zhHans": "",
+    "zhHans": "沿古铜色温度计线，数字从圆头到尖端严格递增。\n每条温度计线恰好有一个圆头。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -257,7 +257,7 @@
   },
   {
     "english": "Along a green line, digits must differ from the next digit on the line by 5 or more.",
-    "zhHans": "",
+    "zhHans": "沿绿色耳语线，相邻两个格子中的数字之差必须至少为 5。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -267,7 +267,7 @@
   },
   {
     "english": "Along a red line, cells an equal distance from the center cell of the line contain digits that sum to the center cell.",
-    "zhHans": "",
+    "zhHans": "沿红色线条，与中心格距离相等的一对格子，其数字之和必须等于中心格中的数字。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -297,7 +297,7 @@
   },
   {
     "english": "Black dots separate two digits where one digit is double the other.",
-    "zhHans": "",
+    "zhHans": "黑点两侧的数字，一个必须恰好是另一个的两倍。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -387,7 +387,7 @@
   },
   {
     "english": "Clues contained entirely inside the HALL OF ILLUSIONS grid are wrogn and indicate the opposite of their normal rules:\\nDigits on wrogn thermometers increase as they get closer to the bulb.\\nDigits on wrogn whisper lines must differ from adjacent digits by less than 5.\\nA digit in a wrogn dark cell must be greater than all orthogonally-adjacent non-dark cells.\\nWrogn black dots, arrows, and indexing clues must not portray the relationship in their respective rules.",
-    "zhHans": "",
+    "zhHans": "完全位于「幻象大厅」网格内的线索都是「颠倒线索」，其含义与通常规则相反：\n颠倒温度计上的数字越靠近圆头，就越大。\n颠倒耳语线上的相邻数字之差，必须小于 5。\n颠倒暗格中的数字，必须大于所有正交相邻的非暗格数字。\n颠倒黑点、箭头及索引线索所表示的关系，都必须不成立。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -500,7 +500,7 @@
   },
   {
     "english": "Digits on a thin gray arrow line sum to the digit in the attached circle.\\nArrows in the fog may cross between cells but never share a cell.",
-    "zhHans": "",
+    "zhHans": "细灰色箭头线上的数字之和，等于箭头所连圆圈内的数字。\n处于迷雾中的箭头线可以在格子之间交叉，但不会共用同一个格子。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -570,7 +570,7 @@
   },
   {
     "english": "Every cell of a blue Roaming Line has a digit. The sequence of its cells is the same when read forwards or backwards.",
-    "zhHans": "",
+    "zhHans": "蓝色巡游线经过的每个格子都必须填数；沿线从头到尾读出的数字序列，必须与从尾到头读出的序列相同（回文）。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -610,7 +610,7 @@
   },
   {
     "english": "Four 4x4 grids can be found by placing digits in clues adjacent to the map.",
-    "zhHans": "",
+    "zhHans": "在地图旁边的线索格填入数字，就能找出四张 4×4 网格。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -788,7 +788,7 @@
   },
   {
     "english": "In the 11x11 THRONE ROOM area, instead of placing digits from 1-11 in each row and column, locate nine 3x3 non-overlapping regions and place the digits from 1-9 into each one. Digits still may not repeat in a row or column.\\nCells in this grid which aren't in any region must not contain a digit.",
-    "zhHans": "",
+    "zhHans": "在 11×11 的「王座厅」中，不是每行每列都填入 1 至 11。你需要找出九个互不重叠的 3×3 宫，并在每个宫里填入 1 至 9。任一行或列中，数字仍不得重复。\n不属于任何宫的格子必须保持空白。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -1192,7 +1192,7 @@
   },
   {
     "english": "See the FAQ and player guide at https://tinyurl.com/SudokuvaniaFAQ",
-    "zhHans": "",
+    "zhHans": "请查看常见问题与玩家指南：https://tinyurl.com/SudokuvaniaFAQ",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -1202,7 +1202,7 @@
   },
   {
     "english": "Shaded Dark Cells are hard to clear fog around. They contain a digit that is less than any orthogonally-adjacent unshaded cell.",
-    "zhHans": "",
+    "zhHans": "阴影覆盖的暗格周围的迷雾较难消散。暗格中的数字，必须小于所有正交相邻且未着阴影的格子中的数字。",
     "gameIds": [
       "digits-of-despair"
     ],
@@ -1525,7 +1525,7 @@
   },
   {
     "english": "Two cells in the FACTORY grid may not have the same digit if they are separated by a single chess knight's move.",
-    "zhHans": "",
+    "zhHans": "在工厂网格中，相距一个国际象棋「马步」的两个格子，不能填入相同数字。",
     "gameIds": [
       "digits-of-despair"
     ],
