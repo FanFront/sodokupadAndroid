@@ -66,6 +66,14 @@ jobs:
         run: |
           npx playwright install --with-deps chromium
           node scripts/replay-offline.mjs
+      - name: Upload replay diagnostics and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Sudokuvania-debug-phone-replay
+          path: offline-debug/
+          if-no-files-found: warn
+          retention-days: 14
       - name: Assemble cached offline debug APK
         run: gradle --no-daemon :app:assembleDebug
       - uses: actions/upload-artifact@v4
@@ -126,6 +134,14 @@ jobs:
         run: gradle --no-daemon :app:assembleDebug
       - name: Replay both games with all network requests blocked
         run: node scripts/replay-offline.mjs
+      - name: Upload replay diagnostics and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Sudokuvania-debug-manual-replay
+          path: offline-debug/
+          if-no-files-found: warn
+          retention-days: 14
       - name: Upload personal offline test APK
         if: always()
         uses: actions/upload-artifact@v4
