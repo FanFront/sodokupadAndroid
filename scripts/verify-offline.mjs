@@ -18,7 +18,7 @@ for (const game of catalog) {
 let bytes=0;
 for (const [url,info] of Object.entries(index.assets)) {
   if (!url.startsWith('https://')) throw new Error('Invalid URL: '+url);
-  if (!/^(files\/[a-f0-9]{64}|pages\/[a-z0-9-]+\.zh-Hans\.html)$/.test(info.file)) throw new Error('Invalid asset path: '+info.file);
+  if (!/^(files\/[a-f0-9]{64}\.[a-z0-9]{1,8}|pages\/[a-z0-9-]+\.zh-Hans\.html)$/.test(info.file)) throw new Error('Invalid asset path: '+info.file);
   const st = await stat(join(root,info.file));
   if (!st.isFile() || st.size !== info.bytes) throw new Error('Size mismatch: '+url);
   bytes += st.size;
