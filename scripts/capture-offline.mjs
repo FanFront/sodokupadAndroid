@@ -118,7 +118,7 @@ async function visit(browser, url) {
           if (++visited > 120000 || depth > 16) return;
           if (typeof value === 'string') {
             if (value.length >= 12 && value.length <= 3000 &&
-                /[A-Za-z]{3,}\\s+[A-Za-z]{3,}/.test(value)) strings.add(value);
+                /[A-Za-z]{3,}\s+[A-Za-z]{3,}/.test(value)) strings.add(value);
           } else if (value && typeof value === 'object') {
             if (seen.has(value)) return;
             seen.add(value);
