@@ -38,6 +38,19 @@ try {
     const response=await page.goto(entry.url,{waitUntil:'domcontentloaded',timeout:40000});
     if(!response||response.status()>=400)problems.add('Cannot load '+entry.url);
     await page.waitForTimeout(2200);
+    try {
+      await page.waitForSelector('#android-gamepad', {timeout:12000});
+      const buttonCount=await page.locator('#android-gamepad button[data-android-action="digit"]').count();
+      if(buttonCount!==10)problems.add('Incomplete Android keypad: '+entry.id);
+      const pan=page.locator('#android-gamepad button[data-android-action="pan"]');
+      await pan.click();
+      if(!await page.locator('html.android-pan').count())problems.add('Touch movement mode failed: '+entry.id);
+      await pan.click();
+      if(await page.locator('html.android-pan').count())problems.add('Touch input mode failed to restore: '+entry.id);
+      if(await page.locator('.topbar').isVisible())problems.add('Desktop header still visible: '+entry.id);
+    }catch(error){
+      problems.add('Android controls missing or broken: '+entry.id+' '+error.message.slice(0,90));
+    }
     const start=page.getByText(/Start Puzzle|Continue Puzzle/i).first();
     if(await start.count()&&await start.isVisible()){
       await start.click({timeout:3500}).catch(()=>{});
