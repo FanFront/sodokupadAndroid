@@ -26,6 +26,7 @@ const processed = new Set();
 const errors = [];
 const writes = new Set();
 const discovered = new Set();
+const decodedStoryCandidates = {};
 
 function key(url) {
   const u = new URL(url);
@@ -104,6 +105,38 @@ async function visit(browser, url) {
     for (const link of await page.locator('a[href]').evaluateAll(nodes => nodes.map(n=>n.href))) {
       if (allowedPuzzle(link)) discovered.add(key(link));
     }
+    // SudokuPad may return a packed puzzle: collect already-decoded story and
+    // rule strings from the game's in-memory source object for manual review.
+    try {
+      decodedStoryCandidates[url] = await page.evaluate(() => {
+        const puzzle = window.Framework?.app?.sourcePuzzle;
+        if (!puzzle) return [];
+        const strings = new Set();
+        const seen = new WeakSet();
+        let visited = 0;
+        function walk(value, depth) {
+          if (++visited > 120000 || depth > 16) return;
+          if (typeof value === 'string') {
+            if (value.length >= 12 && value.length <= 3000 &&
+                /[A-Za-z]{3,}\\s+[A-Za-z]{3,}/.test(value)) strings.add(value);
+          } else if (value && typeof value === 'object') {
+            if (seen.has(value)) return;
+            seen.add(value);
+            if (Array.isArray(value)) {
+              for (const v of value) walk(v, depth+1);
+            } else {
+              for (const [k,v] of Object.entries(value)) {
+                if (!/^(solution|givens|history|undo|redo)$/i.test(k)) walk(v, depth+1);
+              }
+            }
+          }
+        }
+        walk(puzzle, 0);
+        return [...strings].slice(0, 15000);
+      });
+    } catch (error) {
+      errors.push('Could not inspect decoded puzzle text: ' + url);
+    }
   } catch (error) {
     errors.push('Page '+url+': '+error.message);
   } finally {
@@ -139,6 +172,8 @@ const manifest = {
   assets: Object.fromEntries([...entries].sort(([a],[b])=>a.localeCompare(b)))
 };
 await writeFile(join(ROOT,'index.json'), JSON.stringify(manifest,null,2)+'\n');
+await writeFile(join(ROOT,'decoded-game-text.json'),
+  JSON.stringify(decodedStoryCandidates, null, 2)+'\n');
 await writeFile(join(ROOT,'capture-report.json'), JSON.stringify({
   capturedResources:entries.size,
   capturedPages:processed.size,
