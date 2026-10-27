@@ -32,9 +32,12 @@ jobs:
           node --check scripts/build-localized-pages.mjs
           node --check scripts/decode-scl.mjs
           node --check scripts/build-translated-puzzles.mjs
+          node --check scripts/test-scl.mjs
           node --check app/src/main/assets/offline/mobile/android.js
           node --check scripts/apply-translations.mjs
           node scripts/test-translation.cjs
+          npm install --no-audit --no-fund
+          node scripts/test-scl.mjs
 
   build-cached-apk:
     if: github.event_name == 'push'
@@ -62,6 +65,7 @@ jobs:
           npm run build-html
           npm run build-puzzle-zh
           npm run verify
+          node scripts/test-scl.mjs
       - name: Test the actual rendered board at Android phone size
         run: |
           npx playwright install --with-deps chromium
@@ -119,6 +123,8 @@ jobs:
         run: npm run build-puzzle-zh
       - name: Validate the local capture before packaging
         run: npm run verify
+      - name: Validate SudokuPad-compatible puzzle encoding
+        run: node scripts/test-scl.mjs
       - name: Extract English text from HTML and puzzle data
         run: npm run extract-strings
       - name: Save captured resources and HTML into GitHub repository
