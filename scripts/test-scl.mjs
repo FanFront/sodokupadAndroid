@@ -30,6 +30,12 @@ for(const game of games) {
   assert.match(output,/^scl[A-Za-z0-9+/=]+$/);
   assert.deepEqual(unpackScl(output),original,'Lossy Base64-LZ roundtrip '+game.id);
 
+  // In release builds, fail closed instead of silently packaging the original
+  // English API package (the exact regression reported on Android).
+  if(process.argv.includes('--require-translated')) {
+    assert.match(info.file,/^translated\/[a-z0-9-]+\.scl$/,
+      game.id+' must point to the Chinese SCL asset');
+  }
   // The dynamically built Chinese package must also be parseable.
   if(info.file.startsWith('translated/')) {
     const localized=unpackScl(await readFile(join(root,info.file),'utf8'));
@@ -38,6 +44,20 @@ for(const game of games) {
     assert.deepEqual(localized.metadata.solution,original.metadata.solution,game.id+' solution');
     assert.deepEqual(localized.triggereffect,original.triggereffect,game.id+' trigger events');
     assert.deepEqual(localized.foglight,original.foglight,game.id+' fog rules');
+    const visualText=items=>(items||[]).map(x=>x.text).filter(Boolean);
+    // These exact on-board captions are present in the screenshots, not only
+    // in a menu. If they remain English, localization was not actually baked.
+    if(game.id==='digits-of-despair') {
+      assert.ok(visualText(original.overlays).includes('LEARNED RULES'));
+      assert.ok(visualText(localized.overlays).includes('已学会的规则'),
+        'LEARNED RULES SVG caption not localized');
+      assert.ok(visualText(localized.underlays).includes('从圆头向外严格递增。'),
+        'Guide THERMO rule not localized');
+    } else if(game.id==='lineage-of-logic') {
+      assert.ok(visualText(original.overlays).includes('Explore the Castle'));
+      assert.ok(visualText(localized.overlays).includes('探索城堡'),
+        'Lineage of Logic quest labels not localized');
+    }
     console.log(game.id+': original + localized SCL data decoded; '+
       localized.cells.length+'x'+localized.cells[0].length+' cells');
   } else {
