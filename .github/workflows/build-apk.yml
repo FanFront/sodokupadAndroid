@@ -23,6 +23,11 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.13'
+      - name: Check Chinese localization files and JS behavior
+        run: |
+          python3 scripts/check-assets.py
+          node --check app/src/main/assets/translate.js
+          node scripts/test-translation.cjs
       - name: Build APK
         run: gradle --no-daemon :app:assembleDebug
       - uses: actions/upload-artifact@v4
