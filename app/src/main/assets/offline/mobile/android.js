@@ -49,6 +49,9 @@
    * User progress, fog and selected digits are not touched.
    */
   function focusEntrance() {
+    // Standalone 9x9 boss and enemy puzzles have no 50x50 castle entrance.
+    // Applying the map's row-22 fallback would pan the boss board offscreen.
+    if (!isMap()) return false;
     const a = app();
     const f = feature();
     if (!a || !a.puzzle || !a.puzzle.currentPuzzle || !f) return false;
@@ -255,6 +258,10 @@
       return;
     }
     if (action === 'zoom-in' || action === 'zoom-out' || action === 'recenter') {
+      if (action === 'recenter' && !isMap()) {
+        app()?.resize?.();
+        return;
+      }
       const f = feature();
       if (!f || !f.featureEnabled || !f.boEl) {
         notify('大棋盘缩放尚未就绪');
@@ -520,6 +527,7 @@
   // Do not steal the player's current position after startup. Only focus
   // once, after the decoded puzzle metadata and SVG viewBox are ready.
   let tries = 0;
+  if (isMap()) {
   const timer = setInterval(() => {
     if (focusEntrance()) {
       clearInterval(timer);
@@ -535,6 +543,7 @@
       });
     }
   }, 400);
+  }
 
   window.AndroidSudokuvaniaPort = {notify, updateModes, focusEntrance, openRegion, getBossLinks, dock};
 })();
