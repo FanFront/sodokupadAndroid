@@ -44,6 +44,25 @@ try {
 } catch (error) {
   console.warn('No decoded game-text inventory; only HTML/JSON scanned.');
 }
-const sorted=[...source].map(([english,urls])=>({english,foundIn:[...urls]})).sort((a,b)=>a.english.localeCompare(b.english));
+// Also scan the original editable HTML, not only generated Chinese pages.
+const games=JSON.parse(await readFile('app/src/main/assets/games.json','utf8')).games;
+const dictionaries={};
+for(const game of games) {
+  dictionaries[game.id]=JSON.parse(await readFile(
+    'app/src/main/assets/i18n/games/'+game.id+'.zh-Hans.json','utf8'));
+  try {
+    const html=await readFile(join(root,'pages/'+game.id+'.html'),'utf8');
+    for(const m of html.matchAll(/>([^<>]{12,600})</g)) add(m[1],game.url);
+  } catch{}
+}
+const shared=JSON.parse(await readFile('app/src/main/assets/i18n/zh-Hans.json','utf8'));
+const sorted=[...source].map(([english,urls])=>{
+  const foundIn=[...urls];
+  const gameIds=games.filter(g=>foundIn.some(u=>u===g.url)).map(g=>g.id);
+  const existing=gameIds.length===1
+    ? dictionaries[gameIds[0]][english] || shared[english]
+    : shared[english];
+  return {english,zhHans:existing||'',gameIds,foundIn};
+}).sort((a,b)=>a.english.localeCompare(b.english));
 await writeFile(join(root,'translation-candidates.json'),JSON.stringify(sorted,null,2)+'\n');
 console.log('Translation candidates:',sorted.length,'(private; review for spoilers and precision)');
