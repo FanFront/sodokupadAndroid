@@ -1,14 +1,16 @@
-/* Reviewed Chinese text, including story/rules revealed later by the game.
-   Display-only: puzzle JSON and SudokuPad's internal validation remain English. */
+/* Fallback Chinese UI/SVG display translation for authored text.
+   Main story/rules/SVG labels are baked into offline SCL during the APK build.
+   SudokuPad numbers, solving logic and progress are never modified here. */
 (() => {
   'use strict';
   window.SudokuPadAndroidTranslate = dictionary => {
     window.__spChineseObserver?.disconnect();
     if (!document.body || !dictionary) return;
-    // The 50×50 puzzle canvas generates thousands of SVG nodes while
-    // loading. Its text is localized directly in the baked puzzle SCL.
-    // Observe only the surrounding UI/dialogs to avoid blocking rendering.
-    const excluded='script,style,textarea,input,select,option,noscript,code,pre,[contenteditable="true"],#board,#svgrenderer,#android-gamepad';
+    // The 50×50 puzzle draws many SVG nodes. Restrict changes to authored
+    // text; live translation is a fallback for content rebuilt at runtime.
+    const excluded='script,style,textarea,input,select,option,noscript,code,pre,[contenteditable="true"],#android-gamepad';
+    // Translate authored SVG labels, never SudokuPad's editable cell values.
+    const puzzleNumbers='#cell-values,#cell-givens,#cell-candidates,#cell-pencilmarks';
     const entries=Object.entries(dictionary)
       .filter(([en,zh])=>en && typeof zh==='string' && zh && zh!==en)
       .sort((a,b)=>b[0].length-a[0].length);
@@ -32,14 +34,17 @@
     }
     function textNode(node) {
       const parent=node.parentElement;
-      if(!parent || parent.closest(excluded) ||
-         parent.closest('#cell-values,#cell-givens,#cell-candidates,#cell-pencilmarks')) return;
+      if(!parent || parent.closest(excluded) || parent.closest(puzzleNumbers)) return;
+      // All on-board text comes from SVG. Only touch real authored SVG text
+      // (not cell values, CSS, paths, pencil marks or the Android controls).
+      if(parent.closest('#board,#svgrenderer') && !parent.closest('svg text,svg tspan')) return;
       const original=node.nodeValue || '';
       const translated=translateString(original);
       if(translated!==original) node.nodeValue=translated;
     }
     function attributes(elem) {
-      if(!elem || elem.nodeType!==1 || elem.matches(excluded))return;
+      if(!elem || elem.nodeType!==1 || elem.matches(excluded) ||
+         elem.closest('#board,#svgrenderer'))return;
       for(const key of ['title','aria-label','placeholder','alt']) {
         const current=elem.getAttribute(key);
         if(current) {
@@ -61,11 +66,21 @@
       }
     }
     const watcher=new MutationObserver(changes=>{
-      // Do not walk puzzle SVG updates (fog, notes, digits, arrows). They are
-      // frequent and can delay first paint on slower Android WebViews.
+      // Ignore high-volume puzzle paths/shapes; process only new SVG labels.
       for(const m of changes) {
         const parent=m.target.nodeType===1?m.target:m.target.parentElement;
-        if(parent?.closest('#board,#svgrenderer,#android-gamepad'))continue;
+        if(parent?.closest('#android-gamepad'))continue;
+        if(parent?.closest('#board,#svgrenderer')) {
+          // The board has frequent path/rect/fog updates. Only inspect
+          // added SVG text nodes, so localization cannot slow down play.
+          if(m.type==='characterData') textNode(m.target);
+          if(m.type==='childList') for(const n of m.addedNodes) {
+            if(n.nodeType===3) textNode(n);
+            else if(n.nodeType===1 &&
+              (n.matches('text,tspan') || n.querySelector('text,tspan'))) scan(n);
+          }
+          continue;
+        }
         if(m.type==='characterData')textNode(m.target);
         if(m.type==='childList')for(const n of m.addedNodes)scan(n);
         if(m.type==='attributes')attributes(m.target);

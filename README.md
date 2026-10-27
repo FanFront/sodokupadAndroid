@@ -19,6 +19,7 @@
 npm install
 npx playwright install chromium
 npm run capture
+npm run apply-translations
 npm run build-html
 npm run build-puzzle-zh
 npm run verify
@@ -39,7 +40,9 @@ gradle :app:assembleDebug
 - `app/src/main/assets/offline/pages/*.zh-Hans.html`：根据简体中文词典生成、**APK 实际使用**的 HTML。
 - `app/src/main/assets/offline/files/`：按 URL 哈希保存的原始 JS、CSS、WASM、图片、字体和原版 Puzzle API 响应。
 - `app/src/main/assets/offline/translated/`：从原版 `scl` 压缩数据生成的中文版游戏包。只对 `metadata.rules`、`metadata.msgcorrect` 和 `metadata.grids[*].rules` 中**已有人工译文**的字符串进行替换。构建脚本会对解压/重压结果做一致性验证，并检查其他游戏数据未被改变。APK 的离线 API 响应指向这些中文版文件。
-- `app/src/main/assets/offline/translation-candidates.json`：直接解开 SudokuPad `scl` 压缩的主谜题 JSON 后提取故事、规则、任务等文本。目前已识别约 420 个不同的英语片段；截至本次改动，其中 78 条有人工撰写的中文（其余仍为英语）。这份清单不代表所有隐藏副本已找到。
+- `app/src/main/assets/offline/translation-candidates.json`：直接解开 SudokuPad `scl` 压缩的主谜题 JSON 后提取故事、规则、任务等文本。目前已识别 420 个不同的英语片段；截至本次改动，已为所提取的全部 420 条提供简体中文译文（仍须持续审校）。这份清单不代表所有隐藏副本已找到。
+
+翻译修复：先运行 `npm run apply-translations`，再运行 `npm run build-html && npm run build-puzzle-zh`；只修改候选清单、不导入词典会导致棋盘仍显示英文。CI 现会检查词典与候选清单保持一致，并在打包前自动导入。
 
 翻译步骤：打开 `offline/translation-candidates.json`，给每个需要翻译的 `english` 原句填写自然、准确的简体中文 `zhHans` 字段；完成后运行 `npm run apply-translations`，脚本会根据 `gameIds` 将译文导入通用或游戏专用词典。然后运行 `npm run build-html && npm run build-puzzle-zh`，重新生成中文版 HTML **和**压缩的中文版谜题数据。也可以直接编辑 `i18n/games/<game-id>.zh-Hans.json` 的**真实英文原句 → 中文译文**。原始 HTML 不会因重新捕获而被覆盖；想重新抓原始 HTML，需要手动删除 `offline/pages/<game-id>.html`。不要直接篡改 JS 内部的逻辑与数独答案。
 
@@ -62,7 +65,7 @@ gradle :app:assembleDebug
 
 - Playwright 会从压缩题目数据中提取并发现潜在首领链接，但它仍只能捕获实际访问到的相关 SudokuPad 谜题页面和资源。还没出现的 Boss 游戏、分支、媒体或特殊 API 请求可能缺失，遇到缺少资源时应用会拒绝访问。请按 `offline/capture-report.json` 的提示补齐，**不要认为当前的首次抓取等于完整 100% 离线镜像**。
 - SudokuPad 本身没有为巨型 Sudokuvania 地图设计完备的移动端操作；本仓库增加了独立的触屏移动、缩放与输入控制。尚未在真实 Android 手机上确认所有特殊手势、画线和字母谜题都正常。
-- 两个主谜题的压缩数据**已成功解码**。约 420 个不同的英文文本片段已有原文与对应来源路径，其中 **78 项**已经人工翻译（包括开篇规则、第一部多个谜题提示、第二部早期网格、数值/数字规则）。其余大量剧情、支线与结局仍需人工逐条翻译。
+- 两个主谜题的压缩数据**已成功解码**。约 420 个不同的英文文本片段已有原文与对应来源路径，其中 **420 项已填写中文译文**（包括地图上的 SVG 提示、剧情、支线、规则、任务和结局）。已提取的文字已全部覆盖，但隐藏谜题可能包含尚未捕获的英语；复杂数学规则和双关语仍需要真实游玩校对。
 - 翻译只改游戏元数据中的故事与规则文字、以及 UI 显示文本，不改数独格子数据、答案、进度和迷雾判定。保存进度继续存储在 Android WebView 的本地存储中，清除应用数据会丢失存档。
 - 原网页资源与游戏内容属于其权利人，SudokuPad 的前端源代码不是开放源代码许可项目。现在按需求启用了**将原站资源提交到 Git 仓库**的工作流，因此建议在执行前就把仓库设为私有，并确认所需的许可。**日后改为 Private 不会撤销此前的公开访问记录或别人已创建的副本。**
 
