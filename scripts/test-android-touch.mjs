@@ -24,7 +24,7 @@ try {
     window.__calls=[];
     window.Framework={
       app:{
-        puzzle:{selectedCells:[]},tool:'normal',
+        puzzle:{selectedCells:[{}]},tool:'normal',
         hasTool(){return true;},
         changeTool(value){this.tool=value;window.__calls.push(['tool',value]);},
         doPressDigit(value){window.__calls.push(['digit',value]);},
@@ -66,6 +66,11 @@ try {
   assert.equal(calls.filter(c=>c[0]==='digit'&&c[1]==='1').length,2);
   assert.equal(calls.filter(c=>c[0]==='undo').length,1);
   assert.equal(calls.filter(c=>c[0]==='tool'&&c[1]==='corner').length,1);
+  await page.evaluate(()=>{window.Framework.app.puzzle.selectedCells=[];});
+  await digit.tap();
+  assert.match(await page.locator('#android-status').innerText(),/请先轻触棋盘格子/);
+  assert.equal((await page.evaluate(()=>window.__calls)).filter(c=>c[0]==='digit').length,2,
+    'No selection should not write a digit to the puzzle');
 
   // Verify touch coordinates can bypass an unrelated transparent overlay.
   await page.evaluate(()=>{
