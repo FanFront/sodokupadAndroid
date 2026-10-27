@@ -1,64 +1,52 @@
-# SudokuPad Android
+# SudokuPad Android — 离线移植版
 
-A small **unofficial** Android companion app for playing SudokuPad puzzles. Built initially for **Sudokuvania: Digits of Despair** and **Sudokuvania 2: Lineage of Logic**, with an extensible game list and translation packs.
+**目标：** 用 Android APK 离线运行 Sudokuvania 1《Digits of Despair》与 Sudokuvania 2《Lineage of Logic》，并最终提供经人工审校的简体中文剧情与规则。
 
-> This is a work-in-progress WebView companion, **not** a reimplementation or offline distribution of SudokuPad or the puzzles. The puzzles are hosted by [SudokuPad](https://sudokupad.app/) and were created by Skeptical Mario. SudokuPad was made by Sven Neumann. This project is not affiliated with either creator.
+这不再是在线 WebView 或边玩边使用机器翻译的方式。离线构建步骤通过 Chromium 打开原始游戏，捕获 HTML、JS、CSS、WASM（如有）、图片、字体以及浏览器实际请求的谜题 API 响应，然后统一打包进 APK。Android WebView 仍使用原站 URL，但所有 HTTP(S) 请求会被 APK 中的拦截器改为读取本地文件，未捕获的请求会被拒绝（503），因此不会偷偷回源联网。
 
-## Current features
+## 个人使用：制作 APK
 
-- Two preconfigured Sudokuvania games with the requested `setting-nogrid=1&setting-largepuzzle=1` URL settings.
-- Add additional `https://sudokupad.app/...` puzzles from within the app without changing the Java source.
-- Local game catalog in `app/src/main/assets/games.json` for future built-in games.
-- The Android menus and brief guides use **Simplified Chinese (简体中文) only**, plus *selected, exact-match* SudokuPad UI translations. Untranslated content remains in English.
-- Reviewed exact-match Chinese terminology takes priority in `app/src/main/assets/i18n/`.
-- **Opt-in on-device ML Kit English→Chinese translator** for visible, newly revealed story, quest and rule text that does not have a reviewed translation. Tap **全文翻译** inside a game and approve the ~30 MB Wi-Fi-only language model download. Tap the button again (**显示英文**) to compare the original English text.
-- Dynamic text-node translation watches the site's HTML and eligible SVG text; it does not rewrite original puzzle data, puzzle answers, or stored progress. This is **machine translation, not a proofread complete Chinese script**.
-- WebView DOM/local storage enabled. The app does **not** clear website data when switching games or relaunching.
-- Landscape-mode toggle for large grids. Pinch zoom is enabled in WebView, but **this cannot guarantee Sudokuvania zoom or pan works on Android**.
-- Minimal permissions: internet only. No ad SDK, analytics SDK, injected native JS bridge, or unrestricted browsing.
-- GitHub Actions builds an Android **debug APK** as a downloadable workflow artifact.
+1. 在你的 GitHub 项目中打开 **Actions → Build offline APK**。
+2. 点击 **Run workflow**。该操作会在构建机上获取第三方网页文件；不要未经授权再公开分发打包结果。
+3. 工作流会执行 `npm run capture`、`npm run verify`，然后使用 Gradle 构建 APK。
+4. 只有构建**成功**之后，才到该次运行的 **Artifacts** 下载 `Sudokuvania-offline-debug-APK`。它是个人测试用的 debug APK，并不代表两部游戏所有隐藏章节均已验证可脱机运行。
 
-## Important limitations
+## 本地构建
 
-1. **Internet connection required.** The app loads the original SudokuPad website, not local copies of its assets.
-2. **Machine translation ≠ fully reviewed translation.** Live English text is translated on-device once the model is installed and enabled, including many dynamically revealed story and rule descriptions. Some text hidden in images/canvas/tooltips or inaccessible to the DOM remains English; some dynamically rendered SVG text may overflow. Do not trust machine translations for subtle rules; use **显示英文** to compare. The hand-reviewed translation files currently cover menus, selected terms, and a basic guide, **not the complete original game manuscripts**.
-3. Sudokuvania is primarily designed for desktop. Its developer specifically notes that mobile zooming/panning and some pen-tool controls are unsupported. The orientation toggle and WebView zoom options are experimental conveniences, not fixes to the source engine.
-4. SudokuPad saves progress in its own browser storage. Data in **this app** is separate from Chrome or another browser; installing a new app or clearing Android app data can erase saved progress. Keep the same Android package ID and do not clear storage. Use SudokuPad's export/backup features if available.
-5. The APK created by CI is debug-signed, appropriate for personal testing. A release APK needs your own signing key and release process.
-6. The puzzle and site artwork, data and story are owned by their respective creators. This repository intentionally does not bundle those works. Ask the rights holders before redistributing translated game content or publishing an unofficial bundle.
+需要 Node 22、Java 17、Android SDK 35、Gradle 8.13 和 Chromium/Playwright。
 
-## Translation architecture
-
-- AndroidX WebKit uses an **origin-scoped** message listener on `https://sudokupad.app` for asynchronous JS→native translation. Third-party iframes are excluded; no `addJavascriptInterface` bridge is used.
-- On-device ML Kit translation model is downloaded **only after consent, only via Wi-Fi**. Text goes through the local model, not a custom translation server. ML Kit may still send diagnostic/model metadata; see [Google's disclosures](https://developers.google.com/ml-kit/android-data-disclosure).
-- The shared `zh-Hans.json` and per-game dictionaries override machine output for short verified terms. The dynamically revealed text is translated when it appears; we do not unlock any clues or quests early.
-- Original English appears if the model is unavailable, a translation fails, or the player disables automatic translation. A comparison switch is provided.
-
-## Build with GitHub Actions
-
-Open **Actions** → **Build debug APK** → **Run workflow** (or push to `main`). After the job succeeds, open the workflow run and download the `SudokuPadAndroid-debug-APK` artifact. Unzip it and install `app-debug.apk` on Android 8.0+.
-
-For local builds, install JDK 17, Android SDK 35, and Gradle 8.13, then run:
-
-```bash
+```sh
+npm install
+npx playwright install chromium
+npm run capture
+npm run verify
+npm run extract-strings
 gradle :app:assembleDebug
 ```
 
-The source project can also be opened in Android Studio; the Gradle wrapper executable/JAR is not currently vendored.
+生成的本地资源位于 `app/src/main/assets/offline/`，已被 `.gitignore` 排除，以免把未经许可的第三方内容推送到你的公开仓库。**没有离线资源就不能生成可玩的离线版**；应用内会显示明确的缺少资源提示。
 
-## How to add games and translations
+## 简体中文化
 
-- **New built-in game:** add `{"id":"unique-id","title":"Game name","url":"https://sudokupad.app/puzzle-id"}` to `app/src/main/assets/games.json`. Or use the app's Add puzzle form, which stores personal links only on that phone.
-- **Chinese translations:** update the shared `app/src/main/assets/i18n/zh-Hans.json`, or use `app/src/main/assets/i18n/games/<game-id>.zh-Hans.json` for game-specific phrases. The app merges a matching game dictionary into the common Chinese dictionary. Other languages are deliberately unsupported.
-- **More translations for existing games:** add exact original UI snippets as JSON keys with Simplified Chinese values. Avoid spoilers. Please review rules carefully: a mistranslation can change how a sudoku is solved.
-- **Real full game localization:** coordinate with puzzle creators, obtain a translatable data source or an authorized localization mechanism, and audit generated rules, narrative, quests, and SVG-rendered labels. The existing DOM translator is only a best-effort enhancement.
+- `app/src/main/assets/i18n/zh-Hans.json`：通用菜单和标准术语。
+- `app/src/main/assets/i18n/games/<game-id>.zh-Hans.json`：某一游戏中**经人工审核**的固定文本。
+- `scripts/extract-text.mjs`：从本地缓存的 HTML/JSON 提取待译候选文本，输出在被忽略的 `offline/translation-candidates.json` 中。不会自动发布包含剧透的原文清单。
+- 中文文本在原文**正常显示时**按词典替换；未译文本仍显示英文。没有引入任何在线翻译服务或语言模型。译错特殊规则可能导致无解，因此宁可保留英文，也不能猜测。
 
-## Credits
+## 已知限制
 
-- [SudokuPad](https://sudokupad.app/) — Sven Neumann.
-- [Sudokuvania](https://sudokuvania.com/) — Skeptical Mario.
-- [Sudokuvania help and mobile limitations](https://sudokuvania.com/help-and-hints/).
+- Playwright 只能捕获首次加载、点击开始游戏后，以及它发现并打开的相关 SudokuPad 谜题链接。还没出现的 Boss 游戏、分支、媒体或特殊 API 请求可能缺失，遇到缺少资源时应用会拒绝访问。请按 `offline/capture-report.json` 的提示补齐，**不要认为当前的首次抓取等于完整 100% 离线镜像**。
+- SudokuPad 本身没有为巨型 Sudokuvania 地图设计完备的移动端缩放/平移；APK 封装不自动解决复杂触摸手势。
+- 两个游戏的**全部剧情、动态规则与隐藏谜题文本尚未取得并人工翻译完成**。现有中文词库仅覆盖常见词汇和规则概述。要达到自然、完整汉化，需要取得可审阅的游戏数据文本并逐段校对。
+- 翻译只改显示文本，不改数独格子数据、答案、进度和迷雾判定。保存进度继续存储在 Android WebView 的本地存储中，清除应用数据会丢失存档。
+- 原网页资源与游戏内容属于其权利人。SudokuPad 的前端源代码不是开放源代码许可项目。出于版权原因，公开仓库**不包含**网页、游戏脚本、图片或谜题资源。打包前应确认你的使用与分发权利。
 
-## Privacy and security
+## 如何扩展到其他 SudokuPad 游戏
 
-The app allows top-level in-app navigation to `https://sudokupad.app` only; external sites open in your browser. JavaScript is required for gameplay. WebView local storage and cookies are deliberately preserved for save data. As with any embedded website, the remote site's own privacy policies and network requests continue to apply.
+先把新网址与唯一 `id` 加入 `app/src/main/assets/games.json`，重新运行个人抓取和 APK 构建。之后添加对应的中文词典。不同游戏共享同一个 Android 容器和离线资源格式。
+
+## 使用的项目
+
+- [SudokuPad](https://sudokupad.app/) (Sven Neumann)
+- [Sudokuvania](https://sudokuvania.com/) (Skeptical Mario)
+- [Test SudokuPad at Home](https://github.com/ewenmcneill/testsudokupadathome) 的离线缓存思路（没有复制其源代码）

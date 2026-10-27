@@ -1,0 +1,152 @@
+#!/usr/bin/env node
+/**
+ * Personal-use SudokuPad offline snapshot generator.
+ *
+ * Fetches publicly served runtime responses with Playwright, without
+ * committing third-party code, artwork or puzzle payloads to source control.
+ * Unlike wget -r, this records dynamically loaded /api/puzzle requests.
+ *
+ * Usage: npm install && npx playwright install chromium
+ *        node scripts/capture-offline.mjs
+ */
+import { chromium } from 'playwright';
+import { createHash } from 'node:crypto';
+import { mkdir, writeFile, rm, readFile } from 'node:fs/promises';
+import { resolve, join } from 'node:path';
+
+const ROOT = resolve('app/src/main/assets/offline');
+const OUT = join(ROOT, 'files');
+const SOURCES = JSON.parse(await readFile('app/src/main/assets/games.json','utf8')).games;
+const MAX_PUZZLES = Math.max(2, Number(process.env.MAX_OFFLINE_PUZZLES || 32));
+const WAIT_MS = Math.max(1500, Number(process.env.OFFLINE_SETTLE_MS || 6000));
+const MAX_BYTES = 120 * 1024 * 1024;
+const entries = new Map();
+const candidates = new Set(SOURCES.map(g => g.url));
+const processed = new Set();
+const errors = [];
+const writes = new Set();
+const discovered = new Set();
+
+function key(url) {
+  const u = new URL(url);
+  u.hash = '';
+  return u.href;
+}
+function allowedPuzzle(url) {
+  try {
+    const u = new URL(url);
+    if (u.origin !== 'https://sudokupad.app') return false;
+    const p = u.pathname;
+    return p !== '/' && !p.startsWith('/api/') &&
+      !/\.(?:js|css|png|jpg|jpeg|webp|svg|ico|woff2?|map|wasm|json|html|txt)$/i.test(p) &&
+      !/^\/(?:settings|help|about|assets|static|images)\b/i.test(p);
+  } catch { return false; }
+}
+function discover(string) {
+  if (typeof string !== 'string' || string.length > MAX_BYTES) return;
+  for (const match of string.matchAll(/https:\/\/sudokupad\.app\/[a-zA-Z0-9_\-/?=&.%+#]+/g)) {
+    const maybe = match[0].replace(/[)>,;."']+$/, '');
+    if (allowedPuzzle(maybe)) discovered.add(key(maybe));
+  }
+}
+async function saveResponse(response) {
+  const url = key(response.url());
+  if (entries.has(url)) return;
+  if (response.status() < 200 || response.status() >= 300) return;
+  const header = (response.headers()['content-type'] || '').split(';')[0].trim();
+  try {
+    const body = await response.body();
+    if (!body.length || body.length > MAX_BYTES) {
+      errors.push('Invalid size: ' + url + ' (' + body.length + ')');
+      return;
+    }
+    const sha = createHash('sha256').update(url).digest('hex');
+    const file = 'files/' + sha;
+    const mime = header || 'application/octet-stream';
+    await writeFile(join(ROOT, file), body);
+    entries.set(url, { file, mime, bytes: body.length });
+    if (mime.includes('json') || mime.startsWith('text/')) {
+      discover(body.toString('utf8'));
+    }
+  } catch (error) {
+    errors.push('Cannot capture ' + url + ': ' + error.message);
+  }
+}
+function queueResponse(response) {
+  const task = saveResponse(response);
+  writes.add(task);
+  task.finally(() => writes.delete(task));
+}
+async function visit(browser, url) {
+  const page = await browser.newPage({
+    viewport: {width:1440, height:900},
+    serviceWorkers: 'block',
+    acceptDownloads: false
+  });
+  // No game automation or solution entry; this only loads pages and buttons.
+  page.on('response', queueResponse);
+  page.on('requestfailed', r => errors.push('Network failure: ' + r.url() + ' ' + r.failure()?.errorText));
+  try {
+    console.log('Capturing:', url);
+    const response = await page.goto(url, {waitUntil:'domcontentloaded', timeout:90000});
+    if (!response || response.status() >= 400) throw new Error('HTTP '+response?.status());
+    await page.waitForTimeout(WAIT_MS);
+    const start = page.getByText(/Start Puzzle|Continue Puzzle/i).first();
+    if (await start.count() && await start.isVisible()) {
+      await start.click({timeout:4000}).catch(()=>{});
+      await page.waitForTimeout(WAIT_MS);
+    }
+    for (const link of await page.locator('a[href]').evaluateAll(nodes => nodes.map(n=>n.href))) {
+      if (allowedPuzzle(link)) discovered.add(key(link));
+    }
+  } catch (error) {
+    errors.push('Page '+url+': '+error.message);
+  } finally {
+    await page.close();
+  }
+}
+await rm(ROOT, {recursive:true, force:true});
+await mkdir(OUT, {recursive:true});
+const browser = await chromium.launch({headless:true});
+try {
+  // Visit built-ins first; additional Sudokuvania-linked SudokuPad pages next.
+  const queue = [...candidates];
+  while (queue.length && processed.size < MAX_PUZZLES) {
+    const url = queue.shift();
+    if (processed.has(key(url))) continue;
+    processed.add(key(url));
+    await visit(browser, url);
+    await Promise.allSettled([...writes]);
+    for (const next of discovered) {
+      if (!processed.has(next) && !queue.includes(next) &&
+          queue.length + processed.size < MAX_PUZZLES) queue.push(next);
+    }
+  }
+  await Promise.allSettled([...writes]);
+} finally {
+  await browser.close();
+}
+const manifest = {
+  format: 1,
+  capturedAt: new Date().toISOString(),
+  entrypoints: SOURCES.map(g => ({id:g.id, url:g.url})),
+  requestedPages: [...processed],
+  assets: Object.fromEntries([...entries].sort(([a],[b])=>a.localeCompare(b)))
+};
+await writeFile(join(ROOT,'index.json'), JSON.stringify(manifest,null,2)+'\n');
+await writeFile(join(ROOT,'capture-report.json'), JSON.stringify({
+  capturedResources:entries.size,
+  capturedPages:processed.size,
+  bytes:[...entries.values()].reduce((sum,e)=>sum+e.bytes,0),
+  errors:[...new Set(errors)].slice(0,250),
+  caveats:[
+    'Only visited pages and requested resources are captured.',
+    'Unrevealed boss puzzle links and conditional requests may need additional explicit URLs.',
+    'Check copyright permission before distributing bundled third-party assets.'
+  ]
+},null,2)+'\n');
+const missing = SOURCES.filter(g => !entries.has(key(g.url)));
+console.log(JSON.stringify({captured:entries.size,pages:processed.size,missing:missing.map(g=>g.id),errors:errors.length},null,2));
+if (missing.length || entries.size < 4) {
+  throw new Error('Required game HTML or web resources were not captured');
+}

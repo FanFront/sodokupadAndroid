@@ -9,3 +9,6 @@ captures/
 .externalNativeBuild/
 *.jks
 *.keystore
+
+# Downloaded third-party pages, puzzle packages, images and scripts.
+app/src/main/assets/offline/

@@ -1,0 +1,15 @@
+{
+  "name": "sodokupad-offline-capture",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Developer tools; downloaded SudokuPad game resources are not committed",
+  "scripts": {
+    "capture": "node scripts/capture-offline.mjs",
+    "verify": "node scripts/verify-offline.mjs",
+    "extract-strings": "node scripts/extract-text.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}
