@@ -64,6 +64,13 @@ final class OfflineAssetStore {
         if (path != null && path.matches("(?i).*\\.(js|css|wasm|svg|png|jpg|jpeg|woff2?|ico)")) {
             return byUrl.get(uri.buildUpon().clearQuery().build().toString());
         }
+        // Boss / enemy links sometimes add optional SudokuPad settings to
+        // short puzzle URLs. Resolve them to the exact captured page without
+        // allowing unrelated hosts or API calls to bypass the offline index.
+        if ("sudokupad.app".equalsIgnoreCase(uri.getHost()) && path != null
+                && !path.startsWith("/api/") && !path.contains(".")) {
+            return byUrl.get(uri.buildUpon().clearQuery().build().toString());
+        }
         return null;
     }
 
