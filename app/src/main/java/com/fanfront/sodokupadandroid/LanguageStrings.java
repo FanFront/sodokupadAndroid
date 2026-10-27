@@ -6,7 +6,6 @@ import java.util.Map;
 /** Simplified Chinese native strings and spoiler-free guides. */
 final class LanguageStrings {
     private static final Map<String, String> TEXT = new HashMap<>();
-
     static {
         TEXT.put("title", "数独游戏盒");
         TEXT.put("subtitle", "选择要玩的谜题");
@@ -49,6 +48,6 @@ final class LanguageStrings {
         } else {
             guide = "请查看原始 SudokuPad 页面上的规则。这个新增链接目前没有专属翻译。";
         }
-        return guide + "\n\n" + get("translateNote");
+        return guide + "\\n\\n" + get("translateNote");
     }
 }

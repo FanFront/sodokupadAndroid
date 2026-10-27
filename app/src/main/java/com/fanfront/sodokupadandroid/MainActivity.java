@@ -28,6 +28,11 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.webkit.WebViewCompat;
+import androidx.webkit.WebViewFeature;
+
+import java.util.Collections;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -50,6 +55,8 @@ public final class MainActivity extends Activity {
     private SharedPreferences preferences;
     private LinearLayout root;
     private WebView webView;
+    private MachineTranslator machineTranslator;
+    private boolean machineEnabled = false;
     private Game selectedGame;
     private boolean landscape = false;
 
@@ -71,6 +78,7 @@ public final class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         preferences = getSharedPreferences(PREFS, MODE_PRIVATE);
+        machineTranslator = new MachineTranslator();
         showHome();
     }
 
@@ -254,6 +262,7 @@ public final class MainActivity extends Activity {
 
         toolbar.addView(button("‹ " + tr("home"), v -> showHome()));
         toolbar.addView(button(tr("rules"), v -> showGuide()));
+        toolbar.addView(button(machineEnabled ? "显示英文" : "全文翻译", v -> toggleMachineTranslation()));
         toolbar.addView(button(tr("reload"), v -> { if (webView != null) webView.reload(); }));
         toolbar.addView(button(tr("rotate"), v -> {
             landscape = !landscape;
@@ -268,6 +277,23 @@ public final class MainActivity extends Activity {
                 ViewGroup.LayoutParams.MATCH_PARENT, dp(3)));
 
         webView = new WebView(this);
+        if (WebViewFeature.isFeatureSupported(WebViewFeature.WEB_MESSAGE_LISTENER)) {
+            // Unlike addJavascriptInterface, this listener is restricted to the
+            // trusted SudokuPad origin; third-party frames cannot invoke it.
+            WebViewCompat.addWebMessageListener(webView, "SudokuTranslate",
+                    Collections.singleton("https://sudokupad.app"),
+                    (view, message, origin, mainFrame, reply) -> {
+                        if (!mainFrame || !"https://sudokupad.app".equals(origin.toString())
+                                || !machineEnabled || !machineTranslator.isReady()) return;
+                        try {
+                            JSONObject request = new JSONObject(message.getData());
+                            machineTranslator.translate(request.getInt("id"),
+                                    request.getString("text"), reply);
+                        } catch (JSONException ignored) {
+                            // Malformed remote messages have no native side effects.
+                        }
+                    });
+        }
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);
@@ -344,10 +370,55 @@ public final class MainActivity extends Activity {
                 }
             }
             String dictionary = translations.toString();
-            view.evaluateJavascript(script + "\nwindow.SudokuPadAndroidTranslate(" + dictionary + ");", null);
+            boolean enableMachine = machineEnabled && machineTranslator.isReady()
+                    && WebViewFeature.isFeatureSupported(WebViewFeature.WEB_MESSAGE_LISTENER);
+            view.evaluateJavascript(script + "\nwindow.SudokuPadAndroidTranslate(" + dictionary
+                    + ", " + enableMachine + ");", null);
         } catch (IOException | JSONException error) {
             Toast.makeText(this, "Translation pack unavailable", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    /**
+     * ML Kit translates only on the device, after an explicit Wi-Fi model download.
+     * Returning to English never changes puzzle state, only displayed text nodes.
+     */
+    private void toggleMachineTranslation() {
+        if (machineEnabled) {
+            machineEnabled = false;
+            if (webView != null) webView.evaluateJavascript(
+                    "window.__spAndroidTranslator && window.__spAndroidTranslator.setMachine(false);", null);
+            Toast.makeText(this, "已关闭自动翻译；可对照英文原文", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (!WebViewFeature.isFeatureSupported(WebViewFeature.WEB_MESSAGE_LISTENER)) {
+            Toast.makeText(this, "系统 WebView 版本过旧，无法使用动态翻译", Toast.LENGTH_LONG).show();
+            return;
+        }
+        if (machineTranslator.isReady()) {
+            enableMachineTranslation();
+            return;
+        }
+        new AlertDialog.Builder(this)
+                .setTitle("启用中文全文机翻")
+                .setMessage("首次使用需通过 Wi-Fi 下载约 30 MB 的英中语言模型。下载后，文字在手机本地翻译。"
+                        + "剧情与新解锁的文字会尽量自动翻译，但 SVG 图片文字和复杂数独规则可能不准确。"
+                        + "如遇歧义，请关闭翻译，查看英文原文。")
+                .setNegativeButton("取消", null)
+                .setPositiveButton("通过 Wi-Fi 下载", (dialog, which) -> {
+                    Toast.makeText(this, "正在下载中文翻译模型（仅 Wi-Fi）…", Toast.LENGTH_LONG).show();
+                    machineTranslator.prepare(this::enableMachineTranslation,
+                            error -> Toast.makeText(this, "翻译模型下载失败，请连接 Wi-Fi 后重试",
+                                    Toast.LENGTH_LONG).show());
+                })
+                .show();
+    }
+
+    private void enableMachineTranslation() {
+        machineEnabled = true;
+        if (webView != null) webView.evaluateJavascript(
+                "window.__spAndroidTranslator && window.__spAndroidTranslator.setMachine(true);", null);
+        Toast.makeText(this, "已启用中文翻译；复杂规则请与英文核对", Toast.LENGTH_LONG).show();
     }
 
     private void showGuide() {
@@ -400,6 +471,7 @@ public final class MainActivity extends Activity {
     @Override
     protected void onDestroy() {
         closeWebView();
+        if (machineTranslator != null) machineTranslator.close();
         super.onDestroy();
     }
 }

@@ -10,7 +10,9 @@ A small **unofficial** Android companion app for playing SudokuPad puzzles. Buil
 - Add additional `https://sudokupad.app/...` puzzles from within the app without changing the Java source.
 - Local game catalog in `app/src/main/assets/games.json` for future built-in games.
 - The Android menus and brief guides use **Simplified Chinese (简体中文) only**, plus *selected, exact-match* SudokuPad UI translations. Untranslated content remains in English.
-- Exact-match translation entries in `app/src/main/assets/i18n/`. A non-destructive DOM text-node translator observes changes on the original website; it does not change the underlying puzzle data.
+- Reviewed exact-match Chinese terminology takes priority in `app/src/main/assets/i18n/`.
+- **Opt-in on-device ML Kit English→Chinese translator** for visible, newly revealed story, quest and rule text that does not have a reviewed translation. Tap **全文翻译** inside a game and approve the ~30 MB Wi-Fi-only language model download. Tap the same button (then shown as **显示英文** after reopening a game) to compare the original English text.
+- Dynamic text-node translation watches the site's HTML and eligible SVG text; it does not rewrite original puzzle data, puzzle answers, or stored progress. This is **machine translation, not a proofread complete Chinese script**.
 - WebView DOM/local storage enabled. The app does **not** clear website data when switching games or relaunching.
 - Landscape-mode toggle for large grids. Pinch zoom is enabled in WebView, but **this cannot guarantee Sudokuvania zoom or pan works on Android**.
 - Minimal permissions: internet only. No ad SDK, analytics SDK, injected native JS bridge, or unrestricted browsing.
@@ -19,11 +21,18 @@ A small **unofficial** Android companion app for playing SudokuPad puzzles. Buil
 ## Important limitations
 
 1. **Internet connection required.** The app loads the original SudokuPad website, not local copies of its assets.
-2. **Not a complete translation.** Most narrative, quests, hidden rules, and dynamic content are still in English. Only short curated interface phrases are auto-translated, while a concise non-spoiler guide is available for both games. More verified Chinese and puzzle-specific strings can be added later.
+2. **Machine translation ≠ fully reviewed translation.** Live English text is translated on-device once the model is installed and enabled, including many dynamically revealed story and rule descriptions. Some text hidden in images/canvas/tooltips or inaccessible to the DOM remains English; some dynamically rendered SVG text may overflow. Do not trust machine translations for subtle rules; use **显示英文** to compare. The hand-reviewed translation files currently cover menus, selected terms, and a basic guide, **not the complete original game manuscripts**.
 3. Sudokuvania is primarily designed for desktop. Its developer specifically notes that mobile zooming/panning and some pen-tool controls are unsupported. The orientation toggle and WebView zoom options are experimental conveniences, not fixes to the source engine.
 4. SudokuPad saves progress in its own browser storage. Data in **this app** is separate from Chrome or another browser; installing a new app or clearing Android app data can erase saved progress. Keep the same Android package ID and do not clear storage. Use SudokuPad's export/backup features if available.
 5. The APK created by CI is debug-signed, appropriate for personal testing. A release APK needs your own signing key and release process.
 6. The puzzle and site artwork, data and story are owned by their respective creators. This repository intentionally does not bundle those works. Ask the rights holders before redistributing translated game content or publishing an unofficial bundle.
+
+## Translation architecture
+
+- AndroidX WebKit uses an **origin-scoped** message listener on `https://sudokupad.app` for asynchronous JS→native translation. Third-party iframes are excluded; no `addJavascriptInterface` bridge is used.
+- On-device ML Kit translation model is downloaded **only after consent, only via Wi-Fi**. Text goes through the local model, not a custom translation server. ML Kit may still send diagnostic/model metadata; see [Google's disclosures](https://developers.google.com/ml-kit/android-data-disclosure).
+- The shared `zh-Hans.json` and per-game dictionaries override machine output for short verified terms. The dynamically revealed text is translated when it appears; we do not unlock any clues or quests early.
+- Original English appears if the model is unavailable, a translation fails, or the player disables automatic translation. A comparison switch is provided.
 
 ## Build with GitHub Actions
 
