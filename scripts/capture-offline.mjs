@@ -10,6 +10,7 @@
  *        node scripts/capture-offline.mjs
  */
 import { chromium } from 'playwright';
+import { unpackScl } from './decode-scl.mjs';
 import { createHash } from 'node:crypto';
 import { mkdir, writeFile, rm, readFile } from 'node:fs/promises';
 import { resolve, join } from 'node:path';
@@ -17,8 +18,8 @@ import { resolve, join } from 'node:path';
 const ROOT = resolve('app/src/main/assets/offline');
 const OUT = join(ROOT, 'files');
 const SOURCES = JSON.parse(await readFile('app/src/main/assets/games.json','utf8')).games;
-const MAX_PUZZLES = Math.max(2, Number(process.env.MAX_OFFLINE_PUZZLES || 32));
-const WAIT_MS = Math.max(1500, Number(process.env.OFFLINE_SETTLE_MS || 6000));
+const MAX_PUZZLES = Math.max(2, Number(process.env.MAX_OFFLINE_PUZZLES || 96));
+const WAIT_MS = Math.max(1500, Number(process.env.OFFLINE_SETTLE_MS || 4000));
 const MAX_BYTES = 90 * 1024 * 1024; // Stay under GitHub's 100 MiB per-file limit.
 const entries = new Map();
 const candidates = new Set(SOURCES.map(g => g.url));
@@ -78,7 +79,18 @@ async function saveResponse(response) {
     await writeFile(join(ROOT, file), body);
     entries.set(url, { file, mime, bytes: body.length });
     if (mime.includes('json') || mime.startsWith('text/')) {
-      discover(body.toString('utf8'));
+      const decodedBody = body.toString('utf8');
+      discover(decodedBody);
+      if (decodedBody.startsWith('scl')) {
+        try {
+          // Sudokuvania's side quests and Boss Puzzle links are embedded in
+          // compressed game metadata. Capturing only the HTML misses them.
+          const puzzle = unpackScl(decodedBody);
+          discover(JSON.stringify(puzzle));
+        } catch (error) {
+          errors.push('Cannot decompress discovered puzzle links: '+url);
+        }
+      }
     }
   } catch (error) {
     errors.push('Cannot capture ' + url + ': ' + error.message);
