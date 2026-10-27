@@ -1905,7 +1905,7 @@
   },
   {
     "english": "A series of interconnected ballrooms is filled with music. You can't help but move with the beat, and realize it is a negative constraint.\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\n\\nAnti XV - No two orthogonally adjacent cells in the Ballroom may have values that sum to 5 or 10.",
-    "zhHans": "",
+    "zhHans": "一连串相通的舞厅里回荡着音乐。你不由自主地跟着节奏迈步，随即意识到：这竟是一条否定型约束。\n\n数独——每格填入 1 至 9；同一行、列或 3×3 宫内的数字不得重复。\n\n反 XV——舞厅内任意两个正交相邻格子的「数值」之和，都不能等于 5 或 10。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2457,7 +2457,7 @@
   },
   {
     "english": "Despite an aperture through which you can see the beautiful night sky, this large circular room is dominated by an enormous telescope. You had better figure out how to use it.\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\n\\nTelescope Calibration - Use the line in box 5 to operate the telescope. More detailed instructions must be located somewhere in this grid.",
-    "zhHans": "",
+    "zhHans": "圆形大厅的穹顶留出一道开口，可以望见美丽的夜空。然而真正占据整间大厅的，是一架巨大的望远镜。你最好先弄明白该怎么使用它。\n\n数独——每格填入 1 至 9；同一行、列或 3×3 宫内的数字不得重复。\n\n望远镜校准——使用第 5 宫中的线条操作望远镜。更详细的操作说明应该藏在这张网格的某处。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2468,7 +2468,7 @@
   },
   {
     "english": "Despite having mechanical fixtures, this dank space was clearly originally designed to hold prisoners. The cells could just be tool storage, but the skeletons are a dead giveaway.\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\n\\nPower Cells - Digits in the three power cells marked with🔋go into the three similarly-labeled cages.",
-    "zhHans": "",
+    "zhHans": "这间潮湿阴暗的空间虽装着机械设备，最初显然是关押囚犯的地方。铁栅栏后也许只是工具仓库，但地上的骸骨已经说明了一切。\n\n数独——每格填入 1 至 9；同一行、列或 3×3 宫内的数字不得重复。\n\n能源格——三个标有 🔋 的能源格中填入的数字，分别对应三个带有相同标记的笼。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2973,7 +2973,7 @@
   },
   {
     "english": "From what little you understand of this secret research facility, the scientists were experimenting with modified cells. What have you gotten yourself into?\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\n\\nDoubler cells - One cell in each row, column, and 3x3 box is a Doubler cell; the value in a doubler cell is twice the cell's digit.\\nThe nine Doubler cells contain a set of the digits 1-9.",
-    "zhHans": "",
+    "zhHans": "你对这座秘密研究设施所知甚少，只知道科学家曾在这里试验经过改造的格子。你到底闯进了什么地方？\n\n数独——每格填入 1 至 9；同一行、列或 3×3 宫内的数字不得重复。\n\n倍增格——每行、每列及每个 3×3 宫中恰有一个倍增格；倍增格的「数值」等于其中所填「数字」的两倍。\n九个倍增格中填入的数字恰好是 1 至 9，各不相同。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3025,7 +3025,7 @@
   },
   {
     "english": "Gilded walls and personal decorations indicate you have found the personal quarters of the castle's King -- the King of Sudoku who has been ruling from Sudokuvania for the past hundred years.\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\n\\nAntiking - No two diagonally adjacent digits in the Royal Quarters may contain the same digit.",
-    "zhHans": "",
+    "zhHans": "镀金的墙面与私人装饰表明，你找到了城堡之王的寝宫——那位百年来一直在数独魔城统治数独的国王。\n\n数独——每格填入 1 至 9；同一行、列或 3×3 宫内的数字不得重复。\n\n反王规则——王室寝宫内，任意两个对角相邻的格子不得填入相同数字。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3508,7 +3508,7 @@
   },
   {
     "english": "Rows of desks and cubicles are occupied by unblinking workers who appear to be setting Sudoku puzzles. They seem to have no interest in you or anything besides their work, and yet, they are chained to their stations.\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\n\\nKiller cubicles - Digits in a yellow cubicle cage cannot repeat and sum to the number in the upper left corner of the cubicle.",
-    "zhHans": "",
+    "zhHans": "一排排办公桌和隔间里，坐满了目光呆滞的工人。他们似乎只顾着设计数独，对你和周遭的一切毫无兴趣；可他们竟都被锁链拴在工位上。\n\n数独——每格填入 1 至 9；同一行、列或 3×3 宫内的数字不得重复。\n\n杀手隔间——黄色隔间笼中的数字不得重复，且数字之和等于隔间左上角标示的数字。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3607,7 +3607,7 @@
   },
   {
     "english": "Several stoves give the massive kitchen area a sweltering heat. Chefs and busboys ignore you as they create delicious-smelling meals and ferry them throughout the castle. You are tempted to try one, but... where did the ingredients come from?\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\n\\nHot - Each cell has a value one greater than its digit. (This affects how the cell interacts with many types of clues.)",
-    "zhHans": "",
+    "zhHans": "巨大的厨房里炉火旺盛，热浪逼人。厨师与杂役对你视若无睹，一边烹饪香气四溢的饭菜，一边将餐点送往城堡各处。你很想尝一口，可是……食材究竟从哪里来？\n\n数独——每格填入 1 至 9；同一行、列或 3×3 宫内的数字不得重复。\n\n高温格——每格的「数值」比其中填入的「数字」大 1。（这会影响它与多种线索之间的关系。）",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3671,7 +3671,7 @@
   },
   {
     "english": "Tall shelves of books divide the immense library of Sudoku puzzles into hallways, leaving space for study desks or beautiful artwork.\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\n\\nKiller cubicles - Digits in a yellow cubicle cage cannot repeat and sum to the number in the upper left corner of the cubicle.\\n\\nCipher - Each letter represents a different digit from 0-9.",
-    "zhHans": "",
+    "zhHans": "高大的书架把这座庞大的数独图书馆分割成一道道走廊，其间点缀着学习桌与精美艺术品。\n\n数独——每格填入 1 至 9；同一行、列或 3×3 宫内的数字不得重复。\n\n杀手隔间——黄色隔间笼中的数字不得重复，且数字之和等于隔间左上角的数字。\n\n密码——每个字母都代表 0 至 9 中的一个不同数字。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3833,7 +3833,7 @@
   },
   {
     "english": "The ancient design of these buried hallways clashes with the rest of the castle that you've seen. It's as though this underground ruin was here before and Sudokuvania appeared around it...\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\nSome rows or columns have gaps which are not part of the grid; not all rows or columns have nine cells.",
-    "zhHans": "",
+    "zhHans": "这些埋在地下的古老通道，风格与城堡其他地方截然不同。仿佛这片遗迹本就存在，而数独魔城后来才围绕它出现……\n\n数独——每格填入 1 至 9；同一行、列或 3×3 宫内的数字不得重复。\n部分行或列中间有不属于该网格的空隙，因此不是所有行或列都有九个格子。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3922,7 +3922,7 @@
   },
   {
     "english": "The hallways in the upper floors of the castle are better kept than those below, and seem equally vacant, but are all the more threatening for it.\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.",
-    "zhHans": "",
+    "zhHans": "城堡上层的走廊保养得比下层更好，同样空无一人，却因此显得更加危险。\n\n数独——每格填入 1 至 9；同一行、列或 3×3 宫内的数字不得重复。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3974,7 +3974,7 @@
   },
   {
     "english": "The open-air courtyard is a colorful respite from the confines of the castle, but rows of hedges and trellises make it still feel cramped.\\n\\n6x6 Quattroquadri - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.",
-    "zhHans": "",
+    "zhHans": "露天庭院色彩缤纷，令人暂时摆脱城堡的压抑；可整齐的树篱和棚架，又让人感到局促。\n\n6×6 Quattroquadri——每格填入 1 至 9；同一行、列或 3×3 宫内的数字不得重复。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4051,7 +4051,7 @@
   },
   {
     "english": "The walls of Sudokuvania's vault are lined with lockboxes. This must be where the secret of Sudoku is kept, but you have other goals in mind.\\n\\nSudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or 3x3 box.\\n\\nVault cells - Gold vault cells must contain a value greater than the value in every orthogonally-adjacent cell, unless the adjacent cell is also a vault cell.",
-    "zhHans": "",
+    "zhHans": "数独魔城的金库墙上嵌满了保险箱。数独的秘密一定藏在这里，可你心里还有更重要的目标。\n\n数独——每格填入 1 至 9；同一行、列或 3×3 宫内的数字不得重复。\n\n宝库格——金色宝库格的「数值」必须大于所有正交相邻格子的数值，除非相邻格也属于宝库格。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4184,7 +4184,7 @@
   },
   {
     "english": "This seemingly empty room appears to lead towards the Royal Quarters. You feel at a loss, as numbers have no effect on your surroundings.\\n\\nCipher Cages - Each value from 0-9 corresponds to a different letter. Red cages indicate where letters should be placed rather than digits. This cipher is the same throughout the castle.\\n\\nCiphered Sudoku - Place a set of six distinct values from 0-9 into each row, column, and 3x2 box; in all cells except those which overlap with other grids, use letters (there is a red cipher cage around those cells). Make sure the Letter Tool is enabled!\\nCells with a cage labeled with a letter contain that letter.",
-    "zhHans": "",
+    "zhHans": "这个看似空无一物的房间似乎通向王室寝宫。你感到束手无策：不管填什么数字，四周都毫无反应。\n\n密码笼——0 至 9 的每个数值都对应一个不同字母。红色笼表示此处应填写字母，而不是数字；整座城堡共用同一套密码。\n\n密码数独——每行、每列及每个 3×2 宫中，填入从 0 至 9 选出的六个互不相同的数值。除了与其他网格重叠的格子，其余格子必须填写字母（这些格子外围有红色密码笼）。记得启用「字母」工具！\n标着字母的笼内格子，须填写该字母。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4195,7 +4195,7 @@
   },
   {
     "english": "This windy precipice outside one of Sudokuvania's high towers was easy to overlook. It seems you've made it just in time for the ritual, but are you in time to stop it?\\n\\nSudoku - Place a digit from 1-6 into each cell without digits repeating in a row, column, or 2x3 box.",
-    "zhHans": "",
+    "zhHans": "城堡一座高塔外的悬崖风势猛烈，很容易被忽略。看来你刚好赶上仪式……但还来得及阻止吗？\n\n数独——每格填入 1 至 6；同一行、列或 2×3 宫内的数字不得重复。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4363,7 +4363,7 @@
   },
   {
     "english": "You are finally back in a more modern locale--the sewage tunnels under the town of Rowsville. Apparently one of their previous mayors was big on infrastructure.\\n\\nIrregular sudoku - Place a digit from 1-9 into each cell without digits repeating in a row, column, or region. The regions are nine groups of nine orthogonally-connected cells, which may be a 3x3 box or any other shape. Only some region shapes are revealed to start.",
-    "zhHans": "",
+    "zhHans": "你终于回到了一处较有现代气息的地方——行之村地下的下水道。看来这里以前有位很重视基础建设的镇长。\n\n不规则数独——每格填入 1 至 9；同一行、列或区域内的数字不得重复。九个区域各由九个正交相连的格子组成，形状可以是 3×3 方宫，也可以是不规则形状。起初只会揭示其中部分区域的轮廓。",
     "gameIds": [
       "lineage-of-logic"
     ],
