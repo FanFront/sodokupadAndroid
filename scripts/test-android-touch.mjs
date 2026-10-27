@@ -88,7 +88,30 @@ try {
   const previous=await count(undo);
   await undo.click();
   assert.equal(await count(undo),previous+1,'Desktop click fallback failed');
+  // The original desktop rules are invisible on Android, but the gridrules
+  // feature must still supply live, selected-region boss links to the modal.
+  await page.evaluate(() => {
+    window.Framework.app.puzzle.currentPuzzle = {metadata:{}};
+    const rules = document.createElement('div');
+    rules.className = 'puzzle-rules';
+    rules.innerHTML = '<div class="gridrulessection">庭院：本区域规则 ' +
+      '<a href="https://sudokupad.app/frudzw3n73">挑战 Courtyard Boss Puzzle</a></div>';
+    document.querySelector('#controls').append(rules);
+  });
+  await action('region').tap();
+  assert.match(await page.locator('#android-region-overlay').innerText(),/庭院：本区域规则/);
+  await page.locator('#android-region-overlay [data-region-close]').tap();
+  assert.equal(await page.locator('#android-region-overlay').count(),0);
+  await action('boss').tap();
+  assert.equal(await page.locator('#android-region-overlay .android-boss-link').count(),1);
+  const href = await page.locator('#android-region-overlay .android-boss-link').getAttribute('href');
+  assert.equal(href,'https://sudokupad.app/frudzw3n73');
+  await page.route('https://sudokupad.app/frudzw3n73', route =>
+    route.fulfill({status:200,contentType:'text/html',body:'<!doctype html><title>Boss puzzle loaded</title>'}));
+  await page.locator('#android-region-overlay .android-boss-link').tap();
+  await page.waitForURL('https://sudokupad.app/frudzw3n73');
+  assert.equal(await page.title(),'Boss puzzle loaded');
   assert.deepEqual(errors,[]);
-  console.log('PASS: Android touch, rapid digits, actions, overlay hitbox and mouse fallback.');
+  console.log('PASS: Touch keypad, region modal, boss link touch and offline sub-puzzle navigation.');
   await ctx.close();
 }finally{await browser.close();}
