@@ -148,3 +148,6 @@ html.android-port .dialog a[href*="youtube.com"],
 html.android-port .dialog a[href*="patreon.svencodes.com"] {
   display: none !important;
 }
+
+html.android-port .dialog .supportlinks,
+html.android-port .dialog #likepuzzle { display: none !important; }
