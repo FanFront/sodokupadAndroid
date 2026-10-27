@@ -62,6 +62,10 @@ jobs:
           npm run build-html
           npm run build-puzzle-zh
           npm run verify
+      - name: Test the actual rendered board at Android phone size
+        run: |
+          npx playwright install --with-deps chromium
+          node scripts/replay-offline.mjs
       - name: Assemble cached offline debug APK
         run: gradle --no-daemon :app:assembleDebug
       - uses: actions/upload-artifact@v4
