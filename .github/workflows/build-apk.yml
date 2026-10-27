@@ -23,6 +23,7 @@ jobs:
           node --check app/src/main/assets/translate.js
           node --check scripts/capture-offline.mjs
           node --check scripts/verify-offline.mjs
+          node --check scripts/replay-offline.mjs
           node --check scripts/extract-text.mjs
           node scripts/test-translation.cjs
 
@@ -56,6 +57,8 @@ jobs:
         run: npm run capture
       - name: Validate the local capture before packaging
         run: npm run verify
+      - name: Replay both games with all network requests blocked
+        run: node scripts/replay-offline.mjs
       - name: Extract translation candidates privately
         run: npm run extract-strings
       - name: Build offline debug APK
