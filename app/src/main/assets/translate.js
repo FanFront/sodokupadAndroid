@@ -1,13 +1,13 @@
-/* Reviewed Chinese text, including story/rules revealed later by the game.
-   Display-only: puzzle JSON and SudokuPad's internal validation remain English. */
+/* Fallback Chinese UI/SVG display translation for authored text.
+   Main story/rules/SVG labels are baked into offline SCL during the APK build.
+   SudokuPad numbers, solving logic and progress are never modified here. */
 (() => {
   'use strict';
   window.SudokuPadAndroidTranslate = dictionary => {
     window.__spChineseObserver?.disconnect();
     if (!document.body || !dictionary) return;
-    // The 50×50 puzzle canvas generates thousands of SVG nodes while
-    // loading. Its text is localized directly in the baked puzzle SCL.
-    // Observe only the surrounding UI/dialogs to avoid blocking rendering.
+    // The 50×50 puzzle draws many SVG nodes. Restrict changes to authored
+    // text; live translation is a fallback for content rebuilt at runtime.
     const excluded='script,style,textarea,input,select,option,noscript,code,pre,[contenteditable="true"],#android-gamepad';
     // Translate authored SVG labels, never SudokuPad's editable cell values.
     const puzzleNumbers='#cell-values,#cell-givens,#cell-candidates,#cell-pencilmarks';
@@ -66,8 +66,7 @@
       }
     }
     const watcher=new MutationObserver(changes=>{
-      // Do not walk puzzle SVG updates (fog, notes, digits, arrows). They are
-      // frequent and can delay first paint on slower Android WebViews.
+      // Ignore high-volume puzzle paths/shapes; process only new SVG labels.
       for(const m of changes) {
         const parent=m.target.nodeType===1?m.target:m.target.parentElement;
         if(parent?.closest('#android-gamepad'))continue;
