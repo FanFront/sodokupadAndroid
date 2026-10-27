@@ -67,7 +67,7 @@ for(const g of games) {
     continue;
   }
   try {
-    const compressed=await readFile(join(root,entry.file),'utf8');
+    const compressed=await readFile(join(root,entry.originalFile||entry.file),'utf8');
     const puzzle=unpackScl(compressed);
     walk(puzzle,g.id,'puzzle');
     console.log('Decoded:',g.id,Object.keys(puzzle));
