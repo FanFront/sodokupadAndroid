@@ -59,7 +59,10 @@
     }
     const board = doc.getElementById('board');
     const svg = doc.getElementById('svgrenderer');
-    if (!board || !svg || !board.getBoundingClientRect().width) return false;
+    // SudokuPad writes these inline sizes only after resizeBoard() has
+    // calculated the puzzle geometry; don't focus against a placeholder SVG.
+    if (!board || !svg || !board.style.width || !board.style.height ||
+        !board.getBoundingClientRect().width) return false;
     const viewBox = (svg.getAttribute('viewBox') || '').split(/\s+/).map(Number);
     if (viewBox.length !== 4 || !viewBox.every(Number.isFinite) || viewBox[2] <= 0) return false;
     const grids = a.sourcePuzzle?.metadata?.grids || [];
