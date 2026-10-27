@@ -77,11 +77,12 @@ jobs:
             git commit -m "chore: save offline HTML and assets [offline snapshot]"
             git push origin "HEAD:${{ github.ref_name }}"
           fi
-      - name: Replay both games with all network requests blocked
-        run: node scripts/replay-offline.mjs
       - name: Build offline debug APK
         run: gradle --no-daemon :app:assembleDebug
+      - name: Replay both games with all network requests blocked
+        run: node scripts/replay-offline.mjs
       - name: Upload personal offline test APK
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: Sudokuvania-offline-debug-APK
