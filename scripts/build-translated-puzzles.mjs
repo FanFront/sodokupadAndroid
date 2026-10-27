@@ -88,7 +88,13 @@ for(const game of catalog){
   if(JSON.stringify(proof)!==JSON.stringify(original)){
     throw new Error('Puzzle data changed outside permitted metadata prose: '+game.id);
   }
-  const compressed='scl'+LZString.compressToEncodedURIComponent(JSON.stringify(translated));
+  // Critical: SudokuPad's bundled decompressor uses BASE64 with + and /.
+  // compressToEncodedURIComponent uses the different + and - alphabet,
+  // causing the empty-board / false "already solved" failure on Android.
+  const compressed='scl'+LZString.compressToBase64(JSON.stringify(translated));
+  if (!/^[A-Za-z0-9+/=]+$/.test(compressed.slice(3))) {
+    throw new Error('Incorrect SudokuPad Base64 alphabet for '+game.id);
+  }
   const unpacked=unpackScl(compressed);
   if(JSON.stringify(unpacked)!==JSON.stringify(translated)){
     throw new Error('Lossy round-trip in Chinese SudokuPad package: '+game.id);
