@@ -277,7 +277,9 @@
   const timer = setInterval(() => {
     if (focusEntrance()) {
       clearInterval(timer);
-    } else if (++tries > 50) {
+    } else if (++tries === 50) {
+      notify('正在渲染大型数独地图，请稍候…');
+    } else if (tries > 240) {
       clearInterval(timer);
       notify('棋盘未能加载：请检查离线资源并重新打开游戏');
       console.error('Android board startup failed', {
