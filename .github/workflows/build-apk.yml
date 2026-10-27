@@ -25,10 +25,13 @@ jobs:
           node --check scripts/verify-offline.mjs
           node --check scripts/replay-offline.mjs
           node --check scripts/extract-text.mjs
+          node --check scripts/build-localized-pages.mjs
           node scripts/test-translation.cjs
 
   personal-offline-apk:
-    if: github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && !contains(github.event.head_commit.message, '[offline snapshot]'))
+    permissions:
+      contents: write
     needs: source-checks
     runs-on: ubuntu-24.04
     timeout-minutes: 55
@@ -55,12 +58,23 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Capture SudokuPad pages, JS, CSS, assets and game data
         run: npm run capture
+      - name: Materialize readable HTML and apply reviewed Chinese translations
+        run: npm run build-html
       - name: Validate the local capture before packaging
         run: npm run verify
       - name: Replay both games with all network requests blocked
         run: node scripts/replay-offline.mjs
       - name: Extract translation candidates privately
         run: npm run extract-strings
+      - name: Save captured resources and HTML into GitHub repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f app/src/main/assets/offline/
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: save offline HTML and assets [offline snapshot]"
+            git push origin "HEAD:${{ github.ref_name }}"
+          fi
       - name: Build offline debug APK
         run: gradle --no-daemon :app:assembleDebug
       - name: Upload personal offline test APK
