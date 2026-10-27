@@ -90,9 +90,160 @@
     return true;
   }
 
+
+  // The stock gridrules feature writes *current selected-grid* rules into
+  // #controls .puzzle-rules. Keep that DOM alive, and reuse its live content
+  // rather than guessing which boss belongs to a tapped SVG cell.
+  let regionOverlay = null;
+  const mapStorageKey = 'android-sudokuvania-main-map';
+  const isMap = () => /^\/sudokuvania\/(?:digits-of-despair|lineage-of-logic(?:-plain)?)$/
+    .test(window.location.pathname);
+
+  function currentRules() {
+    const rulesFeature = getFramework()?.features?.gridrules;
+    if (rulesFeature?.featureEnabled && typeof rulesFeature.updateRules === 'function') {
+      try { rulesFeature.updateRules(); } catch (error) {
+        console.warn('Cannot update selected-grid rules:', error);
+      }
+    }
+    const rules = doc.querySelector('#controls .puzzle-rules');
+    return rules?.querySelector('.gridrulessection') || rules || null;
+  }
+  function getBossLinks(source) {
+    if (!source) return [];
+    const result = [];
+    for (const a of source.querySelectorAll('a[href]')) {
+      let url;
+      try { url = new URL(a.getAttribute('href'), window.location.href); }
+      catch { continue; }
+      if (url.origin !== 'https://sudokupad.app') continue;
+      if (!(/boss|首领/i.test(a.textContent || '') || /\/boss-/i.test(url.pathname))) continue;
+      if (!result.some(link => link.href === url.href)) {
+        result.push({href:url.href, label:a.textContent.trim()});
+      }
+    }
+    return result;
+  }
+  function closeRegion() {
+    regionOverlay?.remove();
+    regionOverlay = null;
+  }
+  function followRuleLink(href) {
+    let destination;
+    try { destination = new URL(href, window.location.href); }
+    catch { return notify('谜题链接无效'); }
+    if (destination.origin !== 'https://sudokupad.app') return notify('离线模式无法打开外部网站');
+    if (isMap()) {
+      try { sessionStorage.setItem(mapStorageKey, window.location.href); }
+      catch (error) { console.warn('Cannot store main-map route:', error); }
+    }
+    closeRegion();
+    // Navigate in the same WebView; target=_blank is not supported offline.
+    window.location.assign(destination.href);
+  }
+  function openRegion(bossOnly = false) {
+    if (!app()?.puzzle?.currentPuzzle) return notify('谜题仍在加载');
+    closeRegion();
+    const source = currentRules();
+    const overlay = doc.createElement('div');
+    overlay.id = 'android-region-overlay';
+    overlay.setAttribute('role','presentation');
+    const dialog = doc.createElement('section');
+    dialog.className = 'android-region-dialog';
+    dialog.setAttribute('role','dialog');
+    dialog.setAttribute('aria-modal','true');
+    dialog.setAttribute('aria-label', bossOnly ? '首领谜题' : '当前区域规则');
+    const heading = doc.createElement('header');
+    const title = doc.createElement('strong');
+    title.textContent = bossOnly ? '首领谜题' : '当前区域规则';
+    const close = doc.createElement('button');
+    close.type = 'button';
+    close.textContent = '关闭';
+    close.dataset.regionClose = '1';
+    heading.append(title,close);
+    const contents = doc.createElement('div');
+    contents.className = 'android-region-content';
+    if (bossOnly) {
+      const links = getBossLinks(source);
+      if (!links.length) {
+        contents.textContent = '当前区域尚未显示首领谜题链接。请先选中已经探索的区域格子，必要时继续揭开迷雾。';
+      } else {
+        const note = doc.createElement('p');
+        note.textContent = '进入独立谜题后，完成挑战可返回主地图填写首领格答案。';
+        contents.append(note);
+        for (const link of links) {
+          const a = doc.createElement('a');
+          a.href = link.href;
+          a.className = 'android-boss-link';
+          a.textContent = link.label || '进入首领谜题';
+          contents.append(a);
+        }
+      }
+    } else if (source) {
+      contents.append(source.cloneNode(true));
+    } else {
+      contents.textContent = '尚未加载此区域的规则。请先轻触棋盘格子。';
+    }
+    dialog.append(heading, contents);
+    overlay.append(dialog);
+    doc.body.append(overlay);
+    regionOverlay = overlay;
+    // SudokuPad's global handlers can cancel compatibility click events on
+    // Android. A direct touchend handler makes modal links actually usable.
+    let touchStart = null;
+    overlay.addEventListener('touchstart', e => {
+      const t = e.changedTouches?.[0];
+      if (t) touchStart = {id:t.identifier,x:t.clientX,y:t.clientY};
+    }, {capture:true, passive:true});
+    overlay.addEventListener('touchend', e => {
+      const t = Array.from(e.changedTouches || []).find(t => t.identifier === touchStart?.id);
+      if (!t || Math.hypot(t.clientX-touchStart.x,t.clientY-touchStart.y) > 30) return;
+      const target = doc.elementFromPoint(t.clientX,t.clientY);
+      const anchor = target?.closest?.('#android-region-overlay a[href]');
+      const closeButton = target?.closest?.('#android-region-overlay [data-region-close]');
+      if (!anchor && !closeButton) return;
+      if (e.cancelable) e.preventDefault();
+      e.stopImmediatePropagation();
+      if (anchor) followRuleLink(anchor.href);
+      else closeRegion();
+    }, {capture:true,passive:false});
+    overlay.addEventListener('click', e => {
+      const anchor = e.target.closest?.('a[href]');
+      const closeButton = e.target.closest?.('[data-region-close]');
+      if (anchor || closeButton) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        if (anchor) followRuleLink(anchor.href);
+        else closeRegion();
+      } else if (e.target === overlay) closeRegion();
+    }, {capture:true});
+  }
+  // Native SudokuPad rule links also need same-tab navigation in WebView.
+  doc.addEventListener('click', event => {
+    if (regionOverlay || !event.target.closest) return;
+    const anchor = event.target.closest('#controls .gridrulessection a[href]');
+    if (!anchor) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    followRuleLink(anchor.href);
+  }, {capture:true});
+
   function doGameAction(action, value) {
     if (action === 'home') {
       window.location.href = 'sudokuandroid://home';
+      return;
+    }
+    if (action === 'region' || action === 'boss') {
+      openRegion(action === 'boss');
+      return;
+    }
+    if (action === 'back-map') {
+      if (isMap()) return notify('当前已经在地图中');
+      let saved = null;
+      try { saved = sessionStorage.getItem(mapStorageKey); } catch {}
+      if (window.history.length > 1) window.history.back();
+      else if (saved) window.location.assign(saved);
+      else notify('当前没有可返回的地图，请使用主页');
       return;
     }
     if (action === 'pan') {
@@ -188,7 +339,7 @@
       el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden');
   }
   function buttonAt(x, y) {
-    if (visibleModal()) return null;
+    if (regionOverlay || visibleModal()) return null;
     const rect = dock.getBoundingClientRect();
     if (x < rect.left || x >= rect.right || y < rect.top || y >= rect.bottom) return null;
     // Geometry lookup also works if an old SudokuPad element covers the dock
@@ -294,7 +445,8 @@
     ['⌫','erase'],['↶','undo']
   ]);
   row('android-actions', [
-    ['主页','home'],['规则','rules'],['重做','redo'],
+    ['主页','home'],['规则','rules'],['区域','region'],
+    ['首领','boss'],['返回','back-map'],['重做','redo'],
     ['检查','check'],['＋','zoom-in'],['－','zoom-out']
   ]);
   doc.body.appendChild(dock);
@@ -321,6 +473,7 @@
         const orig = doc.querySelector('.controls-input button[data-key="' + btn.dataset.value + '"]');
         btn.textContent = orig?.dataset.value || btn.dataset.value;
       }
+      if (btn.dataset.androidAction === 'back-map') btn.hidden = isMap();
       btn.setAttribute('aria-pressed', on ? 'true' : 'false');
     }
   }
@@ -383,5 +536,5 @@
     }
   }, 400);
 
-  window.AndroidSudokuvaniaPort = {notify, updateModes, focusEntrance, dock};
+  window.AndroidSudokuvaniaPort = {notify, updateModes, focusEntrance, openRegion, getBossLinks, dock};
 })();
