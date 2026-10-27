@@ -95,7 +95,8 @@ html.android-port .puzzle-rules, html.android-port .dialog-content {
   font-size: clamp(18px,5.1vw,24px);
   min-height: 43px;
 }
-#android-gamepad button:active { background: #456a9f; }
+#android-gamepad button:active,
+#android-gamepad button.android-tapped { background: #456a9f !important; }
 #android-gamepad button[aria-pressed="true"] {
   background: #2b7168;
   border-color: #65e0c6;
