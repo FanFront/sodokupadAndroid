@@ -74,13 +74,27 @@
     }
     useApp(a => {
       switch (action) {
-        case 'digit':
-          a.doPressDigit(value);
+        case 'digit': {
+          // SudokuPad may remap the normal keypad to letters or colour IDs.
+          const original = doc.querySelector('.controls-input button[data-key="' + value + '"]');
+          a.doPressDigit(original?.dataset.value || value);
           break;
+        }
+        case 'letter': {
+          if (typeof ToolLetter === 'undefined') return notify('该谜题未加载字母工具');
+          if (!a.hasTool('letter')) window.Framework.addTool(ToolLetter);
+          ToolLetter.tool.toggleMode();
+          updateModes();
+          notify(ToolLetter.tool.letterMode ? '已切换至字母键盘' : '已切换至数字键盘');
+          break;
+        }
         case 'erase':
           a.act({type: 'clear', arg: a.tool});
           break;
         case 'tool':
+          if (value === 'pen' && !a.hasTool('pen') && typeof ToolPen !== 'undefined') {
+            window.Framework.addTool(ToolPen);
+          }
           if (!a.hasTool(value)) return notify('当前游戏不支持这种标记');
           a.changeTool(value);
           updateModes();
@@ -134,7 +148,7 @@
   row('android-tools', [
     ['数字','tool','normal'],['角标','tool','corner'],
     ['中心','tool','centre'],['颜色','tool','colour'],
-    ['移动','pan'],['居中','recenter']
+    ['画线','tool','pen'],['字母','letter'],['移动','pan'],['居中','recenter']
   ]);
   row('android-numbers', [
     ...['1','2','3','4','5','6','7','8','9','0'].map(n=>[n,'digit',n]),
@@ -160,6 +174,13 @@
       let on = btn.dataset.androidAction === 'pan' && moveMode;
       if (a && btn.dataset.androidAction === 'tool') {
         on = a.tool === btn.dataset.value && !moveMode;
+      }
+      if (btn.dataset.androidAction === 'letter' && typeof ToolLetter !== 'undefined') {
+        on = !!ToolLetter.tool.letterMode;
+      }
+      if (btn.dataset.androidAction === 'digit') {
+        const orig = doc.querySelector('.controls-input button[data-key="' + btn.dataset.value + '"]');
+        btn.textContent = orig?.dataset.value || btn.dataset.value;
       }
       btn.setAttribute('aria-pressed', on ? 'true' : 'false');
     }
