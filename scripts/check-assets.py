@@ -41,5 +41,21 @@ for resource in ("android.css", "android.js"):
 for game in games:
     assert (offline / "pages" / (game["id"] + ".html")).is_file()
     assert manifest["assets"][game["url"]]["file"].endswith(".zh-Hans.html")
-assert (offline / "translation-candidates.json").is_file()
-print("Offline Android touch assets, translated HTML and review catalog exist.")
+
+candidates = json.loads((offline / "translation-candidates.json").read_text(encoding="utf-8"))
+assert isinstance(candidates, list), "Translation catalog must be a list"
+reviewed = 0
+for item in candidates:
+    en, zh = item.get("english", ""), item.get("zhHans", "")
+    if not isinstance(en, str) or not isinstance(zh, str) or not zh.strip():
+        continue  # Newly discovered unreviewed text can remain in English.
+    reviewed += 1
+    for game_id in item.get("gameIds", []):
+        terms = decode(ASSETS / f'i18n/games/{game_id}.zh-Hans.json')
+        actual = terms.get(en, shared.get(en))
+        assert actual == zh, (
+            f"Chinese translation missing from shipped dictionary: {game_id}: {en[:100]!r}"
+        )
+assert reviewed >= 400, f"Expected localized text candidates, found {reviewed}"
+print(f"Offline puzzle source/catalog synced: {reviewed}/{len(candidates)} translated.")
+
