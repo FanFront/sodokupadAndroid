@@ -23,6 +23,33 @@ for (const [url,info] of Object.entries(index.assets)) {
   if (!st.isFile() || st.size !== info.bytes) throw new Error('Size mismatch: '+url);
   bytes += st.size;
 }
+// Every linked boss must have a navigable page, an API puzzle package and
+// Android controls. Never silently release a capture with blank boss rooms.
+const expectedBosses = index.requiredBossPuzzles || [];
+if (!expectedBosses.length) {
+  const message = 'Snapshot predates linked-boss capture; run the opt-in capture workflow.';
+  if (process.env.OFFLINE_REQUIRE_BOSS_PUZZLES === '1') throw new Error(message);
+  console.warn('WARNING:',message);
+}
+for (const url of expectedBosses) {
+  if (!/^https:\/\/sudokupad\.app\//.test(url)) throw new Error('Unsafe boss URL: '+url);
+  const page = index.assets[url];
+  const api = 'https://sudokupad.app/api/puzzle' + new URL(url).pathname;
+  const puzzle = index.assets[api];
+  if (!page || !puzzle) throw new Error('Boss not bundled: '+url);
+  if (!/^pages\/linked-[a-f0-9]{16}\.zh-Hans\.html$/.test(page.file)) {
+    throw new Error('Boss is missing mobile HTML: '+url);
+  }
+  const html = await readFile(join(root,page.file),'utf8');
+  if (!html.includes('/__android/android.js') || !html.includes('/__android/android.css')) {
+    throw new Error('Boss HTML has no Android controls: '+url);
+  }
+  if (!/^files\/[a-f0-9]{64}\.[a-z0-9]+$/.test(puzzle.file)) {
+    throw new Error('Missing original boss puzzle package: '+url);
+  }
+}
+if (expectedBosses.length) console.log('Verified',expectedBosses.length,'bosses with Android controls and puzzle data.');
+
 const types = new Set(Object.values(index.assets).map(x=>x.mime));
 if (![...types].some(s=>s.includes('javascript'))) {
   console.warn('WARNING: no JavaScript MIME found. Offline game probably will not run.');
