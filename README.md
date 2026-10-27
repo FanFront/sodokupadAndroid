@@ -22,6 +22,9 @@ npm run capture
 npm run build-html
 npm run verify
 npm run extract-strings
+# 在 translation-candidates.json 中填写 zhHans 后：
+npm run apply-translations
+npm run build-html
 gradle :app:assembleDebug
 ```
 
@@ -35,7 +38,7 @@ gradle :app:assembleDebug
 - `app/src/main/assets/offline/files/`：按 URL 哈希保存的 JS、CSS、WASM、图片、字体、Puzzle API 响应。用 `offline/index.json` 把文件名映射回原始网址。
 - `app/src/main/assets/offline/translation-candidates.json`：从 HTML、JSON、已解码数独对象中提取的待译英文句子列表。这份清单不代表所有隐藏剧情都已找到。
 
-编辑 `i18n/games/<game-id>.zh-Hans.json` 中的**真实英文原句 → 经人工修改的中文译文**，再运行 `npm run build-html` 生成新的中文 HTML。原始 HTML 不会因重新捕获而被覆盖；想重新抓原始 HTML，需要手动删除 `offline/pages/<game-id>.html`。不要直接篡改 JS 内部的逻辑与数独答案。
+翻译步骤：打开 `offline/translation-candidates.json`，给每个需要翻译的 `english` 原句填写自然、准确的简体中文 `zhHans` 字段；完成后运行 `npm run apply-translations`，脚本会根据 `gameIds` 将译文导入通用或游戏专用词典。然后运行 `npm run build-html` 生成中文版 HTML。也可以直接编辑 `i18n/games/<game-id>.zh-Hans.json` 的**真实英文原句 → 中文译文**。原始 HTML 不会因重新捕获而被覆盖；想重新抓原始 HTML，需要手动删除 `offline/pages/<game-id>.html`。不要直接篡改 JS 内部的逻辑与数独答案。
 
 ## 简体中文化
 
