@@ -165,22 +165,105 @@
     });
   }
 
+  /*
+   * SudokuPad installs global mouse/touch handlers before this module loads.
+   * On Android WebView they may cancel the compatibility "click" dispatched
+   * after a finger tap. Listening ONLY for click therefore leaves the
+   * keypad looking active while none of its buttons work.
+   *
+   * Intercept direct touchend in capture phase, independent of synthesized
+   * mouse/click events. Pointerup is the fallback for devices that dispatch
+   * pointer but not Touch Events; click remains for desktop / keyboard.
+   * Do not interact with puzzle cells, which stay under SudokuPad's handlers.
+   */
+  const touchGesture = {button:null, identifier:null, x:0, y:0, consumed:false};
+  let lastActivation = null;
+
+  function visibleModal() {
+    return Array.from(doc.querySelectorAll('.dialog-overlay')).some(el =>
+      el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden');
+  }
+  function buttonAt(x, y) {
+    if (visibleModal()) return null;
+    const rect = dock.getBoundingClientRect();
+    if (x < rect.left || x >= rect.right || y < rect.top || y >= rect.bottom) return null;
+    // Geometry lookup also works if an old SudokuPad element covers the dock
+    // in the hit-testing layer while our buttons remain visually visible.
+    for (const button of dock.querySelectorAll('button[data-android-action]')) {
+      const b = button.getBoundingClientRect();
+      if(x >= b.left && x < b.right && y >= b.top && y < b.bottom) return button;
+    }
+    return null;
+  }
+  function activate(button, kind) {
+    if (!button || button.disabled) return false;
+    // Suppress synthetic click/pointer events for a touch we just handled.
+    // Never suppress another real touchstart/touchend gesture.
+    if (kind !== 'touch' && lastActivation?.button === button &&
+        performance.now() - lastActivation.at < 550) return true;
+    lastActivation = {button, kind, at:performance.now()};
+    button.dataset.androidTapCount = String((+button.dataset.androidTapCount || 0)+1);
+    doGameAction(button.dataset.androidAction,button.dataset.value);
+    return true;
+  }
+  function preventPuzzleInput(event) {
+    if (event.cancelable) event.preventDefault();
+    event.stopImmediatePropagation();
+  }
+  doc.addEventListener('touchstart', event => {
+    const touch=event.changedTouches?.[0];
+    if (!touch) return;
+    const button=buttonAt(touch.clientX,touch.clientY);
+    if (!button) return;
+    Object.assign(touchGesture, {
+      button, identifier:touch.identifier, x:touch.clientX, y:touch.clientY, consumed:false
+    });
+    preventPuzzleInput(event);
+  },{capture:true,passive:false});
+  doc.addEventListener('touchend', event => {
+    const touch=Array.from(event.changedTouches || [])
+      .find(t => t.identifier === touchGesture.identifier);
+    if (!touch || !touchGesture.button) return;
+    const button=buttonAt(touch.clientX,touch.clientY);
+    const startButton=touchGesture.button;
+    const moved=Math.hypot(touch.clientX-touchGesture.x,touch.clientY-touchGesture.y);
+    touchGesture.button=null;
+    touchGesture.identifier=null;
+    preventPuzzleInput(event);
+    if(button===startButton && moved < 32) activate(button,'touch');
+  },{capture:true,passive:false});
+  doc.addEventListener('touchcancel', event => {
+    if(!touchGesture.button) return;
+    touchGesture.button=null;
+    touchGesture.identifier=null;
+    preventPuzzleInput(event);
+  },{capture:true,passive:false});
+  doc.addEventListener('pointerdown', event => {
+    if (buttonAt(event.clientX,event.clientY)) preventPuzzleInput(event);
+  },{capture:true,passive:false});
+  doc.addEventListener('pointerup', event => {
+    const button=buttonAt(event.clientX,event.clientY);
+    if (!button) return;
+    preventPuzzleInput(event);
+    // Prefer touchend over pointerup where both are supported.
+    if (event.pointerType !== 'touch' || !touchGesture.button) {
+      activate(button,event.pointerType === 'touch' ? 'pointer' : 'mouse');
+    }
+  },{capture:true,passive:false});
+  doc.addEventListener('click', event => {
+    const button=event.target.closest?.('#android-gamepad button[data-android-action]') ||
+      buttonAt(event.clientX,event.clientY);
+    if (!button) return;
+    preventPuzzleInput(event);
+    activate(button,'click');
+  },{capture:true,passive:false});
+
   function makeButton(label, action, value) {
     const button = doc.createElement('button');
     button.type = 'button';
     button.textContent = label;
     button.dataset.androidAction = action;
     if (value !== undefined) button.dataset.value = String(value);
-    button.addEventListener('click', e => {
-      e.preventDefault();
-      e.stopPropagation();
-      doGameAction(action, value);
-    });
-    // Original SudokuPad also listens globally for pointer input.
-    button.addEventListener('pointerdown', e => e.stopPropagation());
-    button.addEventListener('pointerup', e => e.stopPropagation());
-    button.addEventListener('touchstart', e => e.stopPropagation(), {passive:true});
-    button.addEventListener('touchend', e => e.stopPropagation(), {passive:true});
     return button;
   }
 
