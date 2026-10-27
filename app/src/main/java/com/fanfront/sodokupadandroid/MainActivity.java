@@ -55,6 +55,7 @@ public final class MainActivity extends Activity {
     private SharedPreferences preferences;
     private LinearLayout root;
     private WebView webView;
+    private Button translateButton;
     private MachineTranslator machineTranslator;
     private boolean machineEnabled = false;
     private Game selectedGame;
@@ -117,6 +118,7 @@ public final class MainActivity extends Activity {
 
     private void newRoot() {
         closeWebView();
+        translateButton = null;
         root = createRoot();
         setContentView(root);
     }
@@ -262,7 +264,9 @@ public final class MainActivity extends Activity {
 
         toolbar.addView(button("‹ " + tr("home"), v -> showHome()));
         toolbar.addView(button(tr("rules"), v -> showGuide()));
-        toolbar.addView(button(machineEnabled ? "显示英文" : "全文翻译", v -> toggleMachineTranslation()));
+        translateButton = button(machineEnabled ? "显示英文" : "全文翻译",
+                v -> toggleMachineTranslation());
+        toolbar.addView(translateButton);
         toolbar.addView(button(tr("reload"), v -> { if (webView != null) webView.reload(); }));
         toolbar.addView(button(tr("rotate"), v -> {
             landscape = !landscape;
@@ -386,6 +390,7 @@ public final class MainActivity extends Activity {
     private void toggleMachineTranslation() {
         if (machineEnabled) {
             machineEnabled = false;
+            if (translateButton != null) translateButton.setText("全文翻译");
             if (webView != null) webView.evaluateJavascript(
                     "window.__spAndroidTranslator && window.__spAndroidTranslator.setMachine(false);", null);
             Toast.makeText(this, "已关闭自动翻译；可对照英文原文", Toast.LENGTH_SHORT).show();
@@ -416,6 +421,7 @@ public final class MainActivity extends Activity {
 
     private void enableMachineTranslation() {
         machineEnabled = true;
+        if (translateButton != null) translateButton.setText("显示英文");
         if (webView != null) webView.evaluateJavascript(
                 "window.__spAndroidTranslator && window.__spAndroidTranslator.setMachine(true);", null);
         Toast.makeText(this, "已启用中文翻译；复杂规则请与英文核对", Toast.LENGTH_LONG).show();

@@ -11,7 +11,7 @@ A small **unofficial** Android companion app for playing SudokuPad puzzles. Buil
 - Local game catalog in `app/src/main/assets/games.json` for future built-in games.
 - The Android menus and brief guides use **Simplified Chinese (简体中文) only**, plus *selected, exact-match* SudokuPad UI translations. Untranslated content remains in English.
 - Reviewed exact-match Chinese terminology takes priority in `app/src/main/assets/i18n/`.
-- **Opt-in on-device ML Kit English→Chinese translator** for visible, newly revealed story, quest and rule text that does not have a reviewed translation. Tap **全文翻译** inside a game and approve the ~30 MB Wi-Fi-only language model download. Tap the same button (then shown as **显示英文** after reopening a game) to compare the original English text.
+- **Opt-in on-device ML Kit English→Chinese translator** for visible, newly revealed story, quest and rule text that does not have a reviewed translation. Tap **全文翻译** inside a game and approve the ~30 MB Wi-Fi-only language model download. Tap the button again (**显示英文**) to compare the original English text.
 - Dynamic text-node translation watches the site's HTML and eligible SVG text; it does not rewrite original puzzle data, puzzle answers, or stored progress. This is **machine translation, not a proofread complete Chinese script**.
 - WebView DOM/local storage enabled. The app does **not** clear website data when switching games or relaunching.
 - Landscape-mode toggle for large grids. Pinch zoom is enabled in WebView, but **this cannot guarantee Sudokuvania zoom or pan works on Android**.

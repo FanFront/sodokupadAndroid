@@ -60,7 +60,7 @@
 
         function observeNode(node) {
             if (!node || !node.isConnected || node.nodeType !== 3) return;
-            if (!machineEnabled && !dictionary) return;
+            if (!dictionary) return;
             if (!visible(node.parentElement)) return;
             var saved = storedNodes.get(node);
             if (saved && node.nodeValue === saved.translated) return;
@@ -125,16 +125,20 @@
                         setText(node, entry.original, result);
                     });
                 }
+                // Any duplicate text nodes that arrived while this request was
+                // pending should now receive the cached translation, too.
+                schedule();
                 sendRequests();
             };
         }
 
-        function schedule(root) {
+        function schedule() {
             if (destroyed || timer) return;
             timer = window.setTimeout(function () {
                 timer = null;
-                scan(root || document.body);
-            }, 150);
+                // Multiple unrelated subtrees may change in one SudokuPad update.
+                scan(document.body);
+            }, 180);
         }
 
         observer = new MutationObserver(function (changes) {
@@ -150,7 +154,7 @@
                     if (!root) root = change.target;
                 }
             });
-            if (root) schedule(root);
+            if (root) schedule();
         });
 
         observer.observe(document.body, {
