@@ -66,7 +66,7 @@ jobs:
           npm run build-html
           npm run build-puzzle-zh
           npm run verify
-          node scripts/test-scl.mjs
+          node scripts/test-scl.mjs --require-translated
       - name: Test the actual rendered board at Android phone size
         run: |
           npx playwright install --with-deps chromium
@@ -128,7 +128,7 @@ jobs:
       - name: Validate the local capture before packaging
         run: npm run verify
       - name: Validate SudokuPad-compatible puzzle encoding
-        run: node scripts/test-scl.mjs
+        run: node scripts/test-scl.mjs --require-translated
       - name: Extract English text from HTML and puzzle data
         run: npm run extract-strings
       - name: Save captured resources and HTML into GitHub repository
