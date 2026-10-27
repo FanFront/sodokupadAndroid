@@ -24,7 +24,7 @@ function canonical(value) {
   return u.href;
 }
 const runtimeStatus = () => {
-  const app = window.Framework?.app;
+  const app = (typeof Framework === 'undefined' ? null : Framework)?.app;
   const board = document.getElementById('board');
   const svg = document.getElementById('svgrenderer');
   const game = document.querySelector('.game');
@@ -34,11 +34,11 @@ const runtimeStatus = () => {
     return {left:b.left, top:b.top, width:b.width, height:b.height,
       right:b.right, bottom:b.bottom};
   };
-  const feature = window.Framework?.features?.largepuzzle;
+  const feature = (typeof Framework === 'undefined' ? null : Framework)?.features?.largepuzzle;
   return {
     readyState:document.readyState,
     href:location.href,
-    framework:!!window.Framework,
+    framework:(typeof Framework !== 'undefined'),
     app:!!app,
     currentPuzzle:!!app?.puzzle?.currentPuzzle,
     gameRows:app?.puzzle?.rows,
@@ -122,7 +122,7 @@ async function replay(entry, original = false) {
         report.errors.push('Start dialog click: ' + error.message.slice(0,180)));
     }
     await page.waitForFunction(() => {
-      const app = window.Framework?.app;
+      const app = (typeof Framework === 'undefined' ? null : Framework)?.app;
       return !!app?.puzzle?.currentPuzzle && app.puzzle.rows >= 20 &&
         app.puzzle.cols >= 20 && !!document.querySelector('#svgrenderer')?.getAttribute('viewBox');
     }, null, {timeout:60000});
@@ -133,7 +133,7 @@ async function replay(entry, original = false) {
     await page.waitForFunction(() => {
       const game = document.querySelector('.game');
       const board = document.getElementById('board');
-      const feature = window.Framework?.features?.largepuzzle;
+      const feature = (typeof Framework === 'undefined' ? null : Framework)?.features?.largepuzzle;
       if (!board || !game) return false;
       const b = board.getBoundingClientRect();
       const g = game.getBoundingClientRect();
