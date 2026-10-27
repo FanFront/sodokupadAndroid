@@ -1738,7 +1738,7 @@
   },
   {
     "english": "3x3 boxes; they can be any shape,",
-    "zhHans": "",
+    "zhHans": "3×3 宫；形状不一定是方形，",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -1748,7 +1748,7 @@
   },
   {
     "english": "6x6 quattroquadri rules apply.",
-    "zhHans": "",
+    "zhHans": "适用 6×6 四宫格规则。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -1758,7 +1758,7 @@
   },
   {
     "english": "6x6 sudoku rules apply.",
-    "zhHans": "",
+    "zhHans": "适用 6×6 数独规则。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -1769,7 +1769,7 @@
   },
   {
     "english": "9x9 irregular sudoku rules apply.",
-    "zhHans": "",
+    "zhHans": "适用 9×9 不规则数独规则。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -1779,7 +1779,7 @@
   },
   {
     "english": "9x9 sudoku rules apply.",
-    "zhHans": "",
+    "zhHans": "适用 9×9 数独规则。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -1800,7 +1800,7 @@
   },
   {
     "english": "a breakable wall",
-    "zhHans": "",
+    "zhHans": "一面可破坏的墙",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -1830,7 +1830,7 @@
   },
   {
     "english": "a different digit from 0-9.",
-    "zhHans": "",
+    "zhHans": "0 至 9 中各不相同的数字。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -1872,7 +1872,7 @@
   },
   {
     "english": "A Nice Place To Solve",
-    "zhHans": "",
+    "zhHans": "适合解题的好地方",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -1893,7 +1893,7 @@
   },
   {
     "english": "A scrap of paper left",
-    "zhHans": "",
+    "zhHans": "留下的一张纸条",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -1916,7 +1916,7 @@
   },
   {
     "english": "a single chess king's move",
-    "zhHans": "",
+    "zhHans": "一步国际象棋王步",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -1926,7 +1926,7 @@
   },
   {
     "english": "a stone figure",
-    "zhHans": "",
+    "zhHans": "一尊石像",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -1957,7 +1957,7 @@
   },
   {
     "english": "activate the telescope.",
-    "zhHans": "",
+    "zhHans": "启动望远镜。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -1967,7 +1967,7 @@
   },
   {
     "english": "activating generators in the Dungeon",
-    "zhHans": "",
+    "zhHans": "启动地牢中的发电机",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -1979,7 +1979,7 @@
   },
   {
     "english": "Additional rules:",
-    "zhHans": "",
+    "zhHans": "附加规则：",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2000,7 +2000,7 @@
   },
   {
     "english": "adjacent non-vault cell.",
-    "zhHans": "",
+    "zhHans": "相邻的非宝库格。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2010,7 +2010,7 @@
   },
   {
     "english": "Adjacent values differ by at least 5.",
-    "zhHans": "",
+    "zhHans": "相邻数值之差至少为 5。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2020,7 +2020,7 @@
   },
   {
     "english": "Adjacent values sum to a prime number.",
-    "zhHans": "",
+    "zhHans": "相邻数值之和为质数。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2030,7 +2030,7 @@
   },
   {
     "english": "adjusting Settings",
-    "zhHans": "",
+    "zhHans": "调整设置",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2080,7 +2080,7 @@
   },
   {
     "english": "Ann Givens",
-    "zhHans": "",
+    "zhHans": "安·吉文斯",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2090,7 +2090,7 @@
   },
   {
     "english": "balcony outline",
-    "zhHans": "",
+    "zhHans": "阳台轮廓",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2100,7 +2100,7 @@
   },
   {
     "english": "BLINK BRACELET",
-    "zhHans": "",
+    "zhHans": "闪烁手环",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2110,7 +2110,7 @@
   },
   {
     "english": "Blink Bracelet as portrayed",
-    "zhHans": "",
+    "zhHans": "闪烁手环示例",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2134,7 +2134,7 @@
   },
   {
     "english": "Break the Cipher",
-    "zhHans": "",
+    "zhHans": "破解密码",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2144,7 +2144,7 @@
   },
   {
     "english": "Buried Chamber, hidden",
-    "zhHans": "",
+    "zhHans": "地下密室（隐藏）",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2154,7 +2154,7 @@
   },
   {
     "english": "but must still connect orthogonally.",
-    "zhHans": "",
+    "zhHans": "但仍必须正交相连。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2164,7 +2164,7 @@
   },
   {
     "english": "cages marked with",
-    "zhHans": "",
+    "zhHans": "标有以下符号的笼",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2184,7 +2184,7 @@
   },
   {
     "english": "cells may not sum to 5 or 10.",
-    "zhHans": "",
+    "zhHans": "格子内的数字之和不得为 5 或 10。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2194,7 +2194,7 @@
   },
   {
     "english": "Check your version",
-    "zhHans": "",
+    "zhHans": "查看版本",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2204,7 +2204,7 @@
   },
   {
     "english": "checking this section of the Journal",
-    "zhHans": "",
+    "zhHans": "查看日志中的这一节",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2214,7 +2214,7 @@
   },
   {
     "english": "Ciphered 6x6 sudoku rules apply.",
-    "zhHans": "",
+    "zhHans": "适用带密码的 6×6 数独规则。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2224,7 +2224,7 @@
   },
   {
     "english": "CLIMBING GLOVES",
-    "zhHans": "",
+    "zhHans": "攀爬手套",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2234,7 +2234,7 @@
   },
   {
     "english": "Climbing Gloves as portrayed",
-    "zhHans": "",
+    "zhHans": "攀爬手套示例",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2255,7 +2255,7 @@
   },
   {
     "english": "COLLECTIBLE ARTIFACTS",
-    "zhHans": "",
+    "zhHans": "可收集的神器",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2265,7 +2265,7 @@
   },
   {
     "english": "Complete objectives",
-    "zhHans": "",
+    "zhHans": "完成目标",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2275,7 +2275,7 @@
   },
   {
     "english": "Conference Room, hidden",
-    "zhHans": "",
+    "zhHans": "会议室（隐藏）",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2285,7 +2285,7 @@
   },
   {
     "english": "Containment Area, hidden",
-    "zhHans": "",
+    "zhHans": "收容区（隐藏）",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2295,7 +2295,7 @@
   },
   {
     "english": "contains one \"doubler\" cell",
-    "zhHans": "",
+    "zhHans": "包含一个「倍增格」",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2305,7 +2305,7 @@
   },
   {
     "english": "Continue the quest",
-    "zhHans": "",
+    "zhHans": "继续任务",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2323,7 +2323,7 @@
   },
   {
     "english": "controlling SudokuPad",
-    "zhHans": "",
+    "zhHans": "操作 SudokuPad",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2333,7 +2333,7 @@
   },
   {
     "english": "Counting Artifacts as portrayed",
-    "zhHans": "",
+    "zhHans": "神器计数示例",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2344,7 +2344,7 @@
   },
   {
     "english": "Crack the cipher",
-    "zhHans": "",
+    "zhHans": "破解密码",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2356,7 +2356,7 @@
   },
   {
     "english": "Crawl Space, hidden",
-    "zhHans": "",
+    "zhHans": "爬行通道（隐藏）",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2376,7 +2376,7 @@
   },
   {
     "english": "DASHING CAPE",
-    "zhHans": "",
+    "zhHans": "疾行披风",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2386,7 +2386,7 @@
   },
   {
     "english": "Dashing Cape as portrayed",
-    "zhHans": "",
+    "zhHans": "疾行披风示例",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2397,7 +2397,7 @@
   },
   {
     "english": "DASHING DOUBLET",
-    "zhHans": "",
+    "zhHans": "疾行紧身衣",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2407,7 +2407,7 @@
   },
   {
     "english": "Dashing Doublet as portrayed",
-    "zhHans": "",
+    "zhHans": "疾行紧身衣示例",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2418,7 +2418,7 @@
   },
   {
     "english": "Deconstructed sudoku rules apply.",
-    "zhHans": "",
+    "zhHans": "适用拆解数独规则。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2428,7 +2428,7 @@
   },
   {
     "english": "defeating this boss",
-    "zhHans": "",
+    "zhHans": "击败这个首领",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2447,7 +2447,7 @@
   },
   {
     "english": "defeating this optional boss",
-    "zhHans": "",
+    "zhHans": "击败这个可选首领",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2479,7 +2479,7 @@
   },
   {
     "english": "Dialogue given",
-    "zhHans": "",
+    "zhHans": "对话提示",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2500,7 +2500,7 @@
   },
   {
     "english": "Difference Kropki",
-    "zhHans": "",
+    "zhHans": "差值克罗普基点",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2511,7 +2511,7 @@
   },
   {
     "english": "Digits in a cage cannot repeat, and",
-    "zhHans": "",
+    "zhHans": "笼中的数字不能重复，且",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2522,7 +2522,7 @@
   },
   {
     "english": "Discover how to",
-    "zhHans": "",
+    "zhHans": "探索如何",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2532,7 +2532,7 @@
   },
   {
     "english": "DRAW your",
-    "zhHans": "",
+    "zhHans": "画出你的",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2543,7 +2543,7 @@
   },
   {
     "english": "Draw your conclusion",
-    "zhHans": "",
+    "zhHans": "得出结论",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2555,7 +2555,7 @@
   },
   {
     "english": "Draw Your Conclusion",
-    "zhHans": "",
+    "zhHans": "得出结论",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2565,7 +2565,7 @@
   },
   {
     "english": "Each cell in this grid has a value",
-    "zhHans": "",
+    "zhHans": "这个网格中的每格都有一个数值",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2575,7 +2575,7 @@
   },
   {
     "english": "Each letter represents",
-    "zhHans": "",
+    "zhHans": "每个字母代表",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2585,7 +2585,7 @@
   },
   {
     "english": "Each row, column, and box",
-    "zhHans": "",
+    "zhHans": "每行、每列、每个宫",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2595,7 +2595,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-armored-guard) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-armored-guard)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2605,7 +2605,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-bull-dozer?setting-nogrid=1) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-bull-dozer?setting-nogrid=1)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2615,7 +2615,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-busy-busboys) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-busy-busboys)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2625,7 +2625,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-cable-management) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-cable-management)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2635,7 +2635,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-chandeliers) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-chandeliers)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2645,7 +2645,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-circular-reasoning) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-circular-reasoning)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2655,7 +2655,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-clockwork-trap?setting-nogrid=1) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-clockwork-trap?setting-nogrid=1)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2665,7 +2665,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-contrarian-librarian) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-contrarian-librarian)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2675,7 +2675,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-cram-session) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-cram-session)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2685,7 +2685,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-dancebreaker) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-dancebreaker)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2695,7 +2695,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-elite-guards) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-elite-guards)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2705,7 +2705,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-enchanted-armor) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-enchanted-armor)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2715,7 +2715,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-grill-interrupted) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-grill-interrupted)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2725,7 +2725,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-high-vaultage) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-high-vaultage)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2735,7 +2735,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-jump-scare) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-jump-scare)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2745,7 +2745,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-lock-boxer) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-lock-boxer)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2755,7 +2755,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-office-drone) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-office-drone)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2765,7 +2765,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-ornery-ivy) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-ornery-ivy)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2775,7 +2775,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-red-armored-guard) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-red-armored-guard)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2785,7 +2785,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-sewage-surge) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-sewage-surge)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2795,7 +2795,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-skeletons) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-skeletons)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2805,7 +2805,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-sum-prison-blues) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-sum-prison-blues)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2815,7 +2815,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-taking-attendants) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-taking-attendants)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2825,7 +2825,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-tango-tough) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-tango-tough)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2835,7 +2835,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-waltz-the-worst-that-could-happen) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-waltz-the-worst-that-could-happen)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2845,7 +2845,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-whisper-wrangler) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-whisper-wrangler)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2855,7 +2855,7 @@
   },
   {
     "english": "Enemies are optional puzzles that can be used as practice.\\n[Click here](https://sudokupad.app/sudokuvania/enemy-zero-sum-game) if you wish to fight the enemy.",
-    "zhHans": "",
+    "zhHans": "敌人是可供练习的可选谜题。\\n如果想挑战敌人，请[点击这里](https://sudokupad.app/sudokuvania/enemy-zero-sum-game)。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2875,7 +2875,7 @@
   },
   {
     "english": "Escort the Townspeople to Safety",
-    "zhHans": "",
+    "zhHans": "护送镇民前往安全地带",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2885,7 +2885,7 @@
   },
   {
     "english": "escorting them through the Sewers",
-    "zhHans": "",
+    "zhHans": "穿过下水道护送他们",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2897,7 +2897,7 @@
   },
   {
     "english": "examining the clues",
-    "zhHans": "",
+    "zhHans": "检查线索",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2909,7 +2909,7 @@
   },
   {
     "english": "Explore the castle",
-    "zhHans": "",
+    "zhHans": "探索城堡",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2920,7 +2920,7 @@
   },
   {
     "english": "Explore the Castle",
-    "zhHans": "",
+    "zhHans": "探索城堡",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2930,7 +2930,7 @@
   },
   {
     "english": "Finish the game",
-    "zhHans": "",
+    "zhHans": "完成游戏",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2940,7 +2940,7 @@
   },
   {
     "english": "following Quest Lines",
-    "zhHans": "",
+    "zhHans": "沿着任务线行动",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2961,7 +2961,7 @@
   },
   {
     "english": "Free the townspeople",
-    "zhHans": "",
+    "zhHans": "解救镇民",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2984,7 +2984,7 @@
   },
   {
     "english": "gaps which are not part of the grid.",
-    "zhHans": "",
+    "zhHans": "不属于网格的空隙。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -2994,7 +2994,7 @@
   },
   {
     "english": "Gargoyle Club, hidden",
-    "zhHans": "",
+    "zhHans": "石像鬼俱乐部（隐藏）",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3004,7 +3004,7 @@
   },
   {
     "english": "Gargoyle Hints as portrayed",
-    "zhHans": "",
+    "zhHans": "石像鬼提示示例",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3015,7 +3015,7 @@
   },
   {
     "english": "GARGOYLE PENDANT",
-    "zhHans": "",
+    "zhHans": "石像鬼吊坠",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3036,7 +3036,7 @@
   },
   {
     "english": "GRAPPLING HOOK",
-    "zhHans": "",
+    "zhHans": "抓钩",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3046,7 +3046,7 @@
   },
   {
     "english": "Grappling Hook as portrayed",
-    "zhHans": "",
+    "zhHans": "抓钩示例",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3057,7 +3057,7 @@
   },
   {
     "english": "greater than any orthogonally",
-    "zhHans": "",
+    "zhHans": "大于所有正交相邻的",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3167,7 +3167,7 @@
   },
   {
     "english": "Ice Cream",
-    "zhHans": "",
+    "zhHans": "冰淇淋",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3177,7 +3177,7 @@
   },
   {
     "english": "Improve your play",
-    "zhHans": "",
+    "zhHans": "提高解题能力",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3187,7 +3187,7 @@
   },
   {
     "english": "Index Arrow",
-    "zhHans": "",
+    "zhHans": "索引箭头",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3210,7 +3210,7 @@
   },
   {
     "english": "JUMP SHOES",
-    "zhHans": "",
+    "zhHans": "跳跃鞋",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3220,7 +3220,7 @@
   },
   {
     "english": "Jump Shoes as portrayed",
-    "zhHans": "",
+    "zhHans": "跳跃鞋示例",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3230,7 +3230,7 @@
   },
   {
     "english": "Learn clue types",
-    "zhHans": "",
+    "zhHans": "学习线索类型",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3250,7 +3250,7 @@
   },
   {
     "english": "Lower Hallway",
-    "zhHans": "",
+    "zhHans": "下层走廊",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3264,7 +3264,7 @@
   },
   {
     "english": "LOWER HALLWAY",
-    "zhHans": "",
+    "zhHans": "下层走廊",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3275,7 +3275,7 @@
   },
   {
     "english": "Maximum Security, hidden",
-    "zhHans": "",
+    "zhHans": "最高戒备区（隐藏）",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3285,7 +3285,7 @@
   },
   {
     "english": "may contain the same digit.",
-    "zhHans": "",
+    "zhHans": "可以填入相同数字。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3345,7 +3345,7 @@
   },
   {
     "english": "No two digits separated by",
-    "zhHans": "",
+    "zhHans": "任何两个相隔",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3355,7 +3355,7 @@
   },
   {
     "english": "Not all rows/columns have 9 cells.",
-    "zhHans": "",
+    "zhHans": "并非所有行或列都有 9 格。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3392,7 +3392,7 @@
   },
   {
     "english": "Place the digits 1-9 into each box",
-    "zhHans": "",
+    "zhHans": "在每个宫内填入数字 1 至 9",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3402,7 +3402,7 @@
   },
   {
     "english": "Place the three batteries into the",
-    "zhHans": "",
+    "zhHans": "将三块电池放入",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3412,7 +3412,7 @@
   },
   {
     "english": "Power the lift",
-    "zhHans": "",
+    "zhHans": "为升降梯供电",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3424,7 +3424,7 @@
   },
   {
     "english": "Quest Lines",
-    "zhHans": "",
+    "zhHans": "任务线",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3444,7 +3444,7 @@
   },
   {
     "english": "reaching the Royal Quarters",
-    "zhHans": "",
+    "zhHans": "前往王室寝宫",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3455,7 +3455,7 @@
   },
   {
     "english": "reading this cell",
-    "zhHans": "",
+    "zhHans": "阅读这个格子",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3465,7 +3465,7 @@
   },
   {
     "english": "RECIPE BOOK",
-    "zhHans": "",
+    "zhHans": "食谱",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3475,7 +3475,7 @@
   },
   {
     "english": "Research the ritual",
-    "zhHans": "",
+    "zhHans": "研究仪式",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3488,7 +3488,7 @@
   },
   {
     "english": "Research the Ritual",
-    "zhHans": "",
+    "zhHans": "研究仪式",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3498,7 +3498,7 @@
   },
   {
     "english": "Restore Power to the Lift",
-    "zhHans": "",
+    "zhHans": "恢复升降梯供电",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3533,7 +3533,7 @@
   },
   {
     "english": "ROYAL QUARTERS",
-    "zhHans": "",
+    "zhHans": "王室寝宫",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3544,7 +3544,7 @@
   },
   {
     "english": "Royal Safe Room, hidden",
-    "zhHans": "",
+    "zhHans": "王室安全屋（隐藏）",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3554,7 +3554,7 @@
   },
   {
     "english": "searching the Observatory and Laboratory",
-    "zhHans": "",
+    "zhHans": "搜索天文台和实验室",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3567,7 +3567,7 @@
   },
   {
     "english": "Secret Lounge, hidden",
-    "zhHans": "",
+    "zhHans": "秘密休息室（隐藏）",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3577,7 +3577,7 @@
   },
   {
     "english": "See your progress",
-    "zhHans": "",
+    "zhHans": "查看进度",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3587,7 +3587,7 @@
   },
   {
     "english": "Segments in each region have the same sum.",
-    "zhHans": "",
+    "zhHans": "每个区域内各线段的数字之和相同。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3628,7 +3628,7 @@
   },
   {
     "english": "Some rows or columns may contain",
-    "zhHans": "",
+    "zhHans": "部分行或列可能包含",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3660,7 +3660,7 @@
   },
   {
     "english": "sum to the total in the upper left.",
-    "zhHans": "",
+    "zhHans": "其和等于左上角标示的总数。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3682,7 +3682,7 @@
   },
   {
     "english": "Test your skill",
-    "zhHans": "",
+    "zhHans": "考验身手",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3849,7 +3849,7 @@
   },
   {
     "english": "the CASTLE",
-    "zhHans": "",
+    "zhHans": "城堡",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3870,7 +3870,7 @@
   },
   {
     "english": "the CIPHER",
-    "zhHans": "",
+    "zhHans": "密码",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3881,7 +3881,7 @@
   },
   {
     "english": "The corner of the shop is occupied",
-    "zhHans": "",
+    "zhHans": "商店一角有人占据",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3912,7 +3912,7 @@
   },
   {
     "english": "The guy above me? That one's always getting carried away.",
-    "zhHans": "",
+    "zhHans": "我上面那家伙？他总是容易得意忘形。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3943,7 +3943,7 @@
   },
   {
     "english": "The Heart",
-    "zhHans": "",
+    "zhHans": "心脏",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3954,7 +3954,7 @@
   },
   {
     "english": "The Marshal",
-    "zhHans": "",
+    "zhHans": "卫队长",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3964,7 +3964,7 @@
   },
   {
     "english": "The nine regions might not be",
-    "zhHans": "",
+    "zhHans": "九个区域不一定是",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3985,7 +3985,7 @@
   },
   {
     "english": "the RITUAL",
-    "zhHans": "",
+    "zhHans": "仪式",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -3997,7 +3997,7 @@
   },
   {
     "english": "The Shopkeeper",
-    "zhHans": "",
+    "zhHans": "店主",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4018,7 +4018,7 @@
   },
   {
     "english": "the staff",
-    "zhHans": "",
+    "zhHans": "工作人员",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4102,7 +4102,7 @@
   },
   {
     "english": "This icon indicates that you have rescued every villager from this grid. Find and speak to them in Rowsville!",
-    "zhHans": "",
+    "zhHans": "这个图标表示你已救出该网格中的所有村民。去行之村找到他们并交谈！",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4206,7 +4206,7 @@
   },
   {
     "english": "to provide power to the lift.",
-    "zhHans": "",
+    "zhHans": "为升降梯供电。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4216,7 +4216,7 @@
   },
   {
     "english": "Top Right Boi",
-    "zhHans": "",
+    "zhHans": "右上角小子",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4236,7 +4236,7 @@
   },
   {
     "english": "unlocking inventory items",
-    "zhHans": "",
+    "zhHans": "解锁物品栏道具",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4246,7 +4246,7 @@
   },
   {
     "english": "Upper Hallway",
-    "zhHans": "",
+    "zhHans": "上层走廊",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4260,7 +4260,7 @@
   },
   {
     "english": "UPPER HALLWAY",
-    "zhHans": "",
+    "zhHans": "上层走廊",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4271,7 +4271,7 @@
   },
   {
     "english": "Values lie strictly between those on the ends.",
-    "zhHans": "",
+    "zhHans": "中间各格的数值必须严格介于两端数值之间。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4281,7 +4281,7 @@
   },
   {
     "english": "Values on opposing squares sum to the value in the star.",
-    "zhHans": "",
+    "zhHans": "两个相对方格的数值之和等于星形内的数值。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4291,7 +4291,7 @@
   },
   {
     "english": "Values sum to a concatenation of the waypoints' values.",
-    "zhHans": "",
+    "zhHans": "各数值之和等于路径点数值依次拼接成的数。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4301,7 +4301,7 @@
   },
   {
     "english": "Variable Sandwiches",
-    "zhHans": "",
+    "zhHans": "可变三明治",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4312,7 +4312,7 @@
   },
   {
     "english": "Vault cells must contain a value",
-    "zhHans": "",
+    "zhHans": "宝库格必须具有一个数值",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4322,7 +4322,7 @@
   },
   {
     "english": "Wall Food Recipes as portrayed",
-    "zhHans": "",
+    "zhHans": "墙壁食谱示例",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4333,7 +4333,7 @@
   },
   {
     "english": "whose value is twice its digit.",
-    "zhHans": "",
+    "zhHans": "其数值是所填数字的两倍。",
     "gameIds": [
       "lineage-of-logic"
     ],
@@ -4343,7 +4343,7 @@
   },
   {
     "english": "without repeating in a row or column.",
-    "zhHans": "",
+    "zhHans": "同一行或同一列中不得重复。",
     "gameIds": [
       "lineage-of-logic"
     ],
