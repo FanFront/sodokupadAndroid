@@ -545,7 +545,7 @@
     "https://sudokupad.app/sudokuvania/digits-of-despair?setting-nogrid=1&setting-largepuzzle=1": {
       "file": "pages/digits-of-despair.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 22157
+      "bytes": 22125
     },
     "https://sudokupad.app/sudokuvania/lineage-of-logic-plain?setting-nogrid=1&setting-largepuzzle=1": {
       "file": "files/a59cedd0ad509ef6de6c3abae305b0365bf2c29f90fb283e760064ff2441566e.html",
@@ -555,7 +555,7 @@
     "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1": {
       "file": "pages/lineage-of-logic.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 22158
+      "bytes": 22126
     },
     "https://sudokupad.app/tool-calculator.css?v=0.611.0": {
       "file": "files/4abdb37fc5e946e7cc6f6c9b961f588516f25b90c999a9e0f89714d3070af5fb.css",
