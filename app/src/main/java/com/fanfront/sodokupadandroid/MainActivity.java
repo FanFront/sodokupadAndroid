@@ -37,7 +37,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Locale;
 
 /**
  * Lightweight WebView host. Games remain on the SudokuPad origin so the
@@ -45,14 +44,10 @@ import java.util.Locale;
  */
 public final class MainActivity extends Activity {
     private static final String PREFS = "sudokupad_android";
-    private static final String KEY_LANGUAGE = "language";
     private static final String KEY_CUSTOM_GAMES = "custom_games";
-    private static final String[] LANGUAGE_NAMES = {"English", "简体中文", "Bahasa Melayu"};
-    private static final String[] LANGUAGE_CODES = {"en", "zh-Hans", "ms"};
     private static final int BACKGROUND = Color.rgb(249, 248, 245);
 
     private SharedPreferences preferences;
-    private String language;
     private LinearLayout root;
     private WebView webView;
     private Game selectedGame;
@@ -76,10 +71,6 @@ public final class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         preferences = getSharedPreferences(PREFS, MODE_PRIVATE);
-        String defaultLanguage = Locale.getDefault().getLanguage();
-        String initial = "zh".equals(defaultLanguage) ? "zh-Hans"
-            : "ms".equals(defaultLanguage) ? "ms" : "en";
-        language = preferences.getString(KEY_LANGUAGE, initial);
         showHome();
     }
 
@@ -88,7 +79,7 @@ public final class MainActivity extends Activity {
     }
 
     private String tr(String key) {
-        return LanguageStrings.get(language, key);
+        return LanguageStrings.get(key);
     }
 
     private LinearLayout createRoot() {
@@ -178,7 +169,6 @@ public final class MainActivity extends Activity {
 
         content.addView(text(tr("title"), 25));
         content.addView(text(tr("subtitle"), 17));
-        content.addView(button(tr("language") + ": " + languageLabel(), view -> chooseLanguage()));
         content.addView(text(tr("note"), 13));
         content.addView(text(tr("builtIn"), 21));
 
@@ -194,27 +184,6 @@ public final class MainActivity extends Activity {
 
         content.addView(button("+ " + tr("add"), view -> showAddDialog()));
         content.addView(text(tr("permission"), 13));
-    }
-
-    private String languageLabel() {
-        for (int i = 0; i < LANGUAGE_CODES.length; i++) {
-            if (LANGUAGE_CODES[i].equals(language)) return LANGUAGE_NAMES[i];
-        }
-        return LANGUAGE_NAMES[0];
-    }
-
-    private void chooseLanguage() {
-        new AlertDialog.Builder(this)
-                .setTitle(tr("language"))
-                .setItems(LANGUAGE_NAMES, (dialog, which) -> {
-                    String changed = LANGUAGE_CODES[which];
-                    if (changed.equals(language)) return;
-                    language = changed;
-                    preferences.edit().putString(KEY_LANGUAGE, language).apply();
-                    if (selectedGame == null) showHome();
-                    else showPlayer(selectedGame); // Reload document so text starts in its original language.
-                })
-                .show();
     }
 
     private static boolean isSudokuPadUrl(Uri uri) {
@@ -285,7 +254,6 @@ public final class MainActivity extends Activity {
 
         toolbar.addView(button("‹ " + tr("home"), v -> showHome()));
         toolbar.addView(button(tr("rules"), v -> showGuide()));
-        toolbar.addView(button(tr("language"), v -> chooseLanguage()));
         toolbar.addView(button(tr("reload"), v -> { if (webView != null) webView.reload(); }));
         toolbar.addView(button(tr("rotate"), v -> {
             landscape = !landscape;
@@ -358,12 +326,24 @@ public final class MainActivity extends Activity {
     }
 
     private void applyTranslation(WebView view) {
-        if ("en".equals(language)) return;
         try {
             String script = readAsset("translate.js");
-            String localeJson = readAsset("i18n/" + language + ".json");
-            // Parse before injection to fail closed on malformed local assets.
-            String dictionary = new JSONObject(localeJson).toString();
+            JSONObject translations = new JSONObject(readAsset("i18n/zh-Hans.json"));
+            // Each game can have its own independently reviewed Chinese entries.
+            if (selectedGame != null && selectedGame.id.matches("[a-z0-9-]+")) {
+                try {
+                    JSONObject gameTranslations = new JSONObject(readAsset(
+                            "i18n/games/" + selectedGame.id + ".zh-Hans.json"));
+                    java.util.Iterator<String> keys = gameTranslations.keys();
+                    while (keys.hasNext()) {
+                        String key = keys.next();
+                        translations.put(key, gameTranslations.get(key));
+                    }
+                } catch (IOException ignored) {
+                    // No game-specific pack; common UI translations still work.
+                }
+            }
+            String dictionary = translations.toString();
             view.evaluateJavascript(script + "\nwindow.SudokuPadAndroidTranslate(" + dictionary + ");", null);
         } catch (IOException | JSONException error) {
             Toast.makeText(this, "Translation pack unavailable", Toast.LENGTH_SHORT).show();
@@ -374,7 +354,7 @@ public final class MainActivity extends Activity {
         if (selectedGame == null) return;
         new AlertDialog.Builder(this)
                 .setTitle(tr("guideTitle"))
-                .setMessage(LanguageStrings.guide(language, selectedGame.id))
+                .setMessage(LanguageStrings.guide(selectedGame.id))
                 .setPositiveButton(tr("ok"), null)
                 .show();
     }

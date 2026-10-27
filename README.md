@@ -9,7 +9,7 @@ A small **unofficial** Android companion app for playing SudokuPad puzzles. Buil
 - Two preconfigured Sudokuvania games with the requested `setting-nogrid=1&setting-largepuzzle=1` URL settings.
 - Add additional `https://sudokupad.app/...` puzzles from within the app without changing the Java source.
 - Local game catalog in `app/src/main/assets/games.json` for future built-in games.
-- Select English, 简体中文 (Simplified Chinese), or Bahasa Melayu for the **Android menus**, a brief in-app puzzle guide, and *selected, exact-match* SudokuPad interface labels.
+- The Android menus and brief guides use **Simplified Chinese (简体中文) only**, plus *selected, exact-match* SudokuPad UI translations. Untranslated content remains in English.
 - Exact-match translation entries in `app/src/main/assets/i18n/`. A non-destructive DOM text-node translator observes changes on the original website; it does not change the underlying puzzle data.
 - WebView DOM/local storage enabled. The app does **not** clear website data when switching games or relaunching.
 - Landscape-mode toggle for large grids. Pinch zoom is enabled in WebView, but **this cannot guarantee Sudokuvania zoom or pan works on Android**.
@@ -19,7 +19,7 @@ A small **unofficial** Android companion app for playing SudokuPad puzzles. Buil
 ## Important limitations
 
 1. **Internet connection required.** The app loads the original SudokuPad website, not local copies of its assets.
-2. **Not a complete translation.** Most narrative, quests, hidden rules, and dynamic content are still in English. Only short curated interface phrases are auto-translated, while a concise non-spoiler guide is available for both games. More translation packs and reviewed, puzzle-specific strings can be added later.
+2. **Not a complete translation.** Most narrative, quests, hidden rules, and dynamic content are still in English. Only short curated interface phrases are auto-translated, while a concise non-spoiler guide is available for both games. More verified Chinese and puzzle-specific strings can be added later.
 3. Sudokuvania is primarily designed for desktop. Its developer specifically notes that mobile zooming/panning and some pen-tool controls are unsupported. The orientation toggle and WebView zoom options are experimental conveniences, not fixes to the source engine.
 4. SudokuPad saves progress in its own browser storage. Data in **this app** is separate from Chrome or another browser; installing a new app or clearing Android app data can erase saved progress. Keep the same Android package ID and do not clear storage. Use SudokuPad's export/backup features if available.
 5. The APK created by CI is debug-signed, appropriate for personal testing. A release APK needs your own signing key and release process.
@@ -40,8 +40,8 @@ The source project can also be opened in Android Studio; the Gradle wrapper exec
 ## How to add games and translations
 
 - **New built-in game:** add `{"id":"unique-id","title":"Game name","url":"https://sudokupad.app/puzzle-id"}` to `app/src/main/assets/games.json`. Or use the app's Add puzzle form, which stores personal links only on that phone.
-- **New language:** add a `i18n/<language>.json` dictionary, supply guide/UI translations in `LanguageStrings.java`, and register the language selector in `MainActivity.java`.
-- **More translations for existing games:** add exact original UI snippets as JSON keys with translations as values. Avoid spoilers. Please review rules carefully: a mistranslation can change how a sudoku is solved.
+- **Chinese translations:** update the shared `app/src/main/assets/i18n/zh-Hans.json`, or use `app/src/main/assets/i18n/games/<game-id>.zh-Hans.json` for game-specific phrases. The app merges a matching game dictionary into the common Chinese dictionary. Other languages are deliberately unsupported.
+- **More translations for existing games:** add exact original UI snippets as JSON keys with Simplified Chinese values. Avoid spoilers. Please review rules carefully: a mistranslation can change how a sudoku is solved.
 - **Real full game localization:** coordinate with puzzle creators, obtain a translatable data source or an authorized localization mechanism, and audit generated rules, narrative, quests, and SVG-rendered labels. The existing DOM translator is only a best-effort enhancement.
 
 ## Credits
