@@ -64,5 +64,16 @@
   "Solution": "答案",
   "Fog": "迷雾",
   "Explore": "探索",
-  "Quest Log": "任务日志"
+  "Quest Log": "任务日志",
+  "Yey!": "太棒了！",
+  "You've already solved this puzzle.": "你已经完成这道谜题。",
+  "Support this app:": "支持本应用：",
+  "View Solution": "查看答案",
+  "Save Replay": "保存回放",
+  "Liked this Puzzle?": "喜欢这道谜题吗？",
+  "You liked this Puzzle!": "你已喜欢这道谜题！",
+  "Puzzle Solved!": "谜题已完成！",
+  "Congratulations!": "恭喜！",
+  "Return to Puzzle": "返回谜题",
+  "Are you sure you want to restart this puzzle?": "确定要重新开始这道谜题吗？"
 }
