@@ -72,7 +72,7 @@ async function saveResponse(response) {
       'image/gif':'gif','font/woff':'woff','font/woff2':'woff2',
       'application/font-woff':'woff','text/plain':'txt'
     };
-    const pathExtension = new URL(url).pathname.match(/\\.([a-z0-9]{1,6})$/i)?.[1];
+    const pathExtension = new URL(url).pathname.match(/\.([a-z0-9]{1,6})$/i)?.[1];
     const extension = byMime[mime] || pathExtension || 'bin';
     const file = 'files/' + sha + '.' + extension.toLowerCase();
     await writeFile(join(ROOT, file), body);
