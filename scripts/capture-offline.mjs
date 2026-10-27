@@ -18,7 +18,7 @@ import { resolve, join } from 'node:path';
 const ROOT = resolve('app/src/main/assets/offline');
 const OUT = join(ROOT, 'files');
 const SOURCES = JSON.parse(await readFile('app/src/main/assets/games.json','utf8')).games;
-const MAX_PUZZLES = Math.max(2, Number(process.env.MAX_OFFLINE_PUZZLES || 96));
+const MAX_PUZZLES = Math.max(2, Number(process.env.MAX_OFFLINE_PUZZLES || 192));
 const WAIT_MS = Math.max(1500, Number(process.env.OFFLINE_SETTLE_MS || 4000));
 const MAX_BYTES = 90 * 1024 * 1024; // Stay under GitHub's 100 MiB per-file limit.
 const entries = new Map();
@@ -27,6 +27,8 @@ const processed = new Set();
 const errors = [];
 const writes = new Set();
 const discovered = new Set();
+const seededLinks = new Set();
+const requiredBossLinks = new Set();
 const decodedStoryCandidates = {};
 
 function key(url) {
@@ -46,7 +48,9 @@ function allowedPuzzle(url) {
 }
 function discover(string) {
   if (typeof string !== 'string' || string.length > MAX_BYTES) return;
-  for (const match of string.matchAll(/https:\/\/sudokupad\.app\/[a-zA-Z0-9_\-/?=&.%+#]+/g)) {
+  // Some puzzle rules contain literal escaped slashes or HTML-encoded ampersands.
+  const normalized = string.replace(/\\\//g, '/').replace(/&amp;/g, '&');
+  for (const match of normalized.matchAll(/https:\/\/sudokupad\.app\/[a-zA-Z0-9_\-/?=&.%+#]+/g)) {
     const maybe = match[0].replace(/[)>,;."']+$/, '');
     if (allowedPuzzle(maybe)) discovered.add(key(maybe));
   }
@@ -166,13 +170,34 @@ async function visit(browser, url) {
     await page.close();
   }
 }
+// The main puzzle's translated rule catalog is an offline, independently
+// reviewable list of links. Seeding from it is essential: the live puzzle can
+// load before metadata is inspectable, and fog hides many boss links.
+try {
+  const catalog = JSON.parse(await readFile(join(ROOT, 'translation-candidates.json'), 'utf8'));
+  for (const item of catalog) {
+    for (const field of ['english', 'zhHans']) discover(item[field]);
+    const english = String(item.english || '');
+    for (const link of english.matchAll(/\[([^\]]+)\]\((https:\/\/sudokupad\.app\/[^)\s]+)\)/g)) {
+      if (!allowedPuzzle(link[2])) continue;
+      const url = key(link[2]);
+      seededLinks.add(url);
+      if (/boss|首领/i.test(link[1]) || /\/boss-/i.test(url)) requiredBossLinks.add(url);
+    }
+  }
+} catch (error) {
+  errors.push('Unable to seed linked puzzles from review catalog: ' + error.message);
+}
+// Preserve existing main pages, translations and candidate records.
+for (const link of discovered) if (!SOURCES.some(g => key(g.url) === link)) seededLinks.add(link);
+
 // Re-capture raw blobs, but preserve manually edited pages/*.html.
 await rm(OUT, {recursive:true, force:true});
 await mkdir(OUT, {recursive:true});
 const browser = await chromium.launch({headless:true});
 try {
   // Visit built-ins first; additional Sudokuvania-linked SudokuPad pages next.
-  const queue = [...candidates];
+  const queue = [...candidates, ...discovered];
   while (queue.length && processed.size < MAX_PUZZLES) {
     const url = queue.shift();
     if (processed.has(key(url))) continue;
@@ -188,11 +213,16 @@ try {
 } finally {
   await browser.close();
 }
+const missingLinkedPages = [...seededLinks].filter(url => !entries.has(url));
+const missingBossPages = [...requiredBossLinks].filter(url =>
+  !entries.has(url) || !entries.has('https://sudokupad.app/api/puzzle' + new URL(url).pathname));
 const manifest = {
   format: 1,
   capturedAt: new Date().toISOString(),
   entrypoints: SOURCES.map(g => ({id:g.id, url:g.url})),
   requestedPages: [...processed],
+  linkedPuzzles: [...seededLinks].sort(),
+  requiredBossPuzzles: [...requiredBossLinks].sort(),
   assets: Object.fromEntries([...entries].sort(([a],[b])=>a.localeCompare(b)))
 };
 await writeFile(join(ROOT,'index.json'), JSON.stringify(manifest,null,2)+'\n');
@@ -201,6 +231,10 @@ await writeFile(join(ROOT,'decoded-game-text.json'),
 await writeFile(join(ROOT,'capture-report.json'), JSON.stringify({
   capturedResources:entries.size,
   capturedPages:processed.size,
+  linkedPuzzles: seededLinks.size,
+  requiredBossPuzzles: requiredBossLinks.size,
+  missingLinkedPages,
+  missingBossPages,
   bytes:[...entries.values()].reduce((sum,e)=>sum+e.bytes,0),
   errors:[...new Set(errors)].slice(0,250),
   caveats:[
@@ -211,6 +245,9 @@ await writeFile(join(ROOT,'capture-report.json'), JSON.stringify({
 },null,2)+'\n');
 const missing = SOURCES.filter(g => !entries.has(key(g.url)));
 console.log(JSON.stringify({captured:entries.size,pages:processed.size,missing:missing.map(g=>g.id),errors:errors.length},null,2));
+if (missingBossPages.length) {
+  throw new Error('Boss puzzle resources missing: ' + missingBossPages.join(', '));
+}
 if (missing.length || entries.size < 4) {
   throw new Error('Required game HTML or web resources were not captured');
 }
