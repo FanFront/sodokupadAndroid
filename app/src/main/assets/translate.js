@@ -5,7 +5,10 @@
   window.SudokuPadAndroidTranslate = dictionary => {
     window.__spChineseObserver?.disconnect();
     if (!document.body || !dictionary) return;
-    const excluded='script,style,textarea,input,select,option,noscript,code,pre,[contenteditable="true"]';
+    // The 50×50 puzzle canvas generates thousands of SVG nodes while
+    // loading. Its text is localized directly in the baked puzzle SCL.
+    // Observe only the surrounding UI/dialogs to avoid blocking rendering.
+    const excluded='script,style,textarea,input,select,option,noscript,code,pre,[contenteditable="true"],#board,#svgrenderer,#android-gamepad';
     const entries=Object.entries(dictionary)
       .filter(([en,zh])=>en && typeof zh==='string' && zh && zh!==en)
       .sort((a,b)=>b[0].length-a[0].length);
@@ -58,7 +61,11 @@
       }
     }
     const watcher=new MutationObserver(changes=>{
+      // Do not walk puzzle SVG updates (fog, notes, digits, arrows). They are
+      // frequent and can delay first paint on slower Android WebViews.
       for(const m of changes) {
+        const parent=m.target.nodeType===1?m.target:m.target.parentElement;
+        if(parent?.closest('#board,#svgrenderer,#android-gamepad'))continue;
         if(m.type==='characterData')textNode(m.target);
         if(m.type==='childList')for(const n of m.addedNodes)scan(n);
         if(m.type==='attributes')attributes(m.target);
