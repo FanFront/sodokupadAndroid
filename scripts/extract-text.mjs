@@ -1,68 +1,85 @@
 #!/usr/bin/env node
 /**
- * Generate a PRIVATE candidate phrase list from downloaded HTML/JSON.
- * Review and place approved Simplified Chinese translations in assets/i18n.
- * Do NOT commit output; it can contain unrevealed story spoilers.
+ * Extract REAL narrative, quests, and rules from captured compressed
+ * SudokuPad puzzle API data, plus visible text from original HTML.
+ * The English/Chinese review file is editable and preserved across rebuilds.
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
+import { parse } from 'parse5';
+import { unpackScl } from './decode-scl.mjs';
+
 const root=resolve('app/src/main/assets/offline');
 const index=JSON.parse(await readFile(join(root,'index.json'),'utf8'));
-const source=new Map();
-function add(text,url){
-  const s=text.replace(/\s+/g,' ').trim();
-  if(s.length<12||s.length>2000||!/[A-Za-z]{3,}\s+[A-Za-z]{3,}/.test(s))return;
-  if(/^[a-f0-9+/=]{100,}$/i.test(s))return;
-  const found=source.get(s)||new Set();
-  found.add(url);source.set(s,found);
-}
-function walk(v,url,depth=0){
-  if(depth>16)return;
-  if(typeof v==='string')add(v,url);
-  else if(Array.isArray(v))v.forEach(x=>walk(x,url,depth+1));
-  else if(v&&typeof v==='object')for(const [k,x]of Object.entries(v)){
-    if(/^(?:solution|givens|answer|cells|lines|arrows|regions|constraints)$/i.test(k))continue;
-    walk(x,url,depth+1);
-  }
-}
-for(const [url,e] of Object.entries(index.assets)){
-  if(!/json|html/.test(e.mime))continue;
-  const data=(await readFile(join(root,e.file))).toString('utf8');
-  if(e.mime.includes('json')){
-    try{walk(JSON.parse(data),url);}catch{}
-  }else{
-    // Simple visible-text candidates, not a proof of complete game text coverage.
-    for(const m of data.matchAll(/>([^<>]{12,600})</g))add(m[1],url);
-  }
-}
-// SudokuPad can expose a decoded in-memory puzzle after loading.
-try {
-  const decoded=JSON.parse(await readFile(join(root,'decoded-game-text.json'),'utf8'));
-  for(const [url,strings] of Object.entries(decoded)) {
-    for(const value of strings) if(typeof value==='string') add(value,url);
-  }
-} catch (error) {
-  console.warn('No decoded game-text inventory; only HTML/JSON scanned.');
-}
-// Also scan the original editable HTML, not only generated Chinese pages.
 const games=JSON.parse(await readFile('app/src/main/assets/games.json','utf8')).games;
-const dictionaries={};
-for(const game of games) {
-  dictionaries[game.id]=JSON.parse(await readFile(
-    'app/src/main/assets/i18n/games/'+game.id+'.zh-Hans.json','utf8'));
-  try {
-    const html=await readFile(join(root,'pages/'+game.id+'.html'),'utf8');
-    for(const m of html.matchAll(/>([^<>]{12,600})</g)) add(m[1],game.url);
-  } catch{}
+const target=join(root,'translation-candidates.json');
+let prior={};
+try {
+  const old=JSON.parse(await readFile(target,'utf8'));
+  prior=Object.fromEntries(old.filter(x=>typeof x.english==='string')
+    .map(x=>[x.english,x.zhHans||'']));
+} catch {}
+const common=JSON.parse(await readFile('app/src/main/assets/i18n/zh-Hans.json','utf8'));
+const perGame={};
+for(const g of games) {
+  perGame[g.id]=JSON.parse(await readFile(
+    'app/src/main/assets/i18n/games/'+g.id+'.zh-Hans.json','utf8'));
 }
-const shared=JSON.parse(await readFile('app/src/main/assets/i18n/zh-Hans.json','utf8'));
-const sorted=[...source].map(([english,urls])=>{
-  const foundIn=[...urls];
-  const gameIds=games.filter(g=>foundIn.some(u=>u===g.url)).map(g=>g.id);
-  const existing=gameIds.length===1
-    ? dictionaries[gameIds[0]][english] || shared[english]
-    : shared[english];
-  return {english,zhHans:existing||'',gameIds,foundIn};
-}).sort((a,b)=>a.english.localeCompare(b.english));
-await writeFile(join(root,'translation-candidates.json'),JSON.stringify(sorted,null,2)+'\n');
-console.log('Translation candidates:',sorted.length,'(private; review for spoilers and precision)');
+const found=new Map();
+function record(english,id,path){
+  const s=(typeof english==='string'?english:'').trim();
+  if(s.length<9||s.length>16000) return;
+  if(!/[A-Za-z]{3,}\s+[A-Za-z]{3,}/.test(s) || /^[a-z0-9+/=-]{100,}$/i.test(s))return;
+  const item=found.get(s)||{english:s,zhHans:'',gameIds:[],sourcePaths:[]};
+  if(!item.gameIds.includes(id))item.gameIds.push(id);
+  if(item.sourcePaths.length<12)item.sourcePaths.push(id+':'+path);
+  item.zhHans ||= prior[s] || perGame[id][s] || common[s] || '';
+  found.set(s,item);
+}
+function walk(value,id,path,depth=0) {
+  if(depth>25)return;
+  if(typeof value==='string')return record(value,id,path);
+  if(Array.isArray(value))return value.forEach((v,i)=>walk(v,id,path+'['+i+']',depth+1));
+  if(value && typeof value==='object') {
+    for(const [key,v] of Object.entries(value)) {
+      // Puzzle geometry, solver state and original answers are never localized.
+      if(/^(?:solution|givens|cells|foglight|triggereffect)$/i.test(key))continue;
+      walk(v,id,path+'.'+key,depth+1);
+    }
+  }
+}
+function walkVisible(node,id,path='html'){
+  if(['script','style','noscript','svg','template'].includes(node.nodeName))return;
+  if(node.nodeName==='#text')record(node.value,id,path);
+  for(const child of node.childNodes||[])walkVisible(child,id,path+'/'+node.nodeName);
+}
+for(const g of games) {
+  const original=join(root,'pages',g.id+'.html');
+  try {
+    walkVisible(parse(await readFile(original,'utf8')),g.id,'original-html');
+  } catch(error) {
+    console.warn('HTML not available:',g.id,error.message);
+  }
+  const api='https://sudokupad.app/api/puzzle'+new URL(g.url).pathname;
+  const entry=index.assets[api];
+  if(!entry) {
+    console.warn('No captured game data:',api);
+    continue;
+  }
+  try {
+    const compressed=await readFile(join(root,entry.file),'utf8');
+    const puzzle=unpackScl(compressed);
+    walk(puzzle,g.id,'puzzle');
+    console.log('Decoded:',g.id,Object.keys(puzzle));
+  } catch(error) {
+    console.warn('Could not decode',g.id,error.message);
+    process.exitCode=1;
+  }
+}
+const prioritized=p=>p.sourcePaths.some(path=>/puzzle\.metadata\.(rules|msgcorrect)/.test(path))?0:1;
+const candidates=[...found.values()].sort((a,b)=>
+  prioritized(a)-prioritized(b)||a.gameIds[0].localeCompare(b.gameIds[0])||
+  a.english.localeCompare(b.english));
+await writeFile(target,JSON.stringify(candidates,null,2)+'\n');
+console.log('Real game text candidates:',candidates.length,
+  'with Chinese:',candidates.filter(x=>x.zhHans).length);
