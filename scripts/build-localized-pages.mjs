@@ -9,6 +9,7 @@
 import { parse, parseFragment, serialize } from 'parse5';
 import { readFile, writeFile, mkdir, copyFile, access, stat } from 'node:fs/promises';
 import { resolve, join } from 'node:path';
+import { createHash } from 'node:crypto';
 
 const root=resolve('app/src/main/assets/offline');
 const indexFile=join(root,'index.json');
@@ -109,4 +110,36 @@ for(const game of games) {
   index.assets[game.url]={...entry,file:localized,bytes:Buffer.byteLength(html)};
   console.log('HTML ready for translation:',game.id, '→',localized);
 }
+// Side puzzles use the same SudokuPad engine as the large maps. Without
+// injecting the phone UI here, a captured boss would open with unusable
+// desktop-only controls. Keep each game's original HTML blob untouched.
+const mapUrls = new Set(games.map(game => game.url));
+let linkedPages = 0;
+for (const [url, entry] of Object.entries(index.assets)) {
+  if (!url.startsWith('https://sudokupad.app/') ||
+      new URL(url).pathname.startsWith('/api/') ||
+      mapUrls.has(url) ||
+      entry.mime !== 'text/html' ||
+      !/^files\/[a-f0-9]{64}\.html$/.test(entry.file)) continue;
+  const document = parse(await readFile(join(root, entry.file), 'utf8'));
+  put(document, common);
+  stripWebOnlyContent(document);
+  const htmlTag = findElement(document, 'html');
+  const head = findElement(document, 'head');
+  const body = findElement(document, 'body');
+  if (!htmlTag || !head || !body) throw new Error('Invalid linked puzzle HTML: ' + url);
+  const lang = (htmlTag.attrs || []).find(a => a.name === 'lang');
+  if (lang) lang.value = 'zh-Hans';
+  else htmlTag.attrs.push({name:'lang', value:'zh-Hans'});
+  appendMarkup(head, '<link rel="stylesheet" href="/__android/android.css">');
+  appendMarkup(body, '<script defer src="/__android/android.js"></script>');
+  const id = 'linked-' + createHash('sha256').update(url).digest('hex').slice(0,16);
+  const target = 'pages/' + id + '.zh-Hans.html';
+  const compiled = serialize(document);
+  await writeFile(join(root, target), compiled, 'utf8');
+  index.assets[url] = {...entry, originalFile:entry.file, file:target,
+    bytes:Buffer.byteLength(compiled)};
+  linkedPages++;
+}
+console.log('Android-enabled linked puzzle pages:', linkedPages);
 await writeFile(indexFile,JSON.stringify(index,null,2)+'\n');
