@@ -29,3 +29,17 @@ for g in games:
 assert not (ASSETS / "i18n/ms.json").exists(), "Chinese-only app must not ship Malay pack"
 print("Chinese translation assets OK:", len(shared), "shared terms;",
       len(games), "built-in games.")
+
+# Android touch controls and both original source HTML pages must exist.
+offline = ASSETS / "offline"
+manifest = decode(offline / "index.json")
+for resource in ("android.css", "android.js"):
+    url = "https://sudokupad.app/__android/" + resource
+    item = manifest["assets"].get(url)
+    assert item is not None, f"Missing offline mapping: {resource}"
+    assert (offline / item["file"]).is_file(), resource
+for game in games:
+    assert (offline / "pages" / (game["id"] + ".html")).is_file()
+    assert manifest["assets"][game["url"]]["file"].endswith(".zh-Hans.html")
+assert (offline / "translation-candidates.json").is_file()
+print("Offline Android touch assets, translated HTML and review catalog exist.")
