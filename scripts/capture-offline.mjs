@@ -62,8 +62,19 @@ async function saveResponse(response) {
       return;
     }
     const sha = createHash('sha256').update(url).digest('hex');
-    const file = 'files/' + sha;
     const mime = header || 'application/octet-stream';
+    // Keep a real file extension so GitHub can display HTML, JS and CSS.
+    const byMime = {
+      'text/html':'html','text/css':'css','text/javascript':'js',
+      'application/javascript':'js','application/json':'json',
+      'application/wasm':'wasm','image/svg+xml':'svg',
+      'image/png':'png','image/jpeg':'jpg','image/webp':'webp',
+      'image/gif':'gif','font/woff':'woff','font/woff2':'woff2',
+      'application/font-woff':'woff','text/plain':'txt'
+    };
+    const pathExtension = new URL(url).pathname.match(/\\.([a-z0-9]{1,6})$/i)?.[1];
+    const extension = byMime[mime] || pathExtension || 'bin';
+    const file = 'files/' + sha + '.' + extension.toLowerCase();
     await writeFile(join(ROOT, file), body);
     entries.set(url, { file, mime, bytes: body.length });
     if (mime.includes('json') || mime.startsWith('text/')) {
