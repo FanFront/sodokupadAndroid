@@ -49,9 +49,9 @@ function stripWebOnlyContent(node) {
   node.childNodes = node.childNodes.filter(child => {
     const attr = name => (child.attrs||[]).find(item=>item.name===name)?.value || '';
     if(child.nodeName === 'script' &&
-        /(?:lazygtmloader|script\\.manual)\\.js/.test(attr('src'))) return false;
+        /(?:lazygtmloader|script\.manual)\.js/.test(attr('src'))) return false;
     if(child.nodeName === 'a' &&
-        /\\bmenu-link-(?:steam|patreon|kofi|youtube|thanks)\\b/.test(attr('class'))) return false;
+        /\bmenu-link-(?:steam|patreon|kofi|youtube|thanks)\b/.test(attr('class'))) return false;
     return true;
   });
   for(const child of node.childNodes) stripWebOnlyContent(child);
