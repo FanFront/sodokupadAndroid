@@ -35,6 +35,15 @@ for(const [url,e] of Object.entries(index.assets)){
     for(const m of data.matchAll(/>([^<>]{12,600})</g))add(m[1],url);
   }
 }
+// SudokuPad can expose a decoded in-memory puzzle after loading.
+try {
+  const decoded=JSON.parse(await readFile(join(root,'decoded-game-text.json'),'utf8'));
+  for(const [url,strings] of Object.entries(decoded)) {
+    for(const value of strings) if(typeof value==='string') add(value,url);
+  }
+} catch (error) {
+  console.warn('No decoded game-text inventory; only HTML/JSON scanned.');
+}
 const sorted=[...source].map(([english,urls])=>({english,foundIn:[...urls]})).sort((a,b)=>a.english.localeCompare(b.english));
 await writeFile(join(root,'translation-candidates.json'),JSON.stringify(sorted,null,2)+'\n');
 console.log('Translation candidates:',sorted.length,'(private; review for spoilers and precision)');
