@@ -4,6 +4,7 @@ name: Build offline APK
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 concurrency:
@@ -41,7 +42,7 @@ jobs:
           node scripts/test-scl.mjs
 
   build-cached-apk:
-    if: github.event_name == 'push'
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
     needs: source-checks
     runs-on: ubuntu-24.04
     steps:
@@ -63,6 +64,7 @@ jobs:
       - name: Rebuild the Chinese pages from existing offline assets
         run: |
           npm install --no-audit --no-fund
+          npm run apply-translations
           npm run build-html
           npm run build-puzzle-zh
           npm run verify
@@ -121,6 +123,8 @@ jobs:
         run: node scripts/test-android-touch.mjs
       - name: Capture SudokuPad pages, JS, CSS, assets and game data
         run: npm run capture
+      - name: Synchronize reviewed translation catalog into game dictionaries
+        run: npm run apply-translations
       - name: Materialize readable HTML and apply reviewed Chinese translations
         run: npm run build-html
       - name: Bake reviewed Chinese into offline compressed game metadata
