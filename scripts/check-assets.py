@@ -76,7 +76,7 @@ for super_id in ("super-sudokoid-1", "super-sudokoid-2"):
             f"Untranslated Super Sudokoid main-map text: {super_id} "
             + repr(item.get("english", "")[:100])
         )
-        urls = lambda text: sorted(re.findall(r"https://sudokupad\\.app/[^\\s)]+", text))
+        urls = lambda text: sorted(re.findall(r"https://sudokupad\.app/[^\s)]+", text))
         assert urls(item["english"]) == urls(zh), (
             f"Game links modified by translation: {super_id}"
         )
@@ -96,7 +96,7 @@ for item in linked:
         assert source != zh and re.search(r"[\u3400-\u9fff]", zh), (
             f"Missing Chinese {field} in {item['id']}"
         )
-        assert sorted(re.findall(r"https://sudokupad\\.app/[^\\s)]+", source)) == sorted(
-            re.findall(r"https://sudokupad\\.app/[^\\s)]+", zh)
+        assert sorted(re.findall(r"https://sudokupad\.app/[^\s)]+", source)) == sorted(
+            re.findall(r"https://sudokupad\.app/[^\s)]+", zh)
         ), f"Broken linked puzzle URL in {item['id']} {field}"
 print("Super Sudokoid Chinese complete:", len(linked), "linked puzzles and two main maps.")
