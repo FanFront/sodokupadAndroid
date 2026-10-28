@@ -119,10 +119,23 @@ for (const [url, entry] of Object.entries(index.assets)) {
   if (!url.startsWith('https://sudokupad.app/') ||
       new URL(url).pathname.startsWith('/api/') ||
       mapUrls.has(url) ||
-      entry.mime !== 'text/html' ||
-      !/^files\/[a-f0-9]{64}\.html$/.test(entry.file)) continue;
-  const document = parse(await readFile(join(root, entry.file), 'utf8'));
+      entry.mime !== 'text/html') continue;
+  const originalFile = entry.originalFile || entry.file;
+  if (!/^files\/[a-f0-9]{64}\.html$/.test(originalFile)) continue;
+  const document = parse(await readFile(join(root, originalFile), 'utf8'));
   put(document, common);
+  const bossName = new URL(url).pathname.split('/').pop();
+  if ((index.requiredBossPuzzles || []).includes(url)) {
+    const boss=JSON.parse(await readFile(
+      join('app/src/main/assets/i18n/bosses', bossName+'.zh-Hans.json'),'utf8'));
+    if (!boss.title || !/[一-龥]/u.test(boss.title)) {
+      throw new Error('Missing boss HTML title localization: '+bossName);
+    }
+    const pageTitle=findElement(document,'title');
+    if (pageTitle?.childNodes?.[0]) {
+      pageTitle.childNodes[0].value=boss.title+' — SudokuPad';
+    }
+  }
   stripWebOnlyContent(document);
   const htmlTag = findElement(document, 'html');
   const head = findElement(document, 'head');
@@ -137,7 +150,7 @@ for (const [url, entry] of Object.entries(index.assets)) {
   const target = 'pages/' + id + '.zh-Hans.html';
   const compiled = serialize(document);
   await writeFile(join(root, target), compiled, 'utf8');
-  index.assets[url] = {...entry, originalFile:entry.file, file:target,
+  index.assets[url] = {...entry, originalFile, file:target,
     bytes:Buffer.byteLength(compiled)};
   linkedPages++;
 }
