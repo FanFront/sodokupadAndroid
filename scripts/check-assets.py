@@ -71,6 +71,10 @@ for super_id in ("super-sudokoid-1", "super-sudokoid-2"):
     entries = [item for item in candidates if super_id in item.get("gameIds", [])]
     assert len(entries) >= 160, f"Incomplete {super_id} text extraction: {len(entries)}"
     for item in entries:
+        # The upstream engine author's personal name is a proper noun and
+        # must stay unchanged, not be treated as unlocalized game prose.
+        if item.get("english") == "Sven Neumann":
+            continue
         zh = item.get("zhHans", "")
         assert isinstance(zh, str) and re.search(r"[\u3400-\u9fff]", zh), (
             f"Untranslated Super Sudokoid main-map text: {super_id} "
