@@ -62,7 +62,7 @@ const runtimeStatus = () => {
 
 async function replay(entry, original = false) {
   const label = entry.id + (original ? '-original' : '-translated');
-  const report = {entry:entry.url, original, errors:[], missing:[], console:[],
+  const report = {entry:entry.url, original, errors:[], missing:[], optionalOnline:[], console:[],
     navigation:[], status:null, diagnostic:null, passes:[]};
   const page = await browser.newPage({
     serviceWorkers:'block',
@@ -87,6 +87,17 @@ async function replay(entry, original = false) {
   });
   await page.route('**/*', async route => {
     const url = canonical(route.request().url());
+    // SudokuPad's global solve counter is an online-only social metric.
+    // Keep it blocked in the APK, but do not mistake it for missing gameplay
+    // data when validating an otherwise complete offline main puzzle.
+    const optional = new URL(url);
+    if(optional.origin==='https://api.sudokupad.com' &&
+        optional.pathname.startsWith('/counter/')) {
+      report.optionalOnline.push(url);
+      await route.fulfill({status:503,contentType:'text/plain',
+        body:'Optional global solve counter is unavailable offline'});
+      return;
+    }
     const resource = snapshot.assets[url];
     if (!resource) {
       if(report.missing.length < 75) report.missing.push(url);
