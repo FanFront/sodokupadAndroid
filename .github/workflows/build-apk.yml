@@ -236,6 +236,8 @@ jobs:
         run: node scripts/test-android-touch.mjs
       - name: Capture SudokuPad pages, JS, CSS, assets and game data
         run: npm run capture
+      - name: Restore every Super Sudokoid linked puzzle to the full snapshot
+        run: node scripts/capture-super-sudokoid-linked.mjs
       - name: Synchronize reviewed translation catalog into game dictionaries
         run: npm run apply-translations
       - name: Materialize readable HTML and apply reviewed Chinese translations
@@ -265,8 +267,10 @@ jobs:
         run: gradle --no-daemon :app:assembleDebug
       - name: Verify bundled certificate, package name and upgrade version
         run: bash scripts/verify-signed-apk.sh
-      - name: Replay both games with all network requests blocked
-        run: node scripts/replay-offline.mjs
+      - name: Replay all four main games and Super Sudokoid side puzzles offline
+        run: |
+          node scripts/replay-offline.mjs
+          node scripts/replay-super-sudokoid-linked.mjs
       - name: Upload replay diagnostics and screenshots
         if: always()
         uses: actions/upload-artifact@v4
