@@ -12,6 +12,8 @@
   const app = () => getFramework()?.app;
   const feature = () => getFramework()?.features?.largepuzzle;
   let moveMode = false;
+  let moreOpen = false;
+  let morePanel = null;
   let drag = null;
   let noticeTimer;
   const dock = doc.createElement('section');
@@ -255,6 +257,12 @@
       else notify('当前没有可返回的地图，请使用主页');
       return;
     }
+    if (action === 'more') {
+      moreOpen = !moreOpen;
+      morePanel.hidden = !moreOpen;
+      updateModes();
+      return;
+    }
     if (action === 'pan') {
       moveMode = !moveMode;
       root.classList.toggle('android-pan', moveMode);
@@ -289,6 +297,12 @@
             notify('请先轻触棋盘格子，再输入数字');
             return;
           }
+          if (moveMode) {
+            moveMode = false;
+            drag = null;
+            root.classList.remove('android-pan');
+            updateModes();
+          }
           // SudokuPad may remap the normal keypad to letters or colour IDs.
           const original = doc.querySelector('.controls-input button[data-key="' + value + '"]');
           a.doPressDigit(original?.dataset.value || value);
@@ -310,6 +324,9 @@
             getFramework().addTool(ToolPen);
           }
           if (!a.hasTool(value)) return notify('当前游戏不支持这种标记');
+          moveMode = false;
+          drag = null;
+          root.classList.remove('android-pan');
           a.changeTool(value);
           updateModes();
           break;
@@ -344,7 +361,8 @@
    * pointer but not Touch Events; click remains for desktop / keyboard.
    * Do not interact with puzzle cells, which stay under SudokuPad's handlers.
    */
-  const touchGesture = {button:null, identifier:null, x:0, y:0, consumed:false};
+  const touchGesture = {button:null, identifier:null, x:0, y:0};
+  const pointerGesture = {button:null, pointerId:null, x:0, y:0};
   let lastActivation = null;
 
   function visibleModal() {
@@ -355,28 +373,33 @@
     if (regionOverlay || visibleModal()) return null;
     const rect = dock.getBoundingClientRect();
     if (x < rect.left || x >= rect.right || y < rect.top || y >= rect.bottom) return null;
-    // Geometry lookup also works if an old SudokuPad element covers the dock
-    // in the hit-testing layer while our buttons remain visually visible.
+    // Ignore captured SudokuPad hitboxes above the visual gamepad.
     for (const button of dock.querySelectorAll('button[data-android-action]')) {
+      if (button.hidden || button.closest('[hidden]')) continue;
       const b = button.getBoundingClientRect();
-      if(x >= b.left && x < b.right && y >= b.top && y < b.bottom) return button;
+      if (x >= b.left && x < b.right && y >= b.top && y < b.bottom) return button;
     }
     return null;
   }
+  function releasePress() {
+    for (const button of dock.querySelectorAll('.android-pressing'))
+      button.classList.remove('android-pressing');
+  }
   function activate(button, kind) {
-    if (!button || button.disabled) return false;
-    // Suppress synthetic click/pointer events for a touch we just handled.
-    // Never suppress another real touchstart/touchend gesture.
-    const syntheticClick = kind === 'click' && lastActivation?.button === button &&
-      performance.now() - lastActivation.at < 550;
-    const duplicateTouchPointer = kind === 'pointer' &&
-      lastActivation?.kind === 'touch' && lastActivation.button === button &&
-      performance.now() - lastActivation.at < 180;
-    if(syntheticClick || duplicateTouchPointer) return true;
+    if (!button || button.disabled || button.hidden || button.closest('[hidden]')) return false;
+    const elapsed = performance.now() - (lastActivation?.at ?? -Infinity);
+    const sameButton = lastActivation?.button === button;
+    // De-duplicate only synthesized cross-stream events, not fast consecutive
+    // touches or accessibility/keyboard-generated clicks.
+    if (sameButton && elapsed < 550 && (
+      (kind === 'click' && lastActivation.kind !== 'click') ||
+      (kind === 'pointer' && lastActivation.kind === 'touch' && elapsed < 250) ||
+      (kind === 'touch' && lastActivation.kind === 'pointer' && elapsed < 250)
+    )) return true;
     lastActivation = {button, kind, at:performance.now()};
     button.dataset.androidTapCount = String((+button.dataset.androidTapCount || 0)+1);
     button.classList.add('android-tapped');
-    setTimeout(() => button.classList.remove('android-tapped'), 160);
+    setTimeout(() => button.classList.remove('android-tapped'), 155);
     doGameAction(button.dataset.androidAction,button.dataset.value);
     return true;
   }
@@ -385,49 +408,62 @@
     event.stopImmediatePropagation();
   }
   doc.addEventListener('touchstart', event => {
-    const touch=event.changedTouches?.[0];
+    const touch = event.changedTouches?.[0];
     if (!touch) return;
-    const button=buttonAt(touch.clientX,touch.clientY);
+    const button = buttonAt(touch.clientX,touch.clientY);
     if (!button) return;
-    Object.assign(touchGesture, {
-      button, identifier:touch.identifier, x:touch.clientX, y:touch.clientY, consumed:false
-    });
+    Object.assign(touchGesture,{button,identifier:touch.identifier,x:touch.clientX,y:touch.clientY});
+    button.classList.add('android-pressing');
     preventPuzzleInput(event);
   },{capture:true,passive:false});
   doc.addEventListener('touchend', event => {
-    const touch=Array.from(event.changedTouches || [])
-      .find(t => t.identifier === touchGesture.identifier);
+    const touch = Array.from(event.changedTouches || [])
+      .find(t=>t.identifier===touchGesture.identifier);
     if (!touch || !touchGesture.button) return;
-    const button=buttonAt(touch.clientX,touch.clientY);
+    const button = buttonAt(touch.clientX,touch.clientY);
     const startButton=touchGesture.button;
     const moved=Math.hypot(touch.clientX-touchGesture.x,touch.clientY-touchGesture.y);
     touchGesture.button=null;
     touchGesture.identifier=null;
+    releasePress();
     preventPuzzleInput(event);
-    if(button===startButton && moved < 32) activate(button,'touch');
+    if(button===startButton && moved<32)activate(button,'touch');
   },{capture:true,passive:false});
   doc.addEventListener('touchcancel', event => {
-    if(!touchGesture.button) return;
+    if(!touchGesture.button)return;
     touchGesture.button=null;
     touchGesture.identifier=null;
+    releasePress();
     preventPuzzleInput(event);
   },{capture:true,passive:false});
   doc.addEventListener('pointerdown', event => {
-    if (buttonAt(event.clientX,event.clientY)) preventPuzzleInput(event);
+    const button=buttonAt(event.clientX,event.clientY);
+    if(!button)return;
+    Object.assign(pointerGesture,{button,pointerId:event.pointerId,x:event.clientX,y:event.clientY});
+    button.classList.add('android-pressing');
+    preventPuzzleInput(event);
   },{capture:true,passive:false});
   doc.addEventListener('pointerup', event => {
+    if(event.pointerId!==pointerGesture.pointerId || !pointerGesture.button)return;
     const button=buttonAt(event.clientX,event.clientY);
-    if (!button) return;
+    const startButton=pointerGesture.button;
+    const moved=Math.hypot(event.clientX-pointerGesture.x,event.clientY-pointerGesture.y);
+    pointerGesture.button=null;
+    pointerGesture.pointerId=null;
+    releasePress();
     preventPuzzleInput(event);
-    // Prefer touchend over pointerup where both are supported.
-    if (event.pointerType !== 'touch' || !touchGesture.button) {
-      activate(button,event.pointerType === 'touch' ? 'pointer' : 'mouse');
-    }
+    if(button===startButton && moved<32)activate(button,event.pointerType==='touch'?'pointer':'mouse');
+  },{capture:true,passive:false});
+  doc.addEventListener('pointercancel', event => {
+    if(event.pointerId!==pointerGesture.pointerId)return;
+    pointerGesture.button=null;
+    pointerGesture.pointerId=null;
+    releasePress();
   },{capture:true,passive:false});
   doc.addEventListener('click', event => {
     const button=event.target.closest?.('#android-gamepad button[data-android-action]') ||
       buttonAt(event.clientX,event.clientY);
-    if (!button) return;
+    if(!button)return;
     preventPuzzleInput(event);
     activate(button,'click');
   },{capture:true,passive:false});
@@ -448,27 +484,33 @@
     dock.appendChild(r);
     return r;
   }
+  // Prioritize numeric input; hide less-used actions to preserve board space.
   row('android-tools', [
-    ['数字','tool','normal'],['角标','tool','corner'],
+    ['填数','tool','normal'],['角标','tool','corner'],
     ['中心','tool','centre'],['颜色','tool','colour'],
-    ['画线','tool','pen'],['字母','letter'],['移动','pan'],['居中','recenter']
+    ['画线','tool','pen'],['字母','letter']
   ]);
   row('android-numbers', [
-    ...['1','2','3','4','5','6','7','8','9','0'].map(n=>[n,'digit',n]),
-    ['⌫','erase'],['↶','undo']
+    ...['1','2','3','4','5','6','7','8','9','0'].map(n=>[n,'digit',n])
   ]);
   row('android-actions', [
-    ['主页','home'],['规则','rules'],['区域','region'],
-    ['首领','boss'],['返回','back-map'],['重做','redo'],
-    ['检查','check'],['＋','zoom-in'],['－','zoom-out']
+    ['⌫ 清除','erase'],['↶ 撤销','undo'],['✥ 移动','pan'],
+    ['⌖ 居中','recenter'],['区域','region'],['副本','boss'],['⋯ 更多','more']
   ]);
+  morePanel = row('android-more-actions', [
+    ['↷ 重做','redo'],['规则','rules'],['✓ 检查','check'],
+    ['＋ 放大','zoom-in'],['－ 缩小','zoom-out'],
+    ['↩ 返回','back-map'],['⌂ 主页','home']
+  ]);
+  morePanel.id='android-more-actions';
+  morePanel.hidden=true;
   doc.body.appendChild(dock);
 
   function updateDockHeight() {
     root.style.setProperty('--android-dock-height', Math.ceil(dock.getBoundingClientRect().height) + 'px');
     if (app() && typeof app().resize === 'function') app().resize();
   }
-  new ResizeObserver(updateDockHeight).observe(dock);
+  if (typeof ResizeObserver === 'function') new ResizeObserver(updateDockHeight).observe(dock);
   window.addEventListener('resize', updateDockHeight);
   updateDockHeight();
 
@@ -487,6 +529,11 @@
         btn.textContent = orig?.dataset.value || btn.dataset.value;
       }
       if (btn.dataset.androidAction === 'back-map') btn.hidden = isMap();
+      if (btn.dataset.androidAction === 'more') {
+        btn.setAttribute('aria-expanded', String(moreOpen));
+        btn.setAttribute('aria-controls', 'android-more-actions');
+        btn.textContent = moreOpen ? '✕ 收起' : '⋯ 更多';
+      }
       if (btn.dataset.androidAction === 'boss')
         btn.textContent = /^\/(?:3g0qh2la4v|xfq6z64i66)$/.test(window.location.pathname) ? '副本' : '首领';
       btn.setAttribute('aria-pressed', on ? 'true' : 'false');
