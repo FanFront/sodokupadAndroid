@@ -34,6 +34,8 @@ jobs:
           node --check scripts/build-localized-pages.mjs
           node --check scripts/decode-scl.mjs
           node --check scripts/build-translated-puzzles.mjs
+          node --check scripts/build-translated-bosses.mjs
+          node --check scripts/test-boss-localization.mjs
           node --check scripts/test-scl.mjs
           node --check app/src/main/assets/offline/mobile/android.js
           node --check scripts/apply-translations.mjs
@@ -67,7 +69,9 @@ jobs:
           npm run apply-translations
           npm run build-html
           npm run build-puzzle-zh
+          npm run build-boss-zh
           npm run verify
+          npm run test-boss-zh
           node scripts/test-scl.mjs --require-translated
       - name: Test the actual rendered board at Android phone size
         run: |
@@ -131,8 +135,12 @@ jobs:
         run: npm run build-html
       - name: Bake reviewed Chinese into offline compressed game metadata
         run: npm run build-puzzle-zh
+      - name: Localize imported boss puzzles without touching solutions
+        run: npm run build-boss-zh
       - name: Validate every boss puzzle and its Android controls
         run: OFFLINE_REQUIRE_BOSS_PUZZLES=1 npm run verify
+      - name: Verify Chinese boss narratives and puzzle integrity
+        run: npm run test-boss-zh
       - name: Validate SudokuPad-compatible puzzle encoding
         run: node scripts/test-scl.mjs --require-translated
       - name: Extract English text from HTML and puzzle data
