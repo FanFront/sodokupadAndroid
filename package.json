@@ -10,7 +10,9 @@
     "extract-strings": "node scripts/extract-text.mjs",
     "build-html": "node scripts/build-localized-pages.mjs",
     "apply-translations": "node scripts/apply-translations.mjs",
-    "build-puzzle-zh": "node scripts/build-translated-puzzles.mjs"
+    "build-puzzle-zh": "node scripts/build-translated-puzzles.mjs",
+    "build-boss-zh": "node scripts/build-translated-bosses.mjs",
+    "test-boss-zh": "node scripts/test-boss-localization.mjs"
   },
   "devDependencies": {
     "playwright": "1.56.1",
