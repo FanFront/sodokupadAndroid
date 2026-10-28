@@ -8,8 +8,27 @@
 
 1. 在你的 GitHub 项目中打开 **Actions → Build offline APK**。
 2. 只有需要**更新/扩充**网页资源时才点击 **Run workflow**。普通推送只从已提交的 `offline/` 构建 APK，不会重新下载游戏。手动抓取脚本在 Ubuntu 24.04 中下载网页资源，然后通过 GitHub Actions 自动提交资源文件。**当前仓库公开时，提交的第三方资源对所有人可见；强烈建议先将仓库设为 Private 并确认有权保存/分享这些文件。**
-3. 手动抓取流程执行 `npm run capture` → `npm run build-html` → `npm run build-puzzle-zh` → `npm run verify` → `npm run extract-strings` → 提交资源 → Gradle 构建 → 离线回放测试。`main` 普通推送会运行更快的 **build-cached-apk**，并上传 `Sudokuvania-android-touch-debug-APK`。
-4. 只有构建**成功**之后，才到该次运行的 **Artifacts** 下载 `Sudokuvania-offline-debug-APK`。它是个人测试用的 debug APK，并不代表两部游戏所有隐藏章节均已验证可脱机运行。
+3. 手动抓取流程执行 `npm run capture` → `npm run build-html` → `npm run build-puzzle-zh` → `npm run verify` → `npm run extract-strings` → 提交资源 → Gradle 构建 → 离线回放测试。`main` 普通推送会运行更快的 **build-cached-apk**，并上传 `Sudokuvania-stable-signed-debug-APK`。
+4. 只有构建**成功**之后，才到该次运行的 **Artifacts** 下载 `Sudokuvania-stable-signed-personal-APK`。它是个人测试用的 debug APK，并不代表两部游戏所有隐藏章节均已验证可脱机运行。
+
+## 后续升级用的固定 APK 签名（需首次设置一次）
+
+**从这一版开始建立一个新的、永久复用的测试签名。** 不兼容旧版随机 debug 证书是可以接受的；但首次使用新签名版安装后，后续下载的构建就可以直接覆盖安装，保留 WebView 本地存档。
+
+GitHub Actions **无法凭空创建和长期保存私钥**。为避免把可冒充本应用的私钥提交到公开仓库，首次设置需要在可信任的电脑上完成：
+
+1. 确保本地安装 Java 17+（提供 `keytool`），在仓库目录运行 `bash scripts/create-signing-key.sh`。设置一个长期保存的强密码。脚本在 Git 忽略的 `.signing/` 中生成 `sudokuvania-stable.p12` 和其 base64 文本副本，不会覆盖旧密钥。
+2. **推荐：** 如果有 GitHub CLI，登录 `gh auth login` 后运行 `bash scripts/upload-signing-secrets.sh`，按照提示输入同一密码。**不使用 CLI：** 打开仓库 **Settings → Secrets and variables → Actions → New repository secret**，逐个添加：
+   - `SUDOKUVANIA_KEYSTORE_B64`：把 `.signing/sudokuvania-stable.base64.txt` 的**全部文本内容**作为 secret 值。
+   - `SUDOKUVANIA_SIGNING_PASSWORD`：创建密钥时输入的密码。
+3. 永久保存自己的 `.p12` 和密码的**私密备份**；绝不上传到 issue、提交记录、公开网盘或聊天中。换签名密钥会让 Android 拒绝覆盖安装。
+4. 重新启动 Actions 的 **Build offline APK** 工作流。普通推送生成 `Sudokuvania-stable-signed-debug-APK`，手动更新离线资源的工作流生成 `Sudokuvania-stable-signed-personal-APK`。每个制品包含 APK 和不含私钥的 `signing-info.txt`，列出包名、版本号、证书 SHA-256 指纹。
+
+Gradle 将始终使用同一个包名 `com.fanfront.sodokupadandroid`，在 GitHub Actions 中用**同一私钥**对 APK 签名，并用递增的 `GITHUB_RUN_NUMBER` 作为 Android `versionCode`。同一条工作流的下一次正常运行会有更高版本号；重跑旧工作流的 APK 可能被 Android 视为降级。可以把首次 `signing-info.txt` 中的证书 SHA-256 指纹另存为非秘密的 Actions **Repository variable** `SUDOKUVANIA_SIGNING_CERT_SHA256`，这样后续误换签名密钥会在上传 APK 之前失败。
+
+**安全要求：** GitHub Actions 在缺少任一 Secret、密钥格式错误、签名错误或版本号不匹配时**不会生成可供覆盖安装的 APK 制品**，不会静默回退到随机 debug 签名。Pull request 只运行非敏感源码检查，不能取得签名 Secret。
+
+**老版本兼容性：** 老 APK 如果使用不同证书，第一次改用固定签名版必须先卸载旧版（卸载可能清除进度）。之后的新固定签名版可直接升级，不再需要卸载。
 
 ## 本地构建
 
