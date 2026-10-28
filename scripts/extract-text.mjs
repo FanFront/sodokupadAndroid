@@ -8,6 +8,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import { parse } from 'parse5';
 import { unpackScl } from './decode-scl.mjs';
+import LZString from 'lz-string';
 
 const root=resolve('app/src/main/assets/offline');
 const index=JSON.parse(await readFile(join(root,'index.json'),'utf8'));
@@ -68,9 +69,26 @@ for(const g of games) {
   }
   try {
     const compressed=await readFile(join(root,entry.originalFile||entry.file),'utf8');
-    const puzzle=unpackScl(compressed);
-    walk(puzzle,g.id,'puzzle');
-    console.log('Decoded:',g.id,Object.keys(puzzle));
+    try {
+      const puzzle=unpackScl(compressed);
+      walk(puzzle,g.id,'puzzle');
+      console.log('Decoded:',g.id,Object.keys(puzzle));
+    } catch (error) {
+      const compact=compressed.startsWith('scl')
+        ? LZString.decompressFromBase64(compressed.slice(3).trim()) : null;
+      if (!g.id.startsWith('super-sudokoid-') || !compact?.startsWith('{id:'))
+        throw error;
+      // SudokuMaker compact literal: extract string fields without eval.
+      const field=/\\b(title|rules|msgcorrect|author|text):'((?:\\\\.|[^'\\\\])*)'/g;
+      let count=0;
+      for (const match of compact.matchAll(field)) {
+        const value=match[2].replace(/\\n/g,'\n').replace(/\\r/g,'\r')
+          .replace(/\\'/g,"'").replace(/\\\\/g,'\\');
+        record(value,g.id,'puzzle.compact.'+match[1]);
+        count++;
+      }
+      console.log('Decoded compact text fields:',g.id,count);
+    }
   } catch(error) {
     console.warn('Could not decode',g.id,error.message);
     process.exitCode=1;

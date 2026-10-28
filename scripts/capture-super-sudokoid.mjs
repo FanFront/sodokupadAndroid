@@ -46,7 +46,7 @@ async function saved(response) {
     const mime=api && body.toString('utf8',0,3)==='scl' ? 'text/plain' :
       (type||'application/octet-stream');
     const suffix=extByMime[mime]||
-      new URL(url).pathname.match(/\\.([a-z0-9]{1,6})$/i)?.[1]||'bin';
+      new URL(url).pathname.match(/\.([a-z0-9]{1,6})$/i)?.[1]||'bin';
     const file='files/'+createHash('sha256').update(url).digest('hex')+
       '.'+suffix.toLowerCase();
     await writeFile(join(root,file),body);
@@ -107,7 +107,7 @@ try {
 } finally {
   await browser.close();
 }
-if(failures.length)throw new Error(failures.join('\\n'));
+if(failures.length)throw new Error(failures.join('\n'));
 for(const game of games) {
   if(!index.entrypoints.some(e=>e.id===game.id))
     index.entrypoints.push({id:game.id,url:game.url});
@@ -120,5 +120,5 @@ index.superSudokoidMainCapture={
   scope:'main puzzles only; side puzzles not yet discovered',
   newlySaved:captured.length
 };
-await writeFile(indexPath,JSON.stringify(index,null,2)+'\\n');
+await writeFile(indexPath,JSON.stringify(index,null,2)+'\n');
 console.log('Two Super Sudokoid main puzzles captured; existing offline snapshot preserved.');
