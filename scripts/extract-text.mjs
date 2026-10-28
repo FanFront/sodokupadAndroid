@@ -79,7 +79,7 @@ for(const g of games) {
       if (!g.id.startsWith('super-sudokoid-') || !compact?.startsWith('{id:'))
         throw error;
       // SudokuMaker compact literal: extract string fields without eval.
-      const field=/\\b(title|rules|msgcorrect|author|text):'((?:\\\\.|[^'\\\\])*)'/g;
+      const field=/\b(title|rules|msgcorrect|author|text):'((?:\\.|[^'\\])*)'/g;
       let count=0;
       for (const match of compact.matchAll(field)) {
         const value=match[2].replace(/\\n/g,'\n').replace(/\\r/g,'\r')
