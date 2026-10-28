@@ -61,7 +61,7 @@
   },
   {
     "english": "It's done! Every corner of the planet has been explored, every secret found.\n\nCONGRATULATIONS! You've managed to solve the puzzle to its entirety, you even found the hidden puzzle! \n\nThanks for playing!",
-    "zhHans": "",
+    "zhHans": "终于完成了！星球的每个角落都已探索，每个秘密都已发现。\n\n恭喜！你不仅完整解开了这个谜题，甚至找到了隐藏谜题！\n\n感谢游玩！",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -71,7 +71,7 @@
   },
   {
     "english": "While cruising through hyperspace, as one does on occasion, your radio suddenly picks up a distress signal from a nearby solar system. The planet it originates from isn't on your star chart, but your ship's computer is adamant that this is none other than the lost home world of the ancient Puzzlo race, known for their penchant for intricate puzzle, and deadly super-weapons. With trepidation, you set course to land.\n\n---\n\nWhen playing this in SudokuPad, consider turning ON the following settings for a better experience:\n* Outlines On Digits\n* Draw Arrows Above Lines\n* Disable Emoji Replacement (this one is a little spotty in some browsers -- turn it off if you don't see a boss cell in the starting sector)\n* Test Large Puzzle UI (which allows you to zoom with the scroll wheel and pan by right-clicking and dragging the mouse).\n* Check On Finish  <-- This one is required!\n\nThis puzzle is not mobile friendly!\n\n---\n\nThis is a dynamic, expanding puzzle. More cells, rules and story segments will be revealed as you play.\n\nSECTORS: the grid consists of 16 sectors. Each sector is a separate 9x9 Sudoku puzzle. Normal Sudoku rules apply separately within each sector, but other rules may span multiple sectors.\n\nWALLS: purple cells separated with a border are wall cells. They do not count as part of the grid and Sudoku rules DO NOT apply to them (meaning that some rows, columns and boxes will have fewer than nine digits in them). Do note that if any other clue applies to a wall cell, the cell still needs to contain a digit that satisfies that clue.\n\nHUD: the area to the right is your HUD. It will be updated with new information as you progress through the puzzle. Click on any revealed HUD cell to update this description with information on that particular story entry, rule description or boss link.\n\nBOSSES: there are a few bosses scattered throughout the map. Once you've managed to place a digit in a boss cell the HUD will be updated. Click on that cell to get a link to a separate boss puzzle. Solve it to defeat the boss and progress in the main puzzle by placing the rewarded digit in the boss's HUD cell.\n\nUPGRADES: yellow circles indicate points of interest. If you fill in a circled cell, check the HUD for story updates and new rules.\n\nCOSMETIC CELLS: pink cells are identical to their neighbors, the color variation is purely cosmetic.\n\nHINTS: if you get stuck and need help figuring out what to do next, click in the top-right corner to access a secret list of vague objectives for each story moment.",
-    "zhHans": "",
+    "zhHans": "你正像往常一样穿越超空间，通讯器突然接收到附近恒星系发来的求救信号。发信星球不在星图上，飞船电脑却坚称那是古老谜族（Puzzlo）失落的故乡。这个种族以复杂精妙的谜题和致命超级武器闻名。你带着忐忑的心情，决定降落调查。\n\n---\n\n在 SudokuPad 中游玩时，建议开启以下设置以获得更好体验：\n* 数字描边\n* 箭头显示在线条上方\n* 禁用表情符号替换（部分浏览器可能有显示问题；如果起始区域看不到首领格，请关闭此功能）\n* 大型谜题界面测试（支持鼠标滚轮缩放及按住鼠标右键拖动地图）\n* 完成时检查（此项为必需！）\n\n本谜题最初并非针对手机设计！\n\n---\n\n这是一个会随着游玩不断扩展的动态谜题。新的格子、规则和剧情会陆续揭晓。\n\n**区域（SECTORS）**：棋盘分为 16 个区域，每个区域都是独立的 9×9 数独。标准数独规则分别适用于各区域，但某些其他规则可能跨越多个区域。\n\n**墙壁（WALLS）**：以边框隔开的紫色格子是墙壁格，不属于标准数独棋盘，不受数独规则约束（因此某些行、列或宫可能少于九个数字）。不过，如果有其他线索涉及墙壁格，仍须填写满足该线索的数字。\n\n**状态面板（HUD）**：棋盘右侧为状态面板。随着解谜进展，面板会显示新信息。点击已经揭示的面板格，可在这里查看对应剧情、规则说明或首领链接。\n\n**首领（BOSSES）**：地图各处散布着数位首领。当你成功填入一个首领格的数字，状态面板便会更新。点击相应面板格取得独立首领谜题的链接。解开首领谜题后，将奖励的数字填入首领在状态面板中的格子，才能继续推进主线。\n\n**升级（UPGRADES）**：黄色圆圈表示值得调查的地点。填入圈内格子的数字后，检查状态面板，获取剧情更新和新规则。\n\n**装饰格（COSMETIC CELLS）**：粉色格与周围格子没有规则上的差异，颜色只是装饰。\n\n**提示（HINTS）**：如果卡住，不知道接下来该做什么，可点击右上角查看按剧情顺序排列的隐秘目标提示清单。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6107,7 +6107,7 @@
   },
   {
     "english": "[Click here to go to the boss puzzle](https://sudokupad.app/1hh6q5xl6l)",
-    "zhHans": "",
+    "zhHans": "[点击进入首领谜题](https://sudokupad.app/1hh6q5xl6l)",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6117,7 +6117,7 @@
   },
   {
     "english": "[Click here to go to the boss puzzle](https://sudokupad.app/64c4lkb5ss)",
-    "zhHans": "",
+    "zhHans": "[点击进入首领谜题](https://sudokupad.app/64c4lkb5ss)",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6127,7 +6127,7 @@
   },
   {
     "english": "[Click here to go to the boss puzzle](https://sudokupad.app/80kqa7jo0h)",
-    "zhHans": "",
+    "zhHans": "[点击进入首领谜题](https://sudokupad.app/80kqa7jo0h)",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6137,7 +6137,7 @@
   },
   {
     "english": "[Click here to go to the boss puzzle](https://sudokupad.app/bpij5pdi3x)",
-    "zhHans": "",
+    "zhHans": "[点击进入首领谜题](https://sudokupad.app/bpij5pdi3x)",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6147,7 +6147,7 @@
   },
   {
     "english": "[Click here to go to the boss puzzle](https://sudokupad.app/dxr2zdfldv)",
-    "zhHans": "",
+    "zhHans": "[点击进入首领谜题](https://sudokupad.app/dxr2zdfldv)",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6157,7 +6157,7 @@
   },
   {
     "english": "[Click here to go to the boss puzzle](https://sudokupad.app/dz1iu0r3tl)",
-    "zhHans": "",
+    "zhHans": "[点击进入首领谜题](https://sudokupad.app/dz1iu0r3tl)",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6167,7 +6167,7 @@
   },
   {
     "english": "[Click here to go to the boss puzzle](https://sudokupad.app/gidcd5jrz7)",
-    "zhHans": "",
+    "zhHans": "[点击进入首领谜题](https://sudokupad.app/gidcd5jrz7)",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6177,7 +6177,7 @@
   },
   {
     "english": "[Click here to go to the boss puzzle](https://sudokupad.app/hfyjv8jqr5)",
-    "zhHans": "",
+    "zhHans": "[点击进入首领谜题](https://sudokupad.app/hfyjv8jqr5)",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6197,7 +6197,7 @@
   },
   {
     "english": "A tall tower rises on the western edge of the land. Its gate is tightly shut and three keys are required to enter. Once you find the keys, enter them in the red cells. The topmost key goes in the topmost lock, and so on.",
-    "zhHans": "",
+    "zhHans": "大陆西缘耸立着一座高塔，大门紧闭，必须找到三把钥匙才能进入。找到钥匙后，将它们的数字填入红色格子：最上面的钥匙对应最上面的锁，以此类推。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6217,7 +6217,7 @@
   },
   {
     "english": "Adjacent digits along a green VINE must differ by at least 5. Any leaves or grass is purely cosmetic.",
-    "zhHans": "",
+    "zhHans": "绿色藤蔓线上相邻两个数字的差至少为 5。叶片和草丛只是装饰。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6228,7 +6228,7 @@
   },
   {
     "english": "All non-wall digits orthogonally adjacent to a drone cell have the same parity. Note that this only applies to adjacent cells and not the drone itself.",
-    "zhHans": "",
+    "zhHans": "与无人机格正交相邻的所有非墙壁格，数字必须具有相同奇偶性。注意：此规则只针对相邻格子，不包括无人机格自身。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6238,7 +6238,7 @@
   },
   {
     "english": "All orthogonally adjacent lava cells must differ by at least 2.\n\n(Note that pink or red cells are cosmetic and if they are surrounded by lava cells, they too count as lava. BREAKABLE cells do not count as lava.)",
-    "zhHans": "",
+    "zhHans": "正交相邻的熔岩格之间数字之差至少为 2。\n\n（粉色或红色格只是装饰；若四周被熔岩包围，也算作熔岩格。可破坏格不算熔岩。）",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6258,7 +6258,7 @@
   },
   {
     "english": "All walls are Fillomino puzzles. They consist of orthogonally connected regions where all digits within a region equal the size of the region, and two regions of the same size may not touch each other orthogonally. Cells with a blue PHASE ENTRY POINT have the same value as the adjacent wall cell they phase into.",
-    "zhHans": "",
+    "zhHans": "所有墙壁都遵循 Fillomino 区域填数规则：墙壁格划分成若干正交连通区域，每个区域内的数字都等于该区域格数；相同大小的两个区域不能正交相邻。带蓝色“相位入口点”的格子与它穿入的相邻墙壁格数值相同。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6298,7 +6298,7 @@
   },
   {
     "english": "At the peak of the towering steel monstrosity is an antenna. You suspected as much after your time in the bunker -- this is the thing powering your drones, and Wark’s barrier technology. You’ve been unable to remotely disable the barriers, but perhaps you can gain some insight into their inner workings by examining the antenna from up close? Having explored everywhere else, it’s your last hope.",
-    "zhHans": "",
+    "zhHans": "在高耸的钢铁怪物顶端，你发现了一根天线。经历了地下掩体之后，你早就有所怀疑：这东西为无人机和沃克的屏障技术供能。你一直没能远程关闭屏障，或许靠近研究天线的运作方式能找到突破口？其余地方都已探索，这成了最后的希望。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6308,7 +6308,7 @@
   },
   {
     "english": "BALL CHUTES",
-    "zhHans": "",
+    "zhHans": "滑球槽",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6338,7 +6338,7 @@
   },
   {
     "english": "Black WALL JUMP arrows have two components: the tip of the arrow, and the wall cell at its base. Move an equal number of cells as the value of the arrowhead's cell, starting in the arrowhead cell and moving in the direction of the arrow. The digit in the cell you land in will have the same value as the wall cell.\n\nFor example, if the arrowhead is 1 and the wall cell is 2, then there should be a 2 in the cell adjacent to the arrowhead (in the direction it points).\n\nThis rule is identical to how Shinespark worked in the previous puzzle.",
-    "zhHans": "",
+    "zhHans": "黑色“穿墙跳跃”箭头包含两个部分：箭头尖端，以及它根部的墙壁格。从箭头尖端格开始，沿箭头指示方向前进，移动的格数等于箭头尖端格的数字；落点格的数字必须与墙壁格相同。\n\n例如，若箭头尖端为 1、墙壁格为 2，则箭头方向上紧邻尖端的一格必须是 2。\n\n这与前作的“蓄力冲刺（Shinespark）”规则相同。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6358,7 +6358,7 @@
   },
   {
     "english": "BREAKABLE BLOCKS",
-    "zhHans": "",
+    "zhHans": "可破坏方块",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6368,7 +6368,7 @@
   },
   {
     "english": "Breaking barriers",
-    "zhHans": "",
+    "zhHans": "突破屏障",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6378,7 +6378,7 @@
   },
   {
     "english": "Bunker buster",
-    "zhHans": "",
+    "zhHans": "掩体破坏者",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6388,7 +6388,7 @@
   },
   {
     "english": "Caldera chaos",
-    "zhHans": "",
+    "zhHans": "火山口混战",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6408,7 +6408,7 @@
   },
   {
     "english": "Cells marked with an explosion are BREAKABLE. To put on enough pressure, they must be larger than all orthogonally adjacent cells, including walls(!) but excluding other breakable cells.",
-    "zhHans": "",
+    "zhHans": "标有爆炸符号的格子是可破坏格。要产生足够压力，它的数字必须大于所有正交相邻格（**包括墙壁格！**），但不必大于其他可破坏格。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6428,7 +6428,7 @@
   },
   {
     "english": "Climbing the weird tower from the outside proves trickier than navigating its insides. With no footholds in sight, you have to get creative, using a combination of wall jumps and drone platforms to ascend. As you approach the top of the tower, a monstrous metal-dragon passes above you. It lets out a deafening screech, as if inviting you to try conquering its domain.",
-    "zhHans": "",
+    "zhHans": "从外侧攀登怪异高塔比在内部穿行更加困难。没有落脚点，你只能灵活结合穿墙跳跃和无人机平台向上攀爬。接近塔顶时，一条巨大的机械龙从你头顶飞过，发出震耳欲聋的尖啸，仿佛是在邀请你挑战它的领地。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6438,7 +6438,7 @@
   },
   {
     "english": "CRYSTAL CAGES",
-    "zhHans": "",
+    "zhHans": "水晶笼",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6488,7 +6488,7 @@
   },
   {
     "english": "Digits along HEAT VENTS must decrease as you go from the round bulb to the tip of the line.",
-    "zhHans": "",
+    "zhHans": "沿散热孔线条的数字，必须从圆形球部朝线条末端递减。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6498,7 +6498,7 @@
   },
   {
     "english": "Digits along the arrows sum to the value of the circle at the arrow's base. Arrows never overlap or share cells with other arrows.",
-    "zhHans": "",
+    "zhHans": "箭头上的数字之和等于箭头根部圆圈内的数字。不同箭头之间不会重叠，也不会共用格子。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6509,7 +6509,7 @@
   },
   {
     "english": "Digits an equal distance (along the line) from the middle of a BALL CHUTE sum to the middle digit. The lines are always of an odd length and the middle cell is always marked.",
-    "zhHans": "",
+    "zhHans": "沿滑球槽线条，距中间格距离相等的两格数字之和必须等于中间格的数字。线条总是奇数格长，中间格也一定有标记。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6539,7 +6539,7 @@
   },
   {
     "english": "Digits separated by a white SCAN DOT differ by exactly 1.",
-    "zhHans": "",
+    "zhHans": "白色扫描点两侧的数字恰好相差 1。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6569,7 +6569,7 @@
   },
   {
     "english": "Each row and column of orange CRYSTAL CAGES must sum to the same value. In most cases, the value is given in the top-left corner of the cage, but if there is a question mark in the corner, you have to figure out the sum yourself.",
-    "zhHans": "",
+    "zhHans": "橙色水晶笼中的每一行和每一列，其数字之和必须相同。多数情况下，这个和值写在笼子左上角；若左上角是问号，则需要自行推导和值。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6589,7 +6589,7 @@
   },
   {
     "english": "Each yellow wall RUNE corresponds to a unique digit. All instances of the same RUNE map to the same digit, while different runes map to different digits.",
-    "zhHans": "",
+    "zhHans": "每种黄色墙壁符文对应唯一数字。同一种符文始终代表相同数字，不同符文则代表不同数字。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6599,7 +6599,7 @@
   },
   {
     "english": "Entropic lines",
-    "zhHans": "",
+    "zhHans": "熵线",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6609,7 +6609,7 @@
   },
   {
     "english": "Equal parities",
-    "zhHans": "",
+    "zhHans": "奇偶相同",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6619,7 +6619,7 @@
   },
   {
     "english": "Equal sums",
-    "zhHans": "",
+    "zhHans": "等和",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6639,7 +6639,7 @@
   },
   {
     "english": "EVENT: SEALED VAULT DOOR",
-    "zhHans": "",
+    "zhHans": "事件：封闭金库门",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6649,7 +6649,7 @@
   },
   {
     "english": "EVENT: THE MIRACLE SEED",
-    "zhHans": "",
+    "zhHans": "事件：奇迹种子",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6659,7 +6659,7 @@
   },
   {
     "english": "EVENT: X MARKS THE SPOT",
-    "zhHans": "",
+    "zhHans": "事件：X 标记的地点",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6669,7 +6669,7 @@
   },
   {
     "english": "Eyes in the sky",
-    "zhHans": "",
+    "zhHans": "空中之眼",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6679,7 +6679,7 @@
   },
   {
     "english": "FAULT LINES",
-    "zhHans": "",
+    "zhHans": "断层线",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6690,7 +6690,7 @@
   },
   {
     "english": "For each ARROW clue, draw a line in the direction of the arrow, starting in the cell with the arrow's head and with length equal to the circled value at the arrow's base.\n\nDigits along the line have to be a set of consecutive digits in any order (without repeating digits).\n\nIf the line would hit a wall, it instead bounces by rotating 90 degrees away from the wall. Notably, it does so inside the cell itself, rather than moving to the cell's corner and bouncing there. It also doesn't cut corners and will bounce instead. The line is not allowed to go straight into a wall (or diagonally into an opposing corner). If it does, it has to be short enough to stop before hitting the wall.\n\nIf you want an example, look [here](https://sudokupad.app/7asln8p2u1)",
-    "zhHans": "",
+    "zhHans": "对每一个箭头线索，从箭头尖端格开始，沿箭头指示方向画一条线，线条长度（以格子计）等于根部圆圈里的数字。\n\n沿线数字必须组成一组连续整数，顺序不限，且数字不得重复。\n\n如果线条即将撞上墙壁，必须转向远离墙壁的一侧，旋转 90 度后继续延伸。注意，转向发生在当前格内，而不是先走到格子顶角再折返；线条也不能切过墙角，遇到墙角必须转向。线条不得直接走进墙壁，也不能沿对角方向撞上相对的墙角；若会撞墙，线条就必须短到刚好在撞上前结束。\n\n需要示例时，请看[这里](https://sudokupad.app/7asln8p2u1)。",
     "gameIds": [
       "super-sudokoid-2"
     ],
