@@ -309,11 +309,36 @@
           break;
         }
         case 'letter': {
-          if (typeof ToolLetter === 'undefined') return notify('该谜题未加载字母工具');
-          if (!a.hasTool('letter')) getFramework().addTool(ToolLetter);
-          ToolLetter.tool.toggleMode();
+          if (typeof ToolLetter === 'undefined' || !ToolLetter.tool)
+            return notify('该谜题未加载字母工具');
+          const framework = getFramework();
+          const letter = ToolLetter.tool;
+          // SudokuPad's Letter Tool is auxiliary (isTool=false), so
+          // app.hasTool('letter') is ALWAYS false even when it is installed.
+          // Enable its setting and inspect app.tools instead to avoid
+          // reinitializing the feature on every tap.
+          if (!a.tools?.letter) {
+            if (typeof framework.setSetting === 'function')
+              framework.setSetting('toolletter', true);
+            if (!a.tools?.letter && typeof framework.addTool === 'function')
+              framework.addTool(ToolLetter);
+          }
+          if (!a.tools?.letter || typeof letter.toggleMode !== 'function')
+            return notify('字母输入暂时无法启用');
+          // The upstream feature only toggles in normal/corner/centre; in
+          // Colour or Pen mode it silently ignores the request.
+          if (!letter.isToolWithLetters(a.tool)) {
+            if (!a.hasTool('normal')) return notify('无法切换至填数模式');
+            a.changeTool('normal');
+          }
+          moveMode = false;
+          drag = null;
+          root.classList.remove('android-pan');
+          const before = !!letter.letterMode;
+          letter.toggleMode();
           updateModes();
-          notify(ToolLetter.tool.letterMode ? '已切换至字母键盘' : '已切换至数字键盘');
+          if (!!letter.letterMode === before) return notify('字母模式未能切换');
+          notify(letter.letterMode ? '字母键盘：A–I、O' : '已切换至数字键盘');
           break;
         }
         case 'erase':
@@ -521,8 +546,9 @@
       if (a && btn.dataset.androidAction === 'tool') {
         on = a.tool === btn.dataset.value && !moveMode;
       }
-      if (btn.dataset.androidAction === 'letter' && typeof ToolLetter !== 'undefined') {
-        on = !!ToolLetter.tool.letterMode;
+      if (btn.dataset.androidAction === 'letter') {
+        on = typeof ToolLetter !== 'undefined' && !!ToolLetter.tool?.letterMode;
+        btn.textContent = on ? 'ABC' : '字母';
       }
       if (btn.dataset.androidAction === 'digit') {
         const orig = doc.querySelector('.controls-input button[data-key="' + btn.dataset.value + '"]');
