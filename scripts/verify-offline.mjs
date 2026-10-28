@@ -120,6 +120,9 @@ if(!linked.length) {
     if(!content.includes('/__android/android.js')||
        !content.includes('/__android/android.css'))
       throw new Error('Missing mobile touch controls in linked puzzle: '+url);
+    const id=new URL(url).pathname.slice(1);
+    if(scl.file!=='translated/super-linked-'+id+'.scl')
+      throw new Error('Super Sudokoid linked puzzle does not serve Chinese SCL: '+url);
     const original=scl.originalFile||scl.file;
     if(!/^files\/[a-f0-9]{64}\.[a-z0-9]{1,8}$/.test(original))
       throw new Error('Pristine linked SCL source missing: '+url);

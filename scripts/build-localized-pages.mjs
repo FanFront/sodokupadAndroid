@@ -16,6 +16,8 @@ const indexFile=join(root,'index.json');
 const index=JSON.parse(await readFile(indexFile,'utf8'));
 const games=JSON.parse(await readFile('app/src/main/assets/games.json','utf8')).games;
 const common=JSON.parse(await readFile('app/src/main/assets/i18n/zh-Hans.json','utf8'));
+const superChinese=JSON.parse(await readFile(join(root,'super-linked-chinese-candidates.json'),'utf8'));
+const linkedChinese=new Map(superChinese.map(item=>[item.url,item]));
 await mkdir(join(root,'pages'),{recursive:true});
 
 // The Android layout files are handwritten (not captured) and versioned.
@@ -145,10 +147,12 @@ for (const [url, entry] of Object.entries(index.assets)) {
   const superLinked=(index.superSudokoidLinkedPuzzles||[]).find(item=>item.url===url);
   if(superLinked) {
     const pageTitle=findElement(document,'title');
-    const before=pageTitle?.childNodes?.[0]?.value || bossName;
+    const reviewed=linkedChinese.get(url)?.fields?.title?.zhHans;
+    if(!reviewed||!/[\u3400-\u9fff]/u.test(reviewed))
+      throw new Error('Missing Chinese title for Super Sudokoid linked puzzle '+bossName);
     if(pageTitle?.childNodes?.[0])pageTitle.childNodes[0].value=
       (superLinked.kind==='boss'?'超级数独机器人 · 首领谜题':'超级数独机器人 · 支线谜题')+
-      ' — '+before;
+      ' — '+reviewed+' — SudokuPad';
   }
   stripWebOnlyContent(document);
   const htmlTag = findElement(document, 'html');

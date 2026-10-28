@@ -32,6 +32,8 @@ jobs:
           node --check scripts/capture-super-sudokoid.mjs
           node --check scripts/capture-super-sudokoid-linked.mjs
           node --check scripts/extract-super-linked-chinese.mjs
+          node --check scripts/build-translated-super-linked.mjs
+          node --check scripts/test-super-linked-localization.mjs
           node --check scripts/replay-super-sudokoid-linked.mjs
           node --check scripts/verify-offline.mjs
           node --check scripts/replay-offline.mjs
@@ -79,8 +81,10 @@ jobs:
           npm run build-html
           npm run build-puzzle-zh
           npm run build-boss-zh
+          npm run build-super-linked-zh
           npm run verify
           npm run test-boss-zh
+          npm run test-super-linked-zh
           node scripts/test-scl.mjs --require-translated
       - name: Test the actual rendered board at Android phone size
         run: |
@@ -136,6 +140,7 @@ jobs:
           npm run build-html
           npm run build-puzzle-zh
           npm run build-boss-zh
+          npm run build-super-linked-zh
           npm run verify
           node scripts/test-scl.mjs --require-translated
           npm run extract-strings
@@ -203,6 +208,7 @@ jobs:
           npm run build-boss-zh
           OFFLINE_REQUIRE_SUPER_LINKED=1 npm run verify
           npm run test-boss-zh
+          npm run test-super-linked-zh
           node scripts/test-scl.mjs --require-translated
       - name: Replay every linked puzzle with network disabled
         run: |
@@ -273,10 +279,14 @@ jobs:
         run: npm run build-puzzle-zh
       - name: Localize imported boss puzzles without touching solutions
         run: npm run build-boss-zh
+      - name: Compile linked Super Sudokoid Chinese SCL packages
+        run: npm run build-super-linked-zh
       - name: Validate every boss puzzle and its Android controls
         run: OFFLINE_REQUIRE_BOSS_PUZZLES=1 npm run verify
       - name: Verify Chinese boss narratives and puzzle integrity
         run: npm run test-boss-zh
+      - name: Validate linked Chinese puzzle narratives and unchanged grid data
+        run: npm run test-super-linked-zh
       - name: Validate SudokuPad-compatible puzzle encoding
         run: node scripts/test-scl.mjs --require-translated
       - name: Extract English text from HTML and puzzle data
