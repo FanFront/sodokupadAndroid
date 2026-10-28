@@ -13,7 +13,8 @@ captures/
 # Downloaded third-party pages, puzzle packages, images and scripts.
 app/src/main/assets/offline/
 
-# Long-lived Android signing identity. NEVER commit either the key or its base64 copy.
+# Ignore old/local signing material; the intentional PUBLIC test key is
+# stored separately as app/signing/sudokuvania-debug.p12.base64.
 .signing/
 *.p12
 *.pfx
