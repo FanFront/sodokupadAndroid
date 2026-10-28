@@ -95,11 +95,23 @@ for(const item of linked){
         await page.waitForTimeout(180);
       }
     }
+    // Some linked puzzles show their rules prompt *after* the SVG is ready.
+    // Never try to operate the keypad through an intentional modal dialog.
+    await page.waitForTimeout(400);
     await dismissInitialDialogs();
     assert.match(await page.title(),/超级数独机器人/,'Linked page title not Chinese');
     const digit=page.locator('#android-gamepad button[data-android-action="digit"][data-value="1"]');
     const before=Number(await digit.getAttribute('data-android-tap-count')||0);
-    await digit.tap({timeout:7000});
+    try {
+      await digit.tap({timeout:1800});
+    } catch (error) {
+      // A puzzle-specific Start/Rules dialog may be queued on an animation
+      // frame after the first dismissal. Recheck the dialog and retry only
+      // when a real modal is blocking the control.
+      if (!await page.locator('.dialog-overlay.centeroverboard:visible').count()) throw error;
+      await dismissInitialDialogs();
+      await digit.tap({timeout:6000});
+    }
     assert.equal(Number(await digit.getAttribute('data-android-tap-count')),before+1,
       'Touch digit handler did not run');
     // On a fresh side puzzle there may be no edit history. SudokuPad can
