@@ -46,6 +46,40 @@ try {
   const count=async element=>Number(await element.getAttribute('data-android-tap-count')||0);
   const action=id=>page.locator('#android-gamepad button[data-android-action="'+id+'"]');
   const pan=action('pan');
+  // 10 generous number keys, compact mode selector, secondary controls hidden.
+  assert.equal(await page.locator('#android-gamepad .android-tools button').count(),6);
+  assert.equal(await page.locator('#android-gamepad .android-numbers button').count(),10);
+  const digitOne=page.locator('#android-gamepad button[data-android-action="digit"][data-value="1"]');
+  assert.ok((await digitOne.boundingBox()).width >= 65,'Digit key is too narrow for a phone');
+  const more=action('more');
+  assert.equal(await more.getAttribute('aria-expanded'),'false');
+  assert.equal(await page.locator('#android-more-actions').isVisible(),false);
+  const closedHeight=await page.locator('#android-gamepad').evaluate(e=>e.getBoundingClientRect().height);
+  await more.tap();
+  assert.equal(await more.getAttribute('aria-expanded'),'true');
+  assert.equal(await page.locator('#android-more-actions').isVisible(),true);
+  assert.ok(await page.locator('#android-gamepad').evaluate(e=>e.getBoundingClientRect().height) > closedHeight);
+  await action('redo').tap();
+  assert.equal(await count(action('redo')),1);
+  await more.tap();
+  assert.equal(await page.locator('#android-more-actions').isVisible(),false);
+  assert.equal(await page.locator('#android-gamepad').evaluate(e=>Math.ceil(e.getBoundingClientRect().height)) ,Math.ceil(closedHeight));
+
+  // A drag ending over the pad must not activate a digit it did not start on.
+  await page.evaluate(()=>{
+    const rect=document.querySelector('#android-gamepad button[data-value="1"]').getBoundingClientRect();
+    document.dispatchEvent(new PointerEvent('pointerdown',{
+      bubbles:true,pointerId:999,clientX:20,clientY:100,pointerType:'mouse'
+    }));
+    document.dispatchEvent(new PointerEvent('pointerup',{
+      bubbles:true,pointerId:999,clientX:rect.left+rect.width/2,
+      clientY:rect.top+rect.height/2,pointerType:'mouse'
+    }));
+  });
+  assert.equal(await count(digitOne),0,'Drag into keypad must not activate a digit');
+  await page.setViewportSize({width:320,height:720});
+  assert.ok((await digitOne.boundingBox()).width >= 55,'Narrow-phone digits should remain tappable');
+  await page.setViewportSize({width:393,height:851});
   await pan.tap();
   assert.equal(await page.locator('html.android-pan').count(),1);
   assert.equal(await count(pan),1);
@@ -62,10 +96,19 @@ try {
   const corner=page.locator('#android-gamepad button[data-android-action="tool"][data-value="corner"]');
   await corner.tap();
   assert.equal(await count(corner),1);
+  // Selecting a writing tool exits navigation mode.
+  await pan.tap();
+  await corner.tap();
+  assert.equal(await page.locator('html.android-pan').count(),0);
+  // Two keyboard-style click events should be two activations, not filtered
+  // as duplicate compatibility clicks.
+  const colour=page.locator('#android-gamepad button[data-android-action="tool"][data-value="colour"]');
+  await colour.evaluate(button=>{button.click();button.click();});
+  assert.equal(await count(colour),2);
   const calls=await page.evaluate(()=>window.__calls);
   assert.equal(calls.filter(c=>c[0]==='digit'&&c[1]==='1').length,2);
   assert.equal(calls.filter(c=>c[0]==='undo').length,1);
-  assert.equal(calls.filter(c=>c[0]==='tool'&&c[1]==='corner').length,1);
+  assert.equal(calls.filter(c=>c[0]==='tool'&&c[1]==='corner').length,2);
   await page.evaluate(()=>{window.Framework.app.puzzle.selectedCells=[];});
   await digit.tap();
   assert.match(await page.locator('#android-status').innerText(),/请先轻触棋盘格子/);
