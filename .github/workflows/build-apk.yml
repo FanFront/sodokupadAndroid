@@ -44,7 +44,9 @@ jobs:
           node scripts/test-scl.mjs
           bash -n scripts/prepare-signing.sh
           bash -n scripts/create-signing-key.sh
+          bash -n scripts/upload-signing-secrets.sh
           bash -n scripts/verify-signed-apk.sh
+          node scripts/test-stable-signing.mjs
 
   build-cached-apk:
     # Fork PRs cannot safely access the permanent signing secrets; source-checks still run.
