@@ -6700,7 +6700,7 @@
   },
   {
     "english": "For each blue water cell, there must be at least ONE water cell among the eight surrounding cells that differs by exacly 1.\n\n(Note that pink or red cells are cosmetic and if they are surrounded by water cells, they too count as water. BREAKABLE cells do not count as water.)",
-    "zhHans": "",
+    "zhHans": "对每一个蓝色水域格，其周围八格中必须至少有**一个**水域格，数字与它恰好相差 1。\n\n（粉色或红色格仅是外观装饰；如果周围是水域格，它们同样算作水域格。可破坏格不算水域。）",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6720,7 +6720,7 @@
   },
   {
     "english": "HEAT VENTS",
-    "zhHans": "",
+    "zhHans": "散热孔",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6750,7 +6750,7 @@
   },
   {
     "english": "In order to break through BARRIER lines, each set of three digits along the lines must contain a low, middle and high digit (123, 456, and 789 respectively), in any order.",
-    "zhHans": "",
+    "zhHans": "要击穿“屏障线”，沿线任意连续三个数字都必须分别有一个低位数字（1、2、3）、一个中位数字（4、5、6）和一个高位数字（7、8、9），次序不限。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6760,7 +6760,7 @@
   },
   {
     "english": "In the corner",
-    "zhHans": "",
+    "zhHans": "角落之中",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6770,7 +6770,7 @@
   },
   {
     "english": "In the rubble right next to where you woke up, you find a still intact power cell that used to belong to your suit. You slot it in and can’t help a sigh of relief as the now fully-powered nanobots start buzzing about, repairing and improving joints and platings. Soon, your suit shines orange, and that means it’s now immune to lava!",
-    "zhHans": "",
+    "zhHans": "在你醒来的地点旁边，一堆瓦砾中竟还藏着一枚完好的战甲能源电池。你将它装上，终于松了一口气：重获充足电力的纳米机器人开始嗡嗡工作，修理并强化关节与护甲板。没多久，战甲便闪耀起橙色光芒——如今你已能免疫熔岩！",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6780,7 +6780,7 @@
   },
   {
     "english": "Inside the center of the geode is a seed. You can’t make any sense of it, so you bring it back to the refugee camp in the hope that someone there knows what to do with it.\n\nThey do, and it causes quite a stir. This mystical beanstalk seed grows to amazing heights when planted. With this, you can finally reach the uppermost layer of the planet again!\n\nStarting in the refugee camp in Sector 7 (the yellow circle), draw an 8 cell long VINE straight up. Digits along the VINE differ by at least 5.",
-    "zhHans": "",
+    "zhHans": "晶洞中央藏着一粒种子。你不明白它有什么用，便把它带回难民营，希望有人能认出来。\n\n果然，他们认识这东西，整个营地都轰动了。这颗神秘的魔豆种子一经种下便会长到惊人的高度。有了它，你终于能够重新抵达星球最上层！\n\n从第 7 区难民营的黄色圆圈出发，笔直向上画一条长度为 8 格的**藤蔓线**。沿线相邻数字之差至少为 5。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6800,7 +6800,7 @@
   },
   {
     "english": "Inverse thermometers",
-    "zhHans": "",
+    "zhHans": "反向温度计",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6830,7 +6830,7 @@
   },
   {
     "english": "Large steel constructions tower over a dry lakebed. Pipes and chutes criss-cross up the sides and you spot multiple abandoned shacks, bolted haphazardly to the walls.",
-    "zhHans": "",
+    "zhHans": "巨型钢铁建筑群耸立在干涸湖床上。管道和滑槽在建筑外墙交错纵横，墙上还零乱地固定着许多废弃小屋。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6850,7 +6850,7 @@
   },
   {
     "english": "Metal riddle",
-    "zhHans": "",
+    "zhHans": "钢铁谜题",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6860,7 +6860,7 @@
   },
   {
     "english": "Missiles aquired",
-    "zhHans": "",
+    "zhHans": "已获得导弹",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6870,7 +6870,7 @@
   },
   {
     "english": "People celebrate! For once, you've managed to win without destroying the planet in the process. Wark's doomsday weapon is no more and his minions are surrendering in droves.\n\nThe people of the refugee camp thank you, their leaders already busy trying to fill the vacuum left by the madman's fall and peace is being restored across the planet. You join them for a feast, get your fair share of back pats, but before long you're back in the cockpit once again.\n\nYou're a drifter after all, and this puzzle is solved. Time to set out for new adventures, to worlds unseen!",
-    "zhHans": "",
+    "zhHans": "人们欢呼雀跃！这次你终于在没有摧毁整颗星球的情况下获胜。沃克的末日武器已被摧毁，他的手下纷纷投降。\n\n难民营的人们向你道谢，他们的领袖已经忙着填补暴君倒台后留下的权力真空，整个星球正逐渐重获和平。你与他们共享盛宴，接受众人的感谢和祝贺，但不久便再次坐进飞船驾驶舱。\n\n毕竟你是个浪迹星际的旅人，而这道谜题已经解开。该启程去往未知世界，展开新的冒险了！",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6880,7 +6880,7 @@
   },
   {
     "english": "Phase suit",
-    "zhHans": "",
+    "zhHans": "相位战甲",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6890,7 +6890,7 @@
   },
   {
     "english": "Power restored!",
-    "zhHans": "",
+    "zhHans": "电力恢复！",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6900,7 +6900,7 @@
   },
   {
     "english": "Proof that you have fully filled in a Sector correctly!",
-    "zhHans": "",
+    "zhHans": "证明你已经正确填满了本区域的所有数独格！",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6910,7 +6910,7 @@
   },
   {
     "english": "Proof that you have fully filled in the walls of a Sector correctly!",
-    "zhHans": "",
+    "zhHans": "证明你已经正确填满了本区域的所有墙壁格！",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6920,7 +6920,7 @@
   },
   {
     "english": "Refugee camp",
-    "zhHans": "",
+    "zhHans": "难民营",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6930,7 +6930,7 @@
   },
   {
     "english": "Refugee rescue",
-    "zhHans": "",
+    "zhHans": "营救难民",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6950,7 +6950,7 @@
   },
   {
     "english": "Renban arrow lines",
-    "zhHans": "",
+    "zhHans": "连续数箭头线",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6960,7 +6960,7 @@
   },
   {
     "english": "Rule breaking",
-    "zhHans": "",
+    "zhHans": "打破规则",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6970,7 +6970,7 @@
   },
   {
     "english": "Rule making",
-    "zhHans": "",
+    "zhHans": "制定规则",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6980,7 +6980,7 @@
   },
   {
     "english": "SCAN DOTS",
-    "zhHans": "",
+    "zhHans": "扫描点",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -6990,7 +6990,7 @@
   },
   {
     "english": "Sequence breaking",
-    "zhHans": "",
+    "zhHans": "突破序列",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7000,7 +7000,7 @@
   },
   {
     "english": "Serpent cluster",
-    "zhHans": "",
+    "zhHans": "蛇群",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7020,7 +7020,7 @@
   },
   {
     "english": "Slingshot arrows",
-    "zhHans": "",
+    "zhHans": "弹弓箭头",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7030,7 +7030,7 @@
   },
   {
     "english": "Speed running",
-    "zhHans": "",
+    "zhHans": "极速通关",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7050,7 +7050,7 @@
   },
   {
     "english": "Sudoku rules do not apply to purple wall cells, they may contain any of the digits 1-9, or no digits. Formally, the Sudoku constraint of the sector is satisfied if no row, column or box contains repeated digits, excluding all wall cells.\n\nDo note that if any other clue applies to a wall cell, the cell still needs to contain a digit that satisfies that clue.",
-    "zhHans": "",
+    "zhHans": "数独规则不适用于紫色墙壁格：它们可以填入 1 至 9 的任何数字，也可以留空。严格来说，只要忽略所有墙壁格后，区域各行、各列、各宫内均无重复数字，就满足该区域的数独约束。\n\n但请注意：如果其他线索涉及墙壁格，该格仍必须填写符合线索要求的数字。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7060,7 +7060,7 @@
   },
   {
     "english": "Sum arrows",
-    "zhHans": "",
+    "zhHans": "求和箭头",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7091,7 +7091,7 @@
   },
   {
     "english": "SUPER MISSILES",
-    "zhHans": "",
+    "zhHans": "超级导弹",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7131,7 +7131,7 @@
   },
   {
     "english": "TARGETING ARROWS",
-    "zhHans": "",
+    "zhHans": "瞄准箭头",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7142,7 +7142,7 @@
   },
   {
     "english": "The antenna",
-    "zhHans": "",
+    "zhHans": "天线",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7152,7 +7152,7 @@
   },
   {
     "english": "The barrier shatters and water comes flooding out, as a well-timed explosion tears through the weak spot in the concrete dam. You watch in wonder as the lakebed is once again filled with water. Color all non-wall cells in Sector 10 blue, up to the dashed line. They are now considered water cells and follow underwater rules.",
-    "zhHans": "",
+    "zhHans": "屏障破碎，洪水奔涌而出！恰到好处的一次爆炸炸穿混凝土水坝的薄弱点。你惊讶地看着干涸的湖床重新被水淹没。将第 10 区虚线以下的所有非墙壁格涂成蓝色。这些格子现在视为水域格，并遵循水下规则。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7162,7 +7162,7 @@
   },
   {
     "english": "The bunker",
-    "zhHans": "",
+    "zhHans": "地下掩体",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7182,7 +7182,7 @@
   },
   {
     "english": "The geode",
-    "zhHans": "",
+    "zhHans": "晶洞",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7192,7 +7192,7 @@
   },
   {
     "english": "The heat is intense as you step up onto the slopes of an active volcano and your ailing suit struggles to keep up. Smoke and steam billows out from heat vents in the ground. You feel the earth tremble slightly.",
-    "zhHans": "",
+    "zhHans": "你踏上活火山的山坡，炽热难耐，损坏的战甲难以承受。烟雾与水蒸气从地面的散热孔不断涌出，你感到大地微微颤动。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7202,7 +7202,7 @@
   },
   {
     "english": "The steel construct looms ever tall above you. You've climbed high, but it still stretches on, further than you can reach. Beyond a not too distant hill, you spot smoke. Whether it's trouble or relief remains to be seen. You've no doubt yet to see the last of Wark's minions.",
-    "zhHans": "",
+    "zhHans": "钢铁巨构仍高耸在你头顶。你已经攀得很高，但顶端依然遥不可及。不远处山丘后面升起了烟雾。那究竟意味着麻烦还是希望，目前还不清楚。但你知道，沃克的爪牙绝不会就此罢休。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7222,7 +7222,7 @@
   },
   {
     "english": "The tower",
-    "zhHans": "",
+    "zhHans": "高塔",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7232,7 +7232,7 @@
   },
   {
     "english": "The tower is strange, seemingly made entirely from a single piece of some dark, unknown metal. There are no seams or joints in the surface, yet somehow you still manage to climb it, thanks to your newfound abilities.\n\nIn a room near the top you find sketches of several mysterious glyphs and RUNES. According to some hastily scribbled notes, someone once used this room to study them.",
-    "zhHans": "",
+    "zhHans": "这座塔十分古怪，仿佛完全由一整块未知的深色金属雕成，表面看不到任何接缝或连接处。所幸凭借刚获得的能力，你仍成功攀了上去。\n\n在靠近塔顶的房间内，你找到了几种神秘图腾和符文的草图。随手写下的笔记显示，曾有人在此研究它们。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7242,7 +7242,7 @@
   },
   {
     "english": "The volcano erupts! Draw a line from each of the two dots above the lava (row 5, column 5 and 6). The lines may move diagonally and may cut corners, but may not cross heat vents or wall cells. They also cannot cross or intersect with each other. The lines must cover all orange dots and behave like slow inverse thermometers (digits along the lines must decrease or stay the same as you move away from the volcano).",
-    "zhHans": "",
+    "zhHans": "火山爆发了！从熔岩上方的两个点（第 5 行、第 5 列与第 6 列）分别画一条线。线可以斜走、可以切角，但不得穿过散热孔或墙壁格，两条线也不能相交或彼此交叉。两条线必须覆盖所有橙色圆点，并像缓慢下降的反向温度计一样：从火山向外延伸时，沿线数字只能减小或保持不变。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7252,7 +7252,7 @@
   },
   {
     "english": "The wind howls as it sweeps across the jagged overhang that makes up this particular cliffside. You ride the current of hot air generated by the volcano. There is seismic activity going on here as well, and you're kept on your toes as you weave between lava plumes and billowing smoke.",
-    "zhHans": "",
+    "zhHans": "狂风呼啸，扫过构成崖壁的锯齿状突出岩层。你乘着火山生成的热上升气流前进。这里也有地震活动，穿梭于熔岩柱和滚滚浓烟之间，你必须时刻保持警惕。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7262,7 +7262,7 @@
   },
   {
     "english": "Thermal scans",
-    "zhHans": "",
+    "zhHans": "热成像扫描",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7282,7 +7282,7 @@
   },
   {
     "english": "This is a list of hints in case you get stuck. Below is a list of objectives for each story moment, suggesting what to work towards.\n\n\n\n1. Defeat the boss in Sector 3.\n\n\n2. Exit Sector 14 via Sector 15 (don't worry about filling in all digits in the sector, it will be a long time before you can fully clear any sector.)\n\n\n3. Collect the upgrade in Sector 11.\n\n\n4. Find a way into Sector 12.\n\n\n5. Find a way into Sector 10.\n\n\n6. Collect one of the upgrades in Sector 10.\n\n\n7. Defeat the boss in Sector 12.\n\n\n8. Collect the upgrade in Sector 12.\n\n\n9. Find a way into Sector 6.\n\n\n10. Find a way into Sector 9.\n\n\n11. Find a way into Sector 5.\n\n\n12. Find a way into Sector 7.\n\n\n13. Defeat the boss in Sector 9, then find a way into Sector 8.\n\n\n14. Defeat the boss in Sector 7, then return to Sector 14.\n\n\n15. Find a way into Sector 16.\n\n\n16. Find a way into Sector 15 from Sector 16.\n\n\n17. Collect all keys and unlock the gate in Sector 5.\n\n\n18. Find a way into Sector 1.\n\n\n19. Defeat the boss in Sector 16, then keep filling in wall cells, collect runes and, ultimately, find a way to break the blocks in Sector 10.\n\n\n20. Collect the upgrade in Sector 10.\n\n\n21. Find another way into Sector 15.\n\n\n22. Collect the upgrade in Sector 15.\n\n\n23. Find a way into Sector 1.\n\n\n24. Defeat the boss in Sector 1.\n\n\n25. Find a way into Sector 13.\n\n\n26. Collect the upgrade in Sector 13.\n\n\n27. Find a way into Sector 3.\n\n\n28. Find a way into Sector 4.\n\n\n29. Find a way into Sector 2.\n\n\n30. Collect the upgrade in Sector 2.\n\n\n31. Defeat the boss in Sector 4.\n\n\n32. Fill in the rest of the grid.\n\n\n??. Defeat boss 0.\n\n\n??. Fill in the learnt rules grid.",
-    "zhHans": "",
+    "zhHans": "如果遇到卡关，可以参考这份按剧情进展编排的提示清单。下面列出了每个剧情节点的目标，帮助你判断下一步该做什么。\n\n1. 击败第 3 区的首领。\n\n2. 由第 14 区经第 15 区离开。（不必急着填满整个区域：距离彻底清除任一区域还早得很。）\n\n3. 取得第 11 区的升级道具。\n\n4. 设法进入第 12 区。\n\n5. 设法进入第 10 区。\n\n6. 取得第 10 区的一项升级。\n\n7. 击败第 12 区的首领。\n\n8. 取得第 12 区的升级道具。\n\n9. 设法进入第 6 区。\n\n10. 设法进入第 9 区。\n\n11. 设法进入第 5 区。\n\n12. 设法进入第 7 区。\n\n13. 击败第 9 区首领，然后设法进入第 8 区。\n\n14. 击败第 7 区首领，然后返回第 14 区。\n\n15. 设法进入第 16 区。\n\n16. 从第 16 区设法进入第 15 区。\n\n17. 收集全部钥匙并打开第 5 区大门。\n\n18. 设法进入第 1 区。\n\n19. 击败第 16 区首领，继续填写墙壁格，收集符文，最后设法打破第 10 区的方块。\n\n20. 取得第 10 区的升级道具。\n\n21. 另找一条进入第 15 区的路线。\n\n22. 取得第 15 区的升级道具。\n\n23. 设法进入第 1 区。\n\n24. 击败第 1 区首领。\n\n25. 设法进入第 13 区。\n\n26. 取得第 13 区的升级道具。\n\n27. 设法进入第 3 区。\n\n28. 设法进入第 4 区。\n\n29. 设法进入第 2 区。\n\n30. 取得第 2 区的升级道具。\n\n31. 击败第 4 区的首领。\n\n32. 填满棋盘其余格子。\n\n??. 击败第 0 号首领。\n\n??. 填满已习得规则的清单格。",
     "gameIds": [
       "super-sudokoid-2"
     ],
