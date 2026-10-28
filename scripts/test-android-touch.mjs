@@ -115,6 +115,9 @@ try {
   assert.equal((await page.evaluate(()=>window.__calls)).filter(c=>c[0]==='digit').length,2,
     'No selection should not write a digit to the puzzle');
 
+  // Open the secondary commands before adding a hitbox that deliberately
+  // intercepts Playwright's ordinary locator.tap hit testing.
+  await more.tap();
   // Verify touch coordinates can bypass an unrelated transparent overlay.
   await page.evaluate(()=>{
     const block=document.createElement('div');
@@ -122,14 +125,13 @@ try {
     block.style.cssText='position:fixed;z-index:28000;left:0;bottom:0;width:100vw;height:120px;background:transparent';
     document.body.appendChild(block);
   });
-  // Redo lives under More after the redesign, including when a legacy
-  // transparent puzzle hitbox overlaps the bottom edge of the viewport.
-  await more.tap();
+  // Redo lives under More even when a legacy transparent puzzle hitbox
+  // overlaps the bottom edge of the viewport.
   const redo=action('redo');
   const rect=await redo.boundingBox();
   assert.ok(rect);
   await page.touchscreen.tap(rect.x+rect.width/2,rect.y+rect.height/2);
-  assert.equal(await count(redo),1,'Tap was intercepted by old layout');
+  assert.equal(await count(redo),2,'Tap was intercepted by old layout');
   await page.locator('#legacy-hitbox').evaluate(node=>node.remove());
   await more.tap();
   const previous=await count(undo);
