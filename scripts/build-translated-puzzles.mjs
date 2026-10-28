@@ -26,7 +26,26 @@ for(const game of catalog){
   if(!/^files\/[a-f0-9]{64}\.[a-z0-9]{1,8}$/.test(sourceFile)) {
     throw new Error('Refusing to alter unknown source file: '+sourceFile);
   }
-  const original=unpackScl(await readFile(join(root,sourceFile),'utf8'));
+  const packed=await readFile(join(root,sourceFile),'utf8');
+  let original;
+  try {
+    original=unpackScl(packed);
+  } catch (error) {
+    // Some SudokuMaker adventure puzzles use compact literal SCL, not JSON.
+    // Preserve every constraint/trigger byte; never eval third-party literals.
+    const decoded=packed.startsWith('scl')
+      ? LZString.decompressFromBase64(packed.slice(3).trim()) : null;
+    if (!game.id.startsWith('super-sudokoid-') || !decoded?.startsWith('{id:')) throw error;
+    const compressed='scl'+LZString.compressToBase64(decoded);
+    if (LZString.decompressFromBase64(compressed.slice(3))!==decoded)
+      throw new Error('Compact SCL roundtrip failed: '+game.id);
+    const target='translated/'+game.id+'.scl';
+    await writeFile(join(root,target),compressed,'utf8');
+    manifest.assets[api]={...entry,file:target,mime:'text/plain',
+      bytes:Buffer.byteLength(compressed),originalFile:sourceFile};
+    console.log(game.id+': compact main puzzle preserved exactly; Chinese UI/title pack available');
+    continue;
+  }
   const translated=JSON.parse(JSON.stringify(original));
   const local=JSON.parse(await readFile(
     'app/src/main/assets/i18n/games/'+game.id+'.zh-Hans.json','utf8'));

@@ -23,10 +23,13 @@ jobs:
         with:
           node-version: '22'
       - name: Check source and Simplified Chinese packs
+        env:
+          SUDOKU_ALLOW_PENDING_CAPTURE: ${{ contains(github.event.head_commit.message, '[capture-super-sudokoid]') }}
         run: |
           python3 scripts/check-assets.py
           node --check app/src/main/assets/translate.js
           node --check scripts/capture-offline.mjs
+          node --check scripts/capture-super-sudokoid.mjs
           node --check scripts/verify-offline.mjs
           node --check scripts/replay-offline.mjs
           node --check scripts/test-android-touch.mjs
@@ -47,7 +50,7 @@ jobs:
 
   build-cached-apk:
     # The repository carries a PUBLIC testing certificate; no Secrets needed.
-    if: github.event_name == 'push' || github.event_name == 'pull_request'
+    if: (github.event_name == 'push' && !contains(github.event.head_commit.message, '[capture-super-sudokoid]')) || github.event_name == 'pull_request'
     needs: source-checks
     runs-on: ubuntu-24.04
     steps:
@@ -101,6 +104,46 @@ jobs:
             app/build/outputs/apk/debug/signing-info.txt
           if-no-files-found: error
           retention-days: 14
+
+
+  capture-super-sudokoid:
+    # Explicit one-off capture of the two requested main puzzles. Preserve
+    # the 100+ Sudokuvania pages and all existing boss resources.
+    if: github.event_name == 'push' && contains(github.event.head_commit.message, '[capture-super-sudokoid]')
+    needs: source-checks
+    permissions:
+      contents: write
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright browser
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Capture Super Sudokoid 1/2 main puzzle pages and SCL
+        run: node scripts/capture-super-sudokoid.mjs
+      - name: Build Chinese pages and preserved main puzzle packages
+        run: |
+          npm run apply-translations
+          npm run build-html
+          npm run build-puzzle-zh
+          npm run build-boss-zh
+          npm run verify
+          node scripts/test-scl.mjs --require-translated
+          npm run extract-strings
+      - name: Commit newly captured offline resources
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f app/src/main/assets/offline/
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: bundle Super Sudokoid 1/2 main puzzles [offline snapshot]"
+            git push origin "HEAD:${{ github.ref_name }}"
+          fi
 
   personal-offline-apk:
     # A one-time explicit capture can also be requested by a commit marker.

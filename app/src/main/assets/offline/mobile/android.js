@@ -74,10 +74,12 @@
     // Grid coordinates from metadata are zero-based.
     const focusCol = entrance && Number.isFinite(+entrance.left)
       ? +entrance.left + Math.max(1, (+entrance.width || 6) * 0.5)
-      : 3;
+      : (/^\/(?:3g0qh2la4v|xfq6z64i66)$/.test(window.location.pathname)
+         ? (a.puzzle.cols || 9) / 2 : 3);
     const focusRow = entrance && Number.isFinite(+entrance.top)
       ? +entrance.top + Math.max(0.5, (+entrance.height || 6) * 0.5)
-      : 22;
+      : (/^\/(?:3g0qh2la4v|xfq6z64i66)$/.test(window.location.pathname)
+         ? (a.puzzle.rows || 9) / 2 : 22);
     const playfield = doc.querySelector('.game')?.getBoundingClientRect();
     if (!playfield || playfield.height < 120 || playfield.width < 120) return false;
     const usable = Math.min(playfield.width / (7 * cellSize),
@@ -99,7 +101,7 @@
   // rather than guessing which boss belongs to a tapped SVG cell.
   let regionOverlay = null;
   const mapStorageKey = 'android-sudokuvania-main-map';
-  const isMap = () => /^\/sudokuvania\/(?:digits-of-despair|lineage-of-logic(?:-plain)?)$/
+  const isMap = () => /^(?:\/sudokuvania\/(?:digits-of-despair|lineage-of-logic(?:-plain)?)|\/(?:3g0qh2la4v|xfq6z64i66))$/
     .test(window.location.pathname);
 
   function currentRules() {

@@ -127,9 +127,9 @@ async function replay(entry, original = false) {
     }
     await page.waitForFunction(() => {
       const app = (typeof Framework === 'undefined' ? null : Framework)?.app;
-      return !!app?.puzzle?.currentPuzzle && app.puzzle.rows >= 20 &&
-        app.puzzle.cols >= 20 && !!document.querySelector('#svgrenderer')?.getAttribute('viewBox');
-    }, null, {timeout:60000});
+      return !!app?.puzzle?.currentPuzzle && app.puzzle.rows >= minimum &&
+        app.puzzle.cols >= minimum && !!document.querySelector('#svgrenderer')?.getAttribute('viewBox');
+    }, entry.id.startsWith('super-sudokoid-') ? 9 : 20, {timeout:60000});
     report.passes.push('Puzzle data and SVG viewBox loaded');
 
     // Focus logic is intentionally asynchronous. Verify that a substantial

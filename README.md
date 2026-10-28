@@ -120,3 +120,14 @@ npm run test-boss-zh
 - [SudokuPad](https://sudokupad.app/) (Sven Neumann)
 - [Sudokuvania](https://sudokuvania.com/) (Skeptical Mario)
 - [Test SudokuPad at Home](https://github.com/ewenmcneill/testsudokupadathome) 的离线缓存思路（没有复制其源代码）
+
+## Super Sudokoid 1/2（超级数独机器人）
+
+已在内置游戏目录添加《最终传输》和《暗影反转》的简体中文入口，来源分别是
+https://sudokupad.app/3g0qh2la4v?setting-arrowsabovelines=1 和
+https://sudokupad.app/xfq6z64i66?setting-arrowsabovelines=1。
+Android 复用现有大地图**移动、拖拽、缩放、数字输入、角标和区域规则**控制台，并将两张地图视为主地图以便居中。
+
+第一阶段仅增量抓取这**两张主地图**的 HTML、运行资源和原始压缩 SCL，不会清除或重新抓取已有 Sudokuvania 主图及 Boss。针对性抓取仅在提交含有 `[capture-super-sudokoid]` 标记时触发，之后快照将提交到 `offline/`，普通提交继续使用缓存构建。
+
+新游戏独立词典位于 `i18n/games/super-sudokoid-{1,2}.zh-Hans.json`。目前提供中文目录名、页面标题、共用操作界面以及可维护的剧情/规则翻译入口；**新增剧情与特殊规则全文仍需基于抓取后的原文逐条翻译审校**。`npm run extract-strings` 会收集原文候选。对 compact SCL，构建必须保留原始题目数据，不能将紧凑格式错误地按 JSON 反序列化。主地图的支线和首领副本不属于此首批抓取范围。

@@ -17,13 +17,38 @@ const games=JSON.parse(await readFile('app/src/main/assets/games.json','utf8')).
 for(const game of games) {
   const api='https://sudokupad.app/api/puzzle'+new URL(game.url).pathname;
   const info=index.assets[api];
+  if (!info && process.env.SUDOKU_ALLOW_PENDING_CAPTURE === 'true' &&
+      game.id.startsWith('super-sudokoid-')) {
+    console.log(game.id+': pending targeted capture');
+    continue;
+  }
   assert.ok(info, 'Missing game API package '+game.id);
   const source=await readFile(join(root,info.originalFile||info.file),'utf8');
   assert.match(source,/^scl[A-Za-z0-9+/=]+$/);
-  const original=unpackScl(source);
-  assert.ok(Array.isArray(original.cells) && original.cells.length>=35, game.id+' rows');
-  assert.ok(original.cells[0].length>=40, game.id+' cols');
-  assert.ok(original.metadata.grids.length>=20, game.id+' grids');
+  let original;
+  try {
+    original=unpackScl(source);
+  } catch (error) {
+    const compact=LZString.decompressFromBase64(source.slice(3));
+    if (!game.id.startsWith('super-sudokoid-') || !compact?.startsWith('{id:')) throw error;
+    const recoded='scl'+LZString.compressToBase64(compact);
+    assert.equal(LZString.decompressFromBase64(recoded.slice(3)),compact);
+    if (process.argv.includes('--require-translated')) {
+      assert.equal(info.file,'translated/'+game.id+'.scl');
+    }
+    if (info.file.startsWith('translated/')) {
+      const localized=await readFile(join(root,info.file),'utf8');
+      assert.equal(LZString.decompressFromBase64(localized.slice(3)),compact,
+        game.id+' compact source must remain unchanged until reviewed translation');
+    }
+    console.log(game.id+': compact main SCL decoded and preserved');
+    continue;
+  }
+  const minimum=game.id.startsWith('super-sudokoid-') ? 9 : 35;
+  assert.ok(Array.isArray(original.cells) && original.cells.length>=minimum, game.id+' rows');
+  assert.ok(original.cells[0].length>=(minimum===9?9:40), game.id+' cols');
+  if (!game.id.startsWith('super-sudokoid-'))
+    assert.ok(original.metadata.grids.length>=20, game.id+' grids');
 
   // Rebuild the puzzle with SudokuPad's exact encoding format.
   const output='scl'+LZString.compressToBase64(JSON.stringify(original));

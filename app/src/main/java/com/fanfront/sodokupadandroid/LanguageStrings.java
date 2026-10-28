@@ -29,7 +29,7 @@ final class LanguageStrings {
         TEXT.put("loadError", "资源加载失败，请检查离线包是否完整。");
         TEXT.put("permission", "无需联网。存档保存在本机，请勿清除应用数据。");
         TEXT.put("own", "我的谜题");
-        TEXT.put("builtIn", "恶魔城数独");
+        TEXT.put("builtIn", "冒险数独游戏");
         TEXT.put("translateNote", "本指南已翻译，但游戏内大量剧情和规则尚未翻译。");
     }
 
