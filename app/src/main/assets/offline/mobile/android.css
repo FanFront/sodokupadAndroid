@@ -248,3 +248,134 @@ html.android-port #android-gamepad button[data-android-action] {
 #android-region-overlay .gridrules {
   margin: 0;
 }
+
+
+/* Touch-first control pad: one focused input surface instead of 29 tiny
+   equally weighted controls. All sizes are CSS pixels (Android WebView dp). */
+#android-gamepad {
+  box-sizing: border-box;
+  width: 100%;
+  gap: 6px;
+  padding: 9px max(8px, env(safe-area-inset-right))
+           calc(8px + env(safe-area-inset-bottom))
+           max(8px, env(safe-area-inset-left));
+  background: linear-gradient(180deg, #1b2940 0%, #111a2c 100%);
+  border-top: 1px solid #60728e;
+  border-radius: 17px 17px 0 0;
+  box-shadow: 0 -5px 22px rgba(5,10,20,.38);
+  -webkit-user-select: none;
+  user-select: none;
+}
+#android-gamepad .android-tools,
+#android-gamepad .android-numbers,
+#android-gamepad .android-actions,
+#android-gamepad .android-more-actions {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+#android-gamepad .android-tools {
+  grid-template-columns: repeat(6, minmax(0,1fr));
+}
+#android-gamepad .android-numbers {
+  grid-template-columns: repeat(5, minmax(0,1fr));
+  grid-template-rows: repeat(2,minmax(53px,auto));
+}
+#android-gamepad .android-actions {
+  grid-template-columns: repeat(7, minmax(0,1fr));
+}
+#android-gamepad .android-more-actions {
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  padding-top: 6px;
+  border-top: 1px solid rgba(156,175,209,.23);
+}
+#android-gamepad .android-more-actions[hidden] {
+  display: none !important;
+}
+#android-gamepad button {
+  box-sizing: border-box;
+  min-height: 44px;
+  min-width: 0;
+  margin: 0;
+  padding: 5px 3px;
+  border-radius: 11px;
+  border: 1px solid #465b7b;
+  background: #283952;
+  color: #f2f6ff;
+  font: 650 clamp(10px,2.9vw,14px)/1.16 system-ui,'Noto Sans SC',sans-serif;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+  overflow-wrap: normal;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+#android-gamepad .android-tools button {
+  min-height: 42px;
+  font-size: clamp(11px,3.05vw,14px);
+  background: #263750;
+}
+#android-gamepad .android-numbers button {
+  min-height: 53px;
+  border-color: #64799b;
+  background: #394f70;
+  font-size: clamp(22px,6vw,29px);
+  font-weight: 750;
+  line-height: 1;
+}
+#android-gamepad .android-actions button {
+  min-height: 46px;
+  font-size: clamp(10px,2.75vw,13px);
+  background: #283b57;
+}
+#android-gamepad .android-more-actions button {
+  min-height: 44px;
+  background: #243751;
+}
+#android-gamepad button[data-android-action="erase"] {
+  color: #ffdee1;
+  border-color: #94616b;
+}
+#android-gamepad button[data-android-action="pan"],
+#android-gamepad button[data-android-action="region"],
+#android-gamepad button[data-android-action="boss"] {
+  border-color: #728cae;
+}
+#android-gamepad button[data-android-action="more"][aria-expanded="true"],
+#android-gamepad button[aria-pressed="true"] {
+  background: #216d67;
+  border-color: #65d9c4;
+  color: #fff;
+  box-shadow: inset 0 0 0 1px rgba(126,250,219,.16);
+}
+#android-gamepad button.android-pressing,
+#android-gamepad button.android-tapped,
+#android-gamepad button:active {
+  background: #4879ac !important;
+  border-color: #b0d2f5;
+}
+#android-gamepad button:focus-visible {
+  outline: 3px solid #ffd984;
+  outline-offset: 1px;
+}
+#android-gamepad #android-status {
+  bottom: calc(100% + 6px);
+  max-width: calc(100vw - 32px);
+  right: 12px;
+  padding: 9px 12px;
+  font-size: 13px;
+  line-height: 1.4;
+  box-shadow: 0 4px 14px rgba(0,0,0,.3);
+}
+@media (max-width: 350px) {
+  #android-gamepad {gap: 4px; padding-left: 5px; padding-right: 5px}
+  #android-gamepad .android-tools,
+  #android-gamepad .android-actions,
+  #android-gamepad .android-numbers {gap: 3px}
+  #android-gamepad .android-actions button {font-size: 10px; padding: 4px 1px}
+}
+@media (max-height: 620px) {
+  #android-gamepad {gap: 4px; padding-top: 4px; padding-bottom: calc(4px + env(safe-area-inset-bottom))}
+  #android-gamepad .android-numbers {grid-template-rows: repeat(2, minmax(46px,auto))}
+  #android-gamepad .android-numbers button {min-height: 46px}
+  #android-gamepad .android-tools button,
+  #android-gamepad .android-actions button {min-height: 42px}
+}
