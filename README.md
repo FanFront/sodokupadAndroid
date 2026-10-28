@@ -71,6 +71,26 @@ gradle :app:assembleDebug
 
 **版权与分发：** 捕获的首领/敌人题目是第三方创作，本工作流会自动提交到仓库。仓库当前为公开仓库时，资源会对外公开。运行任何捕获前请确认所需权限并优先使用私有仓库。
 
+## 首领谜题完整简体中文化
+
+首领副本的剧情、规则、通关文字不是主地图的文本字段。两部游戏共 20 个已导入的首领谜题，现在分别提供可维护的中文翻译，保存在 `app/src/main/assets/i18n/bosses/<首领ID>.zh-Hans.json`，包含 `title`、`rules`、`msgcorrect`。译文保留所有数学规则、关卡后续链接和首领格答案数字。
+
+离线构建顺序：
+
+```sh
+npm run build-html
+npm run build-puzzle-zh
+npm run build-boss-zh
+npm run verify
+npm run test-boss-zh
+```
+
+其中 `build-boss-zh` 从**原始首领 SCL**读取数据，分别处理 Sudokuvania 1 的标准 JSON 压缩包和 Sudokuvania 2 的 SudokuMaker 紧凑字面量压缩包。**不会使用 eval** 处理第三方题目数据；只替换标题（原数据中有标题时）、规则和通关剧情，再压缩成新的 `translated/boss-*.scl`。测试会把翻译字段还原，并逐字对比未修改的全部数独数据，检查题目答案和其他数独规则没有变化。手机页面标题也以中文版生成。
+
+`npm run build-html` 会始终从 `originalFile` 重建独立副本，解决重复构建时新词典无法生效的问题。正常推送已自动运行以上流程并生成新的 APK，无需重新抓取第三方谜题。
+
+注意：二代首领有些原始胜利剧情包含继续前进和简化版的链接；汉化保留网址原样。尚未打包的分支依然不能离线进入，并非汉化失败。
+
 ## 已知限制
 
 - Playwright 会从压缩题目数据中提取并发现潜在首领链接，但它仍只能捕获实际访问到的相关 SudokuPad 谜题页面和资源。还没出现的 Boss 游戏、分支、媒体或特殊 API 请求可能缺失，遇到缺少资源时应用会拒绝访问。请按 `offline/capture-report.json` 的提示补齐，**不要认为当前的首次抓取等于完整 100% 离线镜像**。
