@@ -2233,7 +2233,7 @@
     "https://sudokupad.app/3g0qh2la4v?setting-arrowsabovelines=1&setting-largepuzzle=1": {
       "file": "pages/super-sudokoid-1.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19348
+      "bytes": 19355
     },
     "https://sudokupad.app/api/puzzle/3g0qh2la4v": {
       "file": "translated/super-sudokoid-1.scl",
@@ -2264,7 +2264,7 @@
     "https://sudokupad.app/xfq6z64i66?setting-arrowsabovelines=1&setting-largepuzzle=1": {
       "file": "pages/super-sudokoid-2.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19344
+      "bytes": 19351
     },
     "https://sudokupad.app/api/puzzle/xfq6z64i66": {
       "file": "translated/super-sudokoid-2.scl",

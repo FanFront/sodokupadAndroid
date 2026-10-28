@@ -14,6 +14,12 @@ if (index.format !== 1 || keys.length < 4) throw new Error('No usable capture');
 for (const game of catalog) {
   if (!index.assets[game.url]) throw new Error('Missing game entrypoint: ' + game.url);
   if (!index.entrypoints.some(e=>e.id===game.id)) throw new Error('No catalog entry: ' + game.id);
+  if (game.id.startsWith('super-sudokoid-')) {
+    const page = index.assets[game.url];
+    if (!page.file.endsWith('.zh-Hans.html')) throw new Error('Missing Chinese page: '+game.id);
+    const html = await readFile(join(root,page.file),'utf8');
+    if (!html.includes(game.title)) throw new Error('Unlocalized Super Sudokoid HTML title: '+game.id);
+  }
 }
 let bytes=0;
 for (const [url,info] of Object.entries(index.assets)) {
@@ -36,6 +42,10 @@ if (!expectedBosses.length) {
 const candidates = JSON.parse(await readFile(join(root,'translation-candidates.json'),'utf8'));
 const sourceBosses = new Set();
 for (const item of candidates) {
+  // Super Sudokoid bosses are intentionally outside the first main-map-only
+  // capture. Do not turn its new discovery candidates into Sudokuvania bosses.
+  if (!(item.gameIds || []).some(id =>
+      id === 'digits-of-despair' || id === 'lineage-of-logic')) continue;
   for (const match of String(item.english || '').matchAll(/\[([^\]]+)\]\((https:\/\/sudokupad\.app\/[^)\s]+)\)/g)) {
     if (/boss|首领/i.test(match[1]) || /\/boss-/i.test(match[2])) sourceBosses.add(match[2]);
   }

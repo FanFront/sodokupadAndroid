@@ -92,6 +92,12 @@ for(const game of games) {
   const combined={...common,...specific};
   const doc=parse(original);
   put(doc,combined);
+  if (game.id.startsWith('super-sudokoid-')) {
+    // The original <title> also contains the SudokuPad version and author;
+    // its full string does not exactly match the localized dictionary key.
+    const title=findElement(doc,'title');
+    if(title?.childNodes?.[0]) title.childNodes[0].value=game.title+' — SudokuPad';
+  }
   stripWebOnlyContent(doc);
   const htmlTag=findElement(doc,'html');
   if(htmlTag) {
