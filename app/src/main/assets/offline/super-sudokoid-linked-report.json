@@ -1,0 +1,122 @@
+{
+  "capturedAt": "2026-10-28T02:39:16.174Z",
+  "linked": 22,
+  "byGame": {
+    "super-sudokoid-1": 12,
+    "super-sudokoid-2": 10
+  },
+  "missing": [],
+  "errors": [],
+  "items": [
+    {
+      "url": "https://sudokupad.app/70qpd43i45",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/f4c9vuptqj",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/gnp7aga2sx",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/hf8r43jwsj",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/jo12qmyc5v",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/kt6bb0wm0k",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/lzer9x4edb",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/n4c0dem40c",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/qfnpbofkiq",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/swxudk82v1",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/u6cj0y3fzy",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/y4o6cjk9ao",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/1hh6q5xl6l",
+      "gameId": "super-sudokoid-2",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/64c4lkb5ss",
+      "gameId": "super-sudokoid-2",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/7asln8p2u1",
+      "gameId": "super-sudokoid-2",
+      "kind": "linked"
+    },
+    {
+      "url": "https://sudokupad.app/80kqa7jo0h",
+      "gameId": "super-sudokoid-2",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/bpij5pdi3x",
+      "gameId": "super-sudokoid-2",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/dxr2zdfldv",
+      "gameId": "super-sudokoid-2",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/dz1iu0r3tl",
+      "gameId": "super-sudokoid-2",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/gidcd5jrz7",
+      "gameId": "super-sudokoid-2",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/hfyjv8jqr5",
+      "gameId": "super-sudokoid-2",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/vaz2rx345r",
+      "gameId": "super-sudokoid-2",
+      "kind": "linked"
+    }
+  ]
+}

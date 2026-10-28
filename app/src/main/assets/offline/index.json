@@ -2228,7 +2228,7 @@
     "https://sudokupad.app/__android/android.js": {
       "file": "mobile/android.js",
       "mime": "application/javascript",
-      "bytes": 23400
+      "bytes": 24053
     },
     "https://sudokupad.app/3g0qh2la4v?setting-arrowsabovelines=1&setting-largepuzzle=1": {
       "file": "pages/super-sudokoid-1.zh-Hans.html",
@@ -2238,7 +2238,7 @@
     "https://sudokupad.app/api/puzzle/3g0qh2la4v": {
       "file": "translated/super-sudokoid-1.scl",
       "mime": "text/plain",
-      "bytes": 105047,
+      "bytes": 105071,
       "originalFile": "files/05b68f7c45b52290d3964562cd2c19476b7e1c0682469522b46a875dc72399bf.txt"
     },
     "https://sudokupad.app/assets/twemoji/svg/2b50.svg": {
@@ -2286,6 +2286,263 @@
       "file": "files/0f3ec5e1002c2e88b6b2b8ba2c7e021af5b18bf2b1118dcade1a1038c24fcde9.svg",
       "mime": "image/svg+xml",
       "bytes": 1514
+    },
+    "https://sudokupad.app/f4c9vuptqj": {
+      "file": "pages/linked-e667df6d8ce32748.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19369,
+      "originalFile": "files/e667df6d8ce327489bdfc1d63b29cf35c556914321f85dc4460c20b13c6c377e.html"
+    },
+    "https://sudokupad.app/api/puzzle/f4c9vuptqj": {
+      "file": "files/814875884c52c626e15cd0900648fb9b51477afe07255bbaaea46904ee68676b.txt",
+      "mime": "text/plain",
+      "bytes": 3359
+    },
+    "https://sudokupad.app/u6cj0y3fzy": {
+      "file": "pages/linked-f5d95f95f798be3d.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19365,
+      "originalFile": "files/f5d95f95f798be3d115a3119145b7fd4d8d382fc5a4c5cdf1860c6ccfd43b67a.html"
+    },
+    "https://sudokupad.app/api/puzzle/u6cj0y3fzy": {
+      "file": "files/bfab4c15ae04b70ab630453bf6f97d565049e7ab455dd724403f7d368a75d2af.txt",
+      "mime": "text/plain",
+      "bytes": 2635
+    },
+    "https://sudokupad.app/swxudk82v1": {
+      "file": "pages/linked-4eb327c47f2aebc8.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19370,
+      "originalFile": "files/4eb327c47f2aebc88e49749304f0222d9c0c153473295746cb1f342a4f5a00bb.html"
+    },
+    "https://sudokupad.app/api/puzzle/swxudk82v1": {
+      "file": "files/405579b208e37ebdc455d22eba112885485ff4848c51fdcd8f6d898699659483.txt",
+      "mime": "text/plain",
+      "bytes": 2947
+    },
+    "https://sudokupad.app/gnp7aga2sx": {
+      "file": "pages/linked-17d31ec88af5a28e.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19369,
+      "originalFile": "files/17d31ec88af5a28e570cb891ca8ed78524fe0340603ba08c67d31a2d6de9229a.html"
+    },
+    "https://sudokupad.app/api/puzzle/gnp7aga2sx": {
+      "file": "files/a658a16b29c1457096bb40fe0c786bc5dc3b5b8123f09140551531bd591e14fb.txt",
+      "mime": "text/plain",
+      "bytes": 1971
+    },
+    "https://sudokupad.app/y4o6cjk9ao": {
+      "file": "pages/linked-1235f27c9d86526d.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19374,
+      "originalFile": "files/1235f27c9d86526d1aafa2789590c87eb99d3d8631bc546989bd0867fe8a9aa9.html"
+    },
+    "https://sudokupad.app/api/puzzle/y4o6cjk9ao": {
+      "file": "files/7cff94e479024cff1b4607bc29d1e6de90384613b3dcfe2506ccefd04be56959.txt",
+      "mime": "text/plain",
+      "bytes": 2475
+    },
+    "https://sudokupad.app/70qpd43i45": {
+      "file": "pages/linked-b4e0c8785452526a.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19368,
+      "originalFile": "files/b4e0c8785452526afe247c40d05d5643ca80a5feccbca47ae32c52b162e77de1.html"
+    },
+    "https://sudokupad.app/api/puzzle/70qpd43i45": {
+      "file": "files/ac5d23652d81edc365b0a18f00116bd3cf303c08d41379b038cde2d456862274.txt",
+      "mime": "text/plain",
+      "bytes": 2163
+    },
+    "https://sudokupad.app/kt6bb0wm0k": {
+      "file": "pages/linked-b77980c9a976eaca.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19370,
+      "originalFile": "files/b77980c9a976eaca5f28ca89cb0101f335bb71e1e8995ca1462d81c2a9d39107.html"
+    },
+    "https://sudokupad.app/api/puzzle/kt6bb0wm0k": {
+      "file": "files/6648e57c87d4bbf3c8536ac2d2441194303f8e7d868126797a09b72783fd7ebe.txt",
+      "mime": "text/plain",
+      "bytes": 2891
+    },
+    "https://sudokupad.app/lzer9x4edb": {
+      "file": "pages/linked-cef7d4cb69bb008b.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19362,
+      "originalFile": "files/cef7d4cb69bb008bfedecf8068ee97ff7e0d455874f8f416d0e199d19704202c.html"
+    },
+    "https://sudokupad.app/api/puzzle/lzer9x4edb": {
+      "file": "files/a974adf320e338c6b5e4ebd7996eb839aa26a4704d3b71cb37034a0fd953baad.txt",
+      "mime": "text/plain",
+      "bytes": 2439
+    },
+    "https://sudokupad.app/qfnpbofkiq": {
+      "file": "pages/linked-cb428aa0c60e269d.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19371,
+      "originalFile": "files/cb428aa0c60e269dbb828407a8d8b02369214a854213a6e42613ae8c68287973.html"
+    },
+    "https://sudokupad.app/api/puzzle/qfnpbofkiq": {
+      "file": "files/d4f15f10d21c8d910f2105b36aa5aeecf360f2dfd37043c0cd8a87f9d43f8d77.txt",
+      "mime": "text/plain",
+      "bytes": 3363
+    },
+    "https://sudokupad.app/hf8r43jwsj": {
+      "file": "pages/linked-d10e8fe32feaed0d.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19367,
+      "originalFile": "files/d10e8fe32feaed0d42084f0e85fa7eac33f0678b76bd61973ed3898842ec2cb1.html"
+    },
+    "https://sudokupad.app/api/puzzle/hf8r43jwsj": {
+      "file": "files/b7b09e6e583b4ac91de0b56a7a94c7f954edf5be24d957ad514b36bf6a667bd9.txt",
+      "mime": "text/plain",
+      "bytes": 1583
+    },
+    "https://sudokupad.app/jo12qmyc5v": {
+      "file": "pages/linked-1e80096310cd55c8.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19364,
+      "originalFile": "files/1e80096310cd55c8a8ab0ce998fc1fd494b450ebe208980afc03f54c72a243b1.html"
+    },
+    "https://sudokupad.app/api/puzzle/jo12qmyc5v": {
+      "file": "files/9526c25cf190fdf9cf5855a9e466d1d8666ffc3bce6c4c913065d828a7f709ad.txt",
+      "mime": "text/plain",
+      "bytes": 3903
+    },
+    "https://sudokupad.app/n4c0dem40c": {
+      "file": "pages/linked-677a135915be00ad.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19375,
+      "originalFile": "files/677a135915be00ad87c0325feea7508d3ef34e21f22706523d7006755faab99c.html"
+    },
+    "https://sudokupad.app/api/puzzle/n4c0dem40c": {
+      "file": "files/032f20a84443cdc21f343268cd31a1158b0948d2bbb39d0fb644bde3c945453b.txt",
+      "mime": "text/plain",
+      "bytes": 6683
+    },
+    "https://sudokupad.app/gidcd5jrz7": {
+      "file": "pages/linked-10c439c88d818024.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19374,
+      "originalFile": "files/10c439c88d81802412d939b0b835d35d7325cbb306eac3716e327cf71235be42.html"
+    },
+    "https://sudokupad.app/api/puzzle/gidcd5jrz7": {
+      "file": "files/86f382c577a726b371196e430b427b2079530fcbd33c9ebd72b4f3b265cd6700.txt",
+      "mime": "text/plain",
+      "bytes": 4003
+    },
+    "https://sudokupad.app/bpij5pdi3x": {
+      "file": "pages/linked-7590830f62768584.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19373,
+      "originalFile": "files/7590830f62768584bf035c764019fa8958ef0880d01bf3a999fd287d88ab8eee.html"
+    },
+    "https://sudokupad.app/api/puzzle/bpij5pdi3x": {
+      "file": "files/a61ad5dcaea12c5a06b3e12c392088785f3ed1b8afbd98e4489048b27354d4be.txt",
+      "mime": "text/plain",
+      "bytes": 3711
+    },
+    "https://sudokupad.app/hfyjv8jqr5": {
+      "file": "pages/linked-1b92c833494149c2.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19369,
+      "originalFile": "files/1b92c833494149c2b1e3b1a7282d5463894492266f64775f434f5493217db0fd.html"
+    },
+    "https://sudokupad.app/api/puzzle/hfyjv8jqr5": {
+      "file": "files/08594693c70ab702575b94cd92fdc5f15b16f009d259d737eec76e3280e54c6e.txt",
+      "mime": "text/plain",
+      "bytes": 3947
+    },
+    "https://sudokupad.app/64c4lkb5ss": {
+      "file": "pages/linked-b4fb01af01649947.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19371,
+      "originalFile": "files/b4fb01af016499479a0d0ba80ab1c6a25564554c0cecc198f57846a2498e2596.html"
+    },
+    "https://sudokupad.app/api/puzzle/64c4lkb5ss": {
+      "file": "files/424b1c0632b7296e69ed49258e1853f17d99aabb935af60e2830b2e295e78d6b.txt",
+      "mime": "text/plain",
+      "bytes": 3671
+    },
+    "https://sudokupad.app/80kqa7jo0h": {
+      "file": "pages/linked-9bfb78eecd687b85.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19370,
+      "originalFile": "files/9bfb78eecd687b854f77f322085fc3372daa6b7ded981b566f6b801f5c80e92c.html"
+    },
+    "https://sudokupad.app/api/puzzle/80kqa7jo0h": {
+      "file": "files/b94431cca154c62aee815ef96a4b9c387b2ad37189a721ed3f6b9830b256808b.txt",
+      "mime": "text/plain",
+      "bytes": 7979
+    },
+    "https://sudokupad.app/1hh6q5xl6l": {
+      "file": "pages/linked-d25cd259cc87c328.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19363,
+      "originalFile": "files/d25cd259cc87c328cde0bf986dbdc1d9a9725884e2b72ad3ea0afd24acfe9c57.html"
+    },
+    "https://sudokupad.app/api/puzzle/1hh6q5xl6l": {
+      "file": "files/4bd44a8f3dec456bf13c32ee94fef37f300e75aa32c178b554b8d5f66a320e89.txt",
+      "mime": "text/plain",
+      "bytes": 3331
+    },
+    "https://sudokupad.app/dxr2zdfldv": {
+      "file": "pages/linked-1723ef31324d1f18.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19368,
+      "originalFile": "files/1723ef31324d1f1856526ce2958affcb78aea57d8c552decd1c4aa3a7160ad19.html"
+    },
+    "https://sudokupad.app/api/puzzle/dxr2zdfldv": {
+      "file": "files/1bb631e85171f0964fda8741e16c9f7c4dac5cf78c4e47dc86466c307bdaa859.txt",
+      "mime": "text/plain",
+      "bytes": 3191
+    },
+    "https://sudokupad.app/dz1iu0r3tl": {
+      "file": "pages/linked-4fe60eabd1afd654.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19368,
+      "originalFile": "files/4fe60eabd1afd654f23e9cbc5b3ea65449c5f0acff6849e6b5048934023846f7.html"
+    },
+    "https://sudokupad.app/api/puzzle/dz1iu0r3tl": {
+      "file": "files/506630fd61ceeb97d4a2094ea85b50aa9778315fb4eb135bb27dff67f539707d.txt",
+      "mime": "text/plain",
+      "bytes": 6375
+    },
+    "https://sudokupad.app/7asln8p2u1": {
+      "file": "pages/linked-83fde39b8a84407d.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19378,
+      "originalFile": "files/83fde39b8a84407ddfff44061cb73bf8b9a91259e74babcd8c93a143d2b15a5a.html"
+    },
+    "https://sudokupad.app/api/puzzle/7asln8p2u1": {
+      "file": "files/7ea20d12092a03e4ea810963ebc0cf0fc4b4135d2dca85ccc9086ceb6a882204.txt",
+      "mime": "text/plain",
+      "bytes": 2323
+    },
+    "https://sudokupad.app/vaz2rx345r": {
+      "file": "pages/linked-744a1096f4e0a008.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19373,
+      "originalFile": "files/744a1096f4e0a008ce95172440f829a3de031e9f8b7e6309e8b25e2831dca46a.html"
+    },
+    "https://sudokupad.app/api/puzzle/vaz2rx345r": {
+      "file": "files/ba5430cf6dc1ac277e9e1c7a2ef97bc045594a11aeb579682d4b2ae8b1c9bcc3.txt",
+      "mime": "text/plain",
+      "bytes": 6479
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f52b.svg": {
+      "file": "files/7757ffa5f54b92469bd0e260d63fd853ec58973df7055fd888b5c3725b740185.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1876
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f680.svg": {
+      "file": "files/5cd41ddf16b48897f0744d8426206fb0a935748a1e56e30a5cf4914291b218dc.svg",
+      "mime": "image/svg+xml",
+      "bytes": 677
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f31f.svg": {
+      "file": "files/0b142953aa2711b3c13cf9883877c7138e3b33d9525fdb5abc8c3b51d9c72427.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1288
     }
   },
   "superSudokoidMainCapture": {
@@ -2296,5 +2553,123 @@
     ],
     "scope": "main puzzles only; side puzzles not yet discovered",
     "newlySaved": 11
+  },
+  "superSudokoidLinkedPuzzles": [
+    {
+      "url": "https://sudokupad.app/70qpd43i45",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/f4c9vuptqj",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/gnp7aga2sx",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/hf8r43jwsj",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/jo12qmyc5v",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/kt6bb0wm0k",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/lzer9x4edb",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/n4c0dem40c",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/qfnpbofkiq",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/swxudk82v1",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/u6cj0y3fzy",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/y4o6cjk9ao",
+      "gameId": "super-sudokoid-1",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/1hh6q5xl6l",
+      "gameId": "super-sudokoid-2",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/64c4lkb5ss",
+      "gameId": "super-sudokoid-2",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/7asln8p2u1",
+      "gameId": "super-sudokoid-2",
+      "kind": "linked"
+    },
+    {
+      "url": "https://sudokupad.app/80kqa7jo0h",
+      "gameId": "super-sudokoid-2",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/bpij5pdi3x",
+      "gameId": "super-sudokoid-2",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/dxr2zdfldv",
+      "gameId": "super-sudokoid-2",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/dz1iu0r3tl",
+      "gameId": "super-sudokoid-2",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/gidcd5jrz7",
+      "gameId": "super-sudokoid-2",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/hfyjv8jqr5",
+      "gameId": "super-sudokoid-2",
+      "kind": "boss"
+    },
+    {
+      "url": "https://sudokupad.app/vaz2rx345r",
+      "gameId": "super-sudokoid-2",
+      "kind": "linked"
+    }
+  ],
+  "superSudokoidLinkedCapture": {
+    "capturedAt": "2026-10-28T02:39:16.175Z",
+    "count": 22,
+    "newFiles": 47,
+    "scope": "authored side and boss links and linked SCL metadata"
   }
 }

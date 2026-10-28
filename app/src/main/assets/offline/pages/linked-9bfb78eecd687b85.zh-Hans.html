@@ -1,0 +1,367 @@
+<!DOCTYPE html><html lang="zh-Hans"><head>
+		<meta charset="utf-8">
+		<title>超级数独机器人 · 首领谜题 — Refugee Rescue by The M (Sven's SudokuPad v0.611.0)</title>
+		<meta name="author" content="Sven Neumann, sven@svencodes.com">
+		<meta name="copyright" content="Sven Neumann, sven@svencodes.com">
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no, minimal-ui">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="norton-safeweb-site-verification" content="0mw8o5jz2qb45b9mszz1wr107nbovrwe4c14uw1p61ypqvibs0r0xss0wcmxi98yub-xr2hop0615kow4fjbepme8400w6627jpgkvy5btwbb4q85ita-6f02tlf5e-a">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="chrome" content="nointentdetection">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="180x180" href="/apple-touch-icon.png">
+		<style>
+			body { background-color: #121212; } /* Avoid flash-of-white */
+		</style>
+		<!--BUNDLE[/sudokupad.bundle.css]-->
+		<link rel="stylesheet" href="/style.css?v=0.611.0">
+		<link rel="stylesheet" href="/sudokupad-colors.css?v=0.611.0">
+		<!--/BUNDLE[/sudokupad.bundle.css]-->
+		<script>
+			window.dataLayer=window.dataLayer??[];
+			window.gtag=window.gtag??function gtag(){dataLayer.push(arguments)};
+			window.plausible=Object.assign((...args)=>window.plausible.q.push(args),{q:[]});
+		</script>
+		
+		<script>
+			if(document.location.hostname === 'app.crackingthecryptic.com') {
+				let script = Object.assign(document.createElement('script'), {id: 'Cookiebot', type: 'text/javascript', src: 'https://consent.cookiebot.com/uc.js'});
+				Object.assign(script.dataset, {'cbid': 'cd82f36e-750f-4ecd-aa4f-58712fc543bc', 'blockingmode': 'auto'});
+				document.querySelector('head').appendChild(script);
+			}
+			// Work around mobile scaling issues
+			// initial-scale = 1 / devicePixelRatio
+			document.querySelector('meta[name="viewport"]').getAttribute('content').replace(/initial-scale=([^,]+)/, 'initial-scale='+(1 / window.devicePixelRatio).toFixed(4));
+		</script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&amp;family=Roboto:wght@400;500&amp;display=swap" rel="stylesheet" crossorigin="anonymous">
+		<script name="www-roboto" nonce="Lp7j_riowsdovYBucQ_EbQ">
+			if (document.fonts && document.fonts.load) {
+				document.fonts.load('400 16px Roboto', '');
+				document.fonts.load('500 16px Roboto', '');
+				document.fonts.load('400 24px Lobster', '');
+			}
+		</script>
+
+	<link rel="stylesheet" href="/__android/android.css"></head>
+	<body>
+
+		<!--BUNDLE[/puzpatcher.bundle.js]-->
+		<!--
+		<script src="/fpuzzlesdecoder.js?v=0.611.0"></script>
+		<script src="/puzzlezipper.js?v=0.611.0"></script>
+		<script src="/lzipper.js?v=0.611.0"></script>
+		<script src="/puzpatcher.js?v=0.611.0"></script>
+		-->
+		<!--/BUNDLE[/puzpatcher.bundle.js]-->
+		<script src="/puzpatcher.bundle.js?v=0.611.0"></script>
+		
+		<div class="app">
+
+			<div class="topbar">
+				<div class="menu">
+					<button class="appmenu" id="appmenubtn">
+						<div class="icon">
+							<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z"></path></svg>
+						</div>
+					</button>
+				</div>
+				<div id="sudokupad_toplinks">
+					<script>
+						function getPuzzleId(puzzleId = '') {
+							const rePuzzleId = /^([0-9A-Za-z]+|classic(.*)|.+)$/;
+							var urlQueryPuzzleId = document.location.search.replace(/^\?.*puzzleid=([^&]+).*|.*/, '$1');
+							var urlPathPuzzleId = (document.location.pathname.match(/^\/(?:sudoku\/)?(.+)$/) || [])[1];
+							if(typeof puzzleId === 'string' && puzzleId !== '') {
+								//Reading puzzleId from pre-set variable: puzzleid = <puzzleId>
+							}
+							else if(typeof urlQueryPuzzleId === 'string' && urlQueryPuzzleId !== '') {
+								// Reading puzzleId from url query string: ?puzzleid=<puzzleId>
+								puzzleId = urlQueryPuzzleId;
+							}
+							else if(typeof urlPathPuzzleId === 'string' && urlPathPuzzleId !== '') {
+								// Reading puzzleId from url path: /sudoku/<puzzleId>
+								puzzleId = urlPathPuzzleId;
+							}
+							puzzleId = (puzzleId.match(rePuzzleId) || [])[0];
+							return puzzleId;
+						}
+						const saveDecodeURIComponent = (str, dec) => (dec = decodeURIComponent(str), dec.length < str.length ? dec : str);
+						const reFormat = /^(ctc|scf|fpuz(?:zles)?|classic)/;
+						async function getSudokuPadUrl() {
+							const {saveDecodeURIComponent, cleanPuzzlePackage} = loadFPuzzle;
+							let puzzlePackage = getPuzzleId();
+							if('undefined' !== typeof PuzzleLoader) puzzlePackage = await PuzzleLoader.fetchPuzzle(puzzlePackage);
+							puzzlePackage = patchFpuz(puzzlePackage);
+							puzzlePackage = patchSCLPuzzle(puzzlePackage);
+							puzzlePackage = puzzlePackage.replace(/^sclN4/, 'ctcN4');
+							return `https://sudokupad.svencodes.com/${reFormat.test(puzzlePackage) ? 'puzzle' : 'sudoku'}/${saveDecodeURIComponent(puzzlePackage)}`;
+						}
+						async function openSudokuPad(event) {
+							let url = await getSudokuPadUrl();
+							window.open(url, '_blank');
+							if(event) event.preventDefault();
+							return false;
+						}
+						async function captureSudokuPadLink() {
+							let url = await getSudokuPadUrl();
+							let openUrl = () => document.location = url;
+							let gtagArgs = ['event', 'outbound', 'sudokupad', url, {
+								transport: 'beacon',
+								hitCallback: openUrl,
+								eventCallback: openUrl,
+								hitCallbackFail: openUrl,
+							}];
+							if(typeof ga === 'function') ga('send', ...gtagArgs);
+							else gtag(...gtagArgs);
+							setTimeout(openUrl, 100);
+						}
+					</script>
+					<a id="sudokupad_openwith" href="#" onclick="return openSudokuPad();" title="Sven's SudokuPad" target="_blank"><span>Play in SudokuPad</span> <img src="/images/sudokupad_square_logo.png"> <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M18 19H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h5c.55 0 1-.45 1-1s-.45-1-1-1H5c-1.11 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6c0-.55-.45-1-1-1s-1 .45-1 1v5c0 .55-.45 1-1 1zM14 4c0 .55.45 1 1 1h2.59l-9.13 9.13c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L19 6.41V9c0 .55.45 1 1 1s1-.45 1-1V3h-6c-.55 0-1 .45-1 1z"></path></svg></a>
+					<script>
+						(() => {
+							function updateSudokuPadLinks() {
+								document.querySelectorAll('a#sudokupad_openwith')
+									.forEach(async link => {
+										link.href = await getSudokuPadUrl();
+										link.removeAttribute('onclick');
+										link.setAttribute('onclick', `captureSudokuPadLink(); return false;`);
+									});
+							};
+							updateSudokuPadLinks();
+							let waitIntervalId = setInterval(() => {
+								if('undefined' !== typeof PuzzleLoader) {
+									clearInterval(waitIntervalId);
+									updateSudokuPadLinks();
+								}
+							}, 300);
+						})();
+					</script>
+				</div>
+				<div class="game-clock"></div>
+			</div>
+
+			<aside class="mdc-drawer" id="appmenu">
+				<div class="mdc-drawer-content">
+					<nav class="mdc-list">
+						<div id="appmenuitems">
+							<a class="mdc-list-item menu-link-home" href="/">
+								<div class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z"></path></svg></div>
+								<span class="mdc-list-item-text">Home / Help</span>
+							</a>
+							
+							
+							
+							
+							
+						</div>
+						<div class="footer">
+							<div id="menu-app-version"></div>
+						</div>
+					</nav>
+				</div>
+				<script>
+					(([_, head, dom, tail], doms) => {
+						let {hostname} = doms.find(({re}) => re.test(dom)) || {};
+						if(hostname !== undefined)
+							document.querySelector('#appmenuitems').insertAdjacentHTML('beforeend',
+								`<a class="mdc-list-item menu-link-openalternate" href="${head + hostname + tail}">
+									<div class="icon"><img style="width: 2rem; height: 2rem; margin: 0.25rem 0;" src="${document.querySelector('link[rel="icon"]').href}" /></div>
+									<span class="mdc-list-item-text">Open on ${hostname}</span>
+								</a>`
+							);
+					})(document.location.href.match(/(https?:\/\/)([^/]+)(.*)/), 
+					[
+						{re: /^localhost/, hostname: 'beta.sudokupad.app'},
+						{re: /^(sudokupad.app|app.crackingthecryptic.com)/, hostname: 'beta.sudokupad.app'},
+						{re: /^(beta.sudokupad.app|test.crackingthecryptic.com)/, hostname: 'sudokupad.app'}
+					]);
+				</script>
+			</aside>
+
+			<div class="game">
+
+				<div id="board" class="board">
+					<div class="grid">
+						<div class="cells"></div>
+						<svg id="svgrenderer" class="boardsvg" xmlns="http://www.w3.org/2000/svg" version="1.1" draggable="false" style="vector-effect: non-scaling-stroke;">
+							<g class="defs">
+								<defs>
+									<filter id="outlinefilter" class="viewboxsize" x="-25%" y="-25%" width="150%" height="150%" filterUnits="userSpaceOnUse" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+										<feMorphology in="SourceGraphic" result="outline" operator="dilate" radius="0.65"></feMorphology>
+										<feColorMatrix values="1000 1000 1000 1000 0 1000 1000 1000 1000 0 1000 1000 1000 1000 0 0 0 0 0.7 0" in="outline" result="outline"></feColorMatrix>
+										<feBlend in="SourceGraphic" in2="outline" mode="normal"></feBlend>
+									</filter>
+									<filter id="outlinefilter_dark" class="viewboxsize" x="-25%" y="-25%" width="150%" height="150%" filterUnits="userSpaceOnUse" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+										<feMorphology in="SourceGraphic" result="outline" operator="dilate" radius="0.65"></feMorphology>
+										<feColorMatrix values="-1000 -1000 -1000 1000 0 -1000 -1000 -1000 1000 0 -1000 -1000 -1000 1000 0 0 0 0 0.7 0" in="outline" result="outline"></feColorMatrix>
+										<feBlend in="SourceGraphic" in2="outline" mode="normal"></feBlend>
+									</filter>
+								</defs>
+							</g>
+							<g id="background"></g>
+							<g id="underlay"></g>
+							<g id="cell-colors"></g>
+							<g id="arrows"></g>
+							<g id="cages"></g>
+							<g id="cell-highlights"></g>
+							<g id="cell-grids"></g>
+							<g id="cell-errors"></g>
+							<g id="overlay"></g>
+							<g id="cell-givens"></g>
+							<g id="cell-pen"></g>
+							<g id="cell-pencilmarks"></g>
+							<g id="cell-candidates"></g>
+							<g id="cell-values"></g>
+						</svg>
+						<a id="svenpeek" href="https://patreon.svencodes.com/"></a>
+					</div>
+				</div>
+
+				<div id="controls" class="controls">
+					<div class="controls-info" style="display: none;">
+						<div class="puzzle-header selectable">
+							<svg class="header-left" xmlns="http://www.w3.org/2000/svg" version="1.1" draggable="false" style="width: 4rem; height: 4rem;" viewBox="0 0 100 100">
+								<g fill="#83003f">
+									<path d="M30 0 L100,0 L100,100 L30,100 L50,50 L30,0 L100,0"></path>
+									<path d="M0 25 L30,25 L40,50 L30,75 L0,75 L10,50 L0,25"></path>
+								</g>
+							</svg>
+							<svg class="header-right" xmlns="http://www.w3.org/2000/svg" version="1.1" draggable="false" style="width: 4rem; height: 4rem;" viewBox="0 0 100 100">
+								<g transform="scale(-1, 1) translate(-100, 0)" fill="#83003f">
+									<path d="M30 0 L100,0 L100,100 L30,100 L50,50 L30,0 L100,0"></path>
+									<path d="M0 25 L30,25 L40,50 L30,75 L0,75 L10,50 L0,25"></path>
+								</g>
+							</svg>
+							<div class="puzzle-title">数独</div>
+							<div class="puzzle-author"></div>
+						</div>
+						<div class="rules-copy" title="Copy rules to clipboard"></div>
+						<div class="puzzle-rules selectable"></div>
+					</div>
+					<div class="controls-buttons">
+						<div class="controls-app controls-small">
+						</div>
+						<div class="controls-main tool-normal">
+							<div class="controls-input">
+								<div class="button-row">
+									<button data-control="value" data-key="1" data-value="1" class="digit" title="1">1</button>
+									<button data-control="value" data-key="2" data-value="2" class="digit" title="2">2</button>
+									<button data-control="value" data-key="3" data-value="3" class="digit" title="3">3</button>
+								</div>
+								<div class="button-row">
+									<button data-control="value" data-key="4" data-value="4" class="digit" title="4">4</button>
+									<button data-control="value" data-key="5" data-value="5" class="digit" title="5">5</button>
+									<button data-control="value" data-key="6" data-value="6" class="digit" title="6">6</button>
+								</div>
+								<div class="button-row">
+									<button data-control="value" data-key="7" data-value="7" class="digit" title="7">7</button>
+									<button data-control="value" data-key="8" data-value="8" class="digit" title="8">8</button>
+									<button data-control="value" data-key="9" data-value="9" class="digit" title="9">9</button>
+								</div>
+								<div class="button-row">
+									<button data-control="value" data-key="0" data-value="0" class="digit" title="0">0</button>
+									<button data-control="delete" title="Delete">
+										<div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"></path></svg></div>
+									</button>
+								</div>
+							</div>
+							<div class="controls-tool"></div>
+						</div>
+						<div class="controls-aux"></div>
+					</div>
+					<div class="controls-footer">
+						Created by <a href="https://svencodes.com" target="_blank">Sven Neumann</a> (©) | Support me on <a href="https://patreon.svencodes.com/">Patreon</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+		<!--BUNDLE[/sudokupad.bundle.js]-->
+		<script defer="" src="/portableevents.js?v=0.611.0"></script>
+		<script defer="" src="/utilities.js?v=0.611.0"></script>
+		<script defer="" src="/framework.js?v=0.611.0"></script>
+		<script defer="" src="/puzzletools.js?v=0.611.0"></script>
+		<script defer="" src="/puzzleloader.js?v=0.611.0"></script>
+		<script defer="" src="/rulesparser.js?v=0.611.0"></script>
+		<script defer="" src="/stegosaur.js?v=0.611.0"></script>
+		<script defer="" src="/solver.js?v=0.611.0"></script>
+		<script defer="" src="/controls-app.js?v=0.611.0"></script>
+		<script defer="" src="/tool-color.js?v=0.611.0"></script>
+		<script defer="" src="/controls-tools.js?v=0.611.0"></script>
+		<script defer="" src="/tool-pen.js?v=0.611.0"></script>
+		<script defer="" src="/tool-replay.js?v=0.611.0"></script>
+		<script defer="" src="/tool-select.js?v=0.611.0"></script>
+		<script defer="" src="/tool-letter.js?v=0.611.0"></script>
+		<script defer="" src="/tool-calculator.js?v=0.611.0"></script>
+		<script defer="" src="/feature-conflictchecker.js?v=0.611.0"></script>
+		<script defer="" src="/feature-marksolveddigits.js?v=0.611.0"></script>
+		<script defer="" src="/feature-showseencells.js?v=0.611.0"></script>
+		<script defer="" src="/feature-labelrowscols.js?v=0.611.0"></script>
+		<script defer="" src="/feature-fog.js?v=0.611.0"></script>
+		<script defer="" src="/feature-bgimage.js?v=0.611.0"></script>
+		<script defer="" src="/feature-fpuz.js?v=0.611.0"></script>
+		<script defer="" src="/feature-gifting.js?v=0.611.0"></script>
+		<script defer="" src="/feature-compactmarks.js?v=0.611.0"></script>
+		<script defer="" src="/feature-puzzleevents.js?v=0.611.0"></script>
+		<script defer="" src="/feature-replaygif.js?v=0.611.0"></script>
+		<script defer="" src="/feature-replaysave.js?v=0.611.0"></script>
+		<script defer="" src="/feature-uitheme.js?v=0.611.0"></script>
+		<script defer="" src="/feature-cellpaste.js?v=0.611.0"></script>
+		<script defer="" src="/feature-settingssave.js?v=0.611.0"></script>
+		<script defer="" src="/feature-solvedcounter.js?v=0.611.0"></script>
+		<script defer="" src="/feature-debug.js?v=0.611.0"></script>
+		<script defer="" src="/feature-shorturl.js?v=0.611.0"></script>
+		<script defer="" src="/feature-customcolors.js?v=0.611.0"></script>
+		<script defer="" src="/feature-endless.js?v=0.611.0"></script>
+		<script defer="" src="/feature-emoji.js?v=0.611.0"></script>
+		<script defer="" src="/feature-rulealert.js?v=0.611.0"></script>
+		<script defer="" src="/feature-streamtool.js?v=0.611.0"></script>
+		<script defer="" src="/feature-screenshot.js?v=0.611.0"></script>
+		<script defer="" src="/feature-puzzlepack.js?v=0.611.0"></script>
+		<script defer="" src="/feature-userplugins.js?v=0.611.0"></script>
+		<script defer="" src="/feature-seasonal.js?v=0.611.0"></script>
+		<script defer="" src="/feature-sudokupadpro.js?v=0.611.0"></script>
+		<script defer="" src="/feature-hairgag.js?v=0.611.0"></script>
+		<script defer="" src="/feature-largepuzzle.js?v=0.611.0"></script>
+		<script defer="" src="/feature-layout.js?v=0.611.0"></script>
+		<script defer="" src="/feature-gridrules.js?v=0.611.0"></script>
+		<script defer="" src="/feature-markup.js?v=0.611.0"></script>
+		<script defer="" src="/feature-copycells.js?v=0.611.0"></script>
+		<script defer="" src="/feature-project9x9.js?v=0.611.0"></script>
+		<script defer="" src="/feature-puzzlefont.js?v=0.611.0"></script>
+		<script defer="" src="/feature-aiassistant.js?v=0.611.0"></script>
+		<script defer="" src="/app-settings.js?v=0.611.0"></script>
+		<script defer="" src="/appmenu.js?v=0.611.0"></script>
+		<script defer="" src="/script.js?v=0.611.0"></script>
+		<!--/BUNDLE[/sudokupad.bundle.js]-->
+		
+		<!--BUNDLE[/sudokupad-tools.bundle.css]-->
+		<link rel="stylesheet" href="/tool-color.css?v=0.611.0">
+		<link rel="stylesheet" href="/tool-pen.css?v=0.611.0">
+		<link rel="stylesheet" href="/tool-replay.css?v=0.611.0">
+		<link rel="stylesheet" href="/tool-letter.css?v=0.611.0">
+		<link rel="stylesheet" href="/tool-calculator.css?v=0.611.0">
+		<!--/BUNDLE[/sudokupad-tools.bundle.css]-->
+		
+		<script defer="">
+			function preventZoom(event) {
+				console.log('preventZoom:', event);
+				event.preventDefault();
+				document.body.style.zoom = 0.999999;
+			}
+			document.addEventListener('gesturestart', preventZoom);
+			document.addEventListener('gesturechange', preventZoom);
+			document.addEventListener('gestureend', preventZoom);
+		</script>
+
+		
+
+	
+<script defer="" src="/__android/android.js"></script></body></html>
