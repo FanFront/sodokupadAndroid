@@ -58,8 +58,17 @@ for (const url of expectedBosses) {
   if (!html.includes('/__android/android.js') || !html.includes('/__android/android.css')) {
     throw new Error('Boss HTML has no Android controls: '+url);
   }
-  if (!/^files\/[a-f0-9]{64}\.[a-z0-9]+$/.test(puzzle.file)) {
-    throw new Error('Missing original boss puzzle package: '+url);
+  const bossName = new URL(url).pathname.split('/').pop();
+  if (puzzle.file !== 'translated/boss-'+bossName+'.scl') {
+    throw new Error('Missing Chinese boss puzzle package: '+url);
+  }
+  if (!/^files\/[a-f0-9]{64}\.[a-z0-9]+$/.test(puzzle.originalFile || '')) {
+    throw new Error('Missing pristine original boss puzzle package: '+url);
+  }
+  await stat(join(root,puzzle.originalFile));
+  const chineseScl = await readFile(join(root,puzzle.file),'utf8');
+  if (!chineseScl.startsWith('scl')) {
+    throw new Error('Invalid Chinese boss puzzle: '+url);
   }
 }
 if (expectedBosses.length) console.log('Verified',expectedBosses.length,'bosses with Android controls and puzzle data.');
