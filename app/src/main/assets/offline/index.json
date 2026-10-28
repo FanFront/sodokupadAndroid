@@ -9,6 +9,14 @@
     {
       "id": "lineage-of-logic",
       "url": "https://sudokupad.app/sudokuvania/lineage-of-logic?setting-nogrid=1&setting-largepuzzle=1"
+    },
+    {
+      "id": "super-sudokoid-1",
+      "url": "https://sudokupad.app/3g0qh2la4v?setting-arrowsabovelines=1&setting-largepuzzle=1"
+    },
+    {
+      "id": "super-sudokoid-2",
+      "url": "https://sudokupad.app/xfq6z64i66?setting-arrowsabovelines=1&setting-largepuzzle=1"
     }
   ],
   "requestedPages": [
@@ -112,7 +120,9 @@
     "https://sudokupad.app/sudokuvania/boss-threes-company-plain",
     "https://sudokupad.app/sudokuvania/boss-exorschism-plain",
     "https://sudokupad.app/sudokuvania/boss-threes-company",
-    "https://sudokupad.app/sudokuvania/boss-exorschism"
+    "https://sudokupad.app/sudokuvania/boss-exorschism",
+    "https://sudokupad.app/3g0qh2la4v?setting-arrowsabovelines=1&setting-largepuzzle=1",
+    "https://sudokupad.app/xfq6z64i66?setting-arrowsabovelines=1&setting-largepuzzle=1"
   ],
   "linkedPuzzles": [
     "https://sudokupad.app/6cn54q09sv",
@@ -524,7 +534,7 @@
     "https://sudokupad.app/6cn54q09sv": {
       "file": "pages/linked-35e3191788d38a91.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19337,
+      "bytes": 19306,
       "originalFile": "files/35e3191788d38a919941f858333f852ccbcfc8cc60c204de16c8ee6eabd82d22.html"
     },
     "https://sudokupad.app/6gf2shd8nd": {
@@ -536,7 +546,7 @@
     "https://sudokupad.app/84lyno986x": {
       "file": "pages/linked-f304c1038e6ccdb6.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19335,
+      "bytes": 19303,
       "originalFile": "files/f304c1038e6ccdb6d9ca6ded10d6dc4a27075d2fcbb8de7c49b0e9490df041c4.html"
     },
     "https://sudokupad.app/api/puzzle/3gk1q7s2r9": {
@@ -550,9 +560,10 @@
       "bytes": 1139
     },
     "https://sudokupad.app/api/puzzle/6cn54q09sv": {
-      "file": "files/f1ad242940b6a206ed7b2f35f0a7954363b8849fb47e9d58ac59e6d5f7202f16.html",
-      "mime": "text/html",
-      "bytes": 3531
+      "file": "translated/boss-6cn54q09sv.scl",
+      "mime": "text/plain",
+      "bytes": 3691,
+      "originalFile": "files/f1ad242940b6a206ed7b2f35f0a7954363b8849fb47e9d58ac59e6d5f7202f16.html"
     },
     "https://sudokupad.app/api/puzzle/6gf2shd8nd": {
       "file": "files/675bd4c77bb6481f04f50c69643f487b0ef9f7656a946aa815bebd35ec7ab74a.html",
@@ -560,9 +571,10 @@
       "bytes": 3283
     },
     "https://sudokupad.app/api/puzzle/84lyno986x": {
-      "file": "files/6693cc06f3156d1ef9ff4735275eb95b338dec392b7a95576a62418eef118fba.html",
-      "mime": "text/html",
-      "bytes": 2455
+      "file": "translated/boss-84lyno986x.scl",
+      "mime": "text/plain",
+      "bytes": 2387,
+      "originalFile": "files/6693cc06f3156d1ef9ff4735275eb95b338dec392b7a95576a62418eef118fba.html"
     },
     "https://sudokupad.app/api/puzzle/fbmpcb8k0r": {
       "file": "files/9b1b7efc182d97059330eb0e46face80a3819cbacb462c77b41ba8bda309bc06.html",
@@ -570,9 +582,10 @@
       "bytes": 855
     },
     "https://sudokupad.app/api/puzzle/frudzw3n73": {
-      "file": "files/c040492b07c783f5734282938679d845849d3c98efb61788b30a489e0b074a76.html",
-      "mime": "text/html",
-      "bytes": 2483
+      "file": "translated/boss-frudzw3n73.scl",
+      "mime": "text/plain",
+      "bytes": 2555,
+      "originalFile": "files/c040492b07c783f5734282938679d845849d3c98efb61788b30a489e0b074a76.html"
     },
     "https://sudokupad.app/api/puzzle/g8ksnwu83b": {
       "file": "files/21df67ae471b734b189708e5668f26319921836cf79c94e45198cf5a940e58b2.html",
@@ -580,29 +593,34 @@
       "bytes": 867
     },
     "https://sudokupad.app/api/puzzle/mtrhhm8g95": {
-      "file": "files/69398ff01ee848225525fd35109c84e76c6a83f8bb8ce215dd9527f1b9c31a80.html",
-      "mime": "text/html",
-      "bytes": 4783
+      "file": "translated/boss-mtrhhm8g95.scl",
+      "mime": "text/plain",
+      "bytes": 4671,
+      "originalFile": "files/69398ff01ee848225525fd35109c84e76c6a83f8bb8ce215dd9527f1b9c31a80.html"
     },
     "https://sudokupad.app/api/puzzle/ny34cxleh8": {
-      "file": "files/d5346b5dbb0fe6587b78683ca82e62d71c431535224315621c1e60498028a45a.html",
-      "mime": "text/html",
-      "bytes": 3355
+      "file": "translated/boss-ny34cxleh8.scl",
+      "mime": "text/plain",
+      "bytes": 3359,
+      "originalFile": "files/d5346b5dbb0fe6587b78683ca82e62d71c431535224315621c1e60498028a45a.html"
     },
     "https://sudokupad.app/api/puzzle/ofvhfxebg3": {
-      "file": "files/7ca80caefd310a8e54ec9c8f39e6ca4861ae49adfcaf7250c5cae77bba503375.html",
-      "mime": "text/html",
-      "bytes": 4575
+      "file": "translated/boss-ofvhfxebg3.scl",
+      "mime": "text/plain",
+      "bytes": 4575,
+      "originalFile": "files/7ca80caefd310a8e54ec9c8f39e6ca4861ae49adfcaf7250c5cae77bba503375.html"
     },
     "https://sudokupad.app/api/puzzle/qs2zx7uynr": {
-      "file": "files/f2718b0d0202f7ca9f331aabbcc03b57f5ee97ed23bda922c09ae0d94bb39f48.html",
-      "mime": "text/html",
-      "bytes": 3651
+      "file": "translated/boss-qs2zx7uynr.scl",
+      "mime": "text/plain",
+      "bytes": 3667,
+      "originalFile": "files/f2718b0d0202f7ca9f331aabbcc03b57f5ee97ed23bda922c09ae0d94bb39f48.html"
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-a-nights-tale": {
-      "file": "files/e3aa0b3ba2cb5da9a8a4cab15250d89f59c5369861b17733cb07154eb3533c11.html",
-      "mime": "text/html",
-      "bytes": 6271
+      "file": "translated/boss-boss-a-nights-tale.scl",
+      "mime": "text/plain",
+      "bytes": 6243,
+      "originalFile": "files/e3aa0b3ba2cb5da9a8a4cab15250d89f59c5369861b17733cb07154eb3533c11.html"
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-a-nights-tale-plain": {
       "file": "files/70d258a5ec9db7052c181e73f0c5497be9e410cc862c4639d6f112769c170431.html",
@@ -610,9 +628,10 @@
       "bytes": 5091
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-big-little-lines": {
-      "file": "files/92182851992e070545ecaa6ccf62f573ee9d32235c56c88b291bfc85436fe53f.html",
-      "mime": "text/html",
-      "bytes": 6703
+      "file": "translated/boss-boss-big-little-lines.scl",
+      "mime": "text/plain",
+      "bytes": 6383,
+      "originalFile": "files/92182851992e070545ecaa6ccf62f573ee9d32235c56c88b291bfc85436fe53f.html"
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-big-little-lines-plain": {
       "file": "files/ac0d8c0fd3e086a015a49ded0b1b2348cc0f1bd659f4bc26af11880fe11544a5.html",
@@ -620,9 +639,10 @@
       "bytes": 3879
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-bone-constrictor": {
-      "file": "files/594907f00ed630f555c598753103ce3d1af2e11a455876e8b7700cbcd2f481d0.html",
-      "mime": "text/html",
-      "bytes": 4943
+      "file": "translated/boss-boss-bone-constrictor.scl",
+      "mime": "text/plain",
+      "bytes": 4419,
+      "originalFile": "files/594907f00ed630f555c598753103ce3d1af2e11a455876e8b7700cbcd2f481d0.html"
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-bone-constrictor-plain": {
       "file": "files/e380ed2ea569452d8cfe80dad6a147ba8c0fb741462986fe428653f49cfcdc7e.html",
@@ -630,9 +650,10 @@
       "bytes": 4523
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-clones-quad": {
-      "file": "files/d36cb68b5b484849280892ec52c1da447156040936f93e3cb06aa6ee3849c853.html",
-      "mime": "text/html",
-      "bytes": 4479
+      "file": "translated/boss-boss-clones-quad.scl",
+      "mime": "text/plain",
+      "bytes": 4371,
+      "originalFile": "files/d36cb68b5b484849280892ec52c1da447156040936f93e3cb06aa6ee3849c853.html"
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-clones-quad-plain": {
       "file": "files/5982b0eb27f2e42448172242f3578114a4e88fea66de3607a0ec8b224245439d.html",
@@ -650,9 +671,10 @@
       "bytes": 5651
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-fantasy-footwork": {
-      "file": "files/cc17505b85f35962b5b68573e2f753f64aa98e0bdb5c17a9634404c015934845.html",
-      "mime": "text/html",
-      "bytes": 6051
+      "file": "translated/boss-boss-fantasy-footwork.scl",
+      "mime": "text/plain",
+      "bytes": 5975,
+      "originalFile": "files/cc17505b85f35962b5b68573e2f753f64aa98e0bdb5c17a9634404c015934845.html"
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-fantasy-footwork-plain": {
       "file": "files/66454f713bac18ae6d9a2df015fc46bb65b4fe62c25c184946552f232a0e61f2.html",
@@ -660,9 +682,10 @@
       "bytes": 3747
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-hot-cuisine": {
-      "file": "files/5317240dbbf752783d822cfe96b20384b5ada7a4f28780429cc510b758f669ca.html",
-      "mime": "text/html",
-      "bytes": 6567
+      "file": "translated/boss-boss-hot-cuisine.scl",
+      "mime": "text/plain",
+      "bytes": 6503,
+      "originalFile": "files/5317240dbbf752783d822cfe96b20384b5ada7a4f28780429cc510b758f669ca.html"
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-hot-cuisine-plain": {
       "file": "files/8699f765f75240692241ad9d6e9aff469bb1534ead0a8e55cef31b777f6344ed.html",
@@ -670,9 +693,10 @@
       "bytes": 5291
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-in10sity": {
-      "file": "files/c80f692c3f1920e26a8f7c964218eedc7679ca5e9c3b17df17c4a4b82289cd99.html",
-      "mime": "text/html",
-      "bytes": 5359
+      "file": "translated/boss-boss-in10sity.scl",
+      "mime": "text/plain",
+      "bytes": 5235,
+      "originalFile": "files/c80f692c3f1920e26a8f7c964218eedc7679ca5e9c3b17df17c4a4b82289cd99.html"
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-in10sity-plain": {
       "file": "files/8691ebbaf7d18c10280a976a3caff823ff51f3935dfeec9809d836a612052c89.html",
@@ -680,9 +704,10 @@
       "bytes": 3959
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-saving-grace": {
-      "file": "files/78f940d2dc3eea02db6f1acee6a212361f070aea214575f228065d25a17a68de.html",
-      "mime": "text/html",
-      "bytes": 6279
+      "file": "translated/boss-boss-saving-grace.scl",
+      "mime": "text/plain",
+      "bytes": 6119,
+      "originalFile": "files/78f940d2dc3eea02db6f1acee6a212361f070aea214575f228065d25a17a68de.html"
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-saving-grace-plain": {
       "file": "files/46fffbce600462cb3e828b6660ddeff5e13f2185a43f940ef7dacaa6667d8f61.html",
@@ -690,9 +715,10 @@
       "bytes": 6895
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-stalking-the-freezer": {
-      "file": "files/b4b3b80f6ad4c4f3f8d79a08096c9a41be1b6e4071e4308d29e78f8339d3c7de.html",
-      "mime": "text/html",
-      "bytes": 3663
+      "file": "translated/boss-boss-stalking-the-freezer.scl",
+      "mime": "text/plain",
+      "bytes": 3727,
+      "originalFile": "files/b4b3b80f6ad4c4f3f8d79a08096c9a41be1b6e4071e4308d29e78f8339d3c7de.html"
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-stalking-the-freezer-plain": {
       "file": "files/a9a7b9022171d57f7b5a504ff5751aa5d64dd0269684c780281b6450ba93cac9.html",
@@ -700,9 +726,10 @@
       "bytes": 3511
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-the-witching-hour": {
-      "file": "files/eb1b44c4ca2501b792c4f6b352a3a86d981e2ce6f1a60a1ffe8413fe1bd83864.html",
-      "mime": "text/html",
-      "bytes": 6347
+      "file": "translated/boss-boss-the-witching-hour.scl",
+      "mime": "text/plain",
+      "bytes": 5999,
+      "originalFile": "files/eb1b44c4ca2501b792c4f6b352a3a86d981e2ce6f1a60a1ffe8413fe1bd83864.html"
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-the-witching-hour-plain": {
       "file": "files/59f3d0f0d9dee422051150e7c20d48bbc8662081882cb50646a7d90d0864a7fe.html",
@@ -720,9 +747,10 @@
       "bytes": 6971
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-through-the-ringer": {
-      "file": "files/da143ebf5eaec52a915203fb54f57d259aa7a33e7d077175d71d6de0fe9855bc.html",
-      "mime": "text/html",
-      "bytes": 4815
+      "file": "translated/boss-boss-through-the-ringer.scl",
+      "mime": "text/plain",
+      "bytes": 4587,
+      "originalFile": "files/da143ebf5eaec52a915203fb54f57d259aa7a33e7d077175d71d6de0fe9855bc.html"
     },
     "https://sudokupad.app/api/puzzle/sudokuvania/boss-through-the-ringer-plain": {
       "file": "files/2e4b84d06b049af45ea45f2a7981bf63754b796e37aedbc7770b551c6fa7b319.html",
@@ -1032,9 +1060,10 @@
       "bytes": 2663
     },
     "https://sudokupad.app/api/puzzle/vmp8mhugbr": {
-      "file": "files/c636ee4c39e4ddb33daafbb486daee760c3a4bb646839db98d8fa095c4419d80.html",
-      "mime": "text/html",
-      "bytes": 2747
+      "file": "translated/boss-vmp8mhugbr.scl",
+      "mime": "text/plain",
+      "bytes": 2783,
+      "originalFile": "files/c636ee4c39e4ddb33daafbb486daee760c3a4bb646839db98d8fa095c4419d80.html"
     },
     "https://sudokupad.app/api/puzzle/wnpnjr1uyv": {
       "file": "files/ea5ec0604d045cef14facccb17b583b36de27b7181a82674bfeb24e4eedaa9ab.html",
@@ -1042,9 +1071,10 @@
       "bytes": 2327
     },
     "https://sudokupad.app/api/puzzle/xu2ai5oymi": {
-      "file": "files/80656fc674cd7996b69bd3a5b018cdb40f47d84743eeb30912f47634be4a5265.html",
-      "mime": "text/html",
-      "bytes": 5435
+      "file": "translated/boss-xu2ai5oymi.scl",
+      "mime": "text/plain",
+      "bytes": 5391,
+      "originalFile": "files/80656fc674cd7996b69bd3a5b018cdb40f47d84743eeb30912f47634be4a5265.html"
     },
     "https://sudokupad.app/app-settings.js?v=0.611.0": {
       "file": "files/3f5ec860e77ad0734d104565e0b588bc13c3c5024db7d5d3b94b74044191eca2.js",
@@ -1470,7 +1500,7 @@
     "https://sudokupad.app/frudzw3n73": {
       "file": "pages/linked-52573c05ffb6cacc.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19337,
+      "bytes": 19306,
       "originalFile": "files/52573c05ffb6cacc9801bccd8d747ec6e4561abea9c638028cb8a3aea3a7dcca.html"
     },
     "https://sudokupad.app/g8ksnwu83b": {
@@ -1507,19 +1537,19 @@
     "https://sudokupad.app/mtrhhm8g95": {
       "file": "pages/linked-00cf930d3c9cc9ee.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19339,
+      "bytes": 19303,
       "originalFile": "files/00cf930d3c9cc9eee9ac9c80e28e8283655570c1371ed4c85383b3b0cdad7581.html"
     },
     "https://sudokupad.app/ny34cxleh8": {
       "file": "pages/linked-76139da485333ca2.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19340,
+      "bytes": 19306,
       "originalFile": "files/76139da485333ca2b3a9cadcd3c7533a34991ab15c93c3a2bddcb6dd7f8c4b58.html"
     },
     "https://sudokupad.app/ofvhfxebg3": {
       "file": "pages/linked-757fddf60a5a3879.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19340,
+      "bytes": 19297,
       "originalFile": "files/757fddf60a5a38792a2e6f2a2339d226919c649a786827cbaad8dedb672c2221.html"
     },
     "https://sudokupad.app/portableevents.js?v=0.611.0": {
@@ -1545,7 +1575,7 @@
     "https://sudokupad.app/qs2zx7uynr": {
       "file": "pages/linked-ab803a57464f4a41.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19333,
+      "bytes": 19303,
       "originalFile": "files/ab803a57464f4a41e279220d7d05b0e6487f930a0db76741a15229483bf3aa12.html"
     },
     "https://sudokupad.app/rulesparser.js?v=0.611.0": {
@@ -1581,7 +1611,7 @@
     "https://sudokupad.app/sudokuvania/boss-a-nights-tale": {
       "file": "pages/linked-eea1db691e68f9fd.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19338,
+      "bytes": 19303,
       "originalFile": "files/eea1db691e68f9fd4d9ec3eda4472712b72cebc97abc82241e1ff1ff27075d26.html"
     },
     "https://sudokupad.app/sudokuvania/boss-a-nights-tale-plain": {
@@ -1593,7 +1623,7 @@
     "https://sudokupad.app/sudokuvania/boss-big-little-lines": {
       "file": "pages/linked-b381f0a672d218bb.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19340,
+      "bytes": 19306,
       "originalFile": "files/b381f0a672d218bb6369385d123218b5a9f82e3544e728935fcf6b5f8ec7ed68.html"
     },
     "https://sudokupad.app/sudokuvania/boss-big-little-lines-plain": {
@@ -1605,7 +1635,7 @@
     "https://sudokupad.app/sudokuvania/boss-bone-constrictor": {
       "file": "pages/linked-cb04f7bbf8cdde1c.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19340,
+      "bytes": 19303,
       "originalFile": "files/cb04f7bbf8cdde1cb0ab7b4adabd4a0020566cc9717293d4ef40744a9a5d00ec.html"
     },
     "https://sudokupad.app/sudokuvania/boss-bone-constrictor-plain": {
@@ -1617,7 +1647,7 @@
     "https://sudokupad.app/sudokuvania/boss-clones-quad": {
       "file": "pages/linked-3ca53972fc2dc6e0.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19335,
+      "bytes": 19306,
       "originalFile": "files/3ca53972fc2dc6e0467cbbd9dbd83c304e28db316d2344e05df62cfc9791acf7.html"
     },
     "https://sudokupad.app/sudokuvania/boss-clones-quad-plain": {
@@ -1641,7 +1671,7 @@
     "https://sudokupad.app/sudokuvania/boss-fantasy-footwork": {
       "file": "pages/linked-fbab0b3aed03d2bf.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19340,
+      "bytes": 19303,
       "originalFile": "files/fbab0b3aed03d2bfa611735f8fa37c433f308242b7eaaec8fd7bcc68811015c5.html"
     },
     "https://sudokupad.app/sudokuvania/boss-fantasy-footwork-plain": {
@@ -1653,7 +1683,7 @@
     "https://sudokupad.app/sudokuvania/boss-hot-cuisine": {
       "file": "pages/linked-d2c371f801fbdcc8.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19335,
+      "bytes": 19303,
       "originalFile": "files/d2c371f801fbdcc81151c5dd5375ea31e26fae9c9deb01d013e639e6141712c2.html"
     },
     "https://sudokupad.app/sudokuvania/boss-hot-cuisine-plain": {
@@ -1665,7 +1695,7 @@
     "https://sudokupad.app/sudokuvania/boss-in10sity": {
       "file": "pages/linked-0e67f4767e040bff.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19332,
+      "bytes": 19303,
       "originalFile": "files/0e67f4767e040bff0ef1fddc4b3b0daeccc19ddd6ff1db1873c879e240b98483.html"
     },
     "https://sudokupad.app/sudokuvania/boss-in10sity-plain": {
@@ -1677,7 +1707,7 @@
     "https://sudokupad.app/sudokuvania/boss-saving-grace": {
       "file": "pages/linked-2730292ff8800d12.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19336,
+      "bytes": 19303,
       "originalFile": "files/2730292ff8800d125a194f03666e9daabd79a03245a1bbf7597a1d704e6baf6d.html"
     },
     "https://sudokupad.app/sudokuvania/boss-saving-grace-plain": {
@@ -1689,7 +1719,7 @@
     "https://sudokupad.app/sudokuvania/boss-stalking-the-freezer": {
       "file": "pages/linked-7ece1e6a10594cce.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19344,
+      "bytes": 19303,
       "originalFile": "files/7ece1e6a10594cce9a206e7ecd8189ded96118ddeef6b5b5de2aff2ef0b81c8f.html"
     },
     "https://sudokupad.app/sudokuvania/boss-stalking-the-freezer-plain": {
@@ -1701,7 +1731,7 @@
     "https://sudokupad.app/sudokuvania/boss-the-witching-hour": {
       "file": "pages/linked-bc724d1218743b99.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19341,
+      "bytes": 19303,
       "originalFile": "files/bc724d1218743b990e87809c917e509ab0e526e7f79c752d8738ad71ef7ab928.html"
     },
     "https://sudokupad.app/sudokuvania/boss-the-witching-hour-plain": {
@@ -1725,7 +1755,7 @@
     "https://sudokupad.app/sudokuvania/boss-through-the-ringer": {
       "file": "pages/linked-d1487038736f591a.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19342,
+      "bytes": 19303,
       "originalFile": "files/d1487038736f591a01dd05ebf84d9c21bbe695235e63afc0df3e184e0c054baa.html"
     },
     "https://sudokupad.app/sudokuvania/boss-through-the-ringer-plain": {
@@ -2155,7 +2185,7 @@
     "https://sudokupad.app/vmp8mhugbr": {
       "file": "pages/linked-c709be090785f92e.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19343,
+      "bytes": 19314,
       "originalFile": "files/c709be090785f92ea396cd2486fb03f7370c1a3db57ba3fadfd4031b9c8a76b5.html"
     },
     "https://sudokupad.app/wnpnjr1uyv": {
@@ -2167,7 +2197,7 @@
     "https://sudokupad.app/xu2ai5oymi": {
       "file": "pages/linked-77bcf428a307e68e.zh-Hans.html",
       "mime": "text/html",
-      "bytes": 19334,
+      "bytes": 19303,
       "originalFile": "files/77bcf428a307e68efc8a8d6b6a7bbdc23fa6004977529e13ed745c32fc70dfb7.html"
     },
     "https://www.googletagmanager.com/gtag/js?id=G-7SX7DQ4WG6": {
@@ -2198,7 +2228,73 @@
     "https://sudokupad.app/__android/android.js": {
       "file": "mobile/android.js",
       "mime": "application/javascript",
-      "bytes": 23162
+      "bytes": 23400
+    },
+    "https://sudokupad.app/3g0qh2la4v?setting-arrowsabovelines=1&setting-largepuzzle=1": {
+      "file": "pages/super-sudokoid-1.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19348
+    },
+    "https://sudokupad.app/api/puzzle/3g0qh2la4v": {
+      "file": "translated/super-sudokoid-1.scl",
+      "mime": "text/plain",
+      "bytes": 105047,
+      "originalFile": "files/05b68f7c45b52290d3964562cd2c19476b7e1c0682469522b46a875dc72399bf.txt"
+    },
+    "https://sudokupad.app/assets/twemoji/svg/2b50.svg": {
+      "file": "files/75161262c99faa8ad69459948be9df674b05933c785be8e4af3fe6cd47f70d32.svg",
+      "mime": "image/svg+xml",
+      "bytes": 554
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1fa90.svg": {
+      "file": "files/73b372f2b6aca0be50a2b373ed04d8cae5226bae5ff5896d9ca013c023f575ba.svg",
+      "mime": "image/svg+xml",
+      "bytes": 2245
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f339.svg": {
+      "file": "files/3264c8a56937717cbc34485f99b143783747f2318da4b28e962bfbb4b7ad19b3.svg",
+      "mime": "image/svg+xml",
+      "bytes": 905
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f4f1.svg": {
+      "file": "files/4c3f004ca32fcf6ee37ecdcdf0bfb3f167ca6820233fad546b4b9cde5a990ea4.svg",
+      "mime": "image/svg+xml",
+      "bytes": 184
+    },
+    "https://sudokupad.app/xfq6z64i66?setting-arrowsabovelines=1&setting-largepuzzle=1": {
+      "file": "pages/super-sudokoid-2.zh-Hans.html",
+      "mime": "text/html",
+      "bytes": 19344
+    },
+    "https://sudokupad.app/api/puzzle/xfq6z64i66": {
+      "file": "translated/super-sudokoid-2.scl",
+      "mime": "text/plain",
+      "bytes": 113519,
+      "originalFile": "files/bcb0a95561bf0c997096d7c49d60f55136508421948e77192ceb0474779c5d2b.txt"
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f4da.svg": {
+      "file": "files/1b3928fb00d0a06df9e77acd4c56f2947f35d7cd908794fa823351a915e7b87e.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1335
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f4a5.svg": {
+      "file": "files/c588ee7036f75898aae99335ca5e418ba7a9d405999e932f8bc6d063a0274c27.svg",
+      "mime": "image/svg+xml",
+      "bytes": 842
+    },
+    "https://sudokupad.app/assets/twemoji/svg/1f9f1.svg": {
+      "file": "files/0f3ec5e1002c2e88b6b2b8ba2c7e021af5b18bf2b1118dcade1a1038c24fcde9.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1514
     }
+  },
+  "superSudokoidMainCapture": {
+    "capturedAt": "2026-10-28T02:02:00.203Z",
+    "ids": [
+      "super-sudokoid-1",
+      "super-sudokoid-2"
+    ],
+    "scope": "main puzzles only; side puzzles not yet discovered",
+    "newlySaved": 11
   }
 }

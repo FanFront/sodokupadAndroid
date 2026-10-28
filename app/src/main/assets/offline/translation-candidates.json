@@ -40,6 +40,46 @@
     ]
   },
   {
+    "english": "Having barely escaped a space-pirate ambush, your damaged ship all but crash lands on unexplored planet Sudoku-45. With all your equipment scattered after the violent entry, and the ship’s navigation system refusing to work, you have nothing but instinct and puzzle solving skills to get you back home.\n\n---\n\nIf you're playing this in SudokuPad, consider turning ON the following settings for a better experience:\n* Draw Arrows Above Lines\n* Disable Emoji Replacement\n* Test Large Puzzle UI\n\nThis puzzle was heavily inspired by Skeptical Mario's fantastic puzzle \"Sudokuvania: digits of despair\". Consider checking it out if you haven't.\n\n---\n\nThis is a dynamic, expanding puzzle. Selecting a cell will update this description with the rules of that sector.\n\nMost of the grid is covered in fog. By correctly placing digits, the fog may be lifted. You may place digits in the fog if you know what they are, but otherwise avoid clicking on covered cells to not get spoiled by undiscovered areas or rules. \n\nEach sector is a complete Sudoku of its own. Areas may overlap, in which case the overlapping parts belong to both sectors, but digits entirely within one sector does not affect digits within other sectors (meaning digits can share a row or column as long as they belong to different puzzles).\n\nIn the top-right corner is a list of learnt rules. You may only use a clue if you have unlocked it in this list, even if you think you know how it works. You can click on any of the displayed rules to get a more detailed description here.\n\nMost sectors have a boss. When you discover the boss cell (indicated by an emoji), use the link in the sector's description to play the boss puzzle.\n\n---",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.rules"
+    ]
+  },
+  {
+    "english": "Your engines roar as you burst through the cloud cover and into the stratosphere. A sliver of light follows, not far behind. \n\nThe stars watch as the planet behind you collapses unto itself and explodes in an enormous ball of fire and light. You made it. You survived!\n\nCONGRATULATIONS for reaching the end of this puzzle!\n\nI hope you had fun. There might still be a secret or two left for you to find in the grid, should you wish to continue.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.msgcorrect"
+    ]
+  },
+  {
+    "english": "It's done! Every corner of the planet has been explored, every secret found.\n\nCONGRATULATIONS! You've managed to solve the puzzle to its entirety, you even found the hidden puzzle! \n\nThanks for playing!",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.msgcorrect"
+    ]
+  },
+  {
+    "english": "While cruising through hyperspace, as one does on occasion, your radio suddenly picks up a distress signal from a nearby solar system. The planet it originates from isn't on your star chart, but your ship's computer is adamant that this is none other than the lost home world of the ancient Puzzlo race, known for their penchant for intricate puzzle, and deadly super-weapons. With trepidation, you set course to land.\n\n---\n\nWhen playing this in SudokuPad, consider turning ON the following settings for a better experience:\n* Outlines On Digits\n* Draw Arrows Above Lines\n* Disable Emoji Replacement (this one is a little spotty in some browsers -- turn it off if you don't see a boss cell in the starting sector)\n* Test Large Puzzle UI (which allows you to zoom with the scroll wheel and pan by right-clicking and dragging the mouse).\n* Check On Finish  <-- This one is required!\n\nThis puzzle is not mobile friendly!\n\n---\n\nThis is a dynamic, expanding puzzle. More cells, rules and story segments will be revealed as you play.\n\nSECTORS: the grid consists of 16 sectors. Each sector is a separate 9x9 Sudoku puzzle. Normal Sudoku rules apply separately within each sector, but other rules may span multiple sectors.\n\nWALLS: purple cells separated with a border are wall cells. They do not count as part of the grid and Sudoku rules DO NOT apply to them (meaning that some rows, columns and boxes will have fewer than nine digits in them). Do note that if any other clue applies to a wall cell, the cell still needs to contain a digit that satisfies that clue.\n\nHUD: the area to the right is your HUD. It will be updated with new information as you progress through the puzzle. Click on any revealed HUD cell to update this description with information on that particular story entry, rule description or boss link.\n\nBOSSES: there are a few bosses scattered throughout the map. Once you've managed to place a digit in a boss cell the HUD will be updated. Click on that cell to get a link to a separate boss puzzle. Solve it to defeat the boss and progress in the main puzzle by placing the rewarded digit in the boss's HUD cell.\n\nUPGRADES: yellow circles indicate points of interest. If you fill in a circled cell, check the HUD for story updates and new rules.\n\nCOSMETIC CELLS: pink cells are identical to their neighbors, the color variation is purely cosmetic.\n\nHINTS: if you get stuck and need help figuring out what to do next, click in the top-right corner to access a secret list of vague objectives for each story moment.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.rules"
+    ]
+  },
+  {
     "english": "'Outside the Boxes' quest, given",
     "zhHans": "已接取「框外天地」任务",
     "gameIds": [
@@ -1288,11 +1328,15 @@
     "zhHans": "特别感谢所有支持者",
     "gameIds": [
       "digits-of-despair",
-      "lineage-of-logic"
+      "lineage-of-logic",
+      "super-sudokoid-1",
+      "super-sudokoid-2"
     ],
     "sourcePaths": [
       "digits-of-despair:original-html/#document/html/body/div/aside/div/nav/div/a/span",
-      "lineage-of-logic:original-html/#document/html/body/div/aside/div/nav/div/a/span"
+      "lineage-of-logic:original-html/#document/html/body/div/aside/div/nav/div/a/span",
+      "super-sudokoid-1:original-html/#document/html/body/div/aside/div/nav/div/a/span",
+      "super-sudokoid-2:original-html/#document/html/body/div/aside/div/nav/div/a/span"
     ]
   },
   {
@@ -1373,11 +1417,15 @@
     "zhHans": "Sven Neumann",
     "gameIds": [
       "digits-of-despair",
-      "lineage-of-logic"
+      "lineage-of-logic",
+      "super-sudokoid-1",
+      "super-sudokoid-2"
     ],
     "sourcePaths": [
       "digits-of-despair:original-html/#document/html/body/div/div/div/div/a",
-      "lineage-of-logic:original-html/#document/html/body/div/div/div/div/a"
+      "lineage-of-logic:original-html/#document/html/body/div/div/div/div/a",
+      "super-sudokoid-1:original-html/#document/html/body/div/div/div/div/a",
+      "super-sudokoid-2:original-html/#document/html/body/div/div/div/div/a"
     ]
   },
   {
@@ -1647,13 +1695,15 @@
     "english": "You found a",
     "zhHans": "你找到了一件",
     "gameIds": [
-      "digits-of-despair"
+      "digits-of-despair",
+      "super-sudokoid-1"
     ],
     "sourcePaths": [
       "digits-of-despair:puzzle.overlays[85].text",
       "digits-of-despair:puzzle.overlays[91].text",
       "digits-of-despair:puzzle.overlays[102].text",
-      "digits-of-despair:puzzle.overlays[122].text"
+      "digits-of-despair:puzzle.overlays[122].text",
+      "super-sudokoid-1:puzzle.underlays[1150].text"
     ]
   },
   {
@@ -4411,6 +4461,3204 @@
     "sourcePaths": [
       "lineage-of-logic:puzzle.metadata.grids[34].rules",
       "lineage-of-logic:puzzle.metadata.grids[47].rules"
+    ]
+  },
+  {
+    "english": "A large dam is nested in between two peaks, providing hydroelectric energy to the reactor below. Swift currents risk sweeping you away if you drift too close.\n\nThis is a 9x9 sudoku.\n\n[Click here to go to the Boss puzzle.](https://sudokupad.app/qfnpbofkiq)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[9].rules"
+    ]
+  },
+  {
+    "english": "Adjacent digits along a PARTY",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[225].text"
+    ]
+  },
+  {
+    "english": "Adjacent digits along green VINES must differ by at least 5.\n\nExample: 1-7-2-9-4\n\nHints:\n5 can never appear on a vine.\nBecause of this, digits must alternate between being high (>5) and low (<5).\nThere are only four digits in each group: 1,2,3,4 and 6,7,8,9.\nDigits close to 5, in particular 4 and 6, are harder to place as they have fewer possible partners.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[25].rules",
+      "super-sudokoid-1:puzzle.metadata.grids[26].rules"
+    ]
+  },
+  {
+    "english": "All lines within the",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[239].text"
+    ]
+  },
+  {
+    "english": "All lines within the DISCOTHÈQUE are PARITY LINES. Adjacent digits along the lines must alternate between odd and even. This applies to all clues in the sector.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[48].rules",
+      "super-sudokoid-1:puzzle.metadata.grids[49].rules"
+    ]
+  },
+  {
+    "english": "All rows, columns and diagonals of the SHRINE must sum to 15.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[44].rules"
+    ]
+  },
+  {
+    "english": "All sides and the diagonals",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[233].text"
+    ]
+  },
+  {
+    "english": "and digits do not repeat",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[221].text"
+    ]
+  },
+  {
+    "english": "and made it safely home!",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[264].text"
+    ]
+  },
+  {
+    "english": "ANTI-KNIGHT and ANTI-KING",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[42].title",
+      "super-sudokoid-1:puzzle.metadata.grids[43].title",
+      "super-sudokoid-1:puzzle.overlays[231].text"
+    ]
+  },
+  {
+    "english": "ANTI-KNIGHT rules",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1156].text"
+    ]
+  },
+  {
+    "english": "apply to this puzzle",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1157].text"
+    ]
+  },
+  {
+    "english": "are forming elsewhere",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1147].text"
+    ]
+  },
+  {
+    "english": "Area completion",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[196].text"
+    ]
+  },
+  {
+    "english": "ARROW sum to the circle",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[214].text"
+    ]
+  },
+  {
+    "english": "Ball chutes",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[30].title",
+      "super-sudokoid-1:puzzle.metadata.grids[31].title"
+    ]
+  },
+  {
+    "english": "before the CONTROL digit",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[244].text"
+    ]
+  },
+  {
+    "english": "Black kropki dots",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[23].author",
+      "super-sudokoid-1:puzzle.metadata.grids[24].author"
+    ]
+  },
+  {
+    "english": "Bonus Puzzle!",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[206].text",
+      "super-sudokoid-1:puzzle.underlays[1122].text",
+      "super-sudokoid-1:puzzle.underlays[1128].text",
+      "super-sudokoid-1:puzzle.underlays[1140].text",
+      "super-sudokoid-1:puzzle.underlays[1153].text",
+      "super-sudokoid-1:puzzle.underlays[1155].text"
+    ]
+  },
+  {
+    "english": "Chaos construction",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[50].author",
+      "super-sudokoid-1:puzzle.metadata.grids[51].author"
+    ]
+  },
+  {
+    "english": "closing. PARTY LINES",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1146].text"
+    ]
+  },
+  {
+    "english": "Digits along a German Whisper",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[211].text"
+    ]
+  },
+  {
+    "english": "Digits along a PARTY LINE must alternate between being odd and even.\n\nExample: 2-3-8-1-2\n\nHints:\nThere are only four even digits and five odd ones.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[34].rules",
+      "super-sudokoid-1:puzzle.metadata.grids[35].rules"
+    ]
+  },
+  {
+    "english": "Digits along a TARGETING ARROW must sum to the digit in its circle.\n\nExample: 1+2+3=6\n\nHints:\n9 can't go on an arrow and 1 can't go in a circle, unless the arrow's is just one cell long.\nDigits CAN repeat if the arrow passes multiple boxes.\nThe sum can never be larger than 9.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[29].rules"
+    ]
+  },
+  {
+    "english": "Digits along the TARGETING",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[213].text"
+    ]
+  },
+  {
+    "english": "Digits an equal distance from",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[222].text"
+    ]
+  },
+  {
+    "english": "Digits an equal distance from the middle of a BALL CHUTE must sum to the digit in the middle.\n\nExample: 1-3-5-2-4 => 1+4=5 and 3+2=5\n\nHints:\nThese lines are always an odd length so there is always a middle cell.\n9 can only ever appear in the middle of the line.\nYou can never have a pair of digits that are 5 or higher.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[30].rules",
+      "super-sudokoid-1:puzzle.metadata.grids[31].rules"
+    ]
+  },
+  {
+    "english": "Digits in a KILLER CAGE",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[219].text"
+    ]
+  },
+  {
+    "english": "Digits increase along",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[215].text"
+    ]
+  },
+  {
+    "english": "Digits must increase along THERMOMETERS, with the lowest value appearing in the round bulb.\n\nExample: 1-2-4-7-9\n\nHints:\n1 can only appear in the bulb and 9 on the tip.\nThis means a box full of thermometers may limit where they go.\nA digit along a thermometer may restrict either of its neighbors.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[32].rules",
+      "super-sudokoid-1:puzzle.metadata.grids[33].rules"
+    ]
+  },
+  {
+    "english": "Digits separated by a",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[209].text"
+    ]
+  },
+  {
+    "english": "Digits separated by a white",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[199].text"
+    ]
+  },
+  {
+    "english": "Digits separated by a white SCAN dot differ by exactly 1.\n\nExample: 1-2, 4-3, or 7-6\n\nHints:\nIf a cell is connected with two dots and both other cells see each other, they must form a trio, e.g. 1-2-3.\n1 and 9 can never be in the middle of such strings.\nIf the chain moves into another box it's possible there could be repeated digits, e.g. 1-2-1.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[21].rules",
+      "super-sudokoid-1:puzzle.metadata.grids[22].rules"
+    ]
+  },
+  {
+    "english": "Digits within a KILLER CAGE must sum to the value in the top-left corner. Digits may not repeat in a cage, even if it stretches across multiple boxes.\n\nExample: 1+2+3=6\n\nHints:\nIt is often useful to consider what the largest or smallest sum achievable is, or if any digit must be included to reach a certain sum.\nIt is also useful to consider the digits outside a cage.\nEach 9-cell box sum to 45.\nUnder Advanced settings you can enable a Killer Calculator to see all digit combinations of a cage.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[27].rules",
+      "super-sudokoid-1:puzzle.metadata.grids[28].rules"
+    ]
+  },
+  {
+    "english": "Digits within the FORTRESS must not repeat within a chess king's move (one cell, diagonally) or a chess knight's move (two cells in one direction and one perpendicular to it).",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[42].rules",
+      "super-sudokoid-1:puzzle.metadata.grids[43].rules"
+    ]
+  },
+  {
+    "english": "DISCOTHÈQUE extra rules",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[48].author",
+      "super-sudokoid-1:puzzle.metadata.grids[49].author"
+    ]
+  },
+  {
+    "english": "Draw a line (that may go diagonally, but may only pass through cells with digits in them) from the CORE boss cell to the planet cell in the ship. The sum of all digits along this line should be as small as possible. The final sum, modulo 10, is the digit that should go into the cell.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[52].rules"
+    ]
+  },
+  {
+    "english": "Draw an EVAC LINE from the CORE boss to the ship",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[248].text"
+    ]
+  },
+  {
+    "english": "Each teleporter within the HUB is paired with one outside it. The digit below the HUB teleporter is the CONTROL value. The value of the teleporters is equal to the number of cells seen by the outside teleporter, before it sees the cell with the control value (i.e. excluding the control digit and the teleporter). It's up to you to figure out which teleporter pairs with which partner.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[47].rules"
+    ]
+  },
+  {
+    "english": "Enhanced scanning",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[23].title",
+      "super-sudokoid-1:puzzle.metadata.grids[24].title"
+    ]
+  },
+  {
+    "english": "Escaping the planet",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[52].title"
+    ]
+  },
+  {
+    "english": "EVAC LINE",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[52].author"
+    ]
+  },
+  {
+    "english": "Fast Travel",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[306].text"
+    ]
+  },
+  {
+    "english": "FAST TRAVEL",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[254].text"
+    ]
+  },
+  {
+    "english": "FAST TRAVEL HUB",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[18].author"
+    ]
+  },
+  {
+    "english": "Final Transmission",
+    "zhHans": "最终传输",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1209].text"
+    ]
+  },
+  {
+    "english": "FORTRESS extra rules",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[42].author",
+      "super-sudokoid-1:puzzle.metadata.grids[43].author"
+    ]
+  },
+  {
+    "english": "FORTRESS RULES",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1120].text"
+    ]
+  },
+  {
+    "english": "Found your lost",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[201].text",
+      "super-sudokoid-1:puzzle.underlays[1125].text"
+    ]
+  },
+  {
+    "english": "GARDENING GLOVES",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1136].text"
+    ]
+  },
+  {
+    "english": "German whisper lines",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1",
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[25].author",
+      "super-sudokoid-1:puzzle.metadata.grids[26].author",
+      "super-sudokoid-2:puzzle.metadata.grids[14].author",
+      "super-sudokoid-2:puzzle.metadata.grids[15].author"
+    ]
+  },
+  {
+    "english": "GRAPPLING ANCHORS",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[227].text"
+    ]
+  },
+  {
+    "english": "GRAPPLING CLAW",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1134].text"
+    ]
+  },
+  {
+    "english": "Grappling points",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[38].title",
+      "super-sudokoid-1:puzzle.metadata.grids[39].title"
+    ]
+  },
+  {
+    "english": "GRAVITY SUIT",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1144].text"
+    ]
+  },
+  {
+    "english": "Hidden puzzles",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[197].text"
+    ]
+  },
+  {
+    "english": "Hidden Sector X1 - ID",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[15].title"
+    ]
+  },
+  {
+    "english": "Hidden Sector X2 - ID",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[16].title"
+    ]
+  },
+  {
+    "english": "Hidden Sector X3 - ID",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[17].title"
+    ]
+  },
+  {
+    "english": "Hidden Sector X4 - ID",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[18].title"
+    ]
+  },
+  {
+    "english": "Hidden Sector X5 - ID",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[19].title"
+    ]
+  },
+  {
+    "english": "Hidden Sector X6 - ID",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[20].title"
+    ]
+  },
+  {
+    "english": "HIDDEN TUNNEL",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1151].text"
+    ]
+  },
+  {
+    "english": "HOMING MISSILES",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1126].text"
+    ]
+  },
+  {
+    "english": "in a KILLER CAGE",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1130].text"
+    ]
+  },
+  {
+    "english": "in some order",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[230].text"
+    ]
+  },
+  {
+    "english": "IRREGULAR sudoku",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[45].title",
+      "super-sudokoid-1:puzzle.metadata.grids[46].title"
+    ]
+  },
+  {
+    "english": "Irregular sudoku rules apply",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[235].text"
+    ]
+  },
+  {
+    "english": "is the number of digits seen",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[243].text"
+    ]
+  },
+  {
+    "english": "It seems some previous inmate has dug an escape route! You don’t appreciate how irregular the grid is, but beggars can’t be choosers.\n\nThis is an irregular sudoku. Place the digits 1-7 so that they don't repeat in any row, column or region.\n\n[Click here to go to the Boss puzzle.](https://sudokupad.app/kt6bb0wm0k)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[7].rules"
+    ]
+  },
+  {
+    "english": "It seems that space-pirates have made the fortress overlooking the valley their stronghold. Security is tight so explore with great care -- being both naked and single, you're no match in a fight.\n\nThis is a 9x9 sudoku.\n\n[Click here to go to the Boss puzzle.](https://sudokupad.app/y4o6cjk9ao)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[5].rules"
+    ]
+  },
+  {
+    "english": "Jet streams",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[40].title",
+      "super-sudokoid-1:puzzle.metadata.grids[41].title"
+    ]
+  },
+  {
+    "english": "JET STREAMS indicate how",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[240].text"
+    ]
+  },
+  {
+    "english": "Jump arrows",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[36].author",
+      "super-sudokoid-1:puzzle.metadata.grids[37].author"
+    ]
+  },
+  {
+    "english": "JUMPING from the arrow",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[217].text"
+    ]
+  },
+  {
+    "english": "Killer cages",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[27].author",
+      "super-sudokoid-1:puzzle.metadata.grids[28].author"
+    ]
+  },
+  {
+    "english": "LAB power",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[203].text"
+    ]
+  },
+  {
+    "english": "lands in the diamond's value",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[218].text"
+    ]
+  },
+  {
+    "english": "Large ferns and tall vines cover this region of the planet. Navigating between the great, alien trees will be difficult without proper equipment.\n\nThis is a 9x9 sudoku.\n\n[Click here to go to the Boss puzzle.](https://sudokupad.app/u6cj0y3fzy)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[2].rules"
+    ]
+  },
+  {
+    "english": "LEARNT RULES",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[194].text"
+    ]
+  },
+  {
+    "english": "Leaving the maze of corridors is a relief. Instead, you seem to have come across a teleporter network set up by some lost civilization. It could prove useful (or at least convenient), if you could get it to work that is.\n\nThis is a 2x7 puzzle. Using the digits 1-9, place digits so that they don't repeat in any row or column and so that each teleporter is uniquely connected.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[18].rules"
+    ]
+  },
+  {
+    "english": "LINE have different parities",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[226].text"
+    ]
+  },
+  {
+    "english": "MAGIC SQUARE",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[44].title"
+    ]
+  },
+  {
+    "english": "Making full use of your newfound ability to enter narrow spaces, you flush yourself down the drain, only to be spat out in a maintenance area. Hundreds of pipes, each with their own valves and gauges, cover the walls from floor to ceiling.\n\nThis is a 6x6 sudoku.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[19].rules"
+    ]
+  },
+  {
+    "english": "Making your way across the roof of the battlement, you reach the tower at the top of the fortress. It seems security is less strict up here so you take the time to enjoy the magnificent view of the valley.\n\nThis is a 6x6 ANTI-KNIGHT sudoku. Place the digits 1-6 in each row, column and box and don't let them repeat a chess knight's move away.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[16].rules"
+    ]
+  },
+  {
+    "english": "many digits are \"seen\" that way",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[241].text"
+    ]
+  },
+  {
+    "english": "Measuring heat",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[32].title",
+      "super-sudokoid-1:puzzle.metadata.grids[33].title"
+    ]
+  },
+  {
+    "english": "Missile targeting",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[29].title"
+    ]
+  },
+  {
+    "english": "MORPH BALL",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1142].text"
+    ]
+  },
+  {
+    "english": "New rule unlocked!",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1149].text"
+    ]
+  },
+  {
+    "english": "NIGHT dot have a 2:1 ratio",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[210].text"
+    ]
+  },
+  {
+    "english": "NIGHT VISION VISOR",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1132].text"
+    ]
+  },
+  {
+    "english": "of the SHRINE bonus puzzle",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[237].text"
+    ]
+  },
+  {
+    "english": "One of the digits separated by a black NIGHT dot must be double the other.\n\nExample: 1-2, 4-2, or 3-6\n\nHints:\nNot all digits can appear in a pair as some lack valid partners, e.g. 5.\n2 and 4 are the only digits with multiple partner options.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[23].rules",
+      "super-sudokoid-1:puzzle.metadata.grids[24].rules"
+    ]
+  },
+  {
+    "english": "Parity lines",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[34].author",
+      "super-sudokoid-1:puzzle.metadata.grids[35].author",
+      "super-sudokoid-1:puzzle.metadata.grids[48].title",
+      "super-sudokoid-1:puzzle.metadata.grids[49].title"
+    ]
+  },
+  {
+    "english": "Party lines",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[34].title",
+      "super-sudokoid-1:puzzle.metadata.grids[35].title"
+    ]
+  },
+  {
+    "english": "Pipe cleared",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[261].text"
+    ]
+  },
+  {
+    "english": "Pipe Maze",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[301].text"
+    ]
+  },
+  {
+    "english": "PIPE MAZE",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[19].author",
+      "super-sudokoid-1:puzzle.overlays[255].text"
+    ]
+  },
+  {
+    "english": "Place nine boxes in the CORE",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[245].text"
+    ]
+  },
+  {
+    "english": "Prison breaking",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[27].title",
+      "super-sudokoid-1:puzzle.metadata.grids[28].title"
+    ]
+  },
+  {
+    "english": "QUEST PROGRESSION",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[195].text"
+    ]
+  },
+  {
+    "english": "rules apply to the FORTRESS",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[232].text"
+    ]
+  },
+  {
+    "english": "Save the Party",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[305].text"
+    ]
+  },
+  {
+    "english": "SAVE THE PARTY ANIMALS",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[20].author"
+    ]
+  },
+  {
+    "english": "SCAN dot differ by exactly 1",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[200].text"
+    ]
+  },
+  {
+    "english": "Secret technique learnt",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1137].text"
+    ]
+  },
+  {
+    "english": "show digits that appear in",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[228].text"
+    ]
+  },
+  {
+    "english": "SHRINE extra rules",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[44].author"
+    ]
+  },
+  {
+    "english": "so that each clue is entirely",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[246].text"
+    ]
+  },
+  {
+    "english": "sum to the corner value",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[220].text"
+    ]
+  },
+  {
+    "english": "sum to the middle value",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[223].text"
+    ]
+  },
+  {
+    "english": "SUPER SUDOKOID",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[293].text"
+    ]
+  },
+  {
+    "english": "Super Sudokoid: Final Transmission",
+    "zhHans": "超级数独机器人 1：最终传输",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.title"
+    ]
+  },
+  {
+    "english": "Super Sudokoid: Final Transmission by The M (Sven's SudokuPad v0.611.0)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:original-html/#document/html/head/title"
+    ]
+  },
+  {
+    "english": "Tall mountains tower above. Broken remains of ropes, ladders and bridges speak of how challenging climbing here would be.\n\nThis is a 9x9 sudoku.\n\n[Click here to go to the Boss puzzle.](https://sudokupad.app/lzer9x4edb)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[8].rules"
+    ]
+  },
+  {
+    "english": "TELEPORTER connections",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[47].title"
+    ]
+  },
+  {
+    "english": "TELEPORTER pairs' value",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[242].text"
+    ]
+  },
+  {
+    "english": "The bridge spanning two mountaintops is extremely precarious as it sways in the strong wind. And yet, there is a puzzle to be solved here and you just cannot resist the challenge, even if you hold on hard to the railing while doing so.\n\nThis is a 4x4 sudoku. Additionally, digits along the bridge above do not repeat in that row.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[17].rules"
+    ]
+  },
+  {
+    "english": "The cells within the TUNNEL don't form a square. Instead, boxes are replaced by orthogonally connected regions of seven cells that must contain the digits 1-7. Digits may still not repeat in any row or column, but all digits don't necessarily appear in each row or column.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[45].rules",
+      "super-sudokoid-1:puzzle.metadata.grids[46].rules"
+    ]
+  },
+  {
+    "english": "THE CORE extra rules",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[50].title",
+      "super-sudokoid-1:puzzle.metadata.grids[51].title"
+    ]
+  },
+  {
+    "english": "The digit in the arrow cell indicates how many cells you should jump in the arrow's direction. The value of the cell you land in is the same as the connected diamond cell.\n\nExample: [1]--2> _ 1\n\nHints:\nYou can also work backwards. If you know where you land, you can tell what should be in the diamond, or if you know where the diamond's value is in the arrow's direction, you can tell how far to jump.\nSometimes you can rule out digits by looking at where you can't jump.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[36].rules",
+      "super-sudokoid-1:puzzle.metadata.grids[37].rules"
+    ]
+  },
+  {
+    "english": "The digit outside the grid indicate how many digits in that row or column are \"seen\" from that direction, if larger digits block the view of smaller ones behind them.\n\nExample: 3|24136\n\nHints:\nA 9 would mean it sees every digit. Conversely, a 1 means the highest digit must be adjacent to the clue.\nIf you know where the 9 is, you can count the number of available cells.\nA 2 in the clue means the 8 must either be next to the clue, or behind the 9, with no other option.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[40].rules",
+      "super-sudokoid-1:puzzle.metadata.grids[41].rules"
+    ]
+  },
+  {
+    "english": "The discothèque is",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1145].text"
+    ]
+  },
+  {
+    "english": "The enormous chamber is dominated by a huge mechanical brain in its center. Space itself is unstable as the mental energies exerted warp the air around it. Somehow, you will have to find a way to approach and turn this thing off.\n\nThis is an irregular sudoku. Fill the 11x11 grid with nine 3x3 boxes so that each clue resides entirely within a single box (and no boxes overlap). Place the digits 1-9 in each box so that no digits repeat in any row, column or box.\n\n[Click here to go to the Boss puzzle.](https://sudokupad.app/n4c0dem40c)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[14].rules"
+    ]
+  },
+  {
+    "english": "the four surrounding cells",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[229].text"
+    ]
+  },
+  {
+    "english": "The lights are starting to flicker and dim as if the power lines have a hard time reaching this far down. You are starting to feel uneasy about this.\n\nThis is a 4x4 sudoku.\n\n[Click here to go to the Boss puzzle.](https://sudokupad.app/hf8r43jwsj)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[12].rules"
+    ]
+  },
+  {
+    "english": "the middle of a BALL CHUTE",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[224].text"
+    ]
+  },
+  {
+    "english": "The music kicks up",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1148].text"
+    ]
+  },
+  {
+    "english": "THE PARTY",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[256].text"
+    ]
+  },
+  {
+    "english": "The ship is somehow still intact after the rough landing. You seem to have landed in a lush forest. Better assess the damage and find your bearing.\n\nThis is a 6x6 sudoku. Place the digits 1-6 in each row, column and box.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[0].rules"
+    ]
+  },
+  {
+    "english": "The sterile walls of the underground lab are a stark contrast to the nature outside. Conveyor belts and robots lie dormant as power has long since run out, yet there are signs of more recent activity.\n\nThis is a 9x9 sudoku.\n\n[Click here to go to the Boss puzzle.](https://sudokupad.app/swxudk82v1)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[3].rules"
+    ]
+  },
+  {
+    "english": "There are nine boxes in this puzzle, but you have to figure out where they go. Digits may not repeat in any row, column or box, but every digit doesn't necessarily appear in each row or column. Each clue in the grid is entirely contained within a single box (but multiple clues could possibly share a box).",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[50].rules",
+      "super-sudokoid-1:puzzle.metadata.grids[51].rules"
+    ]
+  },
+  {
+    "english": "THERMAL VISORS",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1124].text"
+    ]
+  },
+  {
+    "english": "THERMOMETERS from the bulb",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[216].text"
+    ]
+  },
+  {
+    "english": "to the TUNNEL",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[236].text"
+    ]
+  },
+  {
+    "english": "Towers of stacked limestones litter the courtyard of some ancient ruins, each marked with strange glyphs you do not recognize.\n\nThis is a 9x9 sudoku.\n\n[Click here to go to the Boss puzzle.](https://sudokupad.app/f4c9vuptqj)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[1].rules"
+    ]
+  },
+  {
+    "english": "TUNNEL extra rules",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[45].author",
+      "super-sudokoid-1:puzzle.metadata.grids[46].author"
+    ]
+  },
+  {
+    "english": "Up to four digits appear in these circles. They indicate digits that must appear in one of the four adjacent cells.\n\nHints:\nThe digits position within the circle has no relation to which cell it belongs in.\nIf a digit appears twice in a clue, it must appear in two of the cells.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[38].rules",
+      "super-sudokoid-1:puzzle.metadata.grids[39].rules"
+    ]
+  },
+  {
+    "english": "value. Enter the sum, modulo 10, in the planet cell",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[250].text"
+    ]
+  },
+  {
+    "english": "Vine climbing",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[25].title",
+      "super-sudokoid-1:puzzle.metadata.grids[26].title"
+    ]
+  },
+  {
+    "english": "VINE differ by at least 5",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[212].text"
+    ]
+  },
+  {
+    "english": "while making digits along it sum to the smallest poissible",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[249].text"
+    ]
+  },
+  {
+    "english": "White kropki dots",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1",
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[21].author",
+      "super-sudokoid-1:puzzle.metadata.grids[22].author",
+      "super-sudokoid-2:puzzle.metadata.grids[13].author"
+    ]
+  },
+  {
+    "english": "within a single box",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[247].text"
+    ]
+  },
+  {
+    "english": "You did not expect to find a discothèque this far underground, and yet, there are dancing aliens everywhere you look, each odder than the last. They seem entirely absorbed by their dancing and don’t seem to notice you.\n\nThis is a 9x9 sudoku.\n\n[Click here to go to the Boss puzzle.](https://sudokupad.app/jo12qmyc5v)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[13].rules"
+    ]
+  },
+  {
+    "english": "You discover where most partygoers ended up after the untimely closure of the discothèque. Quickly gain their attention so you can warn them about the impending doom!\n\nThis is a 4x4 sudoku.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[20].rules"
+    ]
+  },
+  {
+    "english": "You discovered a",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[205].text",
+      "super-sudokoid-1:puzzle.underlays[1121].text",
+      "super-sudokoid-1:puzzle.underlays[1127].text",
+      "super-sudokoid-1:puzzle.underlays[1139].text",
+      "super-sudokoid-1:puzzle.underlays[1152].text",
+      "super-sudokoid-1:puzzle.underlays[1154].text"
+    ]
+  },
+  {
+    "english": "You don’t need to understand the language of the warning signs to realize the enormous turbine in the center of the room is what powers the lab above. Restarting it looks simple enough, but should you?\n\nThis is a 9x9 sudoku.\n\n[Click here to go to the Boss puzzle.](https://sudokupad.app/gnp7aga2sx)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[4].rules"
+    ]
+  },
+  {
+    "english": "You escaped in time",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.overlays[263].text"
+    ]
+  },
+  {
+    "english": "You obtained the",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1131].text",
+      "super-sudokoid-1:puzzle.underlays[1133].text",
+      "super-sudokoid-1:puzzle.underlays[1135].text",
+      "super-sudokoid-1:puzzle.underlays[1141].text",
+      "super-sudokoid-1:puzzle.underlays[1143].text"
+    ]
+  },
+  {
+    "english": "You step into a maze of corridors and hallways, twisting in, out and around itself. You’re off the map now. Where could it lead?\n\nThis is a 6x6 sudoku.\n\nClick h#re to #o to th#...",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[10].rules"
+    ]
+  },
+  {
+    "english": "You step into a small shrine, nested discretely into the cliff wall. A mysterious artifact lies on the alter.\n\nThis is a 3x3 magic square. Place the digits 1-9 in the box so that all rows, columns and diagonals sum to 15.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[15].rules"
+    ]
+  },
+  {
+    "english": "You wander deeper, losing yourself in never-ending corridors and hallways that all look the same. Is there no end?\n\nThis is a 4x4 sudoku.\n\nCl#ck her# to...",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[11].rules"
+    ]
+  },
+  {
+    "english": "You were imprisoned",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.underlays[1129].text"
+    ]
+  },
+  {
+    "english": "You’re in a cage of some sort in a dark, damp, underground prison. Unsettling groans can be heard from within the darkness. You are not alone here.\n\nThis is a 9x9 sudoku.\n\n[Click here to go to the Boss puzzle.](https://sudokupad.app/70qpd43i45)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[6].rules"
+    ]
+  },
+  {
+    "english": "Your engines roar as you burst through the cloud cover and into the stratosphere.\n\nThe stars watch as the planet behind you collapses unto itself and explodes in an enormous ball of fire and light. You made it. You survived!\n\nCONGRATULATIONS for reaching the end of this puzzle!\n\nI hope you had fun. There might still be a secret or two left for you to find in the grid, should you wish to continue.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[53].rules"
+    ]
+  },
+  {
+    "english": "Zipper lines",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-1",
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-1:puzzle.metadata.grids[30].author",
+      "super-sudokoid-1:puzzle.metadata.grids[31].author",
+      "super-sudokoid-2:puzzle.metadata.grids[21].author"
+    ]
+  },
+  {
+    "english": "[Click here to go to the boss puzzle](https://sudokupad.app/1hh6q5xl6l)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[10].rules"
+    ]
+  },
+  {
+    "english": "[Click here to go to the boss puzzle](https://sudokupad.app/64c4lkb5ss)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[8].rules"
+    ]
+  },
+  {
+    "english": "[Click here to go to the boss puzzle](https://sudokupad.app/80kqa7jo0h)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[9].rules"
+    ]
+  },
+  {
+    "english": "[Click here to go to the boss puzzle](https://sudokupad.app/bpij5pdi3x)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[6].rules"
+    ]
+  },
+  {
+    "english": "[Click here to go to the boss puzzle](https://sudokupad.app/dxr2zdfldv)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[11].rules"
+    ]
+  },
+  {
+    "english": "[Click here to go to the boss puzzle](https://sudokupad.app/dz1iu0r3tl)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[12].rules"
+    ]
+  },
+  {
+    "english": "[Click here to go to the boss puzzle](https://sudokupad.app/gidcd5jrz7)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[5].rules"
+    ]
+  },
+  {
+    "english": "[Click here to go to the boss puzzle](https://sudokupad.app/hfyjv8jqr5)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[7].rules"
+    ]
+  },
+  {
+    "english": "a surrounding water",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[936].text"
+    ]
+  },
+  {
+    "english": "A tall tower rises on the western edge of the land. Its gate is tightly shut and three keys are required to enter. Once you find the keys, enter them in the red cells. The topmost key goes in the topmost lock, and so on.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[43].rules"
+    ]
+  },
+  {
+    "english": "adjacent cells",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[154].text"
+    ]
+  },
+  {
+    "english": "Adjacent digits along a green VINE must differ by at least 5. Any leaves or grass is purely cosmetic.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[14].rules",
+      "super-sudokoid-2:puzzle.metadata.grids[15].rules"
+    ]
+  },
+  {
+    "english": "All non-wall digits orthogonally adjacent to a drone cell have the same parity. Note that this only applies to adjacent cells and not the drone itself.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[27].rules"
+    ]
+  },
+  {
+    "english": "All orthogonally adjacent lava cells must differ by at least 2.\n\n(Note that pink or red cells are cosmetic and if they are surrounded by lava cells, they too count as lava. BREAKABLE cells do not count as lava.)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[31].rules"
+    ]
+  },
+  {
+    "english": "All rows and columns",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[157].text"
+    ]
+  },
+  {
+    "english": "All walls are Fillomino puzzles. They consist of orthogonally connected regions where all digits within a region equal the size of the region, and two regions of the same size may not touch each other orthogonally. Cells with a blue PHASE ENTRY POINT have the same value as the adjacent wall cell they phase into.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[20].rules"
+    ]
+  },
+  {
+    "english": "are larger than",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[153].text"
+    ]
+  },
+  {
+    "english": "arrowhead cell to",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[930].text"
+    ]
+  },
+  {
+    "english": "ARROWS sum to",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[170].text"
+    ]
+  },
+  {
+    "english": "At the peak of the towering steel monstrosity is an antenna. You suspected as much after your time in the bunker -- this is the thing powering your drones, and Wark’s barrier technology. You’ve been unable to remotely disable the barriers, but perhaps you can gain some insight into their inner workings by examining the antenna from up close? Having explored everywhere else, it’s your last hope.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[61].rules"
+    ]
+  },
+  {
+    "english": "BALL CHUTES",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[21].title"
+    ]
+  },
+  {
+    "english": "BARRIER cells must alternate",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[166].text"
+    ]
+  },
+  {
+    "english": "between low, mid and high",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[165].text"
+    ]
+  },
+  {
+    "english": "Black WALL JUMP arrows have two components: the tip of the arrow, and the wall cell at its base. Move an equal number of cells as the value of the arrowhead's cell, starting in the arrowhead cell and moving in the direction of the arrow. The digit in the cell you land in will have the same value as the wall cell.\n\nFor example, if the arrowhead is 1 and the wall cell is 2, then there should be a 2 in the cell adjacent to the arrowhead (in the direction it points).\n\nThis rule is identical to how Shinespark worked in the previous puzzle.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[26].rules"
+    ]
+  },
+  {
+    "english": "BREAKABLE blocks",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[152].text"
+    ]
+  },
+  {
+    "english": "BREAKABLE BLOCKS",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[23].title"
+    ]
+  },
+  {
+    "english": "Breaking barriers",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[62].title"
+    ]
+  },
+  {
+    "english": "Bunker buster",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[48].title"
+    ]
+  },
+  {
+    "english": "Caldera chaos",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[7].author"
+    ]
+  },
+  {
+    "english": "cell that differs by 1",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[935].text"
+    ]
+  },
+  {
+    "english": "Cells marked with an explosion are BREAKABLE. To put on enough pressure, they must be larger than all orthogonally adjacent cells, including walls(!) but excluding other breakable cells.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[23].rules"
+    ]
+  },
+  {
+    "english": "cells must differ",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[940].text"
+    ]
+  },
+  {
+    "english": "Climbing the weird tower from the outside proves trickier than navigating its insides. With no footholds in sight, you have to get creative, using a combination of wall jumps and drone platforms to ascend. As you approach the top of the tower, a monstrous metal-dragon passes above you. It lets out a deafening screech, as if inviting you to try conquering its domain.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[55].rules"
+    ]
+  },
+  {
+    "english": "CRYSTAL CAGES",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[25].title"
+    ]
+  },
+  {
+    "english": "DARK INVERSION",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[175].text"
+    ]
+  },
+  {
+    "english": "Digits adjacent",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[156].text"
+    ]
+  },
+  {
+    "english": "Digits along a VINE",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[952].text"
+    ]
+  },
+  {
+    "english": "Digits along BALL CHUTES",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[160].text"
+    ]
+  },
+  {
+    "english": "Digits along HEAT VENTS must decrease as you go from the round bulb to the tip of the line.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[29].rules"
+    ]
+  },
+  {
+    "english": "Digits along the arrows sum to the value of the circle at the arrow's base. Arrows never overlap or share cells with other arrows.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[17].rules",
+      "super-sudokoid-2:puzzle.metadata.grids[18].rules"
+    ]
+  },
+  {
+    "english": "Digits an equal distance (along the line) from the middle of a BALL CHUTE sum to the middle digit. The lines are always of an odd length and the middle cell is always marked.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[21].rules"
+    ]
+  },
+  {
+    "english": "Digits may repeat here!",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[927].text"
+    ]
+  },
+  {
+    "english": "Digits separated by a SCAN",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[155].text"
+    ]
+  },
+  {
+    "english": "Digits separated by a white SCAN DOT differ by exactly 1.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[13].rules"
+    ]
+  },
+  {
+    "english": "dot differ by exactly 1",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[162].text"
+    ]
+  },
+  {
+    "english": "Draw Renban lines",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[944].text"
+    ]
+  },
+  {
+    "english": "Each row and column of orange CRYSTAL CAGES must sum to the same value. In most cases, the value is given in the top-left corner of the cage, but if there is a question mark in the corner, you have to figure out the sum yourself.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[25].rules"
+    ]
+  },
+  {
+    "english": "Each wall RUNE",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[947].text"
+    ]
+  },
+  {
+    "english": "Each yellow wall RUNE corresponds to a unique digit. All instances of the same RUNE map to the same digit, while different runes map to different digits.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[22].rules"
+    ]
+  },
+  {
+    "english": "Entropic lines",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[28].author"
+    ]
+  },
+  {
+    "english": "Equal parities",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[27].author"
+    ]
+  },
+  {
+    "english": "Equal sums",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[25].author"
+    ]
+  },
+  {
+    "english": "equals adjacent wall.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[948].text"
+    ]
+  },
+  {
+    "english": "EVENT: SEALED VAULT DOOR",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[43].title"
+    ]
+  },
+  {
+    "english": "EVENT: THE MIRACLE SEED",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[58].title"
+    ]
+  },
+  {
+    "english": "EVENT: X MARKS THE SPOT",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[56].title"
+    ]
+  },
+  {
+    "english": "Eyes in the sky",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[54].title"
+    ]
+  },
+  {
+    "english": "FAULT LINES",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[24].title",
+      "super-sudokoid-2:puzzle.overlays[173].text"
+    ]
+  },
+  {
+    "english": "For each ARROW clue, draw a line in the direction of the arrow, starting in the cell with the arrow's head and with length equal to the circled value at the arrow's base.\n\nDigits along the line have to be a set of consecutive digits in any order (without repeating digits).\n\nIf the line would hit a wall, it instead bounces by rotating 90 degrees away from the wall. Notably, it does so inside the cell itself, rather than moving to the cell's corner and bouncing there. It also doesn't cut corners and will bounce instead. The line is not allowed to go straight into a wall (or diagonally into an opposing corner). If it does, it has to be short enough to stop before hitting the wall.\n\nIf you want an example, look [here](https://sudokupad.app/7asln8p2u1)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[19].rules"
+    ]
+  },
+  {
+    "english": "For each blue water cell, there must be at least ONE water cell among the eight surrounding cells that differs by exacly 1.\n\n(Note that pink or red cells are cosmetic and if they are surrounded by water cells, they too count as water. BREAKABLE cells do not count as water.)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[30].rules"
+    ]
+  },
+  {
+    "english": "from ARROW tips.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[943].text"
+    ]
+  },
+  {
+    "english": "HEAT VENTS",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[29].title"
+    ]
+  },
+  {
+    "english": "HEAT VENTS are",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[928].text"
+    ]
+  },
+  {
+    "english": "in CRYSTAL CAGES",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[158].text"
+    ]
+  },
+  {
+    "english": "In order to break through BARRIER lines, each set of three digits along the lines must contain a low, middle and high digit (123, 456, and 789 respectively), in any order.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[28].rules"
+    ]
+  },
+  {
+    "english": "In the corner",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[34].title"
+    ]
+  },
+  {
+    "english": "In the rubble right next to where you woke up, you find a still intact power cell that used to belong to your suit. You slot it in and can’t help a sigh of relief as the now fully-powered nanobots start buzzing about, repairing and improving joints and platings. Soon, your suit shines orange, and that means it’s now immune to lava!",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[46].rules"
+    ]
+  },
+  {
+    "english": "Inside the center of the geode is a seed. You can’t make any sense of it, so you bring it back to the refugee camp in the hope that someone there knows what to do with it.\n\nThey do, and it causes quite a stir. This mystical beanstalk seed grows to amazing heights when planted. With this, you can finally reach the uppermost layer of the planet again!\n\nStarting in the refugee camp in Sector 7 (the yellow circle), draw an 8 cell long VINE straight up. Digits along the VINE differ by at least 5.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[58].rules"
+    ]
+  },
+  {
+    "english": "inverse thermometers",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[929].text"
+    ]
+  },
+  {
+    "english": "Inverse thermometers",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[29].author"
+    ]
+  },
+  {
+    "english": "Jump from the",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[932].text"
+    ]
+  },
+  {
+    "english": "land in a cell equal",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[941].text"
+    ]
+  },
+  {
+    "english": "Large steel constructions tower over a dry lakebed. Pipes and chutes criss-cross up the sides and you spot multiple abandoned shacks, bolted haphazardly to the walls.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[37].rules"
+    ]
+  },
+  {
+    "english": "Learnt rules",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[179].text"
+    ]
+  },
+  {
+    "english": "Metal riddle",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[11].author"
+    ]
+  },
+  {
+    "english": "Missiles aquired",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[35].title"
+    ]
+  },
+  {
+    "english": "People celebrate! For once, you've managed to win without destroying the planet in the process. Wark's doomsday weapon is no more and his minions are surrendering in droves.\n\nThe people of the refugee camp thank you, their leaders already busy trying to fill the vacuum left by the madman's fall and peace is being restored across the planet. You join them for a feast, get your fair share of back pats, but before long you're back in the cockpit once again.\n\nYou're a drifter after all, and this puzzle is solved. Time to set out for new adventures, to worlds unseen!",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[63].rules"
+    ]
+  },
+  {
+    "english": "Phase suit",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[49].title"
+    ]
+  },
+  {
+    "english": "Power restored!",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[46].title"
+    ]
+  },
+  {
+    "english": "Proof that you have fully filled in a Sector correctly!",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[1].rules"
+    ]
+  },
+  {
+    "english": "Proof that you have fully filled in the walls of a Sector correctly!",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[2].rules"
+    ]
+  },
+  {
+    "english": "Refugee camp",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[44].title"
+    ]
+  },
+  {
+    "english": "Refugee rescue",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[9].author"
+    ]
+  },
+  {
+    "english": "regions! Phase gate",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[949].text"
+    ]
+  },
+  {
+    "english": "Renban arrow lines",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[19].author"
+    ]
+  },
+  {
+    "english": "Rule breaking",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[4].title"
+    ]
+  },
+  {
+    "english": "Rule making",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[4].author"
+    ]
+  },
+  {
+    "english": "SCAN DOTS",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[13].title"
+    ]
+  },
+  {
+    "english": "Sequence breaking",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[3].title"
+    ]
+  },
+  {
+    "english": "Serpent cluster",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[8].author"
+    ]
+  },
+  {
+    "english": "share parity",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[167].text"
+    ]
+  },
+  {
+    "english": "Slingshot arrows",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[26].author"
+    ]
+  },
+  {
+    "english": "Speed running",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[3].author"
+    ]
+  },
+  {
+    "english": "Story moments",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[174].text"
+    ]
+  },
+  {
+    "english": "Sudoku rules do not apply to purple wall cells, they may contain any of the digits 1-9, or no digits. Formally, the Sudoku constraint of the sector is satisfied if no row, column or box contains repeated digits, excluding all wall cells.\n\nDo note that if any other clue applies to a wall cell, the cell still needs to contain a digit that satisfies that clue.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[16].rules"
+    ]
+  },
+  {
+    "english": "Sum arrows",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[17].author",
+      "super-sudokoid-2:puzzle.metadata.grids[18].author"
+    ]
+  },
+  {
+    "english": "sum to the center value",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[161].text"
+    ]
+  },
+  {
+    "english": "sum to the indicated value",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[159].text"
+    ]
+  },
+  {
+    "english": "SUPER MISSILES",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[19].title"
+    ]
+  },
+  {
+    "english": "Super Sudokoid",
+    "zhHans": "超级数独机器人",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[151].text"
+    ]
+  },
+  {
+    "english": "Super Sudokoid: Dark Inversion",
+    "zhHans": "超级数独机器人 2：暗影反转",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.title"
+    ]
+  },
+  {
+    "english": "Super Sudokoid: Dark Inversion by The M (Sven's SudokuPad v0.611.0)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:original-html/#document/html/head/title"
+    ]
+  },
+  {
+    "english": "TARGETING ARROWS",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[17].title",
+      "super-sudokoid-2:puzzle.metadata.grids[18].title"
+    ]
+  },
+  {
+    "english": "The antenna",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[61].title"
+    ]
+  },
+  {
+    "english": "The barrier shatters and water comes flooding out, as a well-timed explosion tears through the weak spot in the concrete dam. You watch in wonder as the lakebed is once again filled with water. Color all non-wall cells in Sector 10 blue, up to the dashed line. They are now considered water cells and follow underwater rules.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[51].rules"
+    ]
+  },
+  {
+    "english": "The bunker",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[53].title"
+    ]
+  },
+  {
+    "english": "the circle value",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.overlays[169].text"
+    ]
+  },
+  {
+    "english": "The geode",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[57].title"
+    ]
+  },
+  {
+    "english": "The heat is intense as you step up onto the slopes of an active volcano and your ailing suit struggles to keep up. Smoke and steam billows out from heat vents in the ground. You feel the earth tremble slightly.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[36].rules"
+    ]
+  },
+  {
+    "english": "The steel construct looms ever tall above you. You've climbed high, but it still stretches on, further than you can reach. Beyond a not too distant hill, you spot smoke. Whether it's trouble or relief remains to be seen. You've no doubt yet to see the last of Wark's minions.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[41].rules"
+    ]
+  },
+  {
+    "english": "the Sudoku grid.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[926].text"
+    ]
+  },
+  {
+    "english": "The tower",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[55].title"
+    ]
+  },
+  {
+    "english": "The tower is strange, seemingly made entirely from a single piece of some dark, unknown metal. There are no seams or joints in the surface, yet somehow you still manage to climb it, thanks to your newfound abilities.\n\nIn a room near the top you find sketches of several mysterious glyphs and RUNES. According to some hastily scribbled notes, someone once used this room to study them.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[50].rules"
+    ]
+  },
+  {
+    "english": "The volcano erupts! Draw a line from each of the two dots above the lava (row 5, column 5 and 6). The lines may move diagonally and may cut corners, but may not cross heat vents or wall cells. They also cannot cross or intersect with each other. The lines must cover all orange dots and behave like slow inverse thermometers (digits along the lines must decrease or stay the same as you move away from the volcano).",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[39].rules"
+    ]
+  },
+  {
+    "english": "The wind howls as it sweeps across the jagged overhang that makes up this particular cliffside. You ride the current of hot air generated by the volcano. There is seismic activity going on here as well, and you're kept on your toes as you weave between lava plumes and billowing smoke.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[45].rules"
+    ]
+  },
+  {
+    "english": "Thermal scans",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[38].title"
+    ]
+  },
+  {
+    "english": "They bounce on walls!",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[942].text"
+    ]
+  },
+  {
+    "english": "This is a list of hints in case you get stuck. Below is a list of objectives for each story moment, suggesting what to work towards.\n\n\n\n1. Defeat the boss in Sector 3.\n\n\n2. Exit Sector 14 via Sector 15 (don't worry about filling in all digits in the sector, it will be a long time before you can fully clear any sector.)\n\n\n3. Collect the upgrade in Sector 11.\n\n\n4. Find a way into Sector 12.\n\n\n5. Find a way into Sector 10.\n\n\n6. Collect one of the upgrades in Sector 10.\n\n\n7. Defeat the boss in Sector 12.\n\n\n8. Collect the upgrade in Sector 12.\n\n\n9. Find a way into Sector 6.\n\n\n10. Find a way into Sector 9.\n\n\n11. Find a way into Sector 5.\n\n\n12. Find a way into Sector 7.\n\n\n13. Defeat the boss in Sector 9, then find a way into Sector 8.\n\n\n14. Defeat the boss in Sector 7, then return to Sector 14.\n\n\n15. Find a way into Sector 16.\n\n\n16. Find a way into Sector 15 from Sector 16.\n\n\n17. Collect all keys and unlock the gate in Sector 5.\n\n\n18. Find a way into Sector 1.\n\n\n19. Defeat the boss in Sector 16, then keep filling in wall cells, collect runes and, ultimately, find a way to break the blocks in Sector 10.\n\n\n20. Collect the upgrade in Sector 10.\n\n\n21. Find another way into Sector 15.\n\n\n22. Collect the upgrade in Sector 15.\n\n\n23. Find a way into Sector 1.\n\n\n24. Defeat the boss in Sector 1.\n\n\n25. Find a way into Sector 13.\n\n\n26. Collect the upgrade in Sector 13.\n\n\n27. Find a way into Sector 3.\n\n\n28. Find a way into Sector 4.\n\n\n29. Find a way into Sector 2.\n\n\n30. Collect the upgrade in Sector 2.\n\n\n31. Defeat the boss in Sector 4.\n\n\n32. Fill in the rest of the grid.\n\n\n??. Defeat boss 0.\n\n\n??. Fill in the learnt rules grid.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[0].rules"
+    ]
+  },
+  {
+    "english": "to the wall's value",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[931].text"
+    ]
+  },
+  {
+    "english": "Two adjacent lava",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[939].text"
+    ]
+  },
+  {
+    "english": "Under pressure",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[42].title"
+    ]
+  },
+  {
+    "english": "Under significantly more pressure",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[47].title"
+    ]
+  },
+  {
+    "english": "Unfinished business",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[59].title"
+    ]
+  },
+  {
+    "english": "unique digit",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[945].text"
+    ]
+  },
+  {
+    "english": "Unwelcome welcome",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[6].author"
+    ]
+  },
+  {
+    "english": "Wall cells separated by a black FAULT LINE must have a 1:2 ratio (similar to black kropki dots).",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[24].rules"
+    ]
+  },
+  {
+    "english": "Wall glyphs",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[22].author"
+    ]
+  },
+  {
+    "english": "WALL JUMPS",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[26].title"
+    ]
+  },
+  {
+    "english": "WALL PHASING",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[20].title"
+    ]
+  },
+  {
+    "english": "Walls are FILLOMINO",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[950].text"
+    ]
+  },
+  {
+    "english": "Walls are not part of",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[925].text"
+    ]
+  },
+  {
+    "english": "Water cells must have",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.underlays[937].text"
+    ]
+  },
+  {
+    "english": "WHISPER VINES",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[14].title",
+      "super-sudokoid-2:puzzle.metadata.grids[15].title"
+    ]
+  },
+  {
+    "english": "You blast your way through a crack in the wall. On the other side is an underground bunker and research facility. You don't get much time to take in the sight as moments later, an emergency blast door shuts right in your face. You're not getting through this one any time soon so you leave it for now.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[48].rules"
+    ]
+  },
+  {
+    "english": "You come across another abandoned research station. This one was in decent condition before you flooded the place and a few machines still refuse to give in, despite the room being completely submerged. You recognize a DRG mining probe and manage to download a mapping of regional FAULT LINES to your suit.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[52].rules"
+    ]
+  },
+  {
+    "english": "You descend into the firey inferno that is the innards of the volcano. Visibility is absolutely rotten and you're sweltering inside your suit. Still, your scanner says there's a key to be had here, and by this point you have nothing else to go on when it comes to finding your way back home, so into the volcano we go!",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[47].rules"
+    ]
+  },
+  {
+    "english": "You discover a research station. Geological surface scans show an intricate network of heat vents. You copy their thermal mappings indicating how to ride the updrafts from these “inverse thermometers” as the researchers seem to call them.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[38].rules"
+    ]
+  },
+  {
+    "english": "You don’t strike gold. Instead, you emerge inside a geode of tall, orange crystals. The brittle gemstones surround something in the center, but navigating the sharp edges is tricky. To retain their structural integrity, each row and column of a CRYSTAL CAGE must sum to the value in the top-left corner.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[57].rules"
+    ]
+  },
+  {
+    "english": "You emerge in a dry and dusty field and are greeted by a wave of hot air. Wrecks and debris from some long forgotten battle dot the landscape.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[34].rules"
+    ]
+  },
+  {
+    "english": "You emerge inside the underground bunker. Complex machinery relay data metrics back and forth from various points of interest around the planet. Despite the vicinity to an erupting volcano, the air is surprisingly cool.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[53].rules"
+    ]
+  },
+  {
+    "english": "You feel the dampness through your suit as you emerge underwater in a large basin. The wreck of an old space ship lies at the bottom, but the large hole in the hull makes it clear it’s never going to fly again.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[42].rules"
+    ]
+  },
+  {
+    "english": "You find people. Refugees, huddling in a small, makeshift camp. They greet you warmly, once they realize you’re not one of Wark’s goons. The warmongering alien is using the planet as a base for his conquest of the solar system, forcing its people to scavenge for the dangerous, old technology of their ancestors to use as advanced weapons.\n\nThe people in the camp are trying to escape their oppressors, but resources are running low. You promise to help, but reaching Wark’s fortress up on the cliffs above will be near impossible. The camp’s elders hand you a suit upgrade and suggest you explore the nearby water basin. It’s been untouched by scavengers due to the number of deadly predators living there and may still contain something of use. You steel yourself for what lies ahead.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[44].rules"
+    ]
+  },
+  {
+    "english": "You hit the jackpot beating this guy! You access the memory banks of the wrecked dragon, revealing a map to buried treasure that Wark was no doubt trying to get his claws on.\n\nTo find the treasure cell within sector 13 (in the bottom left corner), draw a horizontal line from one of the keys and a vertical line from a second key. The value of third key goes into the cell where the two lines meet.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[56].rules"
+    ]
+  },
+  {
+    "english": "You land on Cell-81, the hidden homeworld of the ancient Puzzlo race. Your ship perches precariously atop the steep cliffs that make up the topmost layer of the planet. The foliage is dense up here, hiding your ship from view. Time to find out who broadcasted that emergency signal.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[32].rules"
+    ]
+  },
+  {
+    "english": "You manage to salvage a half-decent MISSILE launcher from a large, crab-like exoskeleton. Despite the rust and mismatching interfaces, you quickly get the optical targeting system back in working condition.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[35].rules"
+    ]
+  },
+  {
+    "english": "You manage to sneak a peek at Wark’s base of operation. It’s a disheartening sight: the base is heavily fortified, and there are plenty of those barriers that almost broke you before. You will need an edge to deal with them before you stand any chance at defeating Wark and his army. (You just found Wark's base, but it might still be a long time before you're strong enough to confront him. Don't be alarmed if you have plenty of logs left to find.)",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[60].rules"
+    ]
+  },
+  {
+    "english": "You step into a dimly lit chamber. On a pedestal, under a single, bright spotlight, lies a suit unlike any you’ve seen before, the light seemingly inverting as it bounces off the polished metal surface. This is the PHASE SUIT. Read the unlocked rules carefully!",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[49].rules"
+    ]
+  },
+  {
+    "english": "You wake up at the bottom of a ravine. Faint daylight seeps down from cracks in the ceiling, illuminating your surroundings enough that you can navigate. Your suit is badly damaged and almost all of your equipment is broken or offline. Your scanner still works, as do your trusty gardening gloves, so you should be able to climb your way out.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[33].rules"
+    ]
+  },
+  {
+    "english": "You walk up to the largest console and start mashing buttons at random, prompted by your suit’s AI. With some guesswork (and a conveniently placed sticky-note with all the important passwords), you manage to transfer access to the base’s remote controlled DRONES to you, allowing you to use them as platforms when exploring.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[54].rules"
+    ]
+  },
+  {
+    "english": "You’re in luck! Among the fire and brimstone, the volcano has spit out an upgrade cache that must have fallen into the caldera long ago. Inside the cache lies a slightly singed MORPH BALL upgrade, complete with fire decals.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[40].rules"
+    ]
+  },
+  {
+    "english": "You’ve found it! There is a way to break through the barriers if you vary the frequency just right across the width of the fields. Armed with this insight, you’re unstoppable! You toggle your missile launcher to butt-kicking mode and march for the enemy stronghold. Time to end this!",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[62].rules"
+    ]
+  },
+  {
+    "english": "You've made a puzzle out of the rules table and even managed to solve it!",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[4].rules"
+    ]
+  },
+  {
+    "english": "You've managed to actually solve a puzzle that should have been impossible!",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[3].rules"
+    ]
+  },
+  {
+    "english": "Your fault",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[52].title"
+    ]
+  },
+  {
+    "english": "Your ship still stands where you left it. It seems that despite their boast, Wark's goons were either unable to get the ship to fly, or they were busy failing to chase you down. Either way, it's a relief to see the ship still in one piece.\n\nBut you can't leave just yet. You have unfinished business with Wark, and until they're dealt with there's no way you'll leave the refugees behind.",
+    "zhHans": "",
+    "gameIds": [
+      "super-sudokoid-2"
+    ],
+    "sourcePaths": [
+      "super-sudokoid-2:puzzle.metadata.grids[59].rules"
     ]
   }
 ]
