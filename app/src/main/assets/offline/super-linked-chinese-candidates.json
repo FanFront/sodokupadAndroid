@@ -8,15 +8,15 @@
     "fields": {
       "title": {
         "english": "9 Feet Under",
-        "zhHans": ""
+        "zhHans": "地下九尺"
       },
       "rules": {
         "english": "Cages are sent flying in every direction as the prison warden suddenly comes smashing through them. Its red eyes glow in the dark and are located way higher up than you would have liked.\n\n---\n\nPlace the digits 1-9 in each row, column and box.\nDigits separated by a white SCAN dot differ by exactly 1.\nDigits within a KILLER CAGE do not repeat and sum to the value in the upper-left corner of the cage.",
-        "zhHans": ""
+        "zhHans": "狱长突然冲破囚笼，铁笼朝四面八方飞散。黑暗中，它那对血红的眼睛闪闪发亮，而且位置比你希望的高出太多了。\n\n---\n\n每行、每列、每宫填入数字 1 至 9。\n白色扫描点两侧的数字恰好相差 1。\n杀手笼内数字不能重复，且数字之和等于笼子左上角所示数值。"
       },
       "msgcorrect": {
         "english": "The warden flees in terror, startled by your sudden appearance. You never expected someone so massive could yell at such a high pitch.\n\nYou see two glowing eyes on the floor. It appears they’re a pair of night vision goggles. The warden must have dropped them in panic.\n\nObtained the NIGHT VISION VISOR!\n\nNow go back to the main puzzle and enter *1* into the boss cell.",
-        "zhHans": ""
+        "zhHans": "狱长被你突然现身吓得魂飞魄散，转身就逃。你从没想过这么庞大的家伙竟能发出如此尖锐的叫声。\n\n你看到地板上有两只发光的眼睛，原来是一副夜视镜。狱长想必是在逃跑时慌忙掉落了它。\n\n获得**夜视面罩**！\n\n现在返回主地图，在首领格填入 *1*。"
       },
       "author": {
         "english": "The M",
@@ -33,15 +33,15 @@
     "fields": {
       "title": {
         "english": "Temple Temper",
-        "zhHans": ""
+        "zhHans": "神殿暴脾气"
       },
       "rules": {
         "english": "As you search the area, your scanner suddenly beeps furiously and the earth rumbles as a giant stone golem rises menacingly from the dusty ground. It seems to think you’re an intruder.\n\n---\n\nPlace the digits 1-9 in each row, column and box. \nDigits separated by a white SCAN dot differ by exactly 1.",
-        "zhHans": ""
+        "zhHans": "你正探索这片区域，扫描仪突然疯狂鸣响，大地随之震动。一尊巨型石魔像从满是尘埃的地面缓缓站起，带着敌意步步逼近。看来它把你当成了入侵者。\n\n---\n\n每行、每列、每宫填入数字 1 至 9。\n白色扫描点两侧的数字恰好相差 1。"
       },
       "msgcorrect": {
         "english": "You somehow manage to calm the upset golem, and as an apology it lets you loot some equipment from a previous victim. \n\nNow the scanner is pointing to a much larger energy source, deep, deep underground. Maybe this is what’s disrupting your ship’s navigation?\n\nObtained the GARDENING GLOVES!\n\nThe studded gloves let you climb the many vines and ranks that cover the area, provided of course that each step differs by at least 5.\n\nNow go back to the main puzzle and enter *4* into the boss cell.",
-        "zhHans": ""
+        "zhHans": "你居然成功安抚了暴躁的魔像。作为赔礼，它允许你从此前某位倒霉遇难者留下的装备里挑选战利品。\n\n现在扫描仪指向了地底极深处一股更强大的能量源。会不会正是它干扰了飞船导航？\n\n获得**园艺手套**！\n\n这双带有防滑钉的手套可以让你攀爬遍布此地的藤蔓和枝条——当然，前提是每一步的数字差至少为 5。\n\n现在返回主地图，在首领格填入 *4*。"
       },
       "author": {
         "english": "The M",
@@ -58,15 +58,15 @@
     "fields": {
       "title": {
         "english": "Critical Mess",
-        "zhHans": ""
+        "zhHans": "反应堆危机"
       },
       "rules": {
         "english": "The reactor turns on and you feel the temperature rise… and rise… and it doesn’t stop. As you scramble to the controls, you knock over the thermometers and now their labels have all fallen off!\n\n---\n\nPlace the digits 1-9 in each row, column and box.\n\nDigits must increase along thermometers, starting from the bulb, but all the bulbs are missing. You'll have to figure out which end of each thermometer should have the bulb.",
-        "zhHans": ""
+        "zhHans": "反应堆启动了，你感到温度不断攀升……越来越高……丝毫没有停下的意思。你慌忙扑向控制台，却撞翻了温度计，所有标签都掉了下来！\n\n---\n\n每行、每列、每宫填入数字 1 至 9。\n\n沿温度计的数字必须从球部起递增，但所有球部标记都不见了。你必须自行判断每支温度计的哪一端才是球部。"
       },
       "msgcorrect": {
         "english": "With the crisis averted, the reactor hums contentedly and the ceiling’s light strips flicker on. Moments later they glow with a steady, pale, white light. You hear activity above; the lab seems to have been reactivated with the power restored.\n\nThe scanner keeps pointing down.\n\nNow go back to the main puzzle and enter *5* into the boss cell.",
-        "zhHans": ""
+        "zhHans": "危机终于解除。反应堆发出平稳的嗡鸣，天花板上的灯带闪烁几下，很快便亮起稳定的苍白光芒。你听见头顶传来动静：看来电力恢复后实验室重新启动了。\n\n扫描仪却仍然指向更深处。\n\n现在返回主地图，在首领格填入 *5*。"
       },
       "author": {
         "english": "The M",
@@ -83,15 +83,15 @@
     "fields": {
       "title": {
         "english": "Cornerstone",
-        "zhHans": ""
+        "zhHans": "基石"
       },
       "rules": {
         "english": "Place the digits 1-3 in each region so that no rows, columns or regions have duplicate digits.\n\nDigits increase along the thermometer.\nDigits an equal distance from the center of a BALL CHUTE sum to the value in the middle.",
-        "zhHans": ""
+        "zhHans": "在每个区域填入数字 1 至 3，使每行、每列及每个区域内均无重复数字。\n\n沿温度计的数字递增。\n沿滑球槽线条，距中间格距离相等的两格数字之和必须等于中间格数字。"
       },
       "msgcorrect": {
         "english": "You come to a dead end. There is nothing here, and it’s dead silent. You wait for something to happen but nothing does. Relief washes over you as you turn and walk back up. All this madness feels like a fever dream that's starting to fade.\n\nNow go back to the main puzzle and enter 2 into the boss cell. What? You thought it’d be a 3? Nah.",
-        "zhHans": ""
+        "zhHans": "你来到了一条死路。这里空无一物，寂静得可怕。你等了许久，什么也没有发生。转身沿原路返回时，你终于松了口气。这一切荒诞经历像一场渐渐消散的噩梦。\n\n现在返回主地图，在首领格填入 2。什么？你以为会是 3？才不是呢。"
       },
       "author": {
         "english": "The M",
@@ -108,15 +108,15 @@
     "fields": {
       "title": {
         "english": "Beat it!",
-        "zhHans": ""
+        "zhHans": "快闪开！"
       },
       "rules": {
         "english": "Chaos ensues as space-pirates storm in through the front door of the discothèque and rappel down from the ceiling catwalks. Panicked partygoers are running left and right, still to the beat of the music, and you do your best to blend in as you make for the exit.\n\n---\n\nPlace the digits 1-9 in each row, column and box.\n\nDigits in the gray circle are odd.\nDigits separated by a black NIGHT dot have a 1:2 relationship.\nDigits an equal distance from the middle of a BALL CHUTE sum to the cell in the middle.",
-        "zhHans": ""
+        "zhHans": "太空海盗突然从迪斯科舞厅正门闯入，又从天花板的走道索降，顿时一片混乱。惊慌的宾客左冲右突，竟然还跟着音乐节奏跳动。你尽力混进人群，朝出口挪去。\n\n---\n\n每行、每列、每宫填入数字 1 至 9。\n\n灰色圆圈内的数字必须为奇数。\n黑色夜视点两侧的数字必须成 1:2 的倍数关系。\n沿滑球槽线条，距中间格距离相等的两格数字之和等于中间格数字。"
       },
       "msgcorrect": {
         "english": "You quickly sneak out through the back door, making sure to watch your diagonals this time. It seems the party is over and most of the party animals have left to resume their dancing elsewhere. You also decide to not stick around for long.\n\nPARTY LINES have formed in the area.\n\nThe scanner suggests you’re close now. Just a little further…\n\nNow go back to the main puzzle and enter *3* into the boss cell.",
-        "zhHans": ""
+        "zhHans": "你迅速从后门溜走，这次还特意留意了斜向的动静。看来派对已经结束，多数派对狂热者离开此处，去其他地方继续跳舞。你也决定不在这里久留。\n\n区域内出现了**派对线**。\n\n扫描仪提示你已经很接近目标了。再往前一点……\n\n现在返回主地图，在首领格填入 *3*。"
       },
       "author": {
         "english": "The M",
@@ -133,15 +133,15 @@
     "fields": {
       "title": {
         "english": "Under Pressure",
-        "zhHans": ""
+        "zhHans": "重压之下"
       },
       "rules": {
         "english": "The source of the strange signal comes from behind this cracked wall. You’re confident it will come crumbling down if you can just find the structural weakness.\n\n---\n\nPlace the digits 1-9 in each row, column and region.\n\nJET VENT digits outside the puzzle indicate how many digits are seen in that direction, given that larger digits obscure lower ones.\n\nDigits along PARTY lines must alternate between odd and even.",
-        "zhHans": ""
+        "zhHans": "奇怪信号的源头就在这堵龟裂的墙壁后面。你很确信，只要找出结构上的薄弱点，就能让它轰然倒塌。\n\n---\n\n每行、每列、每个区域填入数字 1 至 9。\n\n棋盘外的喷气孔提示数字表示朝对应方向能看见多少个数字；较大的数字会遮挡后面较小的数字。\n\n沿派对线相邻的数字必须奇偶交替。"
       },
       "msgcorrect": {
         "english": "You burst through the wall as if you were a cartoon character on cue. Rubble is strewn about, your visor is covered in dust, and you’re pretty sure there’s at least a dozen pebbles in your shoes, but at least you’re through.\n\nBeyond lies a massive chamber. The scanner beeps furiously…\n\nNow go back to the main puzzle and enter *6* into the boss cell.",
-        "zhHans": ""
+        "zhHans": "你冲破墙壁的动作简直像应声登场的卡通角色。碎石洒满四周，面罩积了一层灰，你很肯定鞋子里至少钻进了十几颗小石子——但总算穿过来了。\n\n另一边是一座巨大的厅堂。扫描仪开始疯狂鸣响……\n\n现在返回主地图，在首领格填入 *6*。"
       },
       "author": {
         "english": "The M",
@@ -158,15 +158,15 @@
     "fields": {
       "title": {
         "english": "Ascent",
-        "zhHans": ""
+        "zhHans": "登峰"
       },
       "rules": {
         "english": "A voice speaks in your mind, urging you to climb the tallest peak in the region. Unfortunately, the wall is blank, with barely any clues to hold on to.\n\n---\n\nPlace the digits 1-9 in each row column and box.\n\nThe numbers outside the grid indicate the sum of the digits along the indicated diagonal.",
-        "zhHans": ""
+        "zhHans": "一个声音在脑海里响起，催促你攀上此地最高峰。不幸的是，这面山壁光秃秃的，几乎找不到可供攀附的线索。\n\n---\n\n每行、每列、每宫填入数字 1 至 9。\n\n棋盘外的数字表示对应对角线上所有数字之和。"
       },
       "msgcorrect": {
         "english": "Somehow, you make it to the very top of the peak… and there’s nothing there. You collapse, exhausted.\n\nAs you rest, you watch the local wildlife. Rather than flying, the birds seem to favor running and jumping. They choose a starting point, then run in a line before leaping and covering huge distances. You realize you could do that too. The ability was hidden within you all along.\n\nUnlocked the SHINESPARK hidden technique!\n\nNow go back to the main puzzle and enter *2* into the boss cell.",
-        "zhHans": ""
+        "zhHans": "你不知怎么终于登上山峰之巅……可这里什么都没有。你精疲力尽地瘫倒在地。\n\n休息时，你观察起当地的野生动物。这里的鸟似乎不爱飞行，反而喜欢奔跑与跳跃。它们先选好起点，沿直线助跑，再一跃飞过惊人的距离。你突然意识到自己也可以这样做——原来这项能力一直潜藏在体内。\n\n解锁隐藏技巧：**蓄力冲刺（Shinespark）**！\n\n现在返回主地图，在首领格填入 *2*。"
       },
       "author": {
         "english": "The M",
@@ -183,15 +183,15 @@
     "fields": {
       "title": {
         "english": "Mother Brain Teaser",
-        "zhHans": ""
+        "zhHans": "母脑终极谜题"
       },
       "rules": {
         "english": "This is it. The final challenge. No frills, no twists, just normal Sudoku. How hard can it be?\n\nYou can feel the mechanical brain focus on you as you approach the controls, mentally rearranging the grid, making the patterns harder, deadlier...\n\n---\n\nNormal Sudoku rules apply...?",
-        "zhHans": ""
+        "zhHans": "就是现在，最终挑战！没有花招，没有变化，只有普通数独。还能有多难呢？\n\n靠近控制台时，你感觉机械大脑的注意力集中到了自己身上。它仿佛正在用意念重排棋盘，使图案越来越艰深、越来越致命……\n\n---\n\n遵循普通数独规则……大概？"
       },
       "msgcorrect": {
         "english": "You did it! Somehow, you overcame the pressure, thought outside the box, and shut the machine off. You should finally be able to leave this planet!\n\nA moment later, the entire room shakes and groans. All the energy meant to be consumed by the brain has nowhere else to go and it's is increasing by the second. This is bad!\n\nThe entire planet will explode. It seems excessive, but that’s what your scanner says. You need to escape this place quickly! \n\nSHIP NAVIGATION restored. Draw an EVAC PATH to your ship to escape the planet’s imminent destruction!\n\nNow go back to the main puzzle and enter *1* into the boss cell.",
-        "zhHans": ""
+        "zhHans": "你成功了！你顶住压力、跳出既定思路，终于关掉了机器。现在总该能离开这颗星球了吧！\n\n片刻之后，整座厅堂剧烈震颤，发出骇人的呻吟。原本应由机械大脑消耗的能量无处可去，而且还在不断增长。大事不妙！\n\n整颗星球即将爆炸。听起来未免太夸张了，但扫描仪就是这么说的。你必须立刻逃走！\n\n**飞船导航系统已恢复**。画出一条通向飞船的**撤离路线**，躲过星球即将到来的毁灭！\n\n现在返回主地图，在首领格填入 *1*。"
       },
       "author": {
         "english": "The M",
@@ -208,15 +208,15 @@
     "fields": {
       "title": {
         "english": "Energy Transfer",
-        "zhHans": ""
+        "zhHans": "能源转移"
       },
       "rules": {
         "english": "The water roars as you open the sluice gates. A warning lamp blinks: you’ll have to redistribute power over the grid to avoid overloading any boxes with too many digits!\n\n---\n\nPlace the digits 1-9 in each row, column and box.\n\nEach column index where in the row digits go. That is: for each column C, if a digit X is placed in row R, then the digit C will be in column X in that row.\n\nFor example, a 5 in row 2, column 1 would indicate that the 1 of row 2 is in column 5.",
-        "zhHans": ""
+        "zhHans": "你打开泄洪闸，水流轰鸣而出。警示灯不停闪烁：必须重新分配整个电网的电力，避免某些宫因为数字过多而超载！\n\n---\n\n每行、每列、每宫填入数字 1 至 9。\n\n每一列都指明本行数字所在的列号。具体而言：对任意一列 C，如果该行 R、列 C 填入数字 X，那么同一行 R 的第 X 列必须填入数字 C。\n\n例如：第 2 行第 1 列填入 5，则第 2 行第 5 列必须填入 1。"
       },
       "msgcorrect": {
         "english": "With the grid back in harmony, another lamp starts flashing. Something is blocking the reactor’s coolant intake pipe and it’s once again starting to over-heat. \n\nThe recommended solution seems to be to manually clear out the pipe. The machine helpfully spits out another suit upgrade to help you navigate the narrow pipes.\n\nObtained the MORPH BALL upgrade!\n\nNow go back to the main puzzle and enter *5* into the boss cell.",
-        "zhHans": ""
+        "zhHans": "电网重新恢复平衡，另一盏警示灯却又开始闪烁。似乎有东西堵住了反应堆的冷却液进水管，温度再次开始上升。\n\n系统建议手动清除管道里的堵塞物。机器还贴心地吐出一件战甲升级，帮助你穿过狭窄的管道。\n\n获得**变形球（Morph Ball）**升级！\n\n现在返回主地图，在首领格填入 *5*。"
       },
       "author": {
         "english": "The M",
@@ -233,15 +233,15 @@
     "fields": {
       "title": {
         "english": "Robot Patrobot",
-        "zhHans": ""
+        "zhHans": "机器人巡逻队"
       },
       "rules": {
         "english": "With the power back on, security robots now stalk the corridors. Can you figure out their movement patterns?\n\n---\n\nPlace the digits 1-9 in each row, column and box. \nArrows sum to the digit in their corresponding circles.",
-        "zhHans": ""
+        "zhHans": "电力恢复后，保安机器人开始在走廊中巡逻。你能推断它们的行动规律吗？\n\n---\n\n每行、每列、每宫填入数字 1 至 9。\n箭头上的数字之和等于对应圆圈内的数字。"
       },
       "msgcorrect": {
         "english": "You hide under a box and ride a conveyor belt to avoid detection. Your search ends with a sinking feeling: there is no doubt that space-pirates have been here. \n\nIn fact, you find a dropped note, detailing their latest security routine. You’re pretty sure you could infiltrate their base of operations using this as a guide.\n\nObtained the SECRET DOCUMENT!\n\nNow go back to the main puzzle and enter *1* into the boss cell.",
-        "zhHans": ""
+        "zhHans": "你躲进箱子底下，搭着传送带避开侦查。然而搜索的结果令你心头一沉：毫无疑问，太空海盗曾经来过这里。\n\n事实上，你捡到一份他们掉落的便条，上面详细记载了最新的警戒巡逻流程。有了它，潜入他们的据点应该不成问题。\n\n获得**机密文件**！\n\n现在返回主地图，在首领格填入 *1*。"
       },
       "author": {
         "english": "The M",
@@ -258,15 +258,15 @@
     "fields": {
       "title": {
         "english": "Worm Food",
-        "zhHans": ""
+        "zhHans": "蠕虫口粮"
       },
       "rules": {
         "english": "You stand face to face(?) with a giant worm. It seems the tunnel wasn’t dug by any prisoners after all, but by this monstrous beast. It’s hungry and you smell like food…\n\n---\n\nPlace the digits 1-9 in each row, column and box.\nAdjacent digits along green VINES differ by at least 5.\n\nA snake is hidden within the grid. The snake moves orthogonally and doesn't touch itself, not even diagonally. \n\nThe snake must collect all apples and all digits along the snake must be 5 or higher.\n\nIts head and tail have been marked in box 4 and 8 respectively.",
-        "zhHans": ""
+        "zhHans": "你与一条巨型蠕虫面对面（如果它有脸的话）。看来这条隧道并非囚犯所挖，而是眼前这只可怕怪兽的杰作。它饿坏了，而你闻起来正像一顿美餐……\n\n---\n\n每行、每列、每宫填入数字 1 至 9。\n绿色藤蔓线上相邻数字之差至少为 5。\n\n棋盘中藏着一条蛇形路径。蛇只能正交移动，不能碰到自己，连对角相邻都不行。\n\n蛇必须吃到所有苹果，而且蛇身上的每个数字都必须大于或等于 5。\n\n蛇头与蛇尾已分别标记在第 4 宫和第 8 宫。"
       },
       "msgcorrect": {
         "english": "Having gobbled up a handful of apples, the worm happily slithers away. You could swear it’s gotten a few cells longer than it was a moment ago.\n\nLeft behind in the mud is a diamond-hard scale. You could fashion a tool out of this.\n\nObtained the GRAPPLING HOOK!\n\nNow go back to the main puzzle and enter *8* into the boss cell.",
-        "zhHans": ""
+        "zhHans": "吞下一大把苹果后，蠕虫心满意足地爬走了。你敢发誓它比刚才又长了好几格。\n\n泥土里留着一片坚硬如钻石的鳞片，或许能用它制作工具。\n\n获得**抓钩**！\n\n现在返回主地图，在首领格填入 *8*。"
       },
       "author": {
         "english": "The M",
@@ -283,15 +283,15 @@
     "fields": {
       "title": {
         "english": "Queens and Bishops",
-        "zhHans": ""
+        "zhHans": "皇后与主教"
       },
       "rules": {
         "english": "With the king and knight gone, the alien queen is playing with the bishop. You have to sneak past them somehow without getting caught.\n\n--\n\nPlace the digits 1-9 in each row, column and box.\n\nDraw a path from the bottom-left corner to the top-right corner. The path may move orthogonally and diagonally, but no cell along the path may be within line of sight of either a bishop (an 8) or a queen (a 9).\n\nDigits have the following roles:\n1, 2, 3 - Walls: block line of sight. Cannot be part of the path.\n4, 5, 6, 7 - Ground: the path can go here.\n8 - Bishops: can see all cells in a diagonal line.\n9 - Queens: can see horizontally, vertically and diagonally.\n\nNote: line of sight is only blocked by walls. Queens and bishops can see past each other.",
-        "zhHans": ""
+        "zhHans": "国王和骑士离开后，外星皇后正与主教玩耍。你必须想办法从他们身边溜过去，不能被发现。\n\n--\n\n每行、每列、每宫填入数字 1 至 9。\n\n从左下角画一条通往右上角的路径，可以正交或斜向移动，但路径上任何一格都不能处在主教（数字 8）或皇后（数字 9）的视线范围内。\n\n数字的角色如下：\n1、2、3 — 墙壁：阻挡视线，路径不得经过。\n4、5、6、7 — 地面：路径可经过。\n8 — 主教：能看见同一对角线上的所有格子。\n9 — 皇后：能看见同一横行、竖列和对角线上的所有格子。\n\n注意：只有墙壁能阻挡视线。皇后和主教能够越过彼此看向后方。"
       },
       "msgcorrect": {
         "english": "You almost make it through the entire base without getting spotted. Almost.\n\nAs you start to relax, you’re suddenly jumped by no fewer than three bishops, coming from diagonals you didn't even know existed! Moments later, you’re caged up and thrown into the dungeon to rot…\n\nNow go back to the main puzzle and enter *3* into the boss cell.",
-        "zhHans": ""
+        "zhHans": "你几乎成功在整个基地里悄无声息地穿行。几乎。\n\n就在你终于松懈时，竟然有足足三名主教从你根本不知道存在的斜向通道扑了出来！没过多久，你就被关进铁笼，扔进地牢自生自灭……\n\n现在返回主地图，在首领格填入 *3*。"
       },
       "author": {
         "english": "The M",
