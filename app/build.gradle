@@ -2,6 +2,30 @@ plugins {
     id 'com.android.application'
 }
 
+// A single long-lived signing identity is supplied by GitHub Actions secrets.
+// Never generate or use an ephemeral Android debug key for a CI test APK.
+def stableKeystorePath = System.getenv('SUDOKUVANIA_KEYSTORE_PATH')
+def stableSigningPassword = System.getenv('SUDOKUVANIA_SIGNING_PASSWORD')
+def hasStableSigning = stableKeystorePath?.trim() && stableSigningPassword?.trim()
+if (System.getenv('CI') == 'true' && !hasStableSigning) {
+    throw new GradleException('Stable signing credentials are required in CI. Configure the SUDOKUVANIA_KEYSTORE_B64 and SUDOKUVANIA_SIGNING_PASSWORD repository secrets.')
+}
+if (hasStableSigning && !file(stableKeystorePath).isFile()) {
+    throw new GradleException('Stable Android signing keystore was not found: ' + stableKeystorePath)
+}
+
+// GitHub Actions run_number is increasing across normal and manual builds of
+// this workflow. A new workflow run therefore produces an upgradeable APK.
+def buildNumberText = System.getenv('SUDOKUVANIA_VERSION_CODE') ?:
+        System.getenv('GITHUB_RUN_NUMBER') ?: '1'
+if (!(buildNumberText ==~ /[0-9]+/)) {
+    throw new GradleException('SUDOKUVANIA_VERSION_CODE must be a positive integer')
+}
+def buildNumber = Integer.parseInt(buildNumberText)
+if (buildNumber <= 0 || buildNumber > 2000000000) {
+    throw new GradleException('Invalid version code: ' + buildNumber)
+}
+
 android {
     namespace 'com.fanfront.sodokupadandroid'
     compileSdk 35
@@ -10,8 +34,34 @@ android {
         applicationId 'com.fanfront.sodokupadandroid'
         minSdk 26
         targetSdk 35
-        versionCode 1
-        versionName '0.1.0'
+        versionCode buildNumber
+        versionName "0.2.${buildNumber}"
+    }
+
+    signingConfigs {
+        if (hasStableSigning) {
+            stableTest {
+                storeFile file(stableKeystorePath)
+                storePassword stableSigningPassword
+                keyAlias 'sudokuvania'
+                keyPassword stableSigningPassword
+                storeType 'pkcs12'
+            }
+        }
+    }
+    buildTypes {
+        debug {
+            // Keep the existing debug APK name and debuggable build for testing,
+            // but sign every CI build with the SAME secret-backed key.
+            if (hasStableSigning) {
+                signingConfig signingConfigs.stableTest
+            }
+        }
+        release {
+            if (hasStableSigning) {
+                signingConfig signingConfigs.stableTest
+            }
+        }
     }
 
     compileOptions {
@@ -19,4 +69,3 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
 }
-
