@@ -2,17 +2,31 @@ plugins {
     id 'com.android.application'
 }
 
-// A single long-lived signing identity is supplied by GitHub Actions secrets.
-// Never generate or use an ephemeral Android debug key for a CI test APK.
-def stableKeystorePath = System.getenv('SUDOKUVANIA_KEYSTORE_PATH')
-def stableSigningPassword = System.getenv('SUDOKUVANIA_SIGNING_PASSWORD')
-def hasStableSigning = stableKeystorePath?.trim() && stableSigningPassword?.trim()
-if (System.getenv('CI') == 'true' && !hasStableSigning) {
-    throw new GradleException('Stable signing credentials are required in CI. Configure the SUDOKUVANIA_KEYSTORE_B64 and SUDOKUVANIA_SIGNING_PASSWORD repository secrets.')
+// PUBLIC TEST KEY ONLY. This is intentionally checked into the repository,
+// so Android debug APKs built on different runners use the same certificate.
+// Anyone can sign APKs with this key: never use it for a trusted production app.
+def bundledSigningFile = file('signing/sudokuvania-debug.p12.base64')
+if (!bundledSigningFile.isFile()) {
+    throw new GradleException('Repository-bundled debug signing key is missing')
 }
-if (hasStableSigning && !file(stableKeystorePath).isFile()) {
-    throw new GradleException('Stable Android signing keystore was not found: ' + stableKeystorePath)
+def signingBytes
+try {
+    signingBytes = java.util.Base64.getMimeDecoder().decode(bundledSigningFile.getText('UTF-8'))
+} catch (IllegalArgumentException error) {
+    throw new GradleException('Invalid repository-bundled debug signing key', error)
 }
+def expectedKeySha256 = 'a53b760e2e0759e1e6792aa923410349229ef4368b4effbdc0036fca01860d9a'
+def actualKeySha256 = java.security.MessageDigest.getInstance('SHA-256')
+        .digest(signingBytes).encodeHex().toString()
+if (actualKeySha256 != expectedKeySha256) {
+    throw new GradleException('Bundled debug key fingerprint changed; existing Android installs would become incompatible')
+}
+def stableKeystore = layout.buildDirectory.file('signing/sudokuvania-debug.p12').get().asFile
+stableKeystore.parentFile.mkdirs()
+if (!stableKeystore.isFile() || !java.util.Arrays.equals(stableKeystore.bytes, signingBytes)) {
+    stableKeystore.bytes = signingBytes
+}
+def stableSigningPassword = 'SudokuvaniaPublicTest2026'
 
 // GitHub Actions run_number is increasing across normal and manual builds of
 // this workflow. A new workflow run therefore produces an upgradeable APK.
@@ -39,28 +53,21 @@ android {
     }
 
     signingConfigs {
-        if (hasStableSigning) {
-            stableTest {
-                storeFile file(stableKeystorePath)
-                storePassword stableSigningPassword
-                keyAlias 'sudokuvania'
-                keyPassword stableSigningPassword
-                storeType 'pkcs12'
-            }
+        stableTest {
+            storeFile stableKeystore
+            storePassword stableSigningPassword
+            keyAlias 'sudokuvania'
+            keyPassword stableSigningPassword
+            storeType 'pkcs12'
         }
     }
     buildTypes {
         debug {
-            // Keep the existing debug APK name and debuggable build for testing,
-            // but sign every CI build with the SAME secret-backed key.
-            if (hasStableSigning) {
-                signingConfig signingConfigs.stableTest
-            }
+            signingConfig signingConfigs.stableTest
         }
         release {
-            if (hasStableSigning) {
-                signingConfig signingConfigs.stableTest
-            }
+            // Personal offline testing only; the bundled key is PUBLIC.
+            signingConfig signingConfigs.stableTest
         }
     }
 
