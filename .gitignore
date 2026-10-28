@@ -12,3 +12,8 @@ captures/
 
 # Downloaded third-party pages, puzzle packages, images and scripts.
 app/src/main/assets/offline/
+
+# Long-lived Android signing identity. NEVER commit either the key or its base64 copy.
+.signing/
+*.p12
+*.pfx
