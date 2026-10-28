@@ -370,7 +370,9 @@ html.android-port #android-gamepad button[data-android-action] {
   #android-gamepad .android-tools,
   #android-gamepad .android-actions,
   #android-gamepad .android-numbers {gap: 3px}
-  #android-gamepad .android-actions button {font-size: 10px; padding: 4px 1px}
+  /* Wrap utility keys rather than shrinking them below a finger target. */
+  #android-gamepad .android-actions {grid-template-columns:repeat(4,minmax(0,1fr))}
+  #android-gamepad .android-actions button {font-size: 11px; padding: 4px 2px}
 }
 @media (max-height: 620px) {
   #android-gamepad {gap: 4px; padding-top: 4px; padding-bottom: calc(4px + env(safe-area-inset-bottom))}
