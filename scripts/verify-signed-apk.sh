@@ -25,13 +25,15 @@ if [[ ! "$cert_digest" =~ ^[[:xdigit:]]{64}$ ]]; then
   echo "::error::Cannot read the APK signing certificate SHA-256 fingerprint" >&2
   exit 1
 fi
-if [[ -n "${SUDOKUVANIA_SIGNING_CERT_SHA256:-}" ]]; then
-  expected="$(tr -d ':[:space:]' <<< "$SUDOKUVANIA_SIGNING_CERT_SHA256" | tr '[:upper:]' '[:lower:]')"
-  actual="$(tr '[:upper:]' '[:lower:]' <<< "$cert_digest")"
-  if [[ "$actual" != "$expected" ]]; then
-    echo "::error::Signing certificate has changed; refusing an incompatible upgrade!" >&2
-    exit 1
-  fi
+# A known certificate must be used even if CI has no configured secrets.
+# The pinned fingerprint is source-controlled alongside the public test key.
+fingerprint_file="app/signing/certificate.sha256"
+[[ -s "$fingerprint_file" ]] || { echo "::error::Bundled signing certificate fingerprint is missing" >&2; exit 1; }
+expected="$(tr -d ':[:space:]' < "$fingerprint_file" | tr '[:upper:]' '[:lower:]')"
+actual="$(tr '[:upper:]' '[:lower:]' <<< "$cert_digest")"
+if [[ ! "$expected" =~ ^[[:xdigit:]]{64}$ || "$actual" != "$expected" ]]; then
+  echo "::error::Signing certificate is different from the repository's permanent test certificate" >&2
+  exit 1
 fi
 outdir="$(dirname "$apk")"
 {
