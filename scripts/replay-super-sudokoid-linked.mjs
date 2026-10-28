@@ -68,12 +68,41 @@ for(const item of linked){
         !!svg?.getAttribute('viewBox') && svg.querySelectorAll('rect,path,text').length>10;
     },null,{timeout:40000});
     report.passed.push('SCL decoded and board drawn');
+    // SudokuPad can open a Rules/Start/completion dialog after the board
+    // renders. A player must dismiss it before the fixed bottom keypad is
+    // touchable. Never click Restart, Reset or View Solution in this test.
+    async function dismissInitialDialogs() {
+      for(let n=0;n<4;n++) {
+        const overlay=page.locator('.dialog-overlay.centeroverboard:visible').last();
+        if(!await overlay.count())return;
+        const snapshot=await overlay.evaluate(node=>({
+          text:node.innerText.slice(0,600),
+          buttons:[...node.querySelectorAll('button')].map(b=>
+            ({text:b.innerText.trim(),title:b.getAttribute('title')})).slice(0,15)
+        }));
+        (report.dialogs ||= []).push(snapshot);
+        const button=overlay.getByRole('button',{
+          name:/Return to Puzzle|Close|Dismiss|OK|Okay|Cancel|Back|Continue Puzzle|Skip|关闭|返回谜题|取消|继续游戏|确定/i
+        }).first();
+        if(await button.count()&&await button.isVisible()){
+          await button.tap({timeout:2500});
+        }else{
+          const icon=overlay.locator('.close, .dialog-close, .btn-close, [data-action="close"]').first();
+          if(await icon.count()&&await icon.isVisible())
+            await icon.tap({timeout:2500});
+          else await page.keyboard.press('Escape');
+        }
+        await page.waitForTimeout(180);
+      }
+    }
+    await dismissInitialDialogs();
     assert.match(await page.title(),/超级数独机器人/,'Linked page title not Chinese');
     const digit=page.locator('#android-gamepad button[data-android-action="digit"][data-value="1"]');
     const before=Number(await digit.getAttribute('data-android-tap-count')||0);
     await digit.tap({timeout:7000});
     assert.equal(Number(await digit.getAttribute('data-android-tap-count')),before+1,
       'Touch digit handler did not run');
+    await dismissInitialDialogs();
     const undo=page.locator('#android-gamepad button[data-android-action="undo"]');
     await undo.tap({timeout:7000});
     report.passed.push('Digit and Undo accepted physical touches');
