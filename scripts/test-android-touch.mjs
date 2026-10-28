@@ -111,6 +111,34 @@ try {
   await page.locator('#android-region-overlay .android-boss-link').tap();
   await page.waitForURL('https://sudokupad.app/frudzw3n73');
   assert.equal(await page.title(),'Boss puzzle loaded');
+  // The Super Sudokoid map uses short bonus-puzzle URLs rather than
+  // boss-named links. Verify the same mobile modal exposes those on touch.
+  const bonusPage=await ctx.newPage();
+  await bonusPage.route('https://sudokupad.app/3g0qh2la4v',route =>
+    route.fulfill({status:200,contentType:'text/html',body:
+      '<!doctype html><html><head><meta name="viewport" content="width=device-width"></head>'+
+      '<body><div id="controls"><div class="puzzle-rules">'+
+      '<div class="gridrulessection"><a href="https://sudokupad.app/qfnpbofkiq">Bonus Puzzle!</a></div>'+
+      '</div></div><div id="board"></div></body></html>'}));
+  await bonusPage.goto('https://sudokupad.app/3g0qh2la4v');
+  await bonusPage.evaluate(()=>{
+    window.Framework={app:{
+      puzzle:{currentPuzzle:{},selectedCells:[]},
+      resize(){},sourcePuzzle:{metadata:{grids:[]}}
+    },features:{}};
+  });
+  await bonusPage.addStyleTag({content:css});
+  await bonusPage.addScriptTag({content:js});
+  await bonusPage.locator('#android-gamepad button[data-android-action="boss"]').tap();
+  const bonuses=bonusPage.locator('#android-region-overlay .android-boss-link');
+  assert.equal(await bonuses.count(),1,'Bonus Puzzle must be visible in Super Sudokoid modal');
+  assert.equal(await bonuses.first().getAttribute('href'),'https://sudokupad.app/qfnpbofkiq');
+  await bonusPage.route('https://sudokupad.app/qfnpbofkiq',route =>
+    route.fulfill({status:200,contentType:'text/html',
+      body:'<!doctype html><title>Bonus puzzle loaded</title>'}));
+  await bonuses.first().tap();
+  await bonusPage.waitForURL('https://sudokupad.app/qfnpbofkiq');
+  await bonusPage.close();
   assert.deepEqual(errors,[]);
   console.log('PASS: Touch keypad, region modal, boss link touch and offline sub-puzzle navigation.');
   await ctx.close();
