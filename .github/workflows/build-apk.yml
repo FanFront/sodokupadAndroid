@@ -38,6 +38,7 @@ jobs:
           node --check scripts/verify-offline.mjs
           node --check scripts/replay-offline.mjs
           node --check scripts/test-android-touch.mjs
+          node --check scripts/test-android-letter.mjs
           node --check scripts/extract-text.mjs
           node --check scripts/build-localized-pages.mjs
           node --check scripts/decode-scl.mjs
@@ -90,6 +91,7 @@ jobs:
         run: |
           npx playwright install --with-deps chromium
           node scripts/test-android-touch.mjs
+          node scripts/test-android-letter.mjs
           node scripts/replay-offline.mjs
           node scripts/replay-super-sudokoid-linked.mjs
       - name: Upload replay diagnostics and screenshots
