@@ -64,3 +64,39 @@ for item in candidates:
 assert reviewed >= 400, f"Expected localized text candidates, found {reviewed}"
 print(f"Offline puzzle source/catalog synced: {reviewed}/{len(candidates)} translated.")
 
+
+# Every authored Super Sudokoid main-map text candidate must be localized.
+import re
+for super_id in ("super-sudokoid-1", "super-sudokoid-2"):
+    entries = [item for item in candidates if super_id in item.get("gameIds", [])]
+    assert len(entries) >= 160, f"Incomplete {super_id} text extraction: {len(entries)}"
+    for item in entries:
+        zh = item.get("zhHans", "")
+        assert isinstance(zh, str) and re.search(r"[\u3400-\u9fff]", zh), (
+            f"Untranslated Super Sudokoid main-map text: {super_id} "
+            + repr(item.get("english", "")[:100])
+        )
+        urls = lambda text: sorted(re.findall(r"https://sudokupad\\.app/[^\\s)]+", text))
+        assert urls(item["english"]) == urls(zh), (
+            f"Game links modified by translation: {super_id}"
+        )
+
+# Every imported Super Sudokoid linked puzzle must have Chinese metadata.
+linked = json.loads((offline / "super-linked-chinese-candidates.json").read_text(encoding="utf-8"))
+assert len(linked) == 22, "All 22 Super Sudokoid side/boss puzzles require translations"
+assert len({item["id"] for item in linked}) == len(linked)
+assert {item["url"] for item in linked} == {
+    item["url"] for item in manifest["superSudokoidLinkedPuzzles"]
+}
+for item in linked:
+    for field in ("title", "rules", "msgcorrect"):
+        source = item["fields"][field]["english"]
+        zh = item["fields"][field]["zhHans"]
+        assert isinstance(source, str) and isinstance(zh, str)
+        assert source != zh and re.search(r"[\u3400-\u9fff]", zh), (
+            f"Missing Chinese {field} in {item['id']}"
+        )
+        assert sorted(re.findall(r"https://sudokupad\\.app/[^\\s)]+", source)) == sorted(
+            re.findall(r"https://sudokupad\\.app/[^\\s)]+", zh)
+        ), f"Broken linked puzzle URL in {item['id']} {field}"
+print("Super Sudokoid Chinese complete:", len(linked), "linked puzzles and two main maps.")

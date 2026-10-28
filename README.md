@@ -93,8 +93,10 @@ gradle :app:assembleDebug
 npm run build-html
 npm run build-puzzle-zh
 npm run build-boss-zh
+npm run build-super-linked-zh
 npm run verify
 npm run test-boss-zh
+npm run test-super-linked-zh
 ```
 
 其中 `build-boss-zh` 从**原始首领 SCL**读取数据，分别处理 Sudokuvania 1 的标准 JSON 压缩包和 Sudokuvania 2 的 SudokuMaker 紧凑字面量压缩包。**不会使用 eval** 处理第三方题目数据；只替换标题（原数据中有标题时）、规则和通关剧情，再压缩成新的 `translated/boss-*.scl`。测试会把翻译字段还原，并逐字对比未修改的全部数独数据，检查题目答案和其他数独规则没有变化。手机页面标题也以中文版生成。
@@ -130,15 +132,16 @@ Android 复用现有大地图**移动、拖拽、缩放、数字输入、角标�
 
 第一阶段仅增量抓取这**两张主地图**的 HTML、运行资源和原始压缩 SCL，不会清除或重新抓取已有 Sudokuvania 主图及 Boss。针对性抓取仅在提交含有 `[capture-super-sudokoid]` 标记时触发，之后快照将提交到 `offline/`，普通提交继续使用缓存构建。
 
-新游戏独立词典位于 `i18n/games/super-sudokoid-{1,2}.zh-Hans.json`。目前提供中文目录名、页面标题、共用操作界面以及可维护的剧情/规则翻译入口；**新增剧情与特殊规则全文仍需基于抓取后的原文逐条翻译审校**。`npm run extract-strings` 会收集原文候选。对 compact SCL，构建必须保留原始题目数据，不能将紧凑格式错误地按 JSON 反序列化。主地图的支线和首领副本不属于此首批抓取范围。
+新游戏独立词典位于 `i18n/games/super-sudokoid-{1,2}.zh-Hans.json`。两个 Super Sudokoid 主地图已针对 **320 条实际提取到的原文**完成简体中文，包括开场剧情、区域谜题规则、HUD 与棋盘 SVG 分段提示、装备说明、首领链接、隐藏目标和结局。词典保存在 `i18n/games/super-sudokoid-{1,2}.zh-Hans.json`，原文与对应译文在 `offline/translation-candidates.json` 中逐项维护。构建时 `npm run build-puzzle-zh` 从原版 SCL 安全生成中文版，不改任何数独约束、数字答案或迷雾逻辑。主地图和下方全部链接副本都已可离线游玩；文本仍建议在真实游玩时持续校对细节。
 
 ## Super Sudokoid 支线与首领（离线 APK）
 
-- 两张已打包的主地图目前在原始 SCL 中提供 **21 个独立题目链接**：第一部 12 个，第二部 9 个。专用脚本 `node scripts/capture-super-sudokoid-linked.mjs` 会从主地图的原始 SCL 和提取文本交叉确认链接，同时跟进已获取副本 SCL 内明确指向的后续 SudokuPad 谜题；不会移除或重抓 Sudokuvania 的已有资源。
+- 两张已打包的主地图及后续谜题中共发现 **22 个独立题目链接**：第一部 12 个，第二部 10 个（含隐藏最终谜题）。专用脚本 `node scripts/capture-super-sudokoid-linked.mjs` 会从主地图的原始 SCL 和提取文本交叉确认链接，同时跟进已获取副本 SCL 内明确指向的后续 SudokuPad 谜题；不会移除或重抓 Sudokuvania 的已有资源。
 - 抓取结果写入 `offline/index.json` 的 `superSudokoidLinkedPuzzles` 与 `offline/super-sudokoid-linked-report.json`，其中保留真实 URL、所属主地图和副本类型。所有记录的副本都必须有可打开的 HTML 和原始压缩 SCL，缺一即中止发布。
-- 每个独立题目的原版 SCL 原封不动保留；`npm run build-html` 在其 HTML 上注入和主地图完全一致的**中文触屏控制台**，使用中文“首领谜题 / 支线谜题”页面类别标题。未审校的原题规则与剧情继续保留英文，不自行修改谜题条件。
+- 全部 **22 个独立谜题**的标题、游戏规则、剧情及通关奖励说明均已翻译成简体中文，原版 SCL 则原封不动保留于 `offline/files/`。译文目录为 `offline/super-linked-chinese-candidates.json`，由 `scripts/extract-super-linked-chinese.mjs` 从原版谜题提取，`npm run build-super-linked-zh` 重打包成 `translated/super-linked-*.scl` 并交给 Android WebView 离线 API 提供。`npm run build-html` 同时为各副本生成中文页面标题、注入中文手机按键。
 - 在主地图中选中已探索区域后，按 **「区域」** 查看区域规则及其链接，或按 **「副本」** 查看当前区域能进入的支线/首领链接。点击后在原 WebView 内打开，并支持 **「返回」** 回到主地图。仍遵守原作的迷雾解锁状态，不会提前显示隐藏谜题。
 - `node scripts/replay-super-sudokoid-linked.mjs` 会逐一以模拟 Android 触屏、无网络模式加载每个副本，检查棋盘绘制、触屏按键和离线资源缺失。原先的 Sudokuvania 首领副本测试保留。
+- `npm run test-super-linked-zh` 严格验证 **22/22** 副本实际提供的 SCL 中含中文标题、规则、通关剧情，检查原始谜题链接及首领奖励数字没有被翻译更改，并还原文本对比所有数独几何、约束与解答数据。任何未汉化副本或数据变更会导致构建失败。
 - 初次导入使用一次性提交标记 `[capture-super-linked]` 来触发 Actions 的专用增量抓取，成功后自动提交离线文件。后续普通推送继续从缓存构建签名 APK，并验证副本完整性；固定测试签名与原有存档保持不变。
 
 **注意：** 副本可能包含剧透，源 SudokuPad 内容有各自作者的权利归属。此抓取会把第三方网页与压缩题目提交到当前 GitHub 仓库，分享前请确认使用和分发权限。
