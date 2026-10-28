@@ -42,15 +42,12 @@ jobs:
           node scripts/test-translation.cjs
           npm install --no-audit --no-fund
           node scripts/test-scl.mjs
-          bash -n scripts/prepare-signing.sh
-          bash -n scripts/create-signing-key.sh
-          bash -n scripts/upload-signing-secrets.sh
           bash -n scripts/verify-signed-apk.sh
           node scripts/test-stable-signing.mjs
 
   build-cached-apk:
-    # Fork PRs cannot safely access the permanent signing secrets; source-checks still run.
-    if: github.event_name == 'push'
+    # The repository carries a PUBLIC testing certificate; no Secrets needed.
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
     needs: source-checks
     runs-on: ubuntu-24.04
     steps:
@@ -69,11 +66,6 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.13'
-      - name: Restore permanent Android signing certificate
-        env:
-          SUDOKUVANIA_KEYSTORE_B64: ${{ secrets.SUDOKUVANIA_KEYSTORE_B64 }}
-          SUDOKUVANIA_SIGNING_PASSWORD: ${{ secrets.SUDOKUVANIA_SIGNING_PASSWORD }}
-        run: bash scripts/prepare-signing.sh
       - name: Rebuild the Chinese pages from existing offline assets
         run: |
           npm install --no-audit --no-fund
@@ -97,13 +89,9 @@ jobs:
           path: offline-debug/
           if-no-files-found: warn
           retention-days: 14
-      - name: Assemble permanently signed APK with increasing versionCode
-        env:
-          SUDOKUVANIA_SIGNING_PASSWORD: ${{ secrets.SUDOKUVANIA_SIGNING_PASSWORD }}
+      - name: Assemble with repository-bundled fixed test key and increasing versionCode
         run: gradle --no-daemon :app:assembleDebug
-      - name: Verify signing certificate, package name and upgrade version
-        env:
-          SUDOKUVANIA_SIGNING_CERT_SHA256: ${{ vars.SUDOKUVANIA_SIGNING_CERT_SHA256 }}
+      - name: Verify bundled certificate, package name and upgrade version
         run: bash scripts/verify-signed-apk.sh
       - uses: actions/upload-artifact@v4
         with:
@@ -140,11 +128,6 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.13'
-      - name: Restore permanent Android signing certificate
-        env:
-          SUDOKUVANIA_KEYSTORE_B64: ${{ secrets.SUDOKUVANIA_KEYSTORE_B64 }}
-          SUDOKUVANIA_SIGNING_PASSWORD: ${{ secrets.SUDOKUVANIA_SIGNING_PASSWORD }}
-        run: bash scripts/prepare-signing.sh
       - name: Install browser snapshot tool
         run: |
           npm install --no-audit --no-fund
@@ -178,13 +161,9 @@ jobs:
             git commit -m "chore: save offline HTML and assets [offline snapshot]"
             git push origin "HEAD:${{ github.ref_name }}"
           fi
-      - name: Build permanently signed offline APK
-        env:
-          SUDOKUVANIA_SIGNING_PASSWORD: ${{ secrets.SUDOKUVANIA_SIGNING_PASSWORD }}
+      - name: Build with repository-bundled fixed test key
         run: gradle --no-daemon :app:assembleDebug
-      - name: Verify signing certificate, package name and upgrade version
-        env:
-          SUDOKUVANIA_SIGNING_CERT_SHA256: ${{ vars.SUDOKUVANIA_SIGNING_CERT_SHA256 }}
+      - name: Verify bundled certificate, package name and upgrade version
         run: bash scripts/verify-signed-apk.sh
       - name: Replay both games with all network requests blocked
         run: node scripts/replay-offline.mjs
