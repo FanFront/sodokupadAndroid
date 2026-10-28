@@ -83,6 +83,53 @@ for (const url of expectedBosses) {
 }
 if (expectedBosses.length) console.log('Verified',expectedBosses.length,'bosses with Android controls and puzzle data.');
 
+// All explicitly authored Super Sudokoid bonus/boss links are required,
+// independently cross-checked against their main-map translation candidates.
+const superGames=catalog.filter(g=>g.id.startsWith('super-sudokoid-'));
+const linked=index.superSudokoidLinkedPuzzles || [];
+const linksByUrl=new Set(linked.map(x=>x.url));
+const fromSource=new Set();
+for(const candidate of candidates) {
+  if(!(candidate.gameIds||[]).some(id=>superGames.some(g=>g.id===id)))continue;
+  for(const match of String(candidate.english||'').matchAll(/https:\/\/sudokupad\.app\/[a-z0-9-]{8,40}/g)) {
+    if(!superGames.some(g=>new URL(g.url).pathname===new URL(match[0]).pathname))
+      fromSource.add(match[0]);
+  }
+}
+if(!linked.length) {
+  const message='Super Sudokoid linked capture missing.';
+  if(process.env.OFFLINE_REQUIRE_SUPER_LINKED==='1')throw new Error(message);
+  console.warn('WARNING:',message);
+}else {
+  for(const url of fromSource)if(!linksByUrl.has(url))
+    throw new Error('Super Sudokoid main-map link omitted from bundle: '+url);
+  for(const game of superGames) {
+    const count=linked.filter(x=>x.gameId===game.id).length;
+    if(count<(game.id.endsWith('-1')?12:9))
+      throw new Error('Super Sudokoid side/boss count too small: '+game.id+' '+count);
+  }
+  for(const {url} of linked) {
+    if(!/^https:\/\/sudokupad\.app\/[a-z0-9-]{8,40}(?:\?.*)?$/.test(url))
+      throw new Error('Unsafe Super Sudokoid linked URL: '+url);
+    const api='https://sudokupad.app/api/puzzle'+new URL(url).pathname;
+    const html=index.assets[url],scl=index.assets[api];
+    if(!html||!scl)throw new Error('Linked puzzle missing page or SCL: '+url);
+    if(!/^pages\/linked-[a-f0-9]{16}\.zh-Hans\.html$/.test(html.file))
+      throw new Error('Super Sudokoid linked page missing Android layout: '+url);
+    const content=await readFile(join(root,html.file),'utf8');
+    if(!content.includes('/__android/android.js')||
+       !content.includes('/__android/android.css'))
+      throw new Error('Missing mobile touch controls in linked puzzle: '+url);
+    const original=scl.originalFile||scl.file;
+    if(!/^files\/[a-f0-9]{64}\.[a-z0-9]{1,8}$/.test(original))
+      throw new Error('Pristine linked SCL source missing: '+url);
+    const data=await readFile(join(root,original),'utf8');
+    if(!/^scl[A-Za-z0-9+/=]+\s*$/.test(data))
+      throw new Error('Invalid linked SCL encoding: '+url);
+  }
+  console.log('Verified',linked.length,'Super Sudokoid linked puzzles with Android HTML and SCL.');
+}
+
 const types = new Set(Object.values(index.assets).map(x=>x.mime));
 if (![...types].some(s=>s.includes('javascript'))) {
   console.warn('WARNING: no JavaScript MIME found. Offline game probably will not run.');

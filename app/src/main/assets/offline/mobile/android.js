@@ -122,7 +122,11 @@
       try { url = new URL(a.getAttribute('href'), window.location.href); }
       catch { continue; }
       if (url.origin !== 'https://sudokupad.app') continue;
-      if (!(/boss|首领/i.test(a.textContent || '') || /\/boss-/i.test(url.pathname))) continue;
+      // Super Sudokoid includes unlabeled short-link bonus puzzles as well
+      // as explicit bosses. Only treat them as side puzzles on its maps.
+      const superMap=/^\/(?:3g0qh2la4v|xfq6z64i66)$/.test(window.location.pathname);
+      const side=superMap && /^\/[a-z0-9-]{8,40}$/.test(url.pathname);
+      if (!side && !(/boss|首领/i.test(a.textContent || '') || /\/boss-/i.test(url.pathname))) continue;
       if (!result.some(link => link.href === url.href)) {
         result.push({href:url.href, label:a.textContent.trim()});
       }
@@ -157,10 +161,10 @@
     dialog.className = 'android-region-dialog';
     dialog.setAttribute('role','dialog');
     dialog.setAttribute('aria-modal','true');
-    dialog.setAttribute('aria-label', bossOnly ? '首领谜题' : '当前区域规则');
+    dialog.setAttribute('aria-label', bossOnly ? (/^\/(?:3g0qh2la4v|xfq6z64i66)$/.test(window.location.pathname)?'支线／首领谜题':'首领谜题') : '当前区域规则');
     const heading = doc.createElement('header');
     const title = doc.createElement('strong');
-    title.textContent = bossOnly ? '首领谜题' : '当前区域规则';
+    title.textContent = bossOnly ? (/^\/(?:3g0qh2la4v|xfq6z64i66)$/.test(window.location.pathname)?'支线／首领谜题':'首领谜题') : '当前区域规则';
     const close = doc.createElement('button');
     close.type = 'button';
     close.textContent = '关闭';
@@ -171,10 +175,10 @@
     if (bossOnly) {
       const links = getBossLinks(source);
       if (!links.length) {
-        contents.textContent = '当前区域尚未显示首领谜题链接。请先选中已经探索的区域格子，必要时继续揭开迷雾。';
+        contents.textContent = '当前区域尚未显示可进入的独立谜题。请先选中已探索的区域格子，必要时继续揭开迷雾。';
       } else {
         const note = doc.createElement('p');
-        note.textContent = '进入独立谜题后，完成挑战可返回主地图填写首领格答案。';
+        note.textContent = '进入独立谜题后，可使用下方「返回」按钮回到主地图。';
         contents.append(note);
         for (const link of links) {
           const a = doc.createElement('a');
@@ -483,6 +487,8 @@
         btn.textContent = orig?.dataset.value || btn.dataset.value;
       }
       if (btn.dataset.androidAction === 'back-map') btn.hidden = isMap();
+      if (btn.dataset.androidAction === 'boss')
+        btn.textContent = /^\/(?:3g0qh2la4v|xfq6z64i66)$/.test(window.location.pathname) ? '副本' : '首领';
       btn.setAttribute('aria-pressed', on ? 'true' : 'false');
     }
   }

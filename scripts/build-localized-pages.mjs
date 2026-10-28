@@ -142,6 +142,14 @@ for (const [url, entry] of Object.entries(index.assets)) {
       pageTitle.childNodes[0].value=boss.title+' — SudokuPad';
     }
   }
+  const superLinked=(index.superSudokoidLinkedPuzzles||[]).find(item=>item.url===url);
+  if(superLinked) {
+    const pageTitle=findElement(document,'title');
+    const before=pageTitle?.childNodes?.[0]?.value || bossName;
+    if(pageTitle?.childNodes?.[0])pageTitle.childNodes[0].value=
+      (superLinked.kind==='boss'?'超级数独机器人 · 首领谜题':'超级数独机器人 · 支线谜题')+
+      ' — '+before;
+  }
   stripWebOnlyContent(document);
   const htmlTag = findElement(document, 'html');
   const head = findElement(document, 'head');
