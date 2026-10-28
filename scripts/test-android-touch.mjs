@@ -122,12 +122,16 @@ try {
     block.style.cssText='position:fixed;z-index:28000;left:0;bottom:0;width:100vw;height:120px;background:transparent';
     document.body.appendChild(block);
   });
+  // Redo lives under More after the redesign, including when a legacy
+  // transparent puzzle hitbox overlaps the bottom edge of the viewport.
+  await more.tap();
   const redo=action('redo');
   const rect=await redo.boundingBox();
   assert.ok(rect);
   await page.touchscreen.tap(rect.x+rect.width/2,rect.y+rect.height/2);
   assert.equal(await count(redo),1,'Tap was intercepted by old layout');
   await page.locator('#legacy-hitbox').evaluate(node=>node.remove());
+  await more.tap();
   const previous=await count(undo);
   await undo.click();
   assert.equal(await count(undo),previous+1,'Desktop click fallback failed');
