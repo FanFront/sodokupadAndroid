@@ -7312,7 +7312,7 @@
   },
   {
     "english": "Under pressure",
-    "zhHans": "",
+    "zhHans": "压力之下",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7322,7 +7322,7 @@
   },
   {
     "english": "Under significantly more pressure",
-    "zhHans": "",
+    "zhHans": "更巨大的压力",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7332,7 +7332,7 @@
   },
   {
     "english": "Unfinished business",
-    "zhHans": "",
+    "zhHans": "未了之事",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7352,7 +7352,7 @@
   },
   {
     "english": "Unwelcome welcome",
-    "zhHans": "",
+    "zhHans": "不受欢迎的欢迎",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7362,7 +7362,7 @@
   },
   {
     "english": "Wall cells separated by a black FAULT LINE must have a 1:2 ratio (similar to black kropki dots).",
-    "zhHans": "",
+    "zhHans": "被黑色断层线隔开的两个墙壁格，数字必须成 1:2 的倍数关系（类似黑色克罗基点）。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7372,7 +7372,7 @@
   },
   {
     "english": "Wall glyphs",
-    "zhHans": "",
+    "zhHans": "墙壁符文",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7382,7 +7382,7 @@
   },
   {
     "english": "WALL JUMPS",
-    "zhHans": "",
+    "zhHans": "穿墙跳跃",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7392,7 +7392,7 @@
   },
   {
     "english": "WALL PHASING",
-    "zhHans": "",
+    "zhHans": "穿墙相位",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7432,7 +7432,7 @@
   },
   {
     "english": "WHISPER VINES",
-    "zhHans": "",
+    "zhHans": "低语藤蔓",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7443,7 +7443,7 @@
   },
   {
     "english": "You blast your way through a crack in the wall. On the other side is an underground bunker and research facility. You don't get much time to take in the sight as moments later, an emergency blast door shuts right in your face. You're not getting through this one any time soon so you leave it for now.",
-    "zhHans": "",
+    "zhHans": "你炸开墙壁上的一道裂缝。另一侧是一座地下掩体和研究设施。还没来得及仔细观察，紧急防爆门便砰地一声在你眼前关闭。短时间内看来没法通过，只能先离开。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7453,7 +7453,7 @@
   },
   {
     "english": "You come across another abandoned research station. This one was in decent condition before you flooded the place and a few machines still refuse to give in, despite the room being completely submerged. You recognize a DRG mining probe and manage to download a mapping of regional FAULT LINES to your suit.",
-    "zhHans": "",
+    "zhHans": "你发现另一座废弃研究站。这一座在被你淹没前状况还算不错；即使房间已完全泡在水里，几台机器仍顽强运转。你认出了一台 DRG 采矿探测器，并成功将附近地区的断层线地图下载到战甲上。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7463,7 +7463,7 @@
   },
   {
     "english": "You descend into the firey inferno that is the innards of the volcano. Visibility is absolutely rotten and you're sweltering inside your suit. Still, your scanner says there's a key to be had here, and by this point you have nothing else to go on when it comes to finding your way back home, so into the volcano we go!",
-    "zhHans": "",
+    "zhHans": "你下降到火山内部的烈焰地狱。能见度糟透了，战甲里更是闷热得难以忍受。可扫描仪坚称这里有一把钥匙；此时你已经没有其他返回家园的线索，只好硬着头皮钻进火山！",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7473,7 +7473,7 @@
   },
   {
     "english": "You discover a research station. Geological surface scans show an intricate network of heat vents. You copy their thermal mappings indicating how to ride the updrafts from these “inverse thermometers” as the researchers seem to call them.",
-    "zhHans": "",
+    "zhHans": "你发现了一座研究站。地质地表扫描显示，地下分布着错综复杂的散热孔网络。你复制了热能分布图，研究人员似乎把利用这些上升气流的方式称作“反向温度计”。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7483,7 +7483,7 @@
   },
   {
     "english": "You don’t strike gold. Instead, you emerge inside a geode of tall, orange crystals. The brittle gemstones surround something in the center, but navigating the sharp edges is tricky. To retain their structural integrity, each row and column of a CRYSTAL CAGE must sum to the value in the top-left corner.",
-    "zhHans": "",
+    "zhHans": "没有挖到黄金，眼前却是一座布满高耸橙色水晶的晶洞。易碎宝石包围着中央的某样东西，但尖锐的晶体使你难以接近。为保持结构稳定，**水晶笼**内的每一行和每一列数字之和必须等于笼子左上角的数值。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7493,7 +7493,7 @@
   },
   {
     "english": "You emerge in a dry and dusty field and are greeted by a wave of hot air. Wrecks and debris from some long forgotten battle dot the landscape.",
-    "zhHans": "",
+    "zhHans": "你走进一片干燥、布满尘土的荒地，迎面扑来一股热浪。很久以前某场战争留下的残骸和废墟散落在四周。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7503,7 +7503,7 @@
   },
   {
     "english": "You emerge inside the underground bunker. Complex machinery relay data metrics back and forth from various points of interest around the planet. Despite the vicinity to an erupting volcano, the air is surprisingly cool.",
-    "zhHans": "",
+    "zhHans": "你进入地下掩体。复杂的机器不断在星球各个重要地点之间传递测量数据。虽然离正在喷发的火山很近，空气却出奇地凉爽。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7513,7 +7513,7 @@
   },
   {
     "english": "You feel the dampness through your suit as you emerge underwater in a large basin. The wreck of an old space ship lies at the bottom, but the large hole in the hull makes it clear it’s never going to fly again.",
-    "zhHans": "",
+    "zhHans": "你穿过战甲感到潮湿：原来自己来到了水下的大盆地。湖底躺着一艘古老飞船的残骸，可船壳上的巨大破洞表明它再也不可能起飞。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7523,7 +7523,7 @@
   },
   {
     "english": "You find people. Refugees, huddling in a small, makeshift camp. They greet you warmly, once they realize you’re not one of Wark’s goons. The warmongering alien is using the planet as a base for his conquest of the solar system, forcing its people to scavenge for the dangerous, old technology of their ancestors to use as advanced weapons.\n\nThe people in the camp are trying to escape their oppressors, but resources are running low. You promise to help, but reaching Wark’s fortress up on the cliffs above will be near impossible. The camp’s elders hand you a suit upgrade and suggest you explore the nearby water basin. It’s been untouched by scavengers due to the number of deadly predators living there and may still contain something of use. You steel yourself for what lies ahead.",
-    "zhHans": "",
+    "zhHans": "你终于遇到了人！一群难民蜷缩在简陋的小营地里。确认你不是沃克的走狗之后，他们热情地欢迎了你。这名好战的外星人以本星球为基地，企图征服整个恒星系，并强迫居民搜寻祖先遗留下的危险古代科技，将其改造成先进武器。\n\n难民们试图摆脱压迫，却已快耗尽物资。你答应提供帮助，但想抵达上方悬崖的沃克堡垒几乎不可能。营地长老交给你一项战甲升级，并建议探索附近的水盆地。那里栖息着众多致命掠食者，一直无人敢去搜寻，可能还藏着有用的东西。你鼓起勇气，准备迎接新的挑战。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7533,7 +7533,7 @@
   },
   {
     "english": "You hit the jackpot beating this guy! You access the memory banks of the wrecked dragon, revealing a map to buried treasure that Wark was no doubt trying to get his claws on.\n\nTo find the treasure cell within sector 13 (in the bottom left corner), draw a horizontal line from one of the keys and a vertical line from a second key. The value of third key goes into the cell where the two lines meet.",
-    "zhHans": "",
+    "zhHans": "打倒那家伙后，你简直中了大奖！你访问机械龙残骸的记忆库，发现了沃克显然一直想据为己有的埋藏宝藏地图。\n\n要在左下角的第 13 区找到藏宝格，从一把钥匙所在格画一条水平线，再从第二把钥匙画一条竖直线；两条线的交点填入第三把钥匙的数值。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7543,7 +7543,7 @@
   },
   {
     "english": "You land on Cell-81, the hidden homeworld of the ancient Puzzlo race. Your ship perches precariously atop the steep cliffs that make up the topmost layer of the planet. The foliage is dense up here, hiding your ship from view. Time to find out who broadcasted that emergency signal.",
-    "zhHans": "",
+    "zhHans": "你降落在 81 号格星球（Cell-81），古老谜族失落的故乡。飞船危险地停在星球最上层的陡峭悬崖上。这里植物茂密，飞船完全隐没在枝叶中。该弄清是谁发出了那条求救信号。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7553,7 +7553,7 @@
   },
   {
     "english": "You manage to salvage a half-decent MISSILE launcher from a large, crab-like exoskeleton. Despite the rust and mismatching interfaces, you quickly get the optical targeting system back in working condition.",
-    "zhHans": "",
+    "zhHans": "你成功从一副巨大的蟹形外骨骼装甲上拆下一具还算不错的**导弹发射器**。虽然有锈蚀和接口不匹配的问题，你仍很快修好了光学瞄准系统。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7563,7 +7563,7 @@
   },
   {
     "english": "You manage to sneak a peek at Wark’s base of operation. It’s a disheartening sight: the base is heavily fortified, and there are plenty of those barriers that almost broke you before. You will need an edge to deal with them before you stand any chance at defeating Wark and his army. (You just found Wark's base, but it might still be a long time before you're strong enough to confront him. Don't be alarmed if you have plenty of logs left to find.)",
-    "zhHans": "",
+    "zhHans": "你偷偷窥见了沃克的作战基地。景象令人沮丧：基地防守极严，还有大量先前差点要你命的屏障。想击败沃克及其军队，必须先找到突破这些屏障的优势。（你只是刚发现沃克的基地，可能还有很长一段时间才能强大到与他正面对决。如果还有许多剧情记录尚未找到，不必惊慌。）",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7573,7 +7573,7 @@
   },
   {
     "english": "You step into a dimly lit chamber. On a pedestal, under a single, bright spotlight, lies a suit unlike any you’ve seen before, the light seemingly inverting as it bounces off the polished metal surface. This is the PHASE SUIT. Read the unlocked rules carefully!",
-    "zhHans": "",
+    "zhHans": "你踏入昏暗的房间。一束明亮聚光灯照在基座上的一套战甲上，那是你从未见过的款式。光芒从抛光金属表面反射时，仿佛连光暗都颠倒了。这里放着的正是**相位战甲**。请仔细阅读刚解锁的规则！",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7583,7 +7583,7 @@
   },
   {
     "english": "You wake up at the bottom of a ravine. Faint daylight seeps down from cracks in the ceiling, illuminating your surroundings enough that you can navigate. Your suit is badly damaged and almost all of your equipment is broken or offline. Your scanner still works, as do your trusty gardening gloves, so you should be able to climb your way out.",
-    "zhHans": "",
+    "zhHans": "你在峡谷底部醒来。微弱日光从顶部裂隙照进来，勉强照亮足以辨认方向的环境。战甲损毁严重，几乎所有装备都已损坏或离线。幸运的是，扫描仪和你可靠的园艺手套还在运作，应该能爬出去。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7593,7 +7593,7 @@
   },
   {
     "english": "You walk up to the largest console and start mashing buttons at random, prompted by your suit’s AI. With some guesswork (and a conveniently placed sticky-note with all the important passwords), you manage to transfer access to the base’s remote controlled DRONES to you, allowing you to use them as platforms when exploring.",
-    "zhHans": "",
+    "zhHans": "你听从战甲人工智能的建议，走到最大的控制台前开始胡乱按键。靠着猜测和一张恰巧贴在那里的“重要密码大全”便利贴，你成功取得基地遥控**无人机**的控制权，可以把它们当作探索时的移动平台。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7603,7 +7603,7 @@
   },
   {
     "english": "You’re in luck! Among the fire and brimstone, the volcano has spit out an upgrade cache that must have fallen into the caldera long ago. Inside the cache lies a slightly singed MORPH BALL upgrade, complete with fire decals.",
-    "zhHans": "",
+    "zhHans": "真走运！在烈焰与硫磺之中，火山吐出了一只很久以前落入火山口的升级补给箱。箱内是一项边缘略有烧焦、还带火焰涂装的**变形球**升级。",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7613,7 +7613,7 @@
   },
   {
     "english": "You’ve found it! There is a way to break through the barriers if you vary the frequency just right across the width of the fields. Armed with this insight, you’re unstoppable! You toggle your missile launcher to butt-kicking mode and march for the enemy stronghold. Time to end this!",
-    "zhHans": "",
+    "zhHans": "找到了！只要让屏障整个宽度上的频率以恰当方式变化，就能突破它。有了这个发现，你已经势不可挡！你将导弹发射器切换到“痛击敌人”模式，向敌军要塞进发。是时候结束这一切了！",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7623,7 +7623,7 @@
   },
   {
     "english": "You've made a puzzle out of the rules table and even managed to solve it!",
-    "zhHans": "",
+    "zhHans": "你甚至把规则清单本身变成一道谜题，还成功解开了它！",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7633,7 +7633,7 @@
   },
   {
     "english": "You've managed to actually solve a puzzle that should have been impossible!",
-    "zhHans": "",
+    "zhHans": "你竟真的解开了一道原本应该不可能完成的谜题！",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7643,7 +7643,7 @@
   },
   {
     "english": "Your fault",
-    "zhHans": "",
+    "zhHans": "你的断层",
     "gameIds": [
       "super-sudokoid-2"
     ],
@@ -7653,7 +7653,7 @@
   },
   {
     "english": "Your ship still stands where you left it. It seems that despite their boast, Wark's goons were either unable to get the ship to fly, or they were busy failing to chase you down. Either way, it's a relief to see the ship still in one piece.\n\nBut you can't leave just yet. You have unfinished business with Wark, and until they're dealt with there's no way you'll leave the refugees behind.",
-    "zhHans": "",
+    "zhHans": "你的飞船仍然停在原地。看来沃克的爪牙虽然夸下海口，却不是没本事让飞船起飞，就是忙着徒劳地追捕你。总之，看到飞船依旧完好无损，总算松了一口气。\n\n但还不能离开。你与沃克之间仍有未了之事，在解决他之前，你绝不能抛下难民不管。",
     "gameIds": [
       "super-sudokoid-2"
     ],
