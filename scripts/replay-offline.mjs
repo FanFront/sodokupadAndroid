@@ -125,7 +125,7 @@ async function replay(entry, original = false) {
       await start.click({timeout:6000});
       report.passes.push('Start/Continue puzzle dialog dismissed');
     }
-    await page.waitForFunction(() => {
+    await page.waitForFunction(minimum => {
       const app = (typeof Framework === 'undefined' ? null : Framework)?.app;
       return !!app?.puzzle?.currentPuzzle && app.puzzle.rows >= minimum &&
         app.puzzle.cols >= minimum && !!document.querySelector('#svgrenderer')?.getAttribute('viewBox');

@@ -182,7 +182,13 @@ try {
       if (!allowedPuzzle(link[2])) continue;
       const url = key(link[2]);
       seededLinks.add(url);
-      if (/boss|首领/i.test(link[1]) || /\/boss-/i.test(url)) requiredBossLinks.add(url);
+      // Only the Sudokuvania adventures currently have reviewed boss packs.
+      // Super Sudokoid links are discoveries, not required for the first main-only capture.
+      if ((item.gameIds || []).some(id =>
+          id === 'digits-of-despair' || id === 'lineage-of-logic') &&
+          (/boss|首领/i.test(link[1]) || url.includes('/boss-'))) {
+        requiredBossLinks.add(url);
+      }
     }
   }
 } catch (error) {
