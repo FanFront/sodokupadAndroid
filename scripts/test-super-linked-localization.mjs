@@ -22,7 +22,7 @@ for(const item of catalog){
     const candidate=item.fields[field];
     assert.equal(original.metadata[field],candidate.english,item.id+' English source changed');
     assert.equal(translated.metadata[field],candidate.zhHans,item.id+' Chinese '+field);
-    assert.match(translated.metadata[field],[\u3400-\u9fff]/u,item.id+' '+field);
+    assert.match(translated.metadata[field],/[\u3400-\u9fff]/u,item.id+' '+field);
     restored.metadata[field]=original.metadata[field];
   }
   assert.deepEqual(restored,original,item.id+' Sudoku geometry, logic or answer changed');
