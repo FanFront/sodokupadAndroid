@@ -1,0 +1,552 @@
+[
+  {
+    "id": "70qpd43i45",
+    "url": "https://sudokupad.app/70qpd43i45",
+    "gameId": "super-sudokoid-1",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "9 Feet Under",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "Cages are sent flying in every direction as the prison warden suddenly comes smashing through them. Its red eyes glow in the dark and are located way higher up than you would have liked.\n\n---\n\nPlace the digits 1-9 in each row, column and box.\nDigits separated by a white SCAN dot differ by exactly 1.\nDigits within a KILLER CAGE do not repeat and sum to the value in the upper-left corner of the cage.",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "The warden flees in terror, startled by your sudden appearance. You never expected someone so massive could yell at such a high pitch.\n\nYou see two glowing eyes on the floor. It appears they’re a pair of night vision goggles. The warden must have dropped them in panic.\n\nObtained the NIGHT VISION VISOR!\n\nNow go back to the main puzzle and enter *1* into the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "f4c9vuptqj",
+    "url": "https://sudokupad.app/f4c9vuptqj",
+    "gameId": "super-sudokoid-1",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Temple Temper",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "As you search the area, your scanner suddenly beeps furiously and the earth rumbles as a giant stone golem rises menacingly from the dusty ground. It seems to think you’re an intruder.\n\n---\n\nPlace the digits 1-9 in each row, column and box. \nDigits separated by a white SCAN dot differ by exactly 1.",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "You somehow manage to calm the upset golem, and as an apology it lets you loot some equipment from a previous victim. \n\nNow the scanner is pointing to a much larger energy source, deep, deep underground. Maybe this is what’s disrupting your ship’s navigation?\n\nObtained the GARDENING GLOVES!\n\nThe studded gloves let you climb the many vines and ranks that cover the area, provided of course that each step differs by at least 5.\n\nNow go back to the main puzzle and enter *4* into the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "gnp7aga2sx",
+    "url": "https://sudokupad.app/gnp7aga2sx",
+    "gameId": "super-sudokoid-1",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Critical Mess",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "The reactor turns on and you feel the temperature rise… and rise… and it doesn’t stop. As you scramble to the controls, you knock over the thermometers and now their labels have all fallen off!\n\n---\n\nPlace the digits 1-9 in each row, column and box.\n\nDigits must increase along thermometers, starting from the bulb, but all the bulbs are missing. You'll have to figure out which end of each thermometer should have the bulb.",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "With the crisis averted, the reactor hums contentedly and the ceiling’s light strips flicker on. Moments later they glow with a steady, pale, white light. You hear activity above; the lab seems to have been reactivated with the power restored.\n\nThe scanner keeps pointing down.\n\nNow go back to the main puzzle and enter *5* into the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "hf8r43jwsj",
+    "url": "https://sudokupad.app/hf8r43jwsj",
+    "gameId": "super-sudokoid-1",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Cornerstone",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "Place the digits 1-3 in each region so that no rows, columns or regions have duplicate digits.\n\nDigits increase along the thermometer.\nDigits an equal distance from the center of a BALL CHUTE sum to the value in the middle.",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "You come to a dead end. There is nothing here, and it’s dead silent. You wait for something to happen but nothing does. Relief washes over you as you turn and walk back up. All this madness feels like a fever dream that's starting to fade.\n\nNow go back to the main puzzle and enter 2 into the boss cell. What? You thought it’d be a 3? Nah.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "jo12qmyc5v",
+    "url": "https://sudokupad.app/jo12qmyc5v",
+    "gameId": "super-sudokoid-1",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Beat it!",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "Chaos ensues as space-pirates storm in through the front door of the discothèque and rappel down from the ceiling catwalks. Panicked partygoers are running left and right, still to the beat of the music, and you do your best to blend in as you make for the exit.\n\n---\n\nPlace the digits 1-9 in each row, column and box.\n\nDigits in the gray circle are odd.\nDigits separated by a black NIGHT dot have a 1:2 relationship.\nDigits an equal distance from the middle of a BALL CHUTE sum to the cell in the middle.",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "You quickly sneak out through the back door, making sure to watch your diagonals this time. It seems the party is over and most of the party animals have left to resume their dancing elsewhere. You also decide to not stick around for long.\n\nPARTY LINES have formed in the area.\n\nThe scanner suggests you’re close now. Just a little further…\n\nNow go back to the main puzzle and enter *3* into the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "kt6bb0wm0k",
+    "url": "https://sudokupad.app/kt6bb0wm0k",
+    "gameId": "super-sudokoid-1",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Under Pressure",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "The source of the strange signal comes from behind this cracked wall. You’re confident it will come crumbling down if you can just find the structural weakness.\n\n---\n\nPlace the digits 1-9 in each row, column and region.\n\nJET VENT digits outside the puzzle indicate how many digits are seen in that direction, given that larger digits obscure lower ones.\n\nDigits along PARTY lines must alternate between odd and even.",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "You burst through the wall as if you were a cartoon character on cue. Rubble is strewn about, your visor is covered in dust, and you’re pretty sure there’s at least a dozen pebbles in your shoes, but at least you’re through.\n\nBeyond lies a massive chamber. The scanner beeps furiously…\n\nNow go back to the main puzzle and enter *6* into the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "lzer9x4edb",
+    "url": "https://sudokupad.app/lzer9x4edb",
+    "gameId": "super-sudokoid-1",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Ascent",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "A voice speaks in your mind, urging you to climb the tallest peak in the region. Unfortunately, the wall is blank, with barely any clues to hold on to.\n\n---\n\nPlace the digits 1-9 in each row column and box.\n\nThe numbers outside the grid indicate the sum of the digits along the indicated diagonal.",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "Somehow, you make it to the very top of the peak… and there’s nothing there. You collapse, exhausted.\n\nAs you rest, you watch the local wildlife. Rather than flying, the birds seem to favor running and jumping. They choose a starting point, then run in a line before leaping and covering huge distances. You realize you could do that too. The ability was hidden within you all along.\n\nUnlocked the SHINESPARK hidden technique!\n\nNow go back to the main puzzle and enter *2* into the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "n4c0dem40c",
+    "url": "https://sudokupad.app/n4c0dem40c",
+    "gameId": "super-sudokoid-1",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Mother Brain Teaser",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "This is it. The final challenge. No frills, no twists, just normal Sudoku. How hard can it be?\n\nYou can feel the mechanical brain focus on you as you approach the controls, mentally rearranging the grid, making the patterns harder, deadlier...\n\n---\n\nNormal Sudoku rules apply...?",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "You did it! Somehow, you overcame the pressure, thought outside the box, and shut the machine off. You should finally be able to leave this planet!\n\nA moment later, the entire room shakes and groans. All the energy meant to be consumed by the brain has nowhere else to go and it's is increasing by the second. This is bad!\n\nThe entire planet will explode. It seems excessive, but that’s what your scanner says. You need to escape this place quickly! \n\nSHIP NAVIGATION restored. Draw an EVAC PATH to your ship to escape the planet’s imminent destruction!\n\nNow go back to the main puzzle and enter *1* into the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "qfnpbofkiq",
+    "url": "https://sudokupad.app/qfnpbofkiq",
+    "gameId": "super-sudokoid-1",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Energy Transfer",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "The water roars as you open the sluice gates. A warning lamp blinks: you’ll have to redistribute power over the grid to avoid overloading any boxes with too many digits!\n\n---\n\nPlace the digits 1-9 in each row, column and box.\n\nEach column index where in the row digits go. That is: for each column C, if a digit X is placed in row R, then the digit C will be in column X in that row.\n\nFor example, a 5 in row 2, column 1 would indicate that the 1 of row 2 is in column 5.",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "With the grid back in harmony, another lamp starts flashing. Something is blocking the reactor’s coolant intake pipe and it’s once again starting to over-heat. \n\nThe recommended solution seems to be to manually clear out the pipe. The machine helpfully spits out another suit upgrade to help you navigate the narrow pipes.\n\nObtained the MORPH BALL upgrade!\n\nNow go back to the main puzzle and enter *5* into the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "swxudk82v1",
+    "url": "https://sudokupad.app/swxudk82v1",
+    "gameId": "super-sudokoid-1",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Robot Patrobot",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "With the power back on, security robots now stalk the corridors. Can you figure out their movement patterns?\n\n---\n\nPlace the digits 1-9 in each row, column and box. \nArrows sum to the digit in their corresponding circles.",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "You hide under a box and ride a conveyor belt to avoid detection. Your search ends with a sinking feeling: there is no doubt that space-pirates have been here. \n\nIn fact, you find a dropped note, detailing their latest security routine. You’re pretty sure you could infiltrate their base of operations using this as a guide.\n\nObtained the SECRET DOCUMENT!\n\nNow go back to the main puzzle and enter *1* into the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "u6cj0y3fzy",
+    "url": "https://sudokupad.app/u6cj0y3fzy",
+    "gameId": "super-sudokoid-1",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Worm Food",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "You stand face to face(?) with a giant worm. It seems the tunnel wasn’t dug by any prisoners after all, but by this monstrous beast. It’s hungry and you smell like food…\n\n---\n\nPlace the digits 1-9 in each row, column and box.\nAdjacent digits along green VINES differ by at least 5.\n\nA snake is hidden within the grid. The snake moves orthogonally and doesn't touch itself, not even diagonally. \n\nThe snake must collect all apples and all digits along the snake must be 5 or higher.\n\nIts head and tail have been marked in box 4 and 8 respectively.",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "Having gobbled up a handful of apples, the worm happily slithers away. You could swear it’s gotten a few cells longer than it was a moment ago.\n\nLeft behind in the mud is a diamond-hard scale. You could fashion a tool out of this.\n\nObtained the GRAPPLING HOOK!\n\nNow go back to the main puzzle and enter *8* into the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "y4o6cjk9ao",
+    "url": "https://sudokupad.app/y4o6cjk9ao",
+    "gameId": "super-sudokoid-1",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Queens and Bishops",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "With the king and knight gone, the alien queen is playing with the bishop. You have to sneak past them somehow without getting caught.\n\n--\n\nPlace the digits 1-9 in each row, column and box.\n\nDraw a path from the bottom-left corner to the top-right corner. The path may move orthogonally and diagonally, but no cell along the path may be within line of sight of either a bishop (an 8) or a queen (a 9).\n\nDigits have the following roles:\n1, 2, 3 - Walls: block line of sight. Cannot be part of the path.\n4, 5, 6, 7 - Ground: the path can go here.\n8 - Bishops: can see all cells in a diagonal line.\n9 - Queens: can see horizontally, vertically and diagonally.\n\nNote: line of sight is only blocked by walls. Queens and bishops can see past each other.",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "You almost make it through the entire base without getting spotted. Almost.\n\nAs you start to relax, you’re suddenly jumped by no fewer than three bishops, coming from diagonals you didn't even know existed! Moments later, you’re caged up and thrown into the dungeon to rot…\n\nNow go back to the main puzzle and enter *3* into the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "1hh6q5xl6l",
+    "url": "https://sudokupad.app/1hh6q5xl6l",
+    "gameId": "super-sudokoid-2",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "No Fair",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "You're tracking back inside the volcano, searching for upgrades with your new wall-phasing powers. After a few minutes you spot something exciting: a POWER BOMB schematic! \n\nBefore you get to it though, the walls shift and a sudden current drags both you and the cache away, deeper and deeper. You feel your suit struggle against the mounting pressure. You need to get out, fast!\n\n---\n\nPlace the digits 1-9 in each row, column and region. \nThere is lava everywhere so adjacent digits may not differ by 1.",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "The cache is lost. You do your best to hold on to any outcrops you find, then try to swim, climb and claw your way out. \n\nIt's not enough. In desperation you jump, and then again, and again. Eventually, you make it out of there. You didn't find any loot, but you have mastered a new techique, the WALL JUMP!\n\nNow go back to the main puzzle and enter *5* into the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "64c4lkb5ss",
+    "url": "https://sudokupad.app/64c4lkb5ss",
+    "gameId": "super-sudokoid-2",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Serpent cluster",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "You swim down into the shipwreck, shoving algae and kelp out of the way as you navigate the narrow hallways. Inside the weapons hangar you spot an upgrade cache, it sticks out for being the only thing in pristine condition. \n\nYet before you have a chance to approach it, you notice shadows circling above your head. Two massive sea serpents have made this room their nest and have caught your scent. They approach swiftly, eager to swallow you whole!\n\n---\n\nPlace the digits 1-9 in each row, column and box.\nDigits separated by a V indicate that the digit \"pointed to\" is smaller than the other.\n\nTwo snakes are hidden in the puzzle. The snakes move orthogonally and don't touch each other or themselves orthogonally. One of the snakes consists entirely of odd digits while the other consists of even digits. The heads of each snake has been given.\n\nDigits in the circled cells indicate how many of the surrounding cells (including diagonals) are snake body parts. The circles are not part of any snake.",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "The snakes don't faze you: you've dealt with Galaxy Wyrms in your travels and while your suit doesn't have the thrusters of an Eaglet spaceship, it's more than nimble enough for this. You do a classic maneuver and before they know it, the snakes are tied up in a neat bow.\n\nWith the serpents dealt with, you return to the weapons station. Inside the cache is an advanced missile system, far superior to your own. SUPER MISSILES, if you will.\n\nNow return to the main puzzle and place a *1* in the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "7asln8p2u1",
+    "url": "https://sudokupad.app/7asln8p2u1",
+    "gameId": "super-sudokoid-2",
+    "kind": "linked",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Super missiles example",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "This upgrade asks you draw a Renban line from each arrow clue (digits along the line must form a set of consecutive digits, in any order , e.g. 3-5-4, and digits must not repeat). \n\nThe line starts from each arrow's tip and moves in the direction of the arrow. The line covers as many cells as the value of the arrow's circle. \n\nIf the line would hit a wall, it instead bounces by rotating 90 degrees away from the wall. Notably, it does so inside the cell itself, rather than moving to the cell's corner and bouncing there. It also doesn't cut corners and will bounce instead. If it can't bounce and still needs to take more cells it is an invalid line!\n\nIn this 4x4 example, the line is four cells long and immediately bounces on the right wall, then again on the floating block.",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "Nicely done! Now try it for real!",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "80kqa7jo0h",
+    "url": "https://sudokupad.app/80kqa7jo0h",
+    "gameId": "super-sudokoid-2",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Refugee Rescue",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "The refugee camp is under attack! You were wondering how they could avoid detection despite the vicinity to Wark's base. Apparently, they couldn't, and now an army is lining up to assault them. \n\nThey're too many for you to take on on your own, but maybe you could sneak into their supply depot and sabotage it? There's no way they expected anyone to approach from behind.\n\n---\n\nPlace the digits 1-9 in each row, column and box .\nDigits along the green whisper VINES differ by at least 5.\n\nThe marked cells in box 5 make up the supply caches. To destroy the supplies, these digits must be larger than any orthogonally adjacent digits that aren't part of a cache.\n\nThe blue circles are enemies, digits in these cells may not repeat a knight's move away.",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "Like a shadow, you sneak in undetected. The fools of Wark's army haven't posted a single guard to protect their weapons and ammunition. \n\nYou take a moment to look for anything useful and snatch a satchel of BOMBS before blowing the rest of the stock sky high. Chaos ensues among the rows of Wark's soldiers, and it doesn't take long before they break rank and flee in every direction. You saved the refugees, and got something out of it as well!\n\nNow go back to the main puzzle and insert a *4* in the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "bpij5pdi3x",
+    "url": "https://sudokupad.app/bpij5pdi3x",
+    "gameId": "super-sudokoid-2",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Unwelcome welcome",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "As you walk down the gangplank of your ship, you're approached by a group of heavily armed aliens. Despite the foliage, they had no trouble locating you. Their leader, a tall, birdlike sentinel addresses you. \n\n\"Halt, outworlder!\" they say. \"This planet, and indeed the whole galaxy, belongs to the Great Lord Wark. As you have so kindly volunteered your ship to his cause, you will be considered a favored slave.\"\n\nThe alien turns to its peers, not waiting for an answer. \"Subdue them\", it says before walking away. Immediately, a half-dozen weapons are aimed at you and despite your efforts to dodge, a strange barrier forms around you. You have to try fending them off!\n\n---\n\nPlace the digits 1-9 in each row, column and box.\nDigits separated by a white SCAN dot differ by exactly 1.\n\nThe effects of the barrier line is unknown.",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "You lose. Despite your best effort, the barrier is unbreakable. What's more, it's making your suit's systems go haywire. Warning signs light up all over your visor and you can feel yourself losing consciousness. \n\nIn a final, desperate attempt to flee, you use your last bit of strength to throw yourself away from your captors. They shout, startled, as you stumble and fall off the cliff's edge and down into the darkness below.\n\n---\n\nNow return to the main puzzle and enter *3* into the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "dxr2zdfldv",
+    "url": "https://sudokupad.app/dxr2zdfldv",
+    "gameId": "super-sudokoid-2",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Metal Riddle",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "A shadow descends! The dragon's diving at you at high speed, plasma blasts firing from shoulder cannons mounted on its exoskeleton. There's not much room to maneuver atop the tower, but you barely manage to phase away before the dragon slams into the ground where you stood a moment ago. You ready your SUPER MISSILES.\n\n---\n\nPlace the digits 1-9 in each row, column and box.\n\nDigits along an arrow sum to its circle. Additionally, draw a Renban line from the tip of each arrow, of the same length as the circle value. Digits along this line make up a contiguous set. The line goes in the direction of the arrow and bounces against the colored boss cells and the outer edges of the puzzle. Should a line go straight towards a wall or corner, it can't bounce and has to be short enough to fit the space.",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "At first your missiles simply bounce of the steel scales of the dragon, but in the end you get a lucky shot into its mouth and bring it to its knees. The mighty explosion as it self-destructs from the damage rocks the tower. The smoldering remains of the robot lie in a burnt heap, but maybe something survived worth scavenging.\n\nNow return to the main puzzle and enter *6* into the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "dz1iu0r3tl",
+    "url": "https://sudokupad.app/dz1iu0r3tl",
+    "gameId": "super-sudokoid-2",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Duel of Wits",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "On a huge throne sits a tiny alien – Wark is smaller than you expected, perhaps a brains over brawn type? The warlord cackles as you approach. “Outsider!” he screeches, then his grin turns wicked. “You’re expected.”\n\nSoldiers pour out from all sides, lining up around you. There is madness behind Wark’s eyes, all seven of them. You have one chance: “I challenge you to a duel”, you say, loud and clear. A Puzzlo duel, where both parties compete to solve a puzzle first, forces the loser to submit to the winner, and as a Puzzlo leader, Wark cannot back out of this one. “Very well”, if he is surprised, he doesn’t show it. ‘I accept”.\n\nSoon, two puzzles are set before you, but what is this? Someone has erased almost all the clues from your copy of the puzzle! You see Wark smirk, clearly aware of this, but two can play this game and while you’ve only used your drones as platforms, they do come equipped with cameras. Soon you have several pictures of Wark’s puzzle on your helmet’s interface.\n\n—\n\nPlace the digits 1-9 in each row, column and box. \n\nThe nine boxes to the right each corresponds to a box in your puzzle, but you have to figure out which goes where. They may be rotated, but not flipped! The clue that still remains in your grid is part of one of the boxes.\n\nAll clues are identical to clues you’ve seen in the main puzzle (dots differ by 1 and vines by 5, digits decrease along vents, ball chutes sum to the middle digit and arrows sum to the circle and fire a bouncing line).",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "You win the duel, and Wark is in shock. “Cheater!” he bursts out, “You must have cheated! The duel doesn’t count. I’m the smartest and there will be no one alive to say otherwise!”. You look on in horror as the throne room’s ceiling opens, revealing a clear view of the sky above. But wait, that’s no moon up above, it’s an orbital space platform and there’s a huge weapon on it aimed straight down at you!\n\nThere is no time to lose. That weapon will destroy the entire planet, and while that’s not unusual in your line of business, there are people living here that can’t evacuate. Wark laughs maniacally as you rush to your ship. The only hope to save the day is if you can destroy this weapon before it fires, but that will not be easy.\n\n[Click here to go to the final puzzle!](https://sudokupad.app/vaz2rx345r)",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "gidcd5jrz7",
+    "url": "https://sudokupad.app/gidcd5jrz7",
+    "gameId": "super-sudokoid-2",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Unwelcome welcome?",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "As you walk down the gangplank of your ship, you're approached by a group of heavily armed aliens. Despite the foliage, they had no trouble locating you. Their leader, a tall, birdlike sentinel addresses you. \"Halt, outworlder!\" they say. \"This planet, and indeed the whole galaxy, belongs to the Great Lord Wark. As you have so kindly volunteered your ship to his cause, you will be considered a favored slave.\"\n\nThe alien turns to its peers, not waiting for an answer. \"Subdue them\", it says before walking away. Immediately, a half-dozen weapons are aimed at you and despite your efforts to dodge, a strange barrier forms around you. You have to try fending them off!\n\n---\n\nPlace the digits 1-9 in each row, column and box.\nDigits separated by a white SCAN dot differ by exactly 1.\n\nThe effects of the barrier line is unknown...\n\n...but let's say you did know how it worked, could things have gone differently?",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "You win. Despite their best effort, the barrier is no match for you. You easily deal with the enemies, moving as if you already knew how they would act, how they would respond. The battle is over in seconds.\n\nYou turn around, face the fortress that is Wark's base and turn your still-operational missile launcher into butt-kicking mode. It's not an upgraded missile system (you haven't found that one yet), but it will have to do.\n\n---\n\nNow return to the main puzzle and enter *7* into the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "hfyjv8jqr5",
+    "url": "https://sudokupad.app/hfyjv8jqr5",
+    "gameId": "super-sudokoid-2",
+    "kind": "boss",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Caldera chaos",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "You spot enemies. A search party is combing the volcano slopes, looking for you, no doubt. They still haven't spotted you which means you have the advantage. Time to test the missile launcher in actual battle!\n\n---\n\nPlace the digits 1-9 in each row, column and box.\nDigits *increase* along the gray thermometers.\nDigits along an arrow sum to the value in the circle.\n\nCells with blue aliens are enemies. To take them out, you can't allow them to dodge your missiles. Make sure anti-knight rules apply to all enemies (digits in enemy cells may not repeat a chess knight's move in any direction)!",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "A critical hit knocks out the last of Wark's minions. Unfortunately, as it tumbles to the ground, its weapon bounces away and crashes into the volcano crater, causing a huge explosion.\n\nThe ground shakes violently as, with a deep roar, the volcano erupts!\n\n---\n\nNow return to the main puzzle and place a *2* in the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  },
+  {
+    "id": "vaz2rx345r",
+    "url": "https://sudokupad.app/vaz2rx345r",
+    "gameId": "super-sudokoid-2",
+    "kind": "linked",
+    "format": "json",
+    "fields": {
+      "title": {
+        "english": "Saving the World!",
+        "zhHans": ""
+      },
+      "rules": {
+        "english": "With your boosters on overdrive, you tear through the atmosphere, racing closer to Wark's crazy super-weapon. You don't have much time, but there is no easy way to approach the orbiting platform, given the swarm of debris and defense turrets surrounding it. You're going to have to find a path through! \n\n---\n\nPlace the digits 1-9 in each of the nine boxes so that no digits repeat in any row, column or box.\n\nThe stars are a set of the digits 1-9. Each star is a different digit.\n\nDraw a line from the rocket to the super-weapon. It may only move orthogonally, and not through star cells or outside any boxes. The line is an equal sum line, meaning that the line segments within each box sum to the same value. The line does not touch itself orthogonally.",
+        "zhHans": ""
+      },
+      "msgcorrect": {
+        "english": "You veer in close, dodging lasers and plasma rays as you weave between asteroids and satellites. Your ship lacks the firepower to take out the weapon so instead you dump all the explosives you have  in a large bundle through the cargo doors, praying it will be enough.\n\nThe explosion is miniscule in comparison to the weapon, yet somehow it's enough. Being charged way beyond any safety limit, the weapon immediately burst into flames, sending a chain reaction of explosions up and down the space platform in every direction, before culminating in a massive blast that rips the weapon to pieces and cracks your windshield from the shock.\n\nAs you slowly descend back to the surface, you receive a message on your display: Wark has surrendered, or rather, his soldiers, who didn't appreciate being \"silenced\" this way, decided they'd had enough of the despot and quickly put him in chains before surrendering themselves. It's your complete victory!\n\nNow return to the main puzzle and enter *9* into the boss cell.",
+        "zhHans": ""
+      },
+      "author": {
+        "english": "The M",
+        "zhHans": ""
+      }
+    }
+  }
+]
