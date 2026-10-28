@@ -31,6 +31,7 @@ jobs:
           node --check scripts/capture-offline.mjs
           node --check scripts/capture-super-sudokoid.mjs
           node --check scripts/capture-super-sudokoid-linked.mjs
+          node --check scripts/extract-super-linked-chinese.mjs
           node --check scripts/replay-super-sudokoid-linked.mjs
           node --check scripts/verify-offline.mjs
           node --check scripts/replay-offline.mjs
@@ -52,7 +53,7 @@ jobs:
 
   build-cached-apk:
     # The repository carries a PUBLIC testing certificate; no Secrets needed.
-    if: (github.event_name == 'push' && !contains(github.event.head_commit.message, '[capture-super-sudokoid]') && !contains(github.event.head_commit.message, '[capture-super-linked]')) || github.event_name == 'pull_request'
+    if: (github.event_name == 'push' && !contains(github.event.head_commit.message, '[capture-super-sudokoid]') && !contains(github.event.head_commit.message, '[capture-super-linked]') && !contains(github.event.head_commit.message, '[extract-super-zh]')) || github.event_name == 'pull_request'
     needs: source-checks
     runs-on: ubuntu-24.04
     steps:
@@ -148,6 +149,32 @@ jobs:
             git push origin "HEAD:${{ github.ref_name }}"
           fi
 
+
+  extract-super-linked-chinese:
+    # One-off text extraction from the already captured original SCL; no network.
+    if: github.event_name == 'push' && contains(github.event.head_commit.message, '[extract-super-zh]')
+    needs: source-checks
+    permissions:
+      contents: write
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Extract all side and boss puzzle text
+        run: |
+          npm install --no-audit --no-fund
+          node scripts/extract-super-linked-chinese.mjs
+      - name: Commit Chinese translation review catalog
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f app/src/main/assets/offline/super-linked-chinese-candidates.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: extract Super Sudokoid side puzzle prose [offline snapshot]"
+            git push origin "HEAD:${{ github.ref_name }}"
+          fi
 
   capture-super-linked:
     # Incremental, explicit archive of the Super Sudokoid side/boss puzzles.
