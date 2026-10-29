@@ -6,9 +6,13 @@
 globalThis.SudokuPadTransfer = (() => {
   const FORMAT='sudokupadx-checkpoint';
   const PALETTE=['#f8cd75','#a9d9a1','#9fcbff','#e9b0d6','#bfb5fa'];
+  // The captured SudokuPad framework declares `const Framework` in a classic
+  // script, which does NOT create window.Framework. Resolve its lexical binding.
+  const app=()=>typeof Framework!=='undefined'
+    ? Framework.app : globalThis.Framework?.app;
   const toSymbol=value=>value===undefined||value===null||value===''?null:String(value).toUpperCase();
   const cellsOf=()=> {
-    const puzzle=globalThis.Framework?.app?.puzzle;
+    const puzzle=app()?.puzzle;
     if(!puzzle||!Array.isArray(puzzle.cells)||!puzzle.cells.length)
       throw Error('请先等待数独棋盘加载完成');
     return puzzle;
@@ -42,7 +46,7 @@ globalThis.SudokuPadTransfer = (() => {
         format:FORMAT,version:1,source:'sodokupadAndroid',
         exportedAt:new Date().toISOString(),
         puzzleId,sourceUrl,key:null,
-        title:globalThis.Framework?.app?.currentPuzzle?.metadata?.title||puzzleId,
+        title:app()?.currentPuzzle?.metadata?.title||puzzleId,
         rows:p.rows,cols:p.cols,givens,cells
       });
     } catch(error) {return JSON.stringify({error:String(error.message||error)});}
