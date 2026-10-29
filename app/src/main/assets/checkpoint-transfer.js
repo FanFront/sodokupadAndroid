@@ -17,7 +17,7 @@ globalThis.SudokuPadTransfer = (() => {
     try{
       const parsed=new URL(url);
       return parsed.hostname.toLowerCase()==='sudokupad.app'
-        ?parsed.pathname.replace(/\\/$/,'').split('/').pop().toLowerCase():'';
+        ?parsed.pathname.split('/').filter(Boolean).pop()?.toLowerCase():'';
     }catch{return '';}
   };
   const cellMarks=(list)=>Array.isArray(list)?list.map(toSymbol).filter(Boolean):[];
@@ -30,11 +30,13 @@ globalThis.SudokuPadTransfer = (() => {
   function exportCheckpoint(sourceUrl,puzzleId) {
     try {
       const p=cellsOf();
-      const cells=p.cells.map(c=>({
-        value:toSymbol(c.value),
-        corner:cellMarks(c.pencilmarks),center:cellMarks(c.candidates),
-        color:colorToX(c.colours?.[0])
-      }));
+      const cells=p.cells.map(c=>c.given!==undefined&&c.given!==null
+        ?{value:null,corner:[],center:[],color:null}
+        :{
+          value:toSymbol(c.value),
+          corner:cellMarks(c.pencilmarks),center:cellMarks(c.candidates),
+          color:colorToX(c.colours?.[0])
+        });
       const givens=p.cells.map(c=>toSymbol(c.given));
       return JSON.stringify({
         format:FORMAT,version:1,source:'sodokupadAndroid',
