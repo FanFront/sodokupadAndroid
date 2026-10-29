@@ -33,6 +33,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
@@ -46,6 +49,10 @@ public final class MainActivity extends Activity {
     private static final String PREFS = "sudokupad_android";
     private static final String KEY_CUSTOM_GAMES = "custom_games";
     private static final int BACKGROUND = Color.rgb(249, 248, 245);
+    private static final int EXPORT_CHECKPOINT = 901;
+    private static final int IMPORT_CHECKPOINT = 902;
+    private static final int MAX_CHECKPOINT_BYTES = 8 * 1024 * 1024;
+    private String checkpointToSave;
 
     private SharedPreferences preferences;
     private LinearLayout root;
@@ -325,9 +332,141 @@ public final class MainActivity extends Activity {
             }
         });
 
+        LinearLayout checkpointButtons = new LinearLayout(this);
+        checkpointButtons.setOrientation(LinearLayout.HORIZONTAL);
+        Button exportButton = button("导出存档", v -> exportCurrentCheckpoint());
+        Button importButton = button("导入存档", v -> selectCheckpointFile());
+        checkpointButtons.addView(exportButton, new LinearLayout.LayoutParams(0, dp(43), 1f));
+        checkpointButtons.addView(importButton, new LinearLayout.LayoutParams(0, dp(43), 1f));
+        root.addView(checkpointButtons);
         root.addView(webView, new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f));
         webView.loadUrl(game.url);
+    }
+
+    private String checkpointScript() throws IOException {
+        return readAsset("checkpoint-transfer.js");
+    }
+
+    private void exportCurrentCheckpoint() {
+        if (webView == null) return;
+        try {
+            final String script = "(function(){\\n" + checkpointScript()
+                    + "\\nreturn SudokuPadTransfer.exportCheckpoint("
+                    + JSONObject.quote(webView.getUrl()) + ","
+                    + JSONObject.quote(selectedGame.id) + ");})()";
+            webView.evaluateJavascript(script, encoded -> {
+                try {
+                    String payload = new JSONArray("[" + encoded + "]").getString(0);
+                    JSONObject checkpoint = new JSONObject(payload);
+                    if (checkpoint.has("error")) throw new JSONException(checkpoint.getString("error"));
+                    if (!"sudokupadx-checkpoint".equals(checkpoint.optString("format")))
+                        throw new JSONException("不支持此存档格式");
+                    checkpointToSave = payload;
+                    Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
+                    intent.addCategory(Intent.CATEGORY_OPENABLE);
+                    intent.setType("application/json");
+                    intent.putExtra(Intent.EXTRA_TITLE, "sudokupad-"
+                            + selectedGame.id + "-checkpoint.json");
+                    startActivityForResult(intent, EXPORT_CHECKPOINT);
+                } catch (Exception error) {
+                    Toast.makeText(this, "存档导出失败：" + error.getMessage(),
+                            Toast.LENGTH_LONG).show();
+                }
+            });
+        } catch (IOException error) {
+            Toast.makeText(this, "缺少存档脚本：" + error.getMessage(), Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private void selectCheckpointFile() {
+        if (webView == null) return;
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
+        intent.setType("*/*");
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
+        startActivityForResult(intent, IMPORT_CHECKPOINT);
+    }
+
+    private String readCheckpoint(Uri uri) throws IOException {
+        try (InputStream in = getContentResolver().openInputStream(uri);
+                ByteArrayOutputStream output = new ByteArrayOutputStream()) {
+            if (in == null) throw new IOException("无法读取此文件");
+            byte[] buffer = new byte[8192];
+            int read;
+            while ((read = in.read(buffer)) != -1) {
+                if (output.size() + read > MAX_CHECKPOINT_BYTES)
+                    throw new IOException("存档超过 8 MiB 限制");
+                output.write(buffer, 0, read);
+            }
+            return output.toString("UTF-8");
+        }
+    }
+
+    private void importCheckpointFromFile(String text) {
+        if (webView == null) return;
+        try {
+            JSONObject cp = new JSONObject(text);
+            if (!"sudokupadx-checkpoint".equals(cp.optString("format"))
+                    || cp.optInt("version") != 1)
+                throw new JSONException("不支持的存档格式");
+            if (!cp.has("cells") || !cp.has("givens"))
+                throw new JSONException("缺少存档单元");
+            new AlertDialog.Builder(this)
+                    .setTitle("导入存档")
+                    .setMessage("导入将覆盖当前谜题的进度，建议先点“导出存档”备份。\\n"
+                            + "存档：" + cp.optString("title", "未命名")
+                            + "\\n确认当前打开的是同一道谜题？")
+                    .setNegativeButton("取消", null)
+                    .setPositiveButton("导入并覆盖", (dialog, which) -> {
+                        try {
+                            final String script = "(function(){\\n" + checkpointScript()
+                                    + "\\nreturn SudokuPadTransfer.importCheckpoint("
+                                    + JSONObject.quote(text) + ","
+                                    + JSONObject.quote(webView.getUrl()) + ");})()";
+                            webView.evaluateJavascript(script, encoded -> {
+                                try {
+                                    String result = new JSONArray("[" + encoded + "]").getString(0);
+                                    JSONObject response = new JSONObject(result);
+                                    if (!response.optBoolean("ok"))
+                                        throw new JSONException(response.optString("error", "导入失败"));
+                                    Toast.makeText(this, "已恢复 "
+                                            + response.optInt("count") + " 格存档",
+                                            Toast.LENGTH_LONG).show();
+                                } catch (Exception error) {
+                                    Toast.makeText(this, "存档导入失败：" + error.getMessage(),
+                                            Toast.LENGTH_LONG).show();
+                                }
+                            });
+                        } catch (IOException error) {
+                            Toast.makeText(this, "缺少存档脚本：" + error.getMessage(),
+                                    Toast.LENGTH_LONG).show();
+                        }
+                    }).show();
+        } catch (JSONException error) {
+            Toast.makeText(this, "无效存档：" + error.getMessage(), Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode != RESULT_OK || data == null || data.getData() == null) return;
+        try {
+            if (requestCode == EXPORT_CHECKPOINT && checkpointToSave != null) {
+                try (OutputStream out = getContentResolver().openOutputStream(data.getData())) {
+                    if (out == null) throw new IOException("无法创建存档文件");
+                    out.write(checkpointToSave.getBytes(StandardCharsets.UTF_8));
+                }
+                checkpointToSave = null;
+                Toast.makeText(this, "存档已保存到所选位置", Toast.LENGTH_LONG).show();
+            } else if (requestCode == IMPORT_CHECKPOINT) {
+                importCheckpointFromFile(readCheckpoint(data.getData()));
+            }
+        } catch (IOException error) {
+            Toast.makeText(this, "存档文件操作失败：" + error.getMessage(),
+                    Toast.LENGTH_LONG).show();
+        }
     }
 
     private void applyTranslation(WebView view) {
