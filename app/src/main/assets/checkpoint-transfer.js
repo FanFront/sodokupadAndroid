@@ -59,8 +59,10 @@ globalThis.SudokuPadTransfer = (() => {
          !Array.isArray(cp.cells)||cp.cells.length!==p.cells.length||
          !Array.isArray(cp.givens)||cp.givens.length!==p.cells.length)
         throw Error('棋盘尺寸不匹配');
-      if(slug(cp.sourceUrl)&&slug(sourceUrl)&&slug(cp.sourceUrl)!==slug(sourceUrl))
-        throw Error('这份存档属于另一道谜题');
+      // Never trust dimensions/givens alone: unrelated puzzles may coincide.
+      const sourceId=slug(cp.sourceUrl),currentId=slug(sourceUrl);
+      if(!sourceId||!currentId||sourceId!==currentId)
+        throw Error('存档的原始 SudokuPad 题目网址与当前题目不匹配');
       const givens=p.cells.map(c=>toSymbol(c.given));
       if(givens.some((v,i)=>v!==toSymbol(cp.givens[i])))
         throw Error('题目给定数字不匹配，已取消导入');
