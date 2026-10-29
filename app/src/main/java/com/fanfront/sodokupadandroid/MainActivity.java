@@ -351,8 +351,8 @@ public final class MainActivity extends Activity {
     private void exportCurrentCheckpoint() {
         if (webView == null) return;
         try {
-            final String script = "(function(){\\n" + checkpointScript()
-                    + "\\nreturn SudokuPadTransfer.exportCheckpoint("
+            final String script = "(function(){\n" + checkpointScript()
+                    + "\nreturn SudokuPadTransfer.exportCheckpoint("
                     + JSONObject.quote(webView.getUrl()) + ","
                     + JSONObject.quote(selectedGame.id) + ");})()";
             webView.evaluateJavascript(script, encoded -> {
@@ -384,7 +384,6 @@ public final class MainActivity extends Activity {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType("*/*");
-        intent.addCategory(Intent.CATEGORY_OPENABLE);
         startActivityForResult(intent, IMPORT_CHECKPOINT);
     }
 
@@ -414,14 +413,14 @@ public final class MainActivity extends Activity {
                 throw new JSONException("缺少存档单元");
             new AlertDialog.Builder(this)
                     .setTitle("导入存档")
-                    .setMessage("导入将覆盖当前谜题的进度，建议先点“导出存档”备份。\\n"
+                    .setMessage("导入将覆盖当前谜题的进度，建议先点“导出存档”备份。\n"
                             + "存档：" + cp.optString("title", "未命名")
-                            + "\\n确认当前打开的是同一道谜题？")
+                            + "\n确认当前打开的是同一道谜题？")
                     .setNegativeButton("取消", null)
                     .setPositiveButton("导入并覆盖", (dialog, which) -> {
                         try {
-                            final String script = "(function(){\\n" + checkpointScript()
-                                    + "\\nreturn SudokuPadTransfer.importCheckpoint("
+                            final String script = "(function(){\n" + checkpointScript()
+                                    + "\nreturn SudokuPadTransfer.importCheckpoint("
                                     + JSONObject.quote(text) + ","
                                     + JSONObject.quote(webView.getUrl()) + ");})()";
                             webView.evaluateJavascript(script, encoded -> {
