@@ -28,6 +28,8 @@ jobs:
         run: |
           python3 scripts/check-assets.py
           node --check app/src/main/assets/translate.js
+          node --check app/src/main/assets/checkpoint-transfer.js
+          node --test scripts/test-checkpoint-transfer.mjs
           node --check scripts/capture-offline.mjs
           node --check scripts/capture-super-sudokoid.mjs
           node --check scripts/capture-super-sudokoid-linked.mjs
