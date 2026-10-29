@@ -26,7 +26,7 @@ function setup() {
     },
     saveProgress(){saved++;}
   };
-  const context={URL,Framework:{app:{puzzle,currentPuzzle:{metadata:{title:'Puzzle'}}}}};
+  const context={URL:globalThis.URL,Framework:{app:{puzzle,currentPuzzle:{metadata:{title:'Puzzle'}}}}};
   context.globalThis=context;
   runInNewContext(bridge,context,{timeout:2000});
   return {api:context.SudokuPadTransfer,cells,counts:()=>({restarts,saved})};
