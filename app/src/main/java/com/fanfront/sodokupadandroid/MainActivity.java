@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.ClipboardManager;
+import android.content.ClipData;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
@@ -335,9 +337,11 @@ public final class MainActivity extends Activity {
         LinearLayout checkpointButtons = new LinearLayout(this);
         checkpointButtons.setOrientation(LinearLayout.HORIZONTAL);
         Button exportButton = button("导出存档", v -> exportCurrentCheckpoint());
-        Button importButton = button("导入存档", v -> selectCheckpointFile());
+        Button importButton = button("读取文件", v -> selectCheckpointFile());
+        Button pasteButton = button("粘贴存档", v -> pasteCheckpoint());
         checkpointButtons.addView(exportButton, new LinearLayout.LayoutParams(0, dp(43), 1f));
         checkpointButtons.addView(importButton, new LinearLayout.LayoutParams(0, dp(43), 1f));
+        checkpointButtons.addView(pasteButton, new LinearLayout.LayoutParams(0, dp(43), 1f));
         root.addView(checkpointButtons);
         root.addView(webView, new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f));
@@ -385,6 +389,22 @@ public final class MainActivity extends Activity {
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType("*/*");
         startActivityForResult(intent, IMPORT_CHECKPOINT);
+    }
+
+    private void pasteCheckpoint() {
+        ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        ClipData data = clipboard == null ? null : clipboard.getPrimaryClip();
+        CharSequence text = data == null || data.getItemCount() == 0
+                ? null : data.getItemAt(0).coerceToText(this);
+        if (text == null || text.length() == 0) {
+            Toast.makeText(this, "剪贴板中没有存档 JSON", Toast.LENGTH_LONG).show();
+            return;
+        }
+        if (text.length() > MAX_CHECKPOINT_BYTES) {
+            Toast.makeText(this, "存档超过 8 MiB 限制", Toast.LENGTH_LONG).show();
+            return;
+        }
+        importCheckpointFromFile(text.toString());
     }
 
     private String readCheckpoint(Uri uri) throws IOException {
